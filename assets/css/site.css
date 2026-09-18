@@ -1,0 +1,1944 @@
+/* ==========================================================================
+   fawazbhseo.in  |  Universal stylesheet
+   Wheat / umber warm-neutral base, single carnelian accent.
+   Flat cards, hard-edge offset shadows. No gradients, no glass, no glow.
+   ========================================================================== */
+
+/* Locally served display face, discovered with the shared render-blocking CSS.
+   The Latin subset is preloaded in head.php. Optional prevents a late heading
+   reflow on slow connections; the existing fallback remains for that visit.
+   Extended subsets are fetched only when their glyphs are used. */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url('../fonts/big-shoulders-display-vietnamese-700-normal.woff2') format('woff2');
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url('../fonts/big-shoulders-display-latin-ext-700-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url('../fonts/big-shoulders-display-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* --------------------------------------------------------------------------
+   1. TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  /* Light mode is the default. */
+  --bg:            #EDE2C8;
+  --surface:       #F7F1DE;
+  --surface-2:     #E7DBBF;
+  --text:          #241E17;
+  --text-2:        #4A4234;
+  --text-muted:    #8B8270;
+  --border:        #E3DCCB;
+  --border-strong: #D2C8AF;
+  --accent:        #B80F0A;
+  --accent-hover:  #8F0C08;
+  --on-accent:     #F7F1DE;
+  --shadow-ink:    #241E17;
+
+  --ff-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --ff-body:    'Newsreader', Georgia, serif;
+  --ff-ui:      'Inter', system-ui, sans-serif;
+
+  --wrap:  1200px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --shadow-card:   5px 5px 0 var(--shadow-ink);
+  --shadow-accent: 5px 5px 0 var(--accent);
+}
+
+[data-theme="dark"] {
+  --bg:            #241E17;
+  --surface:       #1F1C16;
+  --surface-2:     #2A241C;
+  --text:          #EDE2C8;
+  --text-2:        #C2B7A3;
+  --text-muted:    #877D6C;
+  --border:        #322D24;
+  --border-strong: #453D31;
+  --accent:        #E4442E;
+  --accent-hover:  #F26248;
+  --on-accent:     #241E17;
+  --shadow-ink:    #EDE2C8;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET
+   -------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--ff-body);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  transition: background-color .2s linear, color .2s linear;
+}
+
+img, svg, video { display: block; max-width: 100%; height: auto; }
+ul, ol { list-style: none; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. TYPE SCALE
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, .display {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: .92;
+  letter-spacing: -.005em;
+  color: var(--text);
+  text-wrap: balance;
+}
+
+h1, .h1 { font-size: clamp(2.9rem, 8.2vw, 6.4rem); }
+h2, .h2 { font-size: clamp(2.1rem, 5.2vw, 3.9rem); }
+h3, .h3 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); line-height: .98; }
+h4, .h4 { font-size: clamp(1.1rem, 1.7vw, 1.3rem);  line-height: 1.02; }
+
+p { text-wrap: pretty; }
+p + p { margin-top: 1.05em; }
+
+strong, b { font-weight: 600; font-style: normal; }
+em { font-style: italic; }
+cite { font-style: normal; }
+
+.lede {
+  font-size: clamp(1.12rem, 1.7vw, 1.34rem);
+  line-height: 1.55;
+  color: var(--text-2);
+  max-width: 62ch;
+}
+
+.eyebrow {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .69rem;
+  font-weight: 600;
+  letter-spacing: .19em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: '';
+  width: 26px; height: 2px;
+  background: var(--accent);
+  flex: 0 0 auto;
+}
+
+.ui { font-family: var(--ff-ui); font-style: normal; }
+
+/* --------------------------------------------------------------------------
+   4. LAYOUT
+   -------------------------------------------------------------------------- */
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding-block: clamp(64px, 9vw, 124px); }
+
+/* Alternating base colour for vertical rhythm. */
+.section--alt { background: var(--surface-2); }
+
+.section-head { max-width: 74ch; margin-bottom: clamp(38px, 5vw, 62px); }
+.section-head h2 { margin-block: 16px 20px; }
+
+.rule { height: 1.5px; background: var(--border); border: 0; }
+
+.grid { display: grid; gap: clamp(18px, 2.2vw, 26px); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 900px) {
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .grid--2, .grid--3 { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   5. CARDS  (flat, 1.5px border, hard offset shadow)
+   -------------------------------------------------------------------------- */
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--text);
+  box-shadow: var(--shadow-card);
+  padding: clamp(22px, 2.6vw, 32px);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.card--featured { box-shadow: var(--shadow-accent); }
+
+/* The one interactive card effect used sitewide: pressed toward its shadow. */
+.card--link:hover,
+.card--link:focus-visible {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--shadow-ink);
+}
+.card--featured.card--link:hover,
+.card--featured.card--link:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent);
+}
+
+.card h3 { margin-bottom: 12px; }
+.card p  { color: var(--text-2); font-size: .97rem; }
+
+.card-index {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: var(--text-2);
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   6. BUTTONS
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .84rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  padding: 14px 26px;
+  border: 1.5px solid var(--text);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 4px 4px 0 var(--shadow-ink);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.btn:hover, .btn:focus-visible {
+  color: var(--text);
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--shadow-ink);
+}
+.btn svg { width: 17px; height: 17px; flex: 0 0 auto; }
+
+.btn--accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 4px 4px 0 var(--shadow-ink);
+}
+.btn--accent:hover, .btn--accent:focus-visible {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--on-accent);
+}
+
+.btn--sm { padding: 10px 18px; font-size: .78rem; box-shadow: 3px 3px 0 var(--shadow-ink); }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+
+/* Inline text link with a rule under it. */
+.link-arrow {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1.5px solid var(--accent);
+  padding-bottom: 2px;
+}
+.link-arrow svg { width: 15px; height: 15px; }
+.link-arrow:hover { border-color: var(--accent-hover); }
+
+/* --------------------------------------------------------------------------
+   7. HEADER
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: var(--bg);
+  border-bottom: 1.5px solid var(--text);
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  min-height: 74px;
+}
+
+/* Logo: FS mark + wordmark, BH in carnelian. */
+.logo { display: inline-flex; align-items: center; gap: 12px; color: var(--text); }
+.logo:hover { color: var(--text); }
+.logo__mark { width: 38px; height: 38px; flex: 0 0 auto; }
+.logo__mark rect { fill: var(--text); }
+.logo__mark path, .logo__mark text { fill: var(--bg); }
+.logo__word {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.32rem;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  line-height: 1;
+}
+.logo__word .bh { color: var(--accent); }
+
+.site-nav ul { display: flex; align-items: center; gap: clamp(16px, 2.3vw, 32px); }
+.site-nav a {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .83rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--text-2);
+  padding-block: 4px;
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover { color: var(--text); border-color: var(--border-strong); }
+.site-nav a[aria-current="page"] { color: var(--text); border-color: var(--accent); font-weight: 600; }
+
+.header-actions { display: flex; align-items: center; gap: 10px; }
+
+.icon-btn {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1.5px solid var(--text);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 3px 3px 0 var(--shadow-ink);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.icon-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow-ink); }
+.icon-btn svg { width: 18px; height: 18px; }
+
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun  { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+
+.nav-toggle { display: none; }
+
+@media (max-width: 940px) {
+  .site-nav { display: none; }
+  .header-actions .btn { display: none; }
+  .nav-toggle { display: inline-flex; }
+}
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none;
+  border-bottom: 1.5px solid var(--text);
+  background: var(--surface);
+}
+.mobile-nav.is-open { display: block; }
+.mobile-nav ul { padding-block: 10px; }
+.mobile-nav li + li { border-top: 1.5px solid var(--border); }
+.mobile-nav a {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 15px 0;
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.45rem;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.mobile-nav a[aria-current="page"] { color: var(--accent); }
+.mobile-nav .idx {
+  font-family: var(--ff-ui);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: var(--text-2);
+}
+.mobile-nav__cta { padding: 8px 0 22px; }
+
+/* --------------------------------------------------------------------------
+   8. HERO
+   -------------------------------------------------------------------------- */
+.hero { padding-block: clamp(52px, 7vw, 96px); }
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.32fr .68fr;
+  gap: clamp(30px, 4.5vw, 66px);
+  align-items: center;
+}
+.hero h1 { margin-block: 20px 24px; }
+.hero__sub { font-size: clamp(1.15rem, 1.85vw, 1.42rem); color: var(--text-2); max-width: 46ch; line-height: 1.5; }
+.hero .btn-row { margin-top: 32px; }
+
+.hero__figure {
+  border: 1.5px solid var(--text);
+  box-shadow: var(--shadow-accent);
+  background: var(--surface);
+}
+.hero__figure img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.hero__figure figcaption {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  padding: 11px 14px;
+  border-top: 1.5px solid var(--text);
+}
+
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__figure { max-width: 340px; }
+}
+
+/* --------------------------------------------------------------------------
+   9. TRUST STRIP
+   -------------------------------------------------------------------------- */
+.trust {
+  border-block: 1.5px solid var(--text);
+  background: var(--surface-2);
+  padding-block: clamp(26px, 3.4vw, 42px);
+}
+.trust p {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.5vw, 1.95rem);
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--text);
+  max-width: 44ch;
+}
+.trust .accent { color: var(--accent); }
+
+/* --------------------------------------------------------------------------
+   10. STATS / READOUT
+   -------------------------------------------------------------------------- */
+.readout { border: 1.5px solid var(--text); background: var(--surface); }
+.readout__row {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 14px;
+  padding: 13px 16px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .82rem;
+}
+.readout__row + .readout__row { border-top: 1.5px solid var(--border); }
+.readout__row dt { color: var(--text-2); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; padding-top: 2px; }
+.readout__row dd { color: var(--text); font-weight: 500; }
+.readout__row dd small { display: block; color: var(--text-2); font-weight: 400; font-size: .76rem; margin-top: 2px; }
+
+/* Vertical run of stat cards, used in the narrow sidebar column. */
+.stat-stack { display: grid; gap: 18px; }
+
+.stat { border: 1.5px solid var(--text); background: var(--surface); padding: 22px; box-shadow: var(--shadow-card); }
+.stat__val {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  line-height: .86;
+  color: var(--accent);
+}
+.stat__label { font-family: var(--ff-ui); font-style: normal; font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-top: 12px; }
+.stat__note { font-size: .9rem; color: var(--text-2); margin-top: 8px; }
+
+/* --------------------------------------------------------------------------
+   11. PROCESS
+   -------------------------------------------------------------------------- */
+.step { border-top: 3px solid var(--text); padding-top: 18px; }
+.step__k {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.step h3 { margin-bottom: 10px; }
+.step p { color: var(--text-2); font-size: .95rem; }
+
+/* --------------------------------------------------------------------------
+   12. NUMBERED LIST
+   -------------------------------------------------------------------------- */
+.why-list li { display: grid; grid-template-columns: 3rem 1fr; gap: 14px; padding-block: 22px; }
+.why-list li + li { border-top: 1.5px solid var(--border); }
+.why-list .idx {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--accent);
+  line-height: 1;
+}
+.why-list h3 { margin-bottom: 8px; }
+.why-list p { color: var(--text-2); font-size: .96rem; }
+
+/* --------------------------------------------------------------------------
+   13. DELIVERABLES / TICKS
+   -------------------------------------------------------------------------- */
+.deliv { margin-top: 18px; }
+.deliv li {
+  display: grid;
+  grid-template-columns: 1.35rem 1fr;
+  gap: 9px;
+  font-size: .94rem;
+  color: var(--text-2);
+  padding-block: 6px;
+}
+.deliv li + li { border-top: 1px solid var(--border); }
+.deliv .tick { color: var(--accent); font-style: normal; font-weight: 700; }
+
+/* Plain stacked list of internal links, used for town pages inside a card. */
+.linklist li { padding-block: 8px; }
+.linklist li + li { border-top: 1px solid var(--border); }
+.linklist a {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .88rem;
+  font-weight: 600;
+  border-bottom: 1.5px solid transparent;
+}
+.linklist a:hover { border-color: var(--accent); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+.tag {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-2);
+}
+
+/* Flat data table. Same hard-edge treatment as the cards, no zebra tint,
+   no rounded corners, ruled with the ink border only. */
+.table-wrap {
+  overflow-x: auto;
+  border: 1.5px solid var(--text);
+  box-shadow: var(--shadow-card);
+  background: var(--surface);
+}
+.data-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .9rem;
+}
+.data-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 16px clamp(16px, 2vw, 22px);
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .8rem;
+  line-height: 1.55;
+  color: var(--text-2);
+  border-bottom: 1.5px solid var(--border-strong);
+}
+.data-table th,
+.data-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 13px clamp(14px, 1.6vw, 20px);
+  border-bottom: 1px solid var(--border);
+}
+.data-table thead th {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  border-bottom: 3px solid var(--text);
+  white-space: nowrap;
+}
+.data-table tbody th {
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+.data-table tbody td { color: var(--text-2); }
+.data-table tbody td b { color: var(--text); font-weight: 700; }
+.data-table tbody tr:last-child th,
+.data-table tbody tr:last-child td { border-bottom: 0; }
+
+/* Editorial guides. Shared typography and flat surfaces, no new font family. */
+.guide__wrap { max-width: 960px; padding-block: clamp(38px, 6vw, 80px); }
+.guide__header h1 { font-size: clamp(2.75rem, 6.6vw, 5.2rem); margin-block: 22px; }
+.guide__breadcrumb { font-family: var(--ff-ui); font-style: normal; font-size: .78rem; margin-bottom: 28px; overflow-wrap: anywhere; }
+.guide__meta, .guide__disclosure { font-family: var(--ff-ui); font-style: normal; color: var(--text-2); font-size: .8rem; line-height: 1.6; margin-top: 18px; }
+.guide__disclosure { border-inline-start: 3px solid var(--border-strong); padding-inline-start: 14px; }
+.guide__answer { margin-block: 34px; }
+.guide h2 { font-size: clamp(1.85rem, 4vw, 2.75rem); line-height: 1.04; margin-bottom: 20px; }
+.guide h3 { margin-block: 26px 12px; line-height: 1.1; }
+.guide p, .guide li, .guide dd { color: var(--text-2); }
+.guide strong { color: var(--text); }
+.guide p a, .guide li a, .guide dd a, .guide__breadcrumb a { text-decoration: underline; text-underline-offset: .18em; }
+.guide__section { margin-top: clamp(42px, 6vw, 68px); scroll-margin-top: 110px; }
+.guide__section ul, .guide__section ol, .guide__contents ol { padding-inline-start: 1.4em; margin-block: 18px; }
+.guide__section ul { list-style: disc; }
+.guide__section ol, .guide__contents ol { list-style: decimal; }
+.guide li + li { margin-top: 12px; }
+.guide__contents { padding-block: 22px; border-block: 1.5px solid var(--border-strong); }
+.guide__contents a { display: inline-block; padding-block: 4px; }
+.guide__section .table-wrap { margin-block: 24px; }
+.guide__definitions dt { font-family: var(--ff-ui); font-style: normal; font-weight: 600; margin-top: 22px; }
+.guide__definitions dd { margin-top: 6px; }
+.guide__questions details { border-bottom: 1.5px solid var(--border-strong); padding-block: 18px; }
+.guide__questions summary { cursor: pointer; font-family: var(--ff-ui); font-style: normal; font-weight: 600; color: var(--text); }
+.guide__questions details p { margin-top: 14px; }
+.guide__next { margin-top: 52px; }
+.guide__next .btn { margin-block: 20px; }
+.guide code { overflow-wrap: anywhere; }
+/* The standard dark accent is below 4.5:1 for small text. Use the existing
+   brighter hover shade for reading links, not for filled button backgrounds. */
+[data-theme="dark"] .guide a:not(.btn) { color: var(--accent-hover); }
+[data-theme="dark"] .guide a:not(.btn):hover { color: var(--text); }
+@media (max-width: 620px) {
+  .guide .btn { max-width: 100%; white-space: normal; }
+  .guide .data-table { min-width: 620px; }
+}
+
+/* --------------------------------------------------------------------------
+   14. PRICE BLOCK
+   -------------------------------------------------------------------------- */
+.price {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1.5px solid var(--text);
+}
+.price__amount {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1;
+  color: var(--text);
+}
+.price__unit { font-family: var(--ff-ui); font-style: normal; font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-2); display: block; margin-top: 7px; }
+
+/* Rate cards. Same flat card treatment, arranged as plan tiers. */
+.rate-block + .rate-block { margin-top: clamp(40px, 5vw, 68px); }
+.rate-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 14px;
+  margin-bottom: clamp(18px, 2.2vw, 26px);
+  border-bottom: 3px solid var(--text);
+}
+.rate-head .rate-note {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.plan { display: flex; flex-direction: column; }
+.plan__type {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.plan--featured .plan__type { color: var(--accent); }
+.plan__name { margin-block: 10px 14px; }
+.plan__price {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: .9;
+  color: var(--text);
+}
+.plan__sub {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  display: block;
+  margin-top: 8px;
+}
+.plan .deliv { flex: 1 1 auto; }
+.plan .btn { align-self: flex-start; margin-top: 20px; }
+
+.placeholder-flag {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--on-accent);
+  background: var(--accent);
+  padding: 4px 9px;
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   15. QUOTES
+   -------------------------------------------------------------------------- */
+.quote blockquote { font-size: 1.06rem; line-height: 1.55; color: var(--text); }
+.quote figcaption { margin-top: 16px; padding-top: 14px; border-top: 1.5px solid var(--border); }
+.quote cite {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  display: block;
+}
+.quote .biz { font-family: var(--ff-ui); font-style: normal; font-size: .76rem; color: var(--text-2); display: block; margin-top: 5px; }
+.badge {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-2);
+  padding: 3px 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+.badge--accent { border-color: var(--accent); color: var(--accent); }
+
+/* --------------------------------------------------------------------------
+   16. FAQ
+   -------------------------------------------------------------------------- */
+.faq { border-top: 1.5px solid var(--text); }
+.faq details { border-bottom: 1.5px solid var(--border); }
+.faq summary {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  text-transform: uppercase;
+  line-height: 1.1;
+  padding: 20px 44px 20px 0;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: '+';
+  position: absolute;
+  right: 6px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--accent);
+  line-height: 1;
+}
+.faq details[open] summary::after { content: '\2013'; }
+.faq summary:hover { color: var(--accent); }
+.faq__body { padding-bottom: 22px; color: var(--text-2); max-width: 78ch; }
+
+/* Two FAQ markup forms exist across the site and both must look identical.
+   Form A is a <div class="faq"> wrapping bare <details> children.
+   Form B is <details class="faq"> repeated as siblings, which is what the
+   array-driven pages and the location renderer emit. In form B the details
+   IS the .faq, so `.faq details` and `.faq details[open]` above cannot match
+   it. These rules restore the group rule lines and the open-state indicator
+   for form B without touching form A. */
+details.faq { border-top: none; border-bottom: 1.5px solid var(--border); }
+details.faq:first-of-type { border-top: 1.5px solid var(--text); }
+details.faq[open] summary::after { content: '\2013'; }
+
+/* --------------------------------------------------------------------------
+   17. CONTACT FORM
+   -------------------------------------------------------------------------- */
+.contact { background: var(--surface-2); border-block: 1.5px solid var(--text); }
+.contact__grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(30px, 4.5vw, 64px); }
+@media (max-width: 860px) { .contact__grid { grid-template-columns: 1fr; } }
+
+.field { margin-bottom: 18px; }
+.field label {
+  display: block;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .73rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: 7px;
+}
+.field input, .field textarea, .field select {
+  width: 100%;
+  font-family: var(--ff-ui);
+  font-size: .95rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1.5px solid var(--text);
+  padding: 12px 14px;
+}
+.field textarea { min-height: 128px; resize: vertical; }
+.field input::placeholder, .field textarea::placeholder { color: var(--text-2); }
+.field-note { font-family: var(--ff-ui); font-style: normal; font-size: .78rem; color: var(--text-2); margin-top: 6px; }
+
+.form-status {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .86rem;
+  border: 1.5px solid var(--accent);
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+
+.contact-list li { padding-block: 13px; font-family: var(--ff-ui); font-style: normal; font-size: .93rem; }
+.contact-list li + li { border-top: 1.5px solid var(--border); }
+.contact-list .k { display: block; font-size: .69rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-2); margin-bottom: 3px; }
+
+/* --------------------------------------------------------------------------
+   18. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer { border-top: 1.5px solid var(--text); background: var(--bg); }
+.site-footer__top {
+  display: grid;
+  grid-template-columns: 1.5fr .85fr .85fr 1fr;
+  gap: clamp(26px, 3.4vw, 52px);
+  padding-block: clamp(44px, 6vw, 72px);
+}
+@media (max-width: 900px) { .site-footer__top { grid-template-columns: 1fr 1fr; } .site-footer__brand { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .site-footer__top { grid-template-columns: 1fr; } }
+
+.site-footer__tag { font-size: .95rem; color: var(--text-2); max-width: 40ch; margin-top: 16px; }
+.footer-h {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: 15px;
+}
+.footer-col li { margin-bottom: 10px; }
+.footer-col a, .footer-col span {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .89rem;
+  color: var(--text-2);
+}
+.footer-col a:hover { color: var(--accent); }
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 20px;
+  border-top: 1.5px solid var(--border);
+}
+.site-footer__bottom p { font-family: var(--ff-ui); font-style: normal; font-size: .78rem; color: var(--text-2); }
+
+/* --------------------------------------------------------------------------
+   19. FLOATING ACTION BUTTON
+   -------------------------------------------------------------------------- */
+.fab {
+  position: fixed;
+  right: 18px; bottom: 18px;
+  z-index: 80;
+  display: none;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 18px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .82rem;
+  font-weight: 600;
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 1.5px solid var(--text);
+  box-shadow: 4px 4px 0 var(--shadow-ink);
+}
+.fab:hover { color: var(--on-accent); background: var(--accent-hover); transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--shadow-ink); }
+.fab svg { width: 18px; height: 18px; }
+@media (max-width: 940px) { .fab { display: inline-flex; } }
+
+/* --------------------------------------------------------------------------
+   19b. FLOATING ANSWER ASSISTANT
+   Flat panel, hard-edge offset shadow, no blur and no glow. The WhatsApp fab
+   sits bottom right on narrow screens, so the launcher sits above it there.
+   -------------------------------------------------------------------------- */
+/* AI LAUNCHER, INTENTIONAL DESIGN EXCEPTION.
+   Everything else on this site is flat, hard-edged and shadow-offset. This one
+   control deliberately is not. It is the only element allowed a circle, a soft
+   shadow and a motion loop, because it has to read instantly as "this is the
+   AI" rather than as another site button. That exception is scoped to this
+   component only. Do not copy these patterns into cards or any other button.
+   It sits bottom LEFT so it never competes with the WhatsApp fab on the right. */
+.assistant-launcher {
+  position: fixed;
+  left: 18px; bottom: 18px;
+  z-index: 90;
+  width: 60px; height: 60px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #F4F1EA;
+  background: #1D1B26;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .32);
+  animation: fbh-float 3.6s ease-in-out infinite;
+  transition: box-shadow .22s ease, border-color .22s ease, color .22s ease;
+}
+
+/* The breathing float. Small on purpose: enough to read as alive, not enough
+   to become a distraction on every page of the site. */
+@keyframes fbh-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+.assistant-launcher__bot {
+  position: relative;
+  z-index: 1;
+  width: 31px; height: 31px;
+}
+
+/* The eyes blink, which is the cheapest possible "this is awake" cue. Long
+   pause, quick blink, so it never reads as a flicker. */
+.assistant-launcher__eye { animation: fbh-blink 4.4s ease-in-out infinite; }
+@keyframes fbh-blink {
+  0%, 92%, 100% { transform: scaleY(1);   transform-origin: center; }
+  95%           { transform: scaleY(.15); transform-origin: center; }
+}
+
+/* A single expanding ring behind the circle: the "listening" cue. */
+.assistant-launcher__pulse {
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  animation: fbh-pulse 2.9s ease-out infinite;
+}
+@keyframes fbh-pulse {
+  0%        { transform: scale(1); opacity: .75; }
+  70%, 100% { transform: scale(1.42); opacity: 0; }
+}
+
+.assistant-launcher:hover {
+  color: #FFF;
+  border-color: rgba(255, 255, 255, .34);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .42);
+}
+.assistant-launcher:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 3px;
+}
+.assistant-launcher.is-hidden { display: none; }
+
+/* Narrow screens: slightly smaller, still comfortably above the 44px tap
+   target minimum. The WhatsApp fab is on the opposite side, so there is no
+   collision to design around. */
+@media (max-width: 940px) {
+  .assistant-launcher { width: 54px; height: 54px; }
+  .assistant-launcher__bot { width: 28px; height: 28px; }
+}
+
+/* Motion is decorative here, so remove it entirely when asked. The global
+   reduce block later in this file also clamps durations, but the float and
+   pulse should stop completely rather than run fast. */
+@media (prefers-reduced-motion: reduce) {
+  .assistant-launcher,
+  .assistant-launcher__pulse,
+  .assistant-launcher__eye { animation: none !important; }
+}
+
+/* THE ASSISTANT HAS ITS OWN DESIGN SYSTEM. READ THIS FIRST.
+
+   Everything from here to the end of section 19b deliberately ignores the
+   site's design tokens. The site is flat cream paper, hard 1.5px edges, zero
+   blur offset shadows and an italic serif body face. The assistant is the
+   opposite on purpose: a dark instrument panel, soft radii, its own type
+   scale, its own palette. That contrast is the point. A visitor should be able
+   to tell at a glance that this is a tool talking to them and not another
+   block of the website.
+
+   These local variables are scoped to the panel so they cannot leak into the
+   site. Do NOT replace them with --surface, --text or --accent: doing that is
+   what made the panel look like a site card in the first place. The launcher
+   already had this exemption; the panel now shares it.
+
+   The ONE exception to the site's no-blur rule lives here, and it is
+   intentional: a floating tool needs real elevation to read as an overlay. */
+.assistant-panel {
+  --a-bg:       #17161F;
+  --a-surface:  #211F2B;
+  --a-raised:   #2A2836;
+  --a-line:     rgba(255,255,255,.10);
+  --a-line-2:   rgba(255,255,255,.17);
+  --a-text:     #F2F0F6;
+  --a-dim:      #A9A5B8;
+  --a-accent:   #7C7BF5;
+  --a-accent-2: #A78BFA;
+  --a-user:     #34324A;
+  --a-radius:   16px;
+  --a-font:     'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  position: fixed;
+  /* Anchored bottom LEFT to match the launcher it opens from. */
+  left: 18px; bottom: 18px;
+  z-index: 95;
+  width: min(392px, calc(100vw - 36px));
+  max-height: min(640px, calc(100vh - 36px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--a-text);
+  background: var(--a-bg);
+  border: 1px solid var(--a-line-2);
+  border-radius: var(--a-radius);
+  box-shadow: 0 22px 50px -12px rgba(0,0,0,.62), 0 4px 14px rgba(0,0,0,.34);
+  /* Its own font stack, so the site's italic serif never reaches the panel. */
+  font-family: var(--a-font);
+  font-style: normal;
+}
+.assistant-panel[hidden] { display: none; }
+
+/* Open transition. Rises from the launcher rather than just appearing. */
+.assistant-panel {
+  transform-origin: left bottom;
+  animation: fbh-panel-in .26s cubic-bezier(.16,.84,.44,1) both;
+}
+@keyframes fbh-panel-in {
+  from { opacity: 0; transform: translateY(12px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.assistant-panel__head {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 14px 13px 16px;
+  background: linear-gradient(0deg, var(--a-bg), var(--a-surface));
+  border-bottom: 1px solid var(--a-line);
+}
+
+/* The head gets a small live avatar, which is what makes it read as a chat
+   window instead of a form. */
+.assistant-panel__id { display: flex; align-items: center; gap: 11px; min-width: 0; }
+.assistant-panel__avatar {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 34px; height: 34px;
+  color: #fff;
+  background: linear-gradient(140deg, var(--a-accent), var(--a-accent-2));
+  border-radius: 11px;
+}
+.assistant-panel__avatar svg { width: 19px; height: 19px; }
+
+.assistant-panel__head .eyebrow {
+  font-family: var(--a-font);
+  font-style: normal;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--a-dim);
+  margin: 0;
+}
+.assistant-panel__head h2 {
+  font-family: var(--a-font);
+  font-size: .97rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  margin: 2px 0 0;
+  color: var(--a-text);
+}
+
+/* A live dot, so the header states plainly that the thing is listening. */
+.assistant-panel__status { display: inline-flex; align-items: center; gap: 5px; }
+.assistant-panel__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #4ADE80;
+  box-shadow: 0 0 0 3px rgba(74,222,128,.16);
+}
+
+.assistant-close {
+  flex: 0 0 auto;
+  display: inline-flex;
+  padding: 7px;
+  cursor: pointer;
+  color: var(--a-dim);
+  background: transparent;
+  border: 1px solid var(--a-line);
+  border-radius: 9px;
+  transition: color .18s ease, background .18s ease, border-color .18s ease;
+}
+.assistant-close:hover { color: var(--a-text); background: var(--a-raised); border-color: var(--a-line-2); }
+.assistant-close:focus-visible { outline: 2px solid var(--a-accent); outline-offset: 2px; }
+.assistant-close svg { width: 15px; height: 15px; }
+
+.assistant-scope {
+  /* flex-shrink must be 0 so this banner keeps its full height when the log
+     fills up, instead of being squeezed by its sibling.
+
+     MEASURED, do not "fix" again: the banner and the log abut exactly, and the
+     banner's text fits inside its own box. If a screenshot of a scrolled panel
+     looks like the banner overlaps the first message, that is just a message
+     clipped mid-line at the log's scroll edge, which is correct behaviour for
+     any scrolling log. Scroll the log to the top and the boundary is clean.
+     There is no overlap bug here to chase. */
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 10px 16px 11px;
+  font-family: var(--a-font);
+  font-style: normal;
+  font-size: .705rem;
+  line-height: 1.55;
+  color: var(--a-dim);
+  background: rgba(124,123,245,.07);
+  border-bottom: 1px solid var(--a-line);
+}
+
+.assistant-log {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  /* min-height:0 is required: a flex item defaults to min-height:auto, which
+     refuses to shrink below its content and pushes the log outside the panel
+     instead of scrolling inside it. */
+  min-height: 0;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--a-line-2) transparent;
+}
+/* Slim scrollbar, because the default chrome scrollbar on a dark panel is a
+   wide grey slab that ruins the instrument feel. */
+.assistant-log::-webkit-scrollbar { width: 8px; }
+.assistant-log::-webkit-scrollbar-track { background: transparent; }
+.assistant-log::-webkit-scrollbar-thumb {
+  background: var(--a-line-2);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.assistant-msg {
+  max-width: 88%;
+  font-family: var(--a-font);
+  font-style: normal;
+  animation: fbh-msg-in .24s ease-out both;
+}
+@keyframes fbh-msg-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.assistant-msg p {
+  font-family: var(--a-font);
+  font-style: normal;
+  font-size: .855rem;
+  line-height: 1.62;
+  margin: 0;
+}
+.assistant-msg p + p { margin-top: 9px; }
+
+/* Asymmetric radii: the corner nearest the speaker is squared off, which is
+   the standard chat convention and reads instantly as a conversation. */
+.assistant-msg--bot {
+  align-self: flex-start;
+  padding: 11px 14px 12px;
+  color: var(--a-text);
+  background: var(--a-surface);
+  border: 1px solid var(--a-line);
+  border-radius: 14px 14px 14px 4px;
+}
+.assistant-msg--user {
+  align-self: flex-end;
+  padding: 11px 14px 12px;
+  color: var(--a-text);
+  background: var(--a-user);
+  border: 1px solid var(--a-line-2);
+  border-radius: 14px 14px 4px 14px;
+}
+.assistant-msg--user p { font-size: .845rem; }
+
+/* The caret that blinks at the end of the text while it is being typed out. */
+.assistant-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 1px;
+  vertical-align: -.14em;
+  background: var(--a-accent-2);
+  animation: fbh-caret .9s steps(1) infinite;
+}
+@keyframes fbh-caret { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .assistant-cursor { animation: none; opacity: 1; }
+  .assistant-msg, .assistant-panel { animation: none !important; }
+}
+
+/* Thinking indicator. Retrieval is instant, but showing a reply in the same
+   frame as the question reads like a lookup table rather than an answer. */
+.assistant-typing { display: flex; gap: 4px; align-items: center; padding: 14px 15px; }
+.assistant-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--a-dim);
+  animation: fbh-dot 1.15s ease-in-out infinite;
+}
+.assistant-dot:nth-child(2) { animation-delay: .16s; }
+.assistant-dot:nth-child(3) { animation-delay: .32s; }
+@keyframes fbh-dot {
+  0%, 60%, 100% { opacity: .3; transform: translateY(0); }
+  30%           { opacity: 1;  transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .assistant-dot { animation: none !important; opacity: .6; }
+}
+
+.assistant-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 11px;
+  margin-right: 8px;
+  padding: 7px 11px;
+  font-family: var(--a-font);
+  font-style: normal;
+  font-size: .735rem;
+  font-weight: 500;
+  color: var(--a-text);
+  background: rgba(124,123,245,.15);
+  border: 1px solid rgba(124,123,245,.42);
+  border-radius: 8px;
+  transition: background .18s ease, border-color .18s ease;
+}
+.assistant-link:hover {
+  color: #fff;
+  background: rgba(124,123,245,.28);
+  border-color: var(--a-accent);
+}
+
+.assistant-suggest {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 14px 12px;
+}
+.assistant-chip {
+  font-family: var(--a-font);
+  font-style: normal;
+  font-size: .715rem;
+  font-weight: 500;
+  padding: 7px 11px;
+  cursor: pointer;
+  color: var(--a-dim);
+  background: var(--a-surface);
+  border: 1px solid var(--a-line);
+  border-radius: 99px;
+  transition: color .18s ease, background .18s ease, border-color .18s ease;
+}
+.assistant-chip:hover {
+  color: var(--a-text);
+  background: var(--a-raised);
+  border-color: var(--a-line-2);
+}
+.assistant-chip:focus-visible { outline: 2px solid var(--a-accent); outline-offset: 2px; }
+
+.assistant-form {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 12px;
+  background: var(--a-surface);
+  border-top: 1px solid var(--a-line);
+}
+.assistant-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 11px 13px;
+  font-family: var(--a-font);
+  font-style: normal;
+  font-size: .855rem;
+  color: var(--a-text);
+  background: var(--a-bg);
+  border: 1px solid var(--a-line);
+  border-radius: 10px;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.assistant-input:focus {
+  outline: none;
+  border-color: var(--a-accent);
+  box-shadow: 0 0 0 3px rgba(124,123,245,.2);
+}
+.assistant-input::placeholder { color: var(--a-dim); opacity: .78; }
+
+/* Circular send button, echoing the round launcher. */
+.assistant-send {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 38px; height: 38px;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(140deg, var(--a-accent), var(--a-accent-2));
+  border: none;
+  border-radius: 50%;
+  transition: filter .18s ease, transform .18s ease;
+}
+.assistant-send:hover { filter: brightness(1.12); transform: scale(1.05); }
+.assistant-send:focus-visible { outline: 2px solid var(--a-accent-2); outline-offset: 2px; }
+.assistant-send svg { width: 17px; height: 17px; }
+
+.assistant-foot {
+  flex: 0 0 auto;
+  padding: 9px 16px 11px;
+  font-family: var(--a-font);
+  font-style: normal;
+  font-size: .69rem;
+  line-height: 1.5;
+  color: var(--a-dim);
+  background: var(--a-surface);
+  border-top: 1px solid var(--a-line);
+}
+.assistant-foot a { color: var(--a-accent-2); border-bottom: 1px solid rgba(167,139,250,.45); }
+.assistant-foot a:hover { color: #fff; border-bottom-color: #fff; }
+
+/* Endpoint chat states. Scoped to the existing widget; site layout is unchanged. */
+.assistant-suggest[hidden] { display: none; }
+.assistant-msg p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.assistant-msg strong { color: inherit; }
+.assistant-msg p.assistant-fallback-note {
+  color: var(--a-dim);
+  font-size: .715rem;
+  line-height: 1.5;
+}
+.assistant-send { width: 44px; height: 44px; }
+.assistant-close { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+.assistant-chip { min-height: 44px; }
+.assistant-send:disabled, .assistant-chip:disabled, .assistant-link:disabled {
+  opacity: .55;
+  cursor: wait;
+  transform: none;
+  filter: none;
+}
+.assistant-disclaimer { margin: 0; border-top: 0; padding-top: 0; }
+.assistant-panel .assistant-foot + .assistant-foot { margin-top: 0; }
+.assistant-log:focus-visible, .assistant-link:focus-visible { outline: 2px solid var(--a-accent-2); outline-offset: -2px; }
+@supports (height: 100dvh) {
+  .assistant-panel { max-height: min(640px, calc(100dvh - 36px)); }
+}
+
+/* --------------------------------------------------------------------------
+   19c. LANGUAGE SWITCHER AND OFFER BAR
+
+   Unlike the AI assistant above, this IS site chrome, so it follows the site's
+   design language exactly: hard edges, offset shadow with zero blur, Inter for
+   UI text. The switcher is a native <details>, so it opens without JavaScript.
+   -------------------------------------------------------------------------- */
+.lang-switch { position: relative; flex: 0 0 auto; }
+
+/* Remove the default disclosure triangle in every engine. */
+.lang-switch > summary { list-style: none; cursor: pointer; }
+.lang-switch > summary::-webkit-details-marker { display: none; }
+.lang-switch > summary::marker { content: ''; }
+
+.lang-switch__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--text);
+  background: transparent;
+  border: 1.5px solid var(--border-strong);
+}
+.lang-switch__btn:hover { color: var(--on-accent); background: var(--accent); border-color: var(--text); }
+.lang-switch__btn svg { width: 15px; height: 15px; }
+.lang-switch[open] > .lang-switch__btn { color: var(--on-accent); background: var(--accent); border-color: var(--text); }
+.lang-switch > summary:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; }
+
+.lang-switch__menu {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: 0;
+  z-index: 120;
+  min-width: 194px;
+  padding: 5px;
+  background: var(--bg);
+  border: 1.5px solid var(--text);
+  box-shadow: 5px 5px 0 var(--shadow-ink);
+}
+
+.lang-switch__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 11px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  color: var(--text);
+}
+.lang-switch__item:hover { color: var(--on-accent); background: var(--accent); }
+.lang-switch__item.is-current { background: var(--surface-2); }
+.lang-switch__item.is-current:hover { color: var(--on-accent); background: var(--accent); }
+
+/* The native name leads, because someone looking for Kannada scans for
+   "ಕನ್ನಡ" and not for the word "Kannada". The English name is the smaller
+   second line for anyone who cannot read the script yet. */
+.lang-switch__label   { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.lang-switch__native  { font-size: .88rem; font-weight: 600; }
+.lang-switch__english { font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; opacity: .62; }
+
+/* SEARCH FIELD. Only rendered once the list passes eight languages, and only
+   revealed by i18n.js, because a search box that does nothing without
+   JavaScript is worse than none: the full list is still scrollable. */
+.lang-switch__find { padding: 4px 4px 7px; border-bottom: 1.5px solid var(--border); }
+.lang-switch__find[hidden] { display: none; }
+.lang-switch__input {
+  width: 100%;
+  padding: 8px 10px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .82rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1.5px solid var(--border-strong);
+}
+.lang-switch__input:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 1px; }
+.lang-switch__input::placeholder { color: var(--text-2); opacity: .8; }
+/* Kill the WebKit search decorations, which do not match anything else here. */
+.lang-switch__input::-webkit-search-decoration,
+.lang-switch__input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+
+/* THE LIST SCROLLS ONCE IT IS LONG. This is what lets the switcher hold a
+   hundred languages without becoming a different component. The cap is in vh
+   so it always leaves the viewport edge visible on a short screen. */
+.lang-switch__list.is-long {
+  max-height: min(46vh, 340px);
+  overflow-y: auto;
+  overscroll-behavior: contain;   /* do not scroll the page at the list's end */
+}
+.lang-switch__list [hidden] { display: none; }
+
+.lang-switch__empty {
+  margin: 0;
+  padding: 12px 11px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .78rem;
+  color: var(--text-2);
+}
+.lang-switch__empty[hidden] { display: none; }
+
+/* AI BADGE. Marks a machine translation in the list. Deliberately visible
+   rather than hidden: offering someone a rough translation is fine, offering
+   it without saying so is not. */
+.lang-switch__badge {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 2px 5px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: var(--text-2);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+}
+.lang-switch__item:hover .lang-switch__badge {
+  color: var(--on-accent);
+  background: transparent;
+  border-color: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   TRANSLATION PROVENANCE NOTICE
+
+   Sits directly under the header on any locale that is not English and not
+   fully human written. This strip is the honesty mechanism for the entire
+   multilingual system: it is what makes it defensible to offer a language
+   nobody at this end can read. It must never be made dismissible, and it must
+   never be made quieter than the surrounding chrome.
+   -------------------------------------------------------------------------- */
+.translation-note {
+  background: var(--surface-2);
+  border-bottom: 1.5px solid var(--border);
+}
+.translation-note__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.translation-note__tag {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  padding: 2px 6px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: var(--on-accent);
+  background: var(--text);
+}
+.translation-note__text {
+  margin: 0;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .78rem;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+.translation-note__link {
+  color: var(--text);
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1.5px solid var(--accent);
+}
+.translation-note__link:hover { color: var(--accent); }
+
+/* A raw machine draft gets the accent tag. A reviewed translation keeps the
+   neutral one, because the two are not the same claim. */
+.translation-note--machine .translation-note__tag {
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+/* Region aware offer bar. Fixed to the bottom RIGHT above the WhatsApp fab,
+   so it never covers the assistant launcher on the bottom left. */
+.lang-offer {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 96;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  max-width: min(370px, calc(100vw - 36px));
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1.5px solid var(--text);
+  box-shadow: 5px 5px 0 var(--shadow-ink);
+}
+.lang-offer[hidden] { display: none; }
+.lang-offer__text {
+  flex: 1 1 100%;
+  margin: 0;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.lang-offer__go,
+.lang-offer__no {
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .76rem;
+  font-weight: 600;
+  padding: 8px 13px;
+  cursor: pointer;
+  border: 1.5px solid var(--text);
+}
+.lang-offer__go { color: var(--on-accent); background: var(--accent); }
+.lang-offer__go:hover { color: var(--on-accent); background: var(--accent-hover); }
+.lang-offer__no { color: var(--text); background: transparent; border-color: var(--border-strong); }
+.lang-offer__no:hover { color: var(--on-accent); background: var(--text); border-color: var(--text); }
+.lang-offer__ai {
+  display: inline-block;
+  padding: 1px 5px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  vertical-align: 1px;
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   19d. PER SCRIPT TYPOGRAPHY
+
+   Keyed on SCRIPT, not on language. Twenty Devanagari languages share one rule
+   instead of needing twenty, which is the only way this stays maintainable as
+   the language count grows. The matching webfont is loaded per page by
+   head.php via fbh_script_font(), so a rule here only fires on a page that
+   actually requested that face.
+   -------------------------------------------------------------------------- */
+html[lang^="kn"] body,
+html[lang^="tcy"] body { font-family: 'Noto Sans Kannada', var(--ff-ui), sans-serif; font-style: normal; }
+
+html[lang^="hi"] body, html[lang^="mr"] body, html[lang^="ne"] body,
+html[lang^="ks"] body, html[lang^="kok"] body, html[lang^="mai"] body,
+html[lang^="sa"] body { font-family: 'Noto Sans Devanagari', var(--ff-ui), sans-serif; font-style: normal; }
+
+html[lang^="ml"] body { font-family: 'Noto Sans Malayalam', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="ta"] body { font-family: 'Noto Sans Tamil', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="te"] body { font-family: 'Noto Sans Telugu', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="bn"] body,
+html[lang^="as"] body { font-family: 'Noto Sans Bengali', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="gu"] body { font-family: 'Noto Sans Gujarati', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="pa"] body { font-family: 'Noto Sans Gurmukhi', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="or"] body { font-family: 'Noto Sans Oriya', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="si"] body { font-family: 'Noto Sans Sinhala', var(--ff-ui), sans-serif; font-style: normal; }
+
+html[lang^="ar"] body, html[lang^="ur"] body, html[lang^="fa"] body,
+html[lang^="ps"] body, html[lang^="sd"] body { font-family: 'Noto Sans Arabic', var(--ff-ui), sans-serif; font-style: normal; }
+
+html[lang^="he"] body { font-family: 'Noto Sans Hebrew', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="th"] body { font-family: 'Noto Sans Thai', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="lo"] body { font-family: 'Noto Sans Lao', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="km"] body { font-family: 'Noto Sans Khmer', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="my"] body { font-family: 'Noto Sans Myanmar', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="am"] body,
+html[lang^="ti"] body { font-family: 'Noto Sans Ethiopic', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="hy"] body { font-family: 'Noto Sans Armenian', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="ka"] body { font-family: 'Noto Serif Georgian', 'Noto Sans Georgian', var(--ff-ui), sans-serif; font-style: normal; }
+html[lang^="bo"] body { font-family: 'Noto Serif Tibetan', var(--ff-ui), sans-serif; font-style: normal; }
+
+/* CJK loads NO webfont, on purpose: a full Chinese, Japanese or Korean face
+   runs to several megabytes and would undo the performance work. These stacks
+   name the faces already installed on each platform, which CJK readers
+   generally prefer to a downloaded substitute anyway. */
+html[lang^="zh-Hans"] body,
+html[lang^="zh-hans"] body { font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', sans-serif; font-style: normal; }
+html[lang^="zh-Hant"] body,
+html[lang^="zh-hant"] body { font-family: 'PingFang TC', 'Hiragino Sans CNS', 'Microsoft JhengHei', 'Source Han Sans TC', 'Noto Sans CJK TC', sans-serif; font-style: normal; }
+html[lang^="ja"] body { font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif; font-style: normal; }
+html[lang^="ko"] body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans CJK KR', sans-serif; font-style: normal; }
+
+/* HEADINGS. Big Shoulders is a Latin-only display face, so it must be dropped
+   on any NON LATIN script or the browser silently substitutes something
+   unrelated mid-heading.
+
+   This deliberately keys on the scripts that need it rather than on
+   :not([lang^="en"]). The earlier version did the latter, which stripped the
+   display face from German, French and Spanish headings even though Big
+   Shoulders renders those perfectly well. Latin-script locales keep the site's
+   real typography. */
+html[lang^="kn"] :is(h1,h2,h3,.eyebrow), html[lang^="tcy"] :is(h1,h2,h3,.eyebrow),
+html[lang^="hi"] :is(h1,h2,h3,.eyebrow), html[lang^="mr"] :is(h1,h2,h3,.eyebrow),
+html[lang^="ne"] :is(h1,h2,h3,.eyebrow), html[lang^="ks"] :is(h1,h2,h3,.eyebrow),
+html[lang^="kok"] :is(h1,h2,h3,.eyebrow), html[lang^="mai"] :is(h1,h2,h3,.eyebrow),
+html[lang^="sa"] :is(h1,h2,h3,.eyebrow), html[lang^="ml"] :is(h1,h2,h3,.eyebrow),
+html[lang^="ta"] :is(h1,h2,h3,.eyebrow), html[lang^="te"] :is(h1,h2,h3,.eyebrow),
+html[lang^="bn"] :is(h1,h2,h3,.eyebrow), html[lang^="as"] :is(h1,h2,h3,.eyebrow),
+html[lang^="gu"] :is(h1,h2,h3,.eyebrow), html[lang^="pa"] :is(h1,h2,h3,.eyebrow),
+html[lang^="or"] :is(h1,h2,h3,.eyebrow), html[lang^="si"] :is(h1,h2,h3,.eyebrow),
+html[lang^="ar"] :is(h1,h2,h3,.eyebrow), html[lang^="ur"] :is(h1,h2,h3,.eyebrow),
+html[lang^="fa"] :is(h1,h2,h3,.eyebrow), html[lang^="ps"] :is(h1,h2,h3,.eyebrow),
+html[lang^="sd"] :is(h1,h2,h3,.eyebrow), html[lang^="he"] :is(h1,h2,h3,.eyebrow),
+html[lang^="th"] :is(h1,h2,h3,.eyebrow), html[lang^="lo"] :is(h1,h2,h3,.eyebrow),
+html[lang^="km"] :is(h1,h2,h3,.eyebrow), html[lang^="my"] :is(h1,h2,h3,.eyebrow),
+html[lang^="am"] :is(h1,h2,h3,.eyebrow), html[lang^="ti"] :is(h1,h2,h3,.eyebrow),
+html[lang^="hy"] :is(h1,h2,h3,.eyebrow), html[lang^="ka"] :is(h1,h2,h3,.eyebrow),
+html[lang^="bo"] :is(h1,h2,h3,.eyebrow), html[lang^="ru"] :is(h1,h2,h3,.eyebrow),
+html[lang^="uk"] :is(h1,h2,h3,.eyebrow), html[lang^="bg"] :is(h1,h2,h3,.eyebrow),
+html[lang^="sr"] :is(h1,h2,h3,.eyebrow), html[lang^="mk"] :is(h1,h2,h3,.eyebrow),
+html[lang^="kk"] :is(h1,h2,h3,.eyebrow), html[lang^="ky"] :is(h1,h2,h3,.eyebrow),
+html[lang^="tg"] :is(h1,h2,h3,.eyebrow), html[lang^="mn"] :is(h1,h2,h3,.eyebrow),
+html[lang^="el"] :is(h1,h2,h3,.eyebrow), html[lang^="zh"] :is(h1,h2,h3,.eyebrow),
+html[lang^="ja"] :is(h1,h2,h3,.eyebrow), html[lang^="ko"] :is(h1,h2,h3,.eyebrow) {
+  font-family: inherit;
+  letter-spacing: 0;
+}
+
+/* --------------------------------------------------------------------------
+   19e. RIGHT TO LEFT
+
+   dir="rtl" is set on <html> by head.php from the registry, so the document
+   flow mirrors for free. These rules fix the handful of places that were
+   written with physical left/right values and therefore do not mirror
+   themselves. Test any change with /ar, which is the RTL reference locale.
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .lang-switch__menu { right: auto; left: 0; }
+[dir="rtl"] .lang-switch__btn { letter-spacing: normal; }
+
+[dir="rtl"] .lang-offer { right: auto; left: 18px; }
+
+/* The offset shadow points away from the light source, so it flips too.
+   Leaving it at 5px 5px on an RTL page makes every card look subtly wrong
+   without it being obvious why. */
+[dir="rtl"] .lang-switch__menu,
+[dir="rtl"] .lang-offer { box-shadow: -5px 5px 0 var(--shadow-ink); }
+
+/* The assistant is anchored bottom left in LTR, so it moves to bottom right
+   rather than colliding with the offer bar. */
+[dir="rtl"] .assistant-launcher { left: auto; right: 18px; }
+
+[dir="rtl"] .skip-link:focus { left: auto; right: 8px; }
+
+/* Latin runs inside RTL text, such as "SEO" or a URL, need an explicit
+   isolate or the surrounding bidi algorithm reorders the punctuation
+   around them. */
+[dir="rtl"] .translation-note__link,
+[dir="rtl"] .lang-switch__english { unicode-bidi: isolate; }
+
+@media (max-width: 940px) {
+  [dir="rtl"] .lang-switch__menu { right: auto; left: 0; }
+}
+
+@media (max-width: 940px) {
+  /* Do NOT flip this to left:0. The switcher sits at the right end of the
+     header, so a left-aligned menu runs off the right edge of a phone screen,
+     which is exactly what it did before this was measured. Anchoring right and
+     capping the width against the viewport keeps it on screen at any width. */
+  .lang-switch__menu {
+    right: 0;
+    left: auto;
+    min-width: 0;
+    width: max-content;
+    max-width: calc(100vw - 28px);
+  }
+  .lang-offer { left: 18px; right: 18px; bottom: 88px; max-width: none; }
+}
+
+/* --------------------------------------------------------------------------
+   19f. FULL PAGE TRANSLATION
+
+   assets/js/translate.js translates the whole document body into the chosen
+   language at runtime. It ships with its own grey Material-styled toolbar and
+   dropdown, which belong to a different design system entirely and would sit
+   directly above this site's own header. Every rule here exists to keep that
+   chrome off the page while leaving the translation itself working.
+
+   Do NOT replace these with display:none on the widget container. The script
+   measures its own container on startup and errors out when it has no box,
+   which stops translation altogether. Everything below either moves the
+   chrome out of view or neutralises what it does to the document.
+   -------------------------------------------------------------------------- */
+
+/* The mount point. Present and measurable, parked off screen. */
+.fbh-translate-mount {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* The widget's own banner frame, dropdown, balloon and tooltip. */
+.skiptranslate,
+.goog-te-banner-frame,
+.goog-te-gadget,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip {
+  display: none !important;
+}
+
+/* The banner pushes <body> down by its own height with an inline style and
+   sets a top margin on <html>. Both have to be overridden or the header sits
+   under a 40px empty gap on every translated page. */
+body,
+html.translated-ltr body,
+html.translated-rtl body {
+  top: 0 !important;
+  position: static;
+}
+html.translated-ltr,
+html.translated-rtl { margin-top: 0 !important; }
+
+/* Translated runs are wrapped in <font> elements carrying inline colour and
+   background. Left alone, that overrides the palette and drops warm-neutral
+   text onto a white highlight. Inheriting puts the design tokens back. */
+font[style] {
+  color: inherit !important;
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font: inherit !important;
+  vertical-align: baseline;
+}
+
+/* Text settles for the second or two the walk takes, so words change without
+   the page appearing to twitch. Nothing is hidden: the English text stays
+   fully readable and selectable while it is being replaced. */
+html.is-translating body {
+  transition: none;
+}
+html.is-translating :is(h1, h2, h3, h4, p, li, figcaption, label, .btn, .card) {
+  transition: opacity .18s linear;
+}
+
+/* A translated string is very often longer than its English source, German and
+   Finnish especially. Headings are uppercase condensed and set tight, which is
+   where that shows up first as a mid-word break. */
+html.is-translated :is(h1, h2, h3, h4),
+html.translated-ltr :is(h1, h2, h3, h4),
+html.translated-rtl :is(h1, h2, h3, h4) {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Protected terms sit inside translated sentences, so they must not inherit a
+   stray direction or style from the run around them. */
+.notranslate {
+  unicode-bidi: isolate;
+}
+/* Keep both email addresses legible in narrow contact columns and RTL text. */
+a[href^="mailto:"] {
+  overflow-wrap: anywhere;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* RTL, AND THIS IS NOT OPTIONAL. Isolating a protected run stops it disturbing
+   the Arabic around it, but the run itself still inherits direction:rtl, so the
+   bidi algorithm lays its own parts out right to left. Measured on the Arabic
+   harness, "+91 94810 84038" came out as "84038 94810 91+": every group in
+   reverse order with the plus sign stranded on the wrong end. A phone number
+   is the single most important string on a consultant's site and it was being
+   silently corrupted on every RTL page.
+
+   direction:ltr on the protected run fixes it, because everything marked
+   notranslate is Latin script or digits by definition: the brand, the acronyms,
+   the phone number, the email address, the English ranking anchors.
+
+   The language menu label is the one exception and is excluded. Its whole job
+   is to show each language's name in its own script, so an Arabic native name
+   there must stay RTL. */
+[dir="rtl"] .notranslate:not(.lang-switch__label) {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Those protected runs inside an RTL column would otherwise sit flush left
+   against the mirrored layout. The column is still RTL, so the block keeps its
+   right alignment while the text inside each line reads left to right. */
+[dir="rtl"] ul.notranslate,
+[dir="rtl"] ol.notranslate { text-align: right; }
+
+/* --------------------------------------------------------------------------
+   20. UTILITIES
+   -------------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 12px 18px;
+  font-family: var(--ff-ui);
+  font-style: normal;
+  font-weight: 600;
+}
+.skip-link:focus { left: 8px; top: 8px; color: var(--on-accent); }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.sticky-col { position: sticky; top: 106px; }
+@media (max-width: 900px) { .sticky-col { position: static; } }
+
+.split { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(30px, 4.5vw, 66px); }
+@media (max-width: 900px) { .split { grid-template-columns: 1fr; } }
+
+.mt-0 { margin-top: 0; }
+.measure { max-width: 68ch; }
+
+/* GSAP reveal: pre-animation state, removed if JS is unavailable.
+
+   PERFORMANCE, IMPORTANT. An element at opacity 0 is not a Largest Contentful
+   Paint candidate. This rule used to apply to every .reveal on the page,
+   including the hero, which meant LCP could not happen until GSAP had been
+   fetched from a third-party CDN, parsed, registered and run. That put the
+   site's single most important paint metric behind two external scripts.
+
+   Two fixes, both deliberate:
+   1. `.reveal--hold` is now the opt-in for pre-hiding, and it is applied by
+      site.js at runtime ONLY to elements that start outside the viewport.
+      Anything visible on load paints immediately at full opacity.
+   2. Google's own guidance is not to fade in the LCP element at all, so hero
+      content is intentionally never animated.
+
+   Never reintroduce a blanket `.reveal { opacity: 0 }` rule here. */
+.js .reveal--hold { opacity: 0; transform: translateY(18px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .js .reveal--hold { opacity: 1 !important; transform: none !important; }
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
