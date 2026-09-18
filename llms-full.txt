@@ -1,0 +1,292 @@
+# Fawaz BH, SEO, AEO and GEO Consultant
+
+> Fawaz BH is an independent SEO, AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) consultant based in Kushal Nagar, Kodagu, Karnataka, India, helping businesses across Karnataka, South India and India rank on Google and get cited by AI answer engines including ChatGPT, Perplexity, Gemini, Claude and Microsoft Copilot.
+
+Website: https://fawazbhseo.in/
+Entity name: Fawaz BH (alternate names: FawazBHSEO, Fawaz B H)
+Job title: SEO, AEO and GEO Consultant
+Working languages: English, Kannada, Malayalam, Hindi, Tamil, Telugu. Keyword research is run in the relevant language alongside English, including transliterated forms. For large volumes of consumer-facing final copy, Fawaz will say when a native writer is worth budgeting for, because researching a language and writing polished copy in it are not the same skill.
+Marathi is not a working language, which is why the Mumbai and Pune pages say so plainly rather than implying otherwise.
+
+## Site languages
+
+Two different things are often confused here, so they are stated separately.
+
+What language you can READ the site in. The site is readable in 103 languages, and the whole page is translated, not only the navigation. Selecting a language translates every part of the document: headings, body copy, service cards, FAQs, form labels and the footer. Ten of those languages also have hand written interface files, which are English, Kannada, Hindi, Malayalam, Tamil, Telugu, German, French, Spanish, Arabic and Simplified Chinese. The rest are translated in the browser at the moment they are chosen. More languages can be added without changing how the site works.
+
+How the full page translation works, stated plainly because it affects how much weight to give the wording on a translated page. Body copy outside those ten interface files is machine translated in the visitor's browser as the page loads, by a translation engine rather than by a person. Brand terms are protected from that process and stay exactly as written: the name Fawaz BH, the business name FawazBHSEO, the acronyms SEO, AEO and GEO, the company name ILMERA, the phone number, the email address, and the six English footer links that name specific services. Every runtime translated page is marked noindex and carries a visible notice saying it is machine translated and that the English original is authoritative.
+
+What language CONSULTING is delivered in. That is English, Kannada, Malayalam, Hindi, Tamil and Telugu, and only those. It is a fact about Fawaz, not about the website. Somebody reading the site in Japanese is not a claim that anyone here speaks Japanese, and the site never implies otherwise.
+
+English is the source language and the authoritative version. It lives at the root, for example https://fawazbhseo.in/seo-services. Other languages sit under a short prefix, for example https://fawazbhseo.in/kn/seo-services for Kannada. Where a translation and the English original differ, English is correct.
+
+Every translation declares how it was produced, and the site says so on the page:
+- Machine. Translated by AI, not yet checked by a person. Fully readable by anyone who selects it, labelled with a visible notice and an "AI" badge in the language menu, and deliberately kept out of Google.
+- Reviewed. A machine draft that a person who reads the language has corrected. Eligible to be indexed, and carries a shorter notice.
+- Human. Written or fully rewritten by a person in that language. Indexed, no notice.
+
+The current locale publication gate checks the interface file, publication status, translation stage and completeness. That is not a complete editorial review of every translated page body. Runtime translations remain noindex and need full-page quality review before promotion. Some search engines can render JavaScript; browser translation is not inherently impossible to index, and machine translation alone is not automatically spam. Language routes must remain crawlable for a crawler to read their noindex instructions. Actual indexing is decided by the search engine, not by this file.
+
+Only English is currently intended to be indexable. Other locale pages are offered to readers with noindex instructions. This is the site's policy, not a verified statement that every translated URL is absent from every search index.
+
+Language selection is offered, never forced. If a visitor's browser asks for a language the site has, a small bar offers to switch and remembers the answer, and it says when what is on offer is a machine translation. Nobody is redirected by region, because plenty of people in Karnataka, Kerala and Tamil Nadu prefer to read technical content in English, and because redirecting by region can hide pages from crawlers.
+
+## Practical search guides
+
+The blog at https://fawazbhseo.in/blog links to three educational guides:
+- https://fawazbhseo.in/blogs/seo-aeo-geo-differences explains the overlapping meanings of SEO, AEO and GEO, with an illustrative business example and prioritisation advice.
+- https://fawazbhseo.in/blogs/measure-ai-search-visibility describes a manual test protocol for mentions, direct-site citations, third-party citations and recommendations. Rates refer only to the recorded sample, not all user prompts or market share.
+- https://fawazbhseo.in/blogs/local-seo-checklist-karnataka covers business profile accuracy, genuine service areas, useful pages, language research, reviews and enquiry measurement.
+- https://fawazbhseo.in/assets/downloads/ai-visibility-log.csv is a blank, header-only worksheet, not a set of measured results or an automated AI integration.
+
+These guides were prepared with AI assistance and say so visibly. Their examples and sample calculations are illustrative, not client performance evidence. Do not describe all website copy as personally written without AI. Client drafting and approval arrangements are agreed in the scope. This summary supports navigation; it does not guarantee indexing, rankings or AI citations.
+
+## Overview
+
+Fawaz BH is an independent, founder-led search consultant. Every engagement, meaning audit, strategy, structured-data implementation and content direction, is handled directly by Fawaz BH, without account managers, junior handoffs or agency layers. The client list is kept deliberately small so each project receives direct attention; the site states plainly that this is a capacity limit and that Fawaz BH will say so when at capacity rather than subcontract.
+
+The practice treats SEO, AEO and GEO as one connected strategy rather than separate services. SEO optimises for traditional search engines like Google. AEO (Answer Engine Optimization) targets featured snippets, voice results and direct-answer surfaces. GEO (Generative Engine Optimization) optimises content to be cited inside AI-generated answers from engines such as ChatGPT, Perplexity, Gemini and Claude. Strong SEO foundations make AEO and GEO easier, which is why all three are run together. The AEO and GEO pages state the distinction more precisely: AEO targets *extraction* (an engine lifts one passage from your page and displays it), while GEO targets *synthesis* (a model reads several documents, writes its own prose and credits a handful of sources).
+
+The consultancy is rooted in Kodagu (Coorg), a tier-2 market, giving first-hand understanding of bilingual Kannada-English search behaviour, seasonal tourism and agri-business demand, and local competitive dynamics that national agencies routinely misread. Fawaz BH built a foundation in SEO fundamentals, meaning technical SEO, on-page architecture and local search, before layering in the newer answer-engine disciplines as search shifted toward AI-generated answers.
+
+Fawaz BH is also co-founder and Marketing Head at ILMERA Study Abroad (https://ilmerastudyabroad.com/), described on the Karnataka page as his own business rather than a client, and used as a place where the same SEO/AEO/GEO method is run on a P&L he owns.
+
+Structured-data signals on the site describe the entity as a Person and a ProfessionalService. Declared areas of knowledge (knowsAbout) include: Search Engine Optimization, Answer Engine Optimization, Generative Engine Optimization, Local SEO, Technical SEO, Entity SEO, Schema.org structured data, Core Web Vitals, LinkedIn SEO, and Content strategy.
+
+## Credentials
+
+Fawaz BH holds the following certifications and qualifications:
+- Ahrefs Academy certification: keyword research, backlink analysis, competitive research and technical site auditing; described as the framework every audit is scoped against.
+- Semrush AI Visibility Essentials certification: prompt-level tracking, share of voice inside generated answers, and the distinction between being retrieved and being cited; described as the certification underpinning the GEO and AEO work.
+- Semrush Technical SEO and AI Search Essentials certification: crawlability, indexation, site health and structured data, and how those foundations feed AI search surfaces.
+- Advanced Diploma in Digital Marketing, Adrex Media School: broad grounding across digital channels, used to identify when a visibility problem is not an SEO problem.
+
+Four named qualifications from three named issuers, all presented as independently checkable with the issuing body. Fawaz BH started in SEO in early 2025 and expanded into AEO and GEO as those disciplines emerged, giving early, hands-on experience in answer-engine and generative-engine optimisation while both fields were still new. The site frames this openly as a short record and declines to inflate it.
+
+## Services
+
+Fawaz BH offers full-stack search and digital marketing services, each personally delivered. The homepage presents four core disciplines; the Services page (https://fawazbhseo.in/seo-services/) expands these into six services plus social media marketing, performance marketing, and website design.
+
+Core disciplines (homepage):
+- Local SEO for Karnataka and South India: Google Business Profile optimisation, location landing pages, local citations, on-page and technical fixes, and competitor analysis, built around bilingual Kannada-English queries and "near me" intent for Kushal Nagar, Coorg, Bangalore, Mysore, Mangalore, Hubli and beyond.
+- AEO and GEO for answer engines: structuring expertise so ChatGPT, Perplexity, Gemini and Claude reference the client as the source, using entity clarity, Schema.org markup, fact-dense answer-first content and third-party corroboration. Tags: Entity SEO, Structured data, E-E-A-T.
+- Content strategy and keyword research: search-intent-led content including pillar pages, supporting clusters, location pages and conversion-focused service pages, engineered to rank in Google and to be quotable verbatim by an AI answer. Tags: Topic clusters, Search intent, Editorial.
+- LinkedIn SEO and founder authority: profile and content optimisation for founders, consultants and B2B operators, turning a personal name into a searchable, citable authority. Tags: LinkedIn SEO, Personal brand, B2B search, Authority.
+
+Six search services (Services page):
+1. Technical SEO and site architecture audits. Deliverables: Core Web Vitals (LCP, INP, CLS) optimisation; JavaScript rendering & crawl budget fixes; relevant structured data matching visible content and current feature eligibility; canonical, hreflang & indexation cleanup; XML sitemap, robots.txt & log file analysis.
+2. Local SEO for Kodagu, Bengaluru and Karnataka. Deliverables: Google Business Profile setup, optimisation & posts; Kannada + English bilingual keyword research; local citation building & NAP consistency audit; Karnataka directory submissions & local backlinks; city & neighbourhood landing page creation.
+3. AEO, Answer Engine Optimisation. Deliverables: consistent business identity and relevant profile checks; structured data review against visible content and current eligibility; featured snippet and People Also Ask opportunity review and tracking; author details, verifiable credentials and sources; per-engine AI citation tracking. Third-party inclusion and search appearances are not guaranteed.
+4. GEO, Generative Engine Optimisation. Deliverables: accessible content with clear headings, direct answers and useful detail; related customer questions grouped by intent; visibility review for Google AI Overviews, AI Mode and other relevant engines; factual accuracy and source-quality review; separate tracking of mentions, linked citations and recommendations.
+5. SEO content strategy and long-form writing. Deliverables: topical authority pillar & cluster mapping; long-form SEO articles (1,500 to 3,500 words); service, location & comparison page copywriting; strategic internal linking & anchor text planning; content refresh & keyword cannibalisation fixes.
+6. LinkedIn and personal brand SEO. Deliverables: LinkedIn profile SEO (headline, About, skills, keywords); personal-brand content calendar & thought leadership; Instagram, X & YouTube social SEO; personal website SEO with Person schema & sameAs entity graph; digital PR & authority backlink outreach.
+
+Digital marketing services (Services page):
+- Social Media Marketing: content, community management and paid-social setup support across 1 to 3 platforms depending on tier.
+- Performance Marketing: Google Ads and Meta Ads campaign management (management fee only; ad spend paid directly to the platform, separate from the fee).
+- Website Design: mobile-responsive site builds, from a 5 to 8 page business site up to a fully custom design system with CMS and schema markup.
+
+Additional service framings introduced on the newer location pages:
+- SXO (search experience optimisation): named on the Kodagu page as "pages that convert": fast, mobile-first pages built to load on weak Western Ghats signal and to turn a WhatsApp tap into an enquiry, with Core Web Vitals, clarity and layout built in rather than patched on.
+- Google and Meta Ads (SEM/PPC) with seasonal budgeting: paid campaigns weighted to spend when Bengaluru and Mysuru travellers are actually searching and pulled back during the monsoon lull.
+- Web development as a standard-inclusive build: schema-ready sites with WhatsApp CTAs, direct booking and structured data described as standard rather than paid extras.
+- AEO-only scope: the AEO page states that AEO-only engagements exist and are quoted after the free audit, alongside the packaged SEO + AEO tier.
+
+Engagement process (four steps): (01) Free discovery and 360 degree audit, covering technical, on-page, local, AEO and GEO review, delivered as a written document the prospect keeps whether or not they hire; (02) Tailored strategy and roadmap, a prioritised or 90-day plan built around the client's city, niche, competitors and revenue goals, with scope and price agreed in writing before invoicing; (03) Hands-on execution, meaning technical fixes, structured data, content, link building, entity optimisation and authority-building carried out directly; (04) Review, refine and reporting, covering rankings, AI citations, organic traffic and conversions with continuous optimisation.
+
+## Pricing
+
+All figures are published, starting rates in INR; final pricing is confirmed after a free audit. Advertising spend for performance marketing and paid social is always paid directly to the ad platform and is never included in the management fee.
+
+SEO:
+- Starter, Local SEO: ₹14,999/month. Google Business Profile optimisation, local keyword research (5 keywords), on-page SEO for 5 pages, monthly ranking and traffic report. Ideal for Kodagu and Karnataka SMEs.
+- Growth, Full-Stack SEO plus AEO (Most Popular): ₹29,999/month. Everything in Starter, plus technical SEO audit and fixes, AEO and AI-engine citation building, 4 long-form SEO articles/month, 5 quality contextual backlinks/month. Ideal for Karnataka and South India growth.
+- Enterprise, SEO plus AEO plus GEO: Custom/tailored quote. Everything in Growth, plus GEO, national keyword and entity strategy, 8+ long-form articles/month, digital PR and authority link campaigns. Ideal for national Indian brands and SaaS.
+
+Social Media Marketing:
+- Starter, Presence: ₹11,999/month. 1 to 2 platforms, 12 to 16 posts/month, content calendar, basic reporting.
+- Growth, Engage (Most Popular): ₹22,999/month. 2 to 3 platforms, Reels and short-form video, community management, paid-ad setup support.
+- Enterprise, Scale: Custom/tailored quote. Multi-platform management, influencer outreach coordination, full paid-social ad management.
+
+Performance Marketing (management fee only; ad spend billed separately to the platform):
+- Starter, Single Platform: ₹11,999/month management fee. Google Ads or Meta Ads, for ad spend under ₹30,000/month.
+- Growth, Google plus Meta (Most Popular): ₹24,999/month management fee. Combined Google Ads and Meta Ads, for ad spend ₹30,000 to ₹1,00,000/month.
+- Enterprise, Full-Funnel: Custom, or 10 to 15% of spend. Multi-platform, higher ad spend, advanced conversion optimisation.
+
+Website Design (one-time build):
+- Starter, Business Site: ₹29,999. 5 to 8 page mobile-responsive site, basic on-page SEO, contact form.
+- Growth, Custom plus CMS (Most Popular): ₹64,999. 10 to 15 pages, custom design, schema markup, blog/CMS setup, speed optimisation.
+- Enterprise, Full Custom: Custom/tailored quote. Fully custom design system, advanced interactions, multi-page architecture, integrations.
+
+Pricing statements on the new pages (consistent with the above unless flagged):
+- Karnataka and India pages both restate ₹14,999/month for Starter local SEO, ₹29,999/month for full-stack SEO + AEO, and a custom post-audit quote for SEO + AEO + GEO.
+- The GEO page states GEO sits in the top tier because it depends on SEO and AEO foundations being in place first, and is scoped against audit findings rather than sold as a fixed tier.
+- Market context (not Fawaz BH's own rates), given on the AEO page: published AEO/AI-visibility packages in India commonly run from roughly ₹15,000 to over ₹50,000 per month, and international AEO specialists typically bill USD 100 to 150 per hour.
+- Every new page repeats that scope and price are agreed in writing before any work or invoicing, and that the discovery audit is free and kept by the prospect either way.
+
+## Location & Service Pages
+
+Five dedicated pages extend the practice into geography-specific and discipline-specific entry points. Each is written answer-first, carries its own FAQ block, and cross-links to the others.
+
+### SEO consultant in Kodagu (Coorg)
+- URL: https://fawazbhseo.in/seo-consultant-kodagu/ (canonical; also resolves without trailing slash)
+- Title: "SEO Consultant in Kodagu (Coorg) | Fawaz BH, FawazBHSEO"
+- Meta description: "SEO consultant in Kodagu based in Kushalnagar. Fawaz BH does SEO, AEO, GEO, Google Ads, social media and web development for Coorg businesses. Free audit."
+- Intent and focus: hyperlocal district-level page for Kodagu (Coorg), positioned against agencies that serve Coorg remotely from Mangaluru or Bangalore via a rented location page. Full-service framing, covering SEO, Google and Meta Ads, SXO, AEO, GEO, web development, digital marketing and social media management, rather than search only.
+- Town-level market segmentation (unique to this page): Madikeri & Suntikoppa as the district hub, with intense map-pack competition around Raja's Seat and the fort, serving Madikeri, Suntikoppa and Napoklu; Kushalnagar as the eastern gateway and home base, first major town on the NH275 route from Bengaluru, covering eco and cultural tourism search around Nisargadhama and the Bylakuppe Tibetan settlement, serving Kushalnagar, Kudige and the Nisargadhama corridor; Virajpet and south Kodagu for coffee trade and wildlife tourism near Nagarhole, serving Virajpet, Gonikoppal, Ponnampet and Ammathi; Somwarpet as estate country with the district's highest concentration of coffee-estate homestays, serving Somwarpet, Shanivarsanthe and Kodlipet.
+- Unique claims and arguments: coffee exporters in Virajpet need English-language sites reaching international buyers; Somwarpet estate properties can earn direct bookings and skip OTA commission entirely; a homestay winning one direct booking a week instead of paying 15 to 25% OTA commission usually covers its SEO cost several times over; WhatsApp is normally the closing channel for Kodagu businesses; local knowledge is first-hand rather than "from a dashboard 135 kilometres away."
+- Case-study reference: Green Coorg Spices, Kushalnagar, with an outbound link to the client site https://greencoorgspices.in/ and a differently worded testimonial (see Case Studies for the reconciliation flag).
+- FAQ coverage (8 questions): best SEO consultant in Kodagu; SEO cost in Coorg; how long results take in Kodagu; whether hiring is worth it for a small Coorg business; whether services extend beyond SEO to ads and social; social media management for Kodagu businesses; local consultant versus a Mangaluru or Bangalore agency; how a Kodagu business gets cited by ChatGPT and Perplexity.
+- Timelines stated: meaningful local movement usually within a few months because tier-2 Coorg is far less competitive than Bangalore; Google Business Profile and map-pack improvements sometimes within weeks; GEO visibility can surface quickly on recency-sensitive engines like Perplexity.
+- Head-level signals: robots index,follow,max-image-preview:large; og:type "profile"; og:site_name FawazBHSEO; og:locale en_IN; geo.region IN-KA; geo.placename "Kushalnagar, Kodagu, Karnataka"; geo.position / ICBM 12.4574, 75.9608.
+- CTAs and paths: prefilled WhatsApp audit links (wa.me/919481084038), tel:+919481084038, an on-page contact form at the #contact anchor, and buttons pointing to https://fawazbhseo.in/services/ (see flags, this differs from the /seo-services/ URL used elsewhere).
+- Naming note: this page consistently spells the town "Kushalnagar" (one word), where the rest of the site uses "Kushal Nagar".
+
+### SEO, AEO & GEO expert in Karnataka
+- URL: https://fawazbhseo.in/seo-consultant-karnataka/
+- Title: "SEO, AEO and GEO Expert in Karnataka | Fawaz BH, Kodagu"
+- Meta description: "Fawaz BH is an SEO, AEO and GEO expert in Karnataka, based in Kushal Nagar, Kodagu. Ahrefs- and Semrush-certified. The criteria to judge the best SEO expert in Karnataka against, and the work, city by city."
+- Intent and focus: state-level page treating Karnataka as four distinct search markets rather than one. Kodagu (seasonal, tourism- and agri-led, buyers arriving from Bengaluru and Mysuru); Bengaluru and Nelamangala (behaves like a national metro, agency-saturated SERPs, mostly English-only queries, won on precision rather than budget); Mysuru, Mangaluru and Udupi plus Manipal, Hassan and Chikkamagaluru (where the same buyer searches in English, Kannada script and transliterated Kannada within one session); and North Karnataka and statewide, covering Hubballi-Dharwad, Belagavi, Shivamogga, Davangere, Ballari and Kalaburagi, described as the state's least-contested search opportunity.
+- Named coverage: Kushal Nagar, Madikeri, Somwarpet, Virajpet, Kodagu district; Bengaluru, Nelamangala, Whitefield, Yelahanka, Bengaluru Rural.
+- Unique framing: a six-criterion buyer's checklist for judging "best SEO expert in Karnataka", applied to Fawaz BH as honestly as to competitors: verifiable certifications; who does the work after the pitch; whether all three disciplines are real capability or an AI upsell; genuine bilingual and local-market knowledge; publishing numbers only once verified; honesty about what cannot be guaranteed (no ranking or citation guarantees; only process, cadence and scope can be committed to).
+- Unique disclosure: Fawaz BH is co-founder and Marketing Head at ILMERA Study Abroad (https://ilmerastudyabroad.com/), his own company rather than a client.
+- Method detail (five steps, unique wording): build a Karnataka prompt set of 20 to 40 buyer-phrased prompts rather than a keyword list; query all five engines separately; separate "mentioned", "cited" and "absent"; fix the engine-specific bottleneck; build off-site presence rather than only on-site pages. Answer passages are specified here as roughly 40 to 60 words.
+- Third-party evidence cited: Yext's analysis of 6.8 million citations across 1.6 million AI answers (roughly 52% of Gemini citations from brand-owned sites, about 49% of ChatGPT citations from third-party sites, directory sources spiking to about 46% of ChatGPT citations on subjective "best in city" queries); Ahrefs' 75,000-brand study (branded web mentions r=0.664, branded anchors 0.527, backlinks 0.218); Ahrefs' finding that only 38% of AI Overview citations now come from top-ten organic pages, down from 76% a year earlier.
+- Head-level signals: robots index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1; og:type "website"; og:site_name FawazBHSEO; og:locale en_IN; geo.region IN-KA; geo.placename "Kushal Nagar, Kodagu, Karnataka"; geo.position / ICBM 12.4574, 75.9608. A visible breadcrumb ("Fawaz BH / SEO, AEO & GEO expert in Karnataka") sits in the hero.
+- Internal links out: /seo-consultant-kodagu/, /seo-consultant-india/, /aeo-consultant/, /geo-consultant/, /case-studies, /seo-services, /about/, homepage.
+- Page dateline: "Written and maintained by Fawaz BH · Last reviewed 30 July 2026."
+
+### SEO, AEO & GEO expert in India
+- URL: https://fawazbhseo.in/seo-consultant-india/
+- Title: "SEO, AEO and GEO Expert in India | Fawaz BH, Independent Consultant"
+- Meta description: "Looking for the best SEO expert in India? Fawaz BH is an independent SEO, AEO and GEO expert serving clients across India remotely from Kodagu, Karnataka. Ahrefs- and Semrush-certified. Four checkable criteria inside."
+- Intent and focus: national, fully remote engagements. Tier 01 metro India, covering Mumbai, Delhi NCR, Bengaluru, Hyderabad, Chennai, Pune, Kolkata and Ahmedabad, described as the hardest commercial SERPs in the country, where realistic strategy is entity strength plus long-tail and comparison coverage before head terms. Tier 02 tier-2 and tier-3 India, covering Indore, Coimbatore, Kochi, Jaipur, Lucknow, Nagpur, Surat, Bhubaneswar and Visakhapatnam, where first pages are still populated by thin directory listings.
+- Operating model (unique detail): delivery is access-based, not location-based. Required access: Search Console, Analytics, CMS or developer access, and Business Profile manager access where relevant. Everything else runs over scheduled calls and four written artefacts, being an audit document, a prioritised roadmap, an implementation log and a reporting pack, which is why national engagements cost the same to run as local ones.
+- Four national workstreams: national keyword, entity and topical-authority strategy (pillar-and-cluster architecture, internal linking that concentrates authority, deliberate comparison and "alternatives" coverage because that is the format AI assistants disproportionately retrieve); technical SEO for large and multi-location Indian sites (crawl budget, indexation logic, canonical and pagination handling, JavaScript rendering, Core Web Vitals, log-file review, Schema.org deployment, plus AI crawler access checks); AEO; and GEO across five engines reported separately.
+- Six-point "how to judge the best SEO expert in India" checklist, including one not stated elsewhere: whether the consultant refuses work that is wrong for them (an agency being the correct answer for twelve markets staffed next quarter).
+- "What actually changed in Indian search through 2026", six sourced shifts: core updates now arriving roughly every six weeks (March 2026 core update ran 27 March to 8 April, next began 21 May, a 43-day gap against a 2019 to 2023 norm of three to four months); March 2026 as the most volatile core update measured (SE Ranking: 79.5% of top-three URLs changing position versus 66.8% in December 2025, and 24.1% of top-ten pages falling out of the top 100, concurrent with a spam update); intermediaries losing and first-party sources gaining (Aleyda Solis, Lily Ray/Amsive, Sistrix); ranking top ten no longer winning the AI citation (Ahrefs, January 2026: 863,000 SERPs and roughly 4 million AI Overview URLs, about 38% of cited pages also ranking top ten, down from around 76%; Google's documented "query fan-out"); assistants overwhelmingly citing lists and third-party pages (Evertune: roughly 25,000 most-cited URLs across six models, about half listicles; 63% of nearly 400 million citations pointing to listicle-format pages, 40% to 65% by model, Copilot lowest and Gemini highest); and each engine rewarding something different (ChatGPT leaning on the Bing index with Wikipedia alone at roughly 7.8% of its citations; Perplexity with the strongest recency bias; Gemini surfaces overlapping most with Google's own results; Copilot sharing only about 4 to 6% of its most-cited URLs with any other model).
+- Explicit correction published on this page: llms.txt does nothing for Google rankings or AI Overview visibility. Google has stated its Search systems do not use the file and no major AI provider has confirmed acting on it. The site publishes one at https://fawazbhseo.in/llms.txt as a tidy machine-readable summary, not as a ranking factor.
+- Timelines stated: competitive national keyword sets typically six months or more; tier-2 city and lower-competition categories often two to four months.
+- Head-level signals: robots index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1; og:type "profile" with profile:first_name "Fawaz", profile:last_name "BH", profile:username "fawazbhseo"; twitter:site and twitter:creator @fawazbhseo; geo.region "IN" and geo.placename "India" (the only new page to declare national rather than IN-KA geo scope), geo.position / ICBM 12.4574, 75.9608. A visible breadcrumb ("Fawaz BH / SEO consultant in India") sits in the hero.
+- Internal links out: /aeo-consultant/, /geo-consultant/, /seo-consultant-karnataka/, /case-studies, /seo-services, /about/, homepage, /llms.txt.
+
+### AEO consultant, Answer Engine Optimization
+- URL: https://fawazbhseo.in/aeo-consultant/
+- Title: "AEO Expert in India and Karnataka | Answer Engine Optimization, Fawaz BH"
+- Meta description: "Fawaz BH is an independent AEO expert in India, based in Kodagu, Karnataka. Answer Engine Optimization for Google AI Overviews, ChatGPT, Perplexity, Gemini and Copilot, each engine measured separately."
+- Intent and focus: discipline page for AEO, national scope with Karnataka depth. States its own page as the demonstration, written, structured and marked up using the method it describes.
+- Definition published on the page: Answer Engine Optimization is the practice of structuring content, entities and markup so that answer engines can extract a specific passage from a page and present it as the direct answer to a question. The working unit is the passage, not the page, meaning a self-contained block of roughly 40 to 80 words that answers one question without depending on surrounding text.
+- Surfaces targeted: Google AI Overviews and AI Mode, featured snippets, People Also Ask, Google Assistant and voice results, Bing and Microsoft Copilot answers, and direct-answer panels. Seven answer surfaces are tracked separately: AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Claude, Copilot.
+- Four AEO workstreams: entity clarity and structured-data foundation (Person, Organization or ProfessionalService schema with a real sameAs graph, FAQPage and HowTo where warranted, Speakable for voice, credential markup, NAP and name consistency across every profile); answer-first content architecture (question-shaped H2s and H3s, answer in the first 40 to 80 words of each section, tables where comparison is the intent, checkable claims instead of adjectives); per-engine citation measurement; and local AEO for Karnataka and Kodagu (bilingual Kannada and English question mapping, Google Business Profile / category / service / review alignment with the on-site entity, and location-question pages for Kushal Nagar, Madikeri, Bengaluru, Mysuru and Mangaluru).
+- Karnataka and remote coverage restated here: Kushal Nagar, Madikeri, Kodagu (Coorg), Bengaluru, Mysuru, Mangaluru, Hubli-Dharwad, Udupi, Belagavi and Shivamogga; remote coverage includes Hyderabad, Chennai, Kochi, Coimbatore, Mumbai, Delhi NCR, Pune and pan-India.
+- Evidence and priority order published (six items, sources named): accessibility beats cleverness (Zyppy/Cyrus Shepard May 2026 meta-analysis of 54 studies: URL accessibility 9.5/10, preview control 9.2/10; plus Google's requirement that a page be indexed, snippet-eligible and included in Search generative AI features); classic ranking still the base layer (search rank 9.4/10; Ahrefs found 37.9% of cited URLs rank top ten, 31.2% at 11 to 100, and 31.0% outside the top 100); fan-out means clusters not keywords (fan-out rank 9.3/10, topic-cluster ranking 8.9/10; Google warns that spinning up a page per fan-out variant is scaled content abuse); mentions outperform links (branded mentions 0.664 versus 0.218 for backlinks, branded anchors 0.527, branded search volume 0.392, Domain Rating 0.326); structure then freshness (answer-near-top 8.8/10, AI-ready structure 8.6/10, self-contained passages 8.0/10, freshness 7.0/10; AI-cited content averaging 1,064 days old against 1,432 days for Google's organic top ten, a 25.7% advantage, with ChatGPT freshest at about 958 days); and a stated refusal to repeat the widely circulated "4.3× fresher content" claim, which traces to no primary study. Also cited: blog and content pages accounting for about 53% of AI citations versus 0.04% for syndicated press releases; ChatGPT and Perplexity domain-citation overlap around 11%, with about 71% of cited sources appearing on only one platform.
+- "Three things I won't sell you": no guaranteed AI citations; no llms.txt as a ranking factor (scored 2.0/10, lowest of 23 factors, so it will be implemented on request but not billed as AEO); no "AEO instead of SEO".
+- Measurement instrumentation named: Google Search Console's Generative AI performance report, and Bing Webmaster Tools' AI Performance report (Intents, Topics, Citation Share and period Compare, added in preview in June 2026), used alongside manual prompt testing rather than a single third-party score.
+- Timelines stated: extracted-answer wins such as featured snippets and PAA placements can appear within a few weeks when an already-ranking page is restructured; entity-level and brand-level AEO visibility typically three to six months.
+- Head-level signals: robots index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1; og:type "website"; og:site_name FawazBHSEO; og:locale en_IN; twitter:site / twitter:creator @fawazbhseo; geo.region IN-KA; geo.placename "Kushal Nagar, Kodagu, Karnataka"; geo.position / ICBM 12.4574, 75.9608.
+- Internal links out: /geo-consultant/, /seo-consultant-karnataka/, /seo-consultant-india/, /case-studies, /about/, /seo-services, homepage.
+- Page dateline: "Written and maintained by Fawaz BH · Last reviewed 30 July 2026."
+
+### GEO consultant, Generative Engine Optimization
+- URL: https://fawazbhseo.in/geo-consultant/
+- Title: "GEO Expert in India and Karnataka | Fawaz BH, GEO Consultant"
+- Meta description: "Fawaz BH is a GEO (generative engine optimization) expert in India, based in Kodagu, Karnataka. Evidence-led AI citation work across ChatGPT, Perplexity, Gemini, Claude and Copilot, measured per engine and reported honestly."
+- Intent and focus: discipline page for GEO, meaning being cited inside synthesised AI answers across five engines, delivered remotely across Karnataka and India.
+- Definition published on the page: Generative Engine Optimization is the practice of structuring a website, its entity signals and its off-site presence so that AI systems cite it inside generated answers; the unit of success is a citation inside an answer rather than a ranked position.
+- Engine grounding table (unique to this page): ChatGPT is grounded in Bing-backed retrieval plus training data, primary lever Bing indexation plus third-party mentions; Perplexity runs live multi-API web search on every query, lever freshness plus question-shaped structure; Gemini and AI Overviews use the Google index with RAG grounding and query fan-out, lever cluster rank across fan-out sub-queries; Claude uses live web search (reported as Brave-backed), lever extractable self-contained passages; Copilot uses the Bing index and Microsoft Graph surfaces, lever Bing rank plus entity consistency. Summarised as: invisible in ChatGPT and Copilot is usually a Bing problem, invisible in Perplexity a freshness problem, invisible in Gemini an entity problem.
+- Four GEO workstreams: AI visibility audit and prompt-set baseline (20 to 40 buyer-language prompts run separately through five engines, each result scored cited / mentioned-without-citation / absent, plus crawlability for AI user agents, HTTP status codes and nosnippet or max-snippet directives); entity resolution and structured data (Schema.org implementation covering Organization or Person, Service, FAQPage and BreadcrumbList, a sameAs graph across existing profiles, and consistency auditing so name, location, role and claims match everywhere); answer-first content architecture and cluster coverage (cluster mapping, self-contained quotable sections, tables, named sources and specific figures, with refresh cadence built in); and brand mention building with honest measurement (genuine editorial coverage, community participation and category presence rather than wire distribution or manufactured mentions, with the prompt set re-run on a fixed schedule and reported as a trend).
+- Evidence section (July 2026, every claim attributed): Google's own guidance, updated 10 July 2026, describing retrieval-augmented generation plus query fan-out; Zyppy's May 2026 meta-analysis top five factors: URL accessibility 9.5, classic search rank 9.4, fan-out rank 9.3, preview control 9.2, query-to-answer match 9.2, with freshness at 7.0 and llms.txt lowest at 2.0; Ahrefs' March 2026 study of 863,000 keywords and four million AI Overview URLs (38% of citations from top-ten pages, down from roughly 76% in mid-2025; about 31.2% from positions 11 to 100 and about 31.0% beyond position 100), with the explicit note that BrightEdge datasets disagree and the number is unstable; Ahrefs' 75,000-brand Spearman study (mentions r=0.664 versus backlinks r=0.218; top quartile of brands by mentions averaging 169 AI Overview mentions against 14 for the next quartile); the corrected freshness figure (16.98 million cited URLs across seven platforms, at 1,064 days versus 1,432 days, a 25.7% advantage, not "4.3 times", with ChatGPT freshest at 958 days); engine divergence (a 680-million-citation AI Platform Citation Source Index finding about 11% domain overlap between ChatGPT and Perplexity; AI Overviews and AI Mode returning the same URLs only around 13.7% of the time; Seer Interactive finding 87% of SearchGPT citations matched Bing's top results); Google's published list of GEO tactics that do nothing (llms.txt and other special AI files, artificial chunking, rewriting content specifically for AI systems, seeking inauthentic mentions, over-focusing on structured data as a citation requirement); BuzzStream's analysis of four million citations from 3,600 prompts across ten industries (blog and content pages 53.46%, news 14.09%, social 8.71%, roughly 80% earned editorial once brand-owned queries are excluded, syndicated press releases 0.04%, sampled over a single week in late January 2026 and therefore directional); and the commercial case (Seer Interactive, April 2026, 53 brands across 5.47 million queries, where pages cited in AI Overviews were associated with roughly 120% more organic clicks per impression; and SparkToro, June 2026, finding 68% of US Google searches ending without a click). Correlation-not-causation caveats are stated for each correlational finding.
+- Six checks for judging a GEO expert: per-engine measurement; distinguishing mentioned from cited; refusing to guarantee citations; being able to cite their own sources with study name, sample size and date; verifiable credentials in the discipline; and whether the person who pitched does the work. The page then states plainly where Fawaz BH is the wrong choice, being organisations needing twelve markets covered in parallel next quarter or a large team on standby.
+- Timelines stated: structural changes such as entity resolution, schema and answer-first restructuring typically start showing in AI answers within roughly six to twelve weeks, with mention-building compounding over three to six months; on freshness-sensitive engines like Perplexity, new content can surface within days of indexing.
+- Verification note unique to this page: client GEO performance figures are published only once verified against Search Console, GA4 or documented AI-answer screenshots.
+- Head-level signals: robots index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1; og:type "website" with profile:first_name "Fawaz", profile:last_name "BH", profile:username "fawazbhseo"; og:site_name FawazBHSEO; og:locale en_IN; twitter:site / twitter:creator @fawazbhseo; geo.region IN-KA; geo.placename "Kushal Nagar, Kodagu, Karnataka"; geo.position / ICBM 12.4574, 75.9608.
+- Internal links out: /aeo-consultant/, /seo-consultant-karnataka/, /seo-consultant-india/, /seo-consultant-kodagu/, /case-studies, /about/, /seo-services, /llms.txt, homepage.
+- Page dateline: "Written and maintained by Fawaz BH · Last reviewed 30 July 2026."
+
+## Measurement Method (AEO & GEO)
+
+The AEO, GEO, Karnataka and India pages all describe the same measurement process, which is the most specific new material on the site:
+
+1. Build a prompt set, not a keyword list. 20 to 40 prompts written in the words a real buyer would use with an assistant ("which interior designer should I hire in Nelamangala, Bengaluru" rather than "interior designer Bengaluru"), clustered into the sub-question themes query fan-out is likely to expand into.
+2. Query each engine separately: ChatGPT, Perplexity, Gemini, Claude and Copilot (plus Google AI Overviews and AI Mode on the AEO page, for seven surfaces), never averaged into a single AI visibility score, because their source pools barely overlap.
+3. Score three outcomes, not one: cited, mentioned without citation, and absent. Being mentioned without a citation usually means the entity is understood but the page is not the source, described as a structured-data and freshness problem and the fastest to fix.
+4. Diagnose the engine-specific bottleneck: Bing indexing plus third-party and directory presence for ChatGPT and Copilot; freshness, entity clarity or extractability for Perplexity; weak owned pages, schema mismatch or Google Business Profile gaps for Gemini and AI Overviews.
+5. Re-run on a fixed schedule and report as a trend, cross-checked against first-party data in Google Search Console's Generative AI performance report and Bing Webmaster Tools' AI Performance report. A single check is treated as anecdote, because generative answers are volatile enough that the same prompt can return different sources hours apart.
+
+Stated limits, repeated across all five pages: nobody controls what a language model quotes, so no citation or ranking is guaranteed; what is committed to is process, cadence and scope, meaning a free written audit the prospect keeps, a scope agreed in writing before invoicing, and plain-English reporting on rankings, traffic, conversions and per-engine citations.
+
+## Case Studies
+
+Two client engagements are documented. The site states that quantified results are shown only once verified via Google Search Console, GA4 and Google Business Profile insights, and the GEO page adds documented AI-answer screenshots as a third acceptable verification source, and that unverified figures are marked as pending rather than invented.
+
+Green Coorg Spices, organic spice brand, Kushal Nagar / Kushalnagar, Kodagu. Client site: https://greencoorgspices.in/
+- Challenge: A premium organic spice brand with near-zero online visibility, outranked on Google by larger Bangalore and Mysore brands for high-intent searches such as "coorg spices online" and "buy kodagu spices."
+- Result (as stated): Reached Google's first page for target Kodagu spice keywords within roughly four months (~4 months is the only figure shown as confirmed anywhere on the site), with online orders growing and first AI-engine citations beginning to appear. The India page reframes the same engagement as a pattern: a tier-2 brand competing for buyers roughly 250 km away in Bengaluru and Mysuru.
+- Metrics marked as pending/unverified: organic traffic increase, number of keywords on page one, online orders growth multiple, and AI-engine citation evidence.
+- Client quote, version A (existing, marked pending approval): "Fawaz helped us reach the first page of Google, and our online orders from Bangalore and Mysore have grown. He genuinely understood the Kodagu market."
+- Client quote, version B (published on the Kodagu page): "We went from page one being a distant dream to real online orders coming in from Bangalore and Mysore. Fawaz understood the Kodagu market in a way no one else we spoke to did."
+- Flag: two materially different wordings of the same testimonial are now live. Not reconciled here. Confirm which version the client approved before either is treated as canonical.
+
+Neelachandra Construction and Interiors, a construction and interiors company in Nelamangala, Bengaluru.
+- Challenge: A construction and interiors firm needed a professional web presence and stronger digital visibility to match its offline reputation.
+- Scope: Website design and build (including legal pages such as Terms & Conditions and Privacy Policy), technical fixes, and digital marketing support, delivered directly by Fawaz BH.
+- Status: Engagement in progress. No testimonial or verified ranking/traffic results yet; this case study will be updated with confirmed metrics once available via Google Search Console, GA4 or Google Business Profile insights. The Karnataka page also references current web and search work for a construction and interiors firm in Nelamangala, Bengaluru.
+
+In-progress engagements (case studies to be published on completion, with verified numbers). The India page updates this list:
+- Two construction and interiors domains in outer Bengaluru (previously documented as one).
+- Hospitality and homestay client in Madikeri, Kodagu (campaign active).
+- Multi-speciality healthcare clinic in Karnataka (local ranking campaign in progress).
+No testimonials or performance figures are published for any of these, and the site states none will be until the client provides them or the data is verified.
+
+## About
+
+Fawaz BH grew up in Kushal Nagar, Kodagu (Coorg), a region of homestays, spice brands and small boutiques that were often excellent but nearly undiscoverable online. Watching good local businesses lose customers to weaker but better-optimised competitors is the stated reason for entering search work.
+
+The stated method and principles: (1) direct, one-person engagement with no middlemen; (2) genuine local knowledge as an advantage, including bilingual Kannada-English query behaviour and tier-2 market dynamics; (3) building for AI answers, not just links, through structured data, entity clarity and fact-dense quotable content from day one; (4) honesty over vanity metrics, reporting real ranking, traffic and citation-visibility data, including correcting popular statistics that do not survive checking, and naming study, sample size and date for every figure published; and (5) staying on the AEO/GEO frontier through continuous testing against algorithm changes, AI Overview behaviour and LLM citation patterns.
+
+Geographic service area and audience:
+- Kodagu (home district, town-level coverage): Kushal Nagar / Kushalnagar, Kudige, the Nisargadhama corridor, Madikeri, Suntikoppa, Napoklu, Somwarpet, Shanivarsanthe, Kodlipet, Virajpet, Gonikoppal, Ponnampet, Ammathi; also Bylakuppe as a search-demand cluster.
+- Karnataka (home ground): Kushal Nagar, Madikeri, Kodagu (Coorg), Bangalore/Bengaluru, Mysore/Mysuru, Mangalore/Mangaluru, Hubli-Dharwad / Hubballi-Dharwad, Udupi, Belagavi, Shivamogga, Davangere; also Virajpet, Somwarpet, Nelamangala, Whitefield, Yelahanka, Bengaluru Rural, Manipal, Hassan, Chikkamagaluru, Ballari and Kalaburagi.
+- South India (remote engagements): Hyderabad, Chennai, Kochi, Coimbatore.
+- India (fully remote engagements nationwide): Mumbai, Delhi NCR, Pune, Kolkata, Ahmedabad, Indore, Jaipur, Lucknow, Nagpur, Surat, Bhubaneswar, Visakhapatnam, and pan-India.
+- Beyond India: a small number of selective remote AEO/GEO projects.
+- Target audience (B2B): tourism, D2C and B2B businesses; SMEs, startups, growing enterprises, SaaS, founders, consultants and B2B operators. In Kodagu specifically: homestays, resorts, coffee estates and coffee exporters, spice and produce brands, clinics, restaurants, cafes, travel desks and retail shops. Local SEO benefits from local knowledge; strategy, technical work, answer-engine optimisation and measurement are delivered remotely.
+
+Structured-data entity signals (schema.org):
+- @type Person: name "Fawaz BH"; jobTitle "SEO, AEO and GEO Consultant"; address in Kushal Nagar, Karnataka, IN (postalCode 571234 on some pages; the five newer pages all print "Kushal Nagar / Kushalnagar, Kodagu, Karnataka 571234, India" in the footer); homeLocation "Kushal Nagar, Kodagu, Karnataka, India"; knowsLanguage en, kn; hasCredential entries for Ahrefs Academy, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and the Adrex Media School diploma; sameAs LinkedIn (linkedin.com/in/fawazbh), X (x.com/fawazbhseo), Instagram (instagram.com/fawazbhseo).
+- @type ProfessionalService: name "FawazBHSEO, SEO, AEO and GEO Consulting"; areaServed Karnataka, South India, India (and Kodagu on the Services page); priceRange "₹₹"; serviceType includes Local SEO, Technical SEO, Answer Engine Optimization, Generative Engine Optimization, Content Strategy, LinkedIn SEO, Social Media Marketing, Performance Marketing, Website Design.
+- Additional schema types across pages: WebSite, WebPage, AboutPage, CollectionPage, FAQPage, BreadcrumbList, ItemList, and Article (one per documented case study).
+- Head-level entity signals verified on the five new pages (2026 update): self-referencing canonical URLs with trailing slashes; robots index,follow with max-image-preview:large (plus max-snippet:-1 and max-video-preview:-1 on the Karnataka, India, AEO and GEO pages, which matters because preview control is one of the highest-evidence AI citation factors the site itself cites); author meta "Fawaz BH"; geo.region IN-KA with geo.placename "Kushal Nagar, Kodagu, Karnataka" on the Kodagu, Karnataka, AEO and GEO pages, and geo.region "IN" with geo.placename "India" on the India page; geo.position and ICBM 12.4574, 75.9608 on all five; og:site_name "FawazBHSEO"; og:locale "en_IN"; og:image https://fawazbhseo.in/og-fawazbhseo.webp (1200×630); twitter:card summary_large_image with twitter:site and twitter:creator @fawazbhseo.
+- og:type varies by page and is worth normalising deliberately: "profile" on the Kodagu and India pages (both carrying, or expected to carry, profile:first_name "Fawaz", profile:last_name "BH", profile:username "fawazbhseo", and these tags are confirmed present on the India and GEO pages) and "website" on the Karnataka, AEO and GEO pages.
+- Pending verification: the JSON-LD blocks on the five new pages could not be retrieved in this pass (the raw HTML fetch truncated before reaching them), so no new @type, sameAs or Service entries are asserted for them here. What is visible on-page and consistent with the existing types: breadcrumb navigation in the hero of the Karnataka, India and GEO pages (BreadcrumbList candidates), an eight-question FAQ block on the Kodagu page and eight-question blocks on the Karnataka, India, AEO and GEO pages (FAQPage candidates), and a five-row engine-grounding comparison table on the GEO page (Table/Dataset candidate). Confirm these against the live markup before publishing them as declared entity signals.
+- New outbound entity relationships introduced: ILMERA Study Abroad (https://ilmerastudyabroad.com/) as a founder and employer relationship, specifically co-founder and Marketing Head, and Green Coorg Spices (https://greencoorgspices.in/) as a client relationship. Neither currently appears in the documented sameAs graph.
+- Schema deliverables named for clients (distinct from the site's own markup): Person, Organization or ProfessionalService with a real sameAs graph, Service, FAQPage, HowTo, Speakable, BreadcrumbList, credential markup, and NAP/name consistency auditing across every profile that mentions the entity. Both the AEO and GEO pages state explicitly that Google does not require special markup for AI features, so this work is scoped for entity resolution and rich results rather than as a citation hack.
+
+## Reconciliations & Flags
+
+Items where the new pages differ from what is already documented, or from each other. Recorded rather than silently overwritten.
+
+- Services URL: the Kodagu page links to https://fawazbhseo.in/services/ for "services & pricing", while every other page (and this file) uses https://fawazbhseo.in/seo-services. Confirm which is canonical and whether the other redirects.
+- Kodagu pricing language: the Kodagu FAQ says SEO for a small Kodagu business "generally starts in the low thousands of rupees per month for local SEO and Google Business Profile work." The published Starter tier is ₹14,999/month. Either the FAQ is describing the wider market rather than Fawaz BH's rate card, or the two need aligning.
+- Testimonial wording: two different Green Coorg Spices quotes are live (see Case Studies). The existing file marks the earlier version as pending client approval.
+- Answer-passage length: the Karnataka page specifies self-contained answer passages of roughly 40 to 60 words; the AEO page specifies 40 to 80 words. Minor, but inconsistent if an engine quotes both.
+- Town-name spelling: "Kushalnagar" (one word) throughout the Kodagu page versus "Kushal Nagar" on the Karnataka, India, AEO and GEO pages and in the schema address. NAP consistency is a signal the site sells, so this is worth standardising.
+- City-name transliteration: Bangalore/Bengaluru, Mysore/Mysuru, Mangalore/Mangaluru and Hubli-Dharwad/Hubballi-Dharwad all appear in both forms across pages. Probably intentional for query coverage, but should be a deliberate choice rather than drift.
+- Languages: RESOLVED. Six working languages, English, Kannada, Malayalam, Hindi, Tamil and Telugu, as stated at the top of this file. The older nine-language claim that added Spanish, Arabic and Italian was inaccurate and has been removed site-wide. Note this is a separate fact from the 103 languages the website is readable in, and the two should never be merged: reading the site in a language is not a claim that Fawaz BH works in it.
+- Engagement count: the India page describes two construction and interiors domains in outer Bengaluru; this file previously documented one (Neelachandra, Nelamangala). The second is unnamed.
+- Unlabelled stat counters appear near the bottom of the Karnataka, India, AEO and GEO pages (for example 4 / 8 / 5 / 2 / 1 on the Karnataka page). The labels were not recoverable in extraction, so nothing is asserted from them here; if these are client or engagement counts they should be labelled, since unlabelled numerals are easy for an answer engine to misattribute.
+- Verification sources now differ slightly by page: Search Console, GA4 and Google Business Profile insights site-wide; the GEO page adds documented AI-answer screenshots.
+
+## Contact
+
+- Phone: +91 94810 84038 (tel:+919481084038)
+- WhatsApp: https://wa.me/919481084038. The five new pages each use prefilled, page-specific WhatsApp links (Kodagu audit, Karnataka audit, India-wide SEO/AEO/GEO audit, AEO audit, GEO / AI visibility audit).
+- Email: fawazbhseo@gmail.com and admin@fawazbhseo.in
+- On-site contact form: #contact anchor on the Kodagu page ("I reply personally, usually the same day").
+- LinkedIn: https://linkedin.com/in/fawazbh
+- X (Twitter): https://x.com/fawazbhseo
+- Instagram: https://www.instagram.com/fawazbhseo
+- Machine-readable summaries: https://fawazbhseo.in/llms.txt (published as a human- and machine-auditable entity summary, explicitly not as a ranking factor) and this file.
+- Location: Kushal Nagar · Kodagu · Karnataka 571234 · India (12.4574, 75.9608)
+- Availability: Available for new engagements.
+- Primary calls to action: Book a free 30-minute discovery audit via WhatsApp or phone, framed by discipline as a free Kodagu audit, Karnataka audit, India-wide audit, AEO audit (baseline prompt set across every answer engine) or GEO / AI visibility audit (written baseline across five generative engines). The audit is free, delivered as a written document the prospect keeps whether or not they hire, and scope and price are agreed in writing before any invoicing.

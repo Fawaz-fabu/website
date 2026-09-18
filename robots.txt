@@ -1,0 +1,18 @@
+# Crawl policy for https://fawazbhseo.in
+# Public pages and rendering assets are crawlable by search and AI agents.
+# One shared group avoids named agents bypassing the internal-path exclusions.
+User-agent: *
+Allow: /
+Disallow: /includes/
+Disallow: /locales/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+
+# Do not block language URLs here: crawlers need access to read their noindex.
+# Incomplete translations retain page-level noindex and are not in the sitemap.
+# robots.txt controls crawling, not guaranteed exclusion from search results.
+# Internal-path exclusions are not access controls; server rules remain needed.
+# Guidance: https://developers.google.com/search/docs/crawling-indexing/block-indexing
+
+Sitemap: https://fawazbhseo.in/sitemap.xml

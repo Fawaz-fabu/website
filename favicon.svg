@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" role="img" aria-label="FawazBHSEO">
+  <title>FawazBHSEO</title>
+  <!-- Same FS mark geometry as the header logo in includes/header.php.
+       This exists because favicon.ico is 269 KB, which is an absurd payload
+       for an icon. Any browser that supports SVG icons will use this file and
+       never request the .ico at all. Do not restyle the mark here without
+       making the same change in header.php. -->
+  <rect width="38" height="38" fill="#241E17"/>
+  <path d="M7 9h11v3.4h-7.2v3.6h6.4v3.4h-6.4V29H7z" fill="#EDE2C8"/>
+  <path d="M31 13.1h-3.7c0-1.1-.8-1.8-2.2-1.8-1.3 0-2.1.6-2.1 1.5 0 .8.6 1.2 2 1.6l1.9.5c2.7.7 4.1 2.1 4.1 4.5 0 3.1-2.4 5.1-6 5.1-3.7 0-6.1-2-6.1-5.2h3.8c0 1.3.9 2.1 2.4 2.1 1.4 0 2.2-.6 2.2-1.6 0-.8-.6-1.3-2-1.6l-1.9-.5c-2.7-.7-4.1-2.2-4.1-4.5 0-3 2.4-4.9 5.9-4.9 3.6 0 5.9 1.9 5.9 4.8z" fill="#EDE2C8"/>
+</svg>
