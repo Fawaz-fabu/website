@@ -200,7 +200,7 @@ $creds = [
 
 /* ── Proof ────────────────────────────────────────────────────────────── */
 $patterns = [
-    ['Pattern', 'A tier-2 brand ranking in a metro market', 'A Kushal Nagar spice producer competing for buyers 250 km away in Bengaluru and Mysuru. Reached Google&#8217;s first page for target Kodagu spice keywords in roughly four months, the only figure on this site shown as confirmed. Documented on the <a href="/case-studies">case studies page</a>, where remaining metrics are marked pending until verified.'],
+    ['Engagement', 'Green Coorg Spices, Kodagu', 'Read the engagement notes and the client-approved testimonial on the <a href="/case-studies">case studies page</a>. No numerical client performance result is presented.'],
     ['Pattern', 'Live engagements, marked live', 'Two construction and interiors domains in outer Bengaluru, a homestay client in Madikeri, and a multi-speciality clinic in Karnataka are currently in progress. No testimonials or performance figures are published for any of them yet, and none will be until the client provides them or the data is verified.'],
     ['Background', 'The longer version', 'How I got into search in early 2025 and why I moved into answer-engine work as it was forming is on the <a href="/about">about page</a>. The full service and pricing breakdown, including published starting rates, is on the <a href="/seo-services">SEO services page</a>.'],
 ];
@@ -277,6 +277,9 @@ foreach ($faqs as $f) {
     ];
 }
 
+// After a real review, set its YYYY-MM-DD date here; otherwise leave null.
+$reviewed_on = null;
+
 $schema = json_encode([
     '@context' => 'https://schema.org',
     '@graph'   => [
@@ -287,8 +290,7 @@ $schema = json_encode([
             'name'  => 'SEO, AEO and GEO expert in India, Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
             'inLanguage'   => 'en-IN',
-            'dateModified' => '2026-07-30',
-        ],
+        ] + fbh_review_date_schema($reviewed_on),
         [
             '@type' => 'BreadcrumbList',
             '@id'   => 'https://fawazbhseo.in/seo-consultant-india#breadcrumb',
@@ -308,8 +310,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -325,22 +326,20 @@ $schema = json_encode([
         ],
         [
             '@type'      => 'ProfessionalService',
-            '@id'        => 'https://fawazbhseo.in/seo-consultant-india#practice',
-            'name'       => 'FawazBHSEO, SEO consultant in India',
+            '@id'        => 'https://fawazbhseo.in/#practice',
+            'name'       => 'FawazBHSEO',
             'founder'    => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'url'        => 'https://fawazbhseo.in/seo-consultant-india',
+            'url'        => 'https://fawazbhseo.in/',
             'telephone'  => '+91-94810-84038',
             'email'      => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'priceRange' => 'From INR 14999 per month',
             'address'    => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
             ],
-            'geo'        => ['@type' => 'GeoCoordinates', 'latitude' => 12.4574, 'longitude' => 75.9608],
             'areaServed' => [
                 ['@type' => 'Country', 'name' => 'India'],
                 'Mumbai', 'Delhi NCR', 'Bengaluru', 'Hyderabad', 'Chennai',
@@ -545,7 +544,7 @@ render_header('cities');
           </div>
           <?php endforeach; ?>
         </div>
-        <p class="field-note" style="margin-top:18px">Client performance figures appear on the <a href="/case-studies">case studies page</a> only once verified against Google Search Console, GA4 or Business Profile data. No estimated or illustrative numbers are published anywhere on this site.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. No numerical client performance results are published there.</p>
       </div>
 
     </div>
@@ -710,10 +709,8 @@ render_header('cities');
       'id'      => 'contact',
   ]); ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Also available: <a href="/seo-consultant-karnataka">SEO consultant in Karnataka</a>, <a href="/seo-consultant-kodagu">SEO consultant in Kodagu</a>, <a href="/aeo-consultant">AEO consultant</a>, <a href="/geo-consultant">GEO consultant</a>.
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="2026-07-30">30 July 2026</time>.
-  </p>
+  <p class="wrap field-note" style="padding-bottom:40px">Also available: <a href="/seo-consultant-karnataka">SEO consultant in Karnataka</a>, <a href="/seo-consultant-kodagu">SEO consultant in Kodagu</a>, <a href="/aeo-consultant">AEO consultant</a>, <a href="/geo-consultant">GEO consultant</a>.</p>
+  <?php fbh_render_review_date($reviewed_on); ?>
 
 </main>
 

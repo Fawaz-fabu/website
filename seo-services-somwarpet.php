@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-somwarpet',
     'city'    => 'Somwarpet',
     'region'  => 'Kodagu, Karnataka',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Somwarpet town', 'Shanivarsanthe', 'Kodlipet', 'Shantalli', 'Suntikoppa', 'Mallalli', 'Pushpagiri fringe'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Somwarpet, Kodagu, Karnataka',
-    'geo_position'  => '12.5966;75.8517',
-    'latitude'      => 12.5966,
-    'longitude'     => 75.8517,
 
     'market' => [
         ['The estate stay guest plans early, which is where the whole opportunity sits', 'Somewhere between a fortnight and two months passes between someone deciding on a Kodagu estate break and actually paying for it. In that gap they search for what an estate stay is really like, whether the property is reachable, what the harvest season looks like, and how it compares with three others they have shortlisted. Every one of those searches is a page an estate could own and almost none of them do. The booking is usually decided long before the booking button is clicked.'],

@@ -32,8 +32,7 @@ $schema = <<<'JSONLD'
       "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Kushal Nagar",
-        "addressLocality": "Kodagu",
+        "addressLocality": "Kushalnagar, Kodagu",
         "addressRegion": "Karnataka",
         "postalCode": "571234",
         "addressCountry": "IN"
@@ -90,7 +89,7 @@ render_header('contact');
         <div class="readout__row"><dt>Email</dt><dd><a class="notranslate" translate="no" href="mailto:fawazbhseo@gmail.com">fawazbhseo@gmail.com</a><small>Read personally</small></dd></div>
         <div class="readout__row"><dt>Admin email</dt><dd><a class="notranslate" translate="no" href="mailto:admin@fawazbhseo.in">admin@fawazbhseo.in</a></dd></div>
         <div class="readout__row"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/fawazbh" target="_blank" rel="noopener">linkedin.com/in/fawazbh</a><small>Connect or message</small></dd></div>
-        <div class="readout__row"><dt>Based in</dt><dd>Kushal Nagar<small>Kodagu, Karnataka 571234</small></dd></div>
+        <div class="readout__row"><dt>Based in</dt><dd>Kushalnagar<small>Kodagu, Karnataka, India, 571234</small></dd></div>
         <div class="readout__row"><dt>Hours</dt><dd>Mon to Sat<small>India Standard Time</small></dd></div>
       </dl>
 

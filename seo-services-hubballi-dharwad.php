@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-hubballi-dharwad',
     'city'    => 'Hubballi-Dharwad',
     'region'  => 'Karnataka',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Hubballi', 'Dharwad', 'Gokul Road', 'Vidyanagar', 'Navanagar', 'Kalghatgi', 'Kundgol'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Hubballi-Dharwad, Karnataka',
-    'geo_position'  => '15.3647;75.1240',
-    'latitude'      => 15.3647,
-    'longitude'     => 75.1240,
 
     'market' => [
         ['Two cities with two different economies, treated as one by most marketing', 'Hubballi is commerce, wholesale and distribution. Dharwad is administration, education and research. They are officially a twin city but they do not search alike, and the customer of a Hubballi trader has almost nothing in common with the parent researching a Dharwad college. Marketing that averages the two into a generic Hubballi-Dharwad message underperforms in both. The strategy has to pick which city and which economy it is actually speaking to.'],

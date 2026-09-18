@@ -270,6 +270,9 @@ foreach ($faqs as $f) {
     ];
 }
 
+// After a real review, set its YYYY-MM-DD date here; otherwise leave null.
+$reviewed_on = null;
+
 $schema = json_encode([
     '@context' => 'https://schema.org',
     '@graph'   => [
@@ -279,8 +282,7 @@ $schema = json_encode([
             'url'   => 'https://fawazbhseo.in/geo-consultant',
             'name'  => 'GEO expert in India, Generative Engine Optimization by Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'dateModified' => '2026-07-30',
-        ],
+        ] + fbh_review_date_schema($reviewed_on),
         [
             '@type'    => 'Person',
             '@id'      => 'https://fawazbhseo.in/#fawaz',
@@ -292,8 +294,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -585,7 +586,7 @@ render_header('services');
           <?php endforeach; ?>
         </div>
 
-        <p class="field-note" style="margin-top:18px">Client GEO performance figures are published on the <a href="/case-studies">case studies page</a> only once verified against Search Console, GA4 or documented AI-answer screenshots. Nothing illustrative or estimated is published as a result.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. No numerical client performance results are published there.</p>
       </div>
 
     </div>
@@ -653,7 +654,7 @@ render_header('services');
         <article class="card card--link reveal">
           <span class="card-index">Record</span>
           <h3><a href="/case-studies">Case studies</a></h3>
-          <p>Documented engagements across Karnataka and South India, with figures published only once verified. Background on how the practice started in early 2025 and moved into AEO and GEO as those disciplines formed is on the <a href="/about">about page</a>, and full service scope on <a href="/seo-services">SEO services</a>.</p>
+          <p>Engagement notes and client-approved testimonials, without numerical performance claims. Background on how the practice started in early 2025 and moved into AEO and GEO as those disciplines formed is on the <a href="/about">about page</a>, and full service scope on <a href="/seo-services">SEO services</a>.</p>
         </article>
       </div>
     </div>
@@ -692,9 +693,7 @@ render_header('services');
       'id'      => 'contact',
   ]); ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="2026-07-30">30 July 2026</time>.
-  </p>
+  <?php fbh_render_review_date($reviewed_on); ?>
 
 </main>
 

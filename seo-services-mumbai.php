@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-mumbai',
     'city'    => 'Mumbai',
     'region'  => 'Maharashtra',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['South Mumbai', 'Bandra and Khar', 'Andheri', 'Lower Parel', 'Powai', 'Thane', 'Navi Mumbai', 'Borivali'],
 
-    'geo_region'    => 'IN-MH',
-    'geo_placename' => 'Mumbai, Maharashtra',
-    'geo_position'  => '19.0760;72.8777',
-    'latitude'      => 19.0760,
-    'longitude'     => 72.8777,
 
     'market' => [
         ['Mumbai is linear, so local intent is even narrower than in other metros', 'The city runs north to south along a few transport corridors, and a customer in Borivali will not travel to Colaba for a routine service. Google resolves local intent accordingly, and travel time rather than distance is what governs the customer&#8217;s decision. Businesses optimising for Mumbai as a whole compete with everyone across a two hour commute for traffic that cannot convert. The winnable ground is a small number of localities along your own corridor, with a Business Profile whose service area matches where customers realistically come from.'],

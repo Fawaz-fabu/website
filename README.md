@@ -18,6 +18,20 @@ Built as PHP pages with function-wrapped shared includes. The design follows the
 
 ## 2. Currently completed
 
+### Owner-approved audit corrections, ranks 2 to 5
+
+This section supersedes historical descriptions of client metrics, testimonial approval, business coordinates and review dates below. The site remains plain PHP on Apache/Hostinger, uploaded manually. No routing, canonical, i18n or sitemap implementation was changed.
+
+- Removed the order-growth multiple and unsupported separate client performance counters/claims, including the four-month ranking claim and the homepage claim that AI engines recommend the consultant. Existing client testimonial wording remains verbatim, approved by the clients over WhatsApp as confirmed by the owner. There are no pending-approval labels for those testimonials.
+- `includes/head.php` provides optional `reviewed_on` validation and rendering. In each of the 16 existing location PHP files, `reviewed_on` is explicitly null. After an actual editorial review, replace null with that review's YYYY-MM-DD date. Missing or invalid dates output neither the visible review line nor WebPage dateModified. Older fixed review dates on discipline/hub pages were also replaced with null manual values. No request time, file time or upload time is used as a fallback. Guide preparation dates are unchanged.
+- AI SEO India's description and authorship explanation now agree with the site's AI-assisted writing/editing disclosure.
+- The one practice is `FawazBHSEO`, ID `https://fawazbhseo.in/#practice`, URL `https://fawazbhseo.in/`. Its only address is Kushalnagar, Kodagu, Karnataka, India, 571234. PostalAddress combines locality and district in `addressLocality`; no street address or coordinates are supplied. City services reference this same provider and use areaServed, not separate local-business entities. Geo-position/ICBM tags and market-coordinate configuration were removed.
+- Both existing LLM summaries were synchronised with these decisions, the current 32-page directory and unchanged published prices. They remain static summaries; they do not automatically update the primary chat endpoint.
+
+Verification: all 54 PHP files pass syntax checks; all 32 public content templates plus the 404 page render; all 32 Kannada variants retain their existing canonical/noindex behaviour; five Green Coorg Spices quote instances match the pre-edit markup exactly; all business schemas share one practice ID and the confirmed address; nine synthetic date cases pass. Protected sitemap, robots and locale implementation/data files are byte-identical. The generated sitemap still contains 32 entries. Public URLs and storage architecture are unchanged; no database or runtime dependency was introduced.
+
+Status: tested locally, not uploaded to Hostinger or pushed to GitHub. After manual upload, check homepage/case-study layout, the absence of result counters and review dates, client quotes, address/schema, existing canonical/robots output, language selection, the sitemap and ordinary navigation/forms. Actual Apache redirects and browser interactions need that host-level check. Preserve the existing sitemap date behaviour in this task; it still uses file modification times.
+
 ### Endpoint-based chat frontend, 2026-09-15
 
 **Latest narrow fix:** a successful automatic keyword fallback now suppresses the current question's 429 notice in both the visible thread and screen-reader status. The quota notice is deferred until fallback resolves, so it does not flash or get announced before an answer arrives. Disabled, missing, failed or empty fallback still shows the 429 message and contact link, never a retry. This revision changes only `assets/js/assistant.js`, `includes/head.php` (cache version), and this README; upload the two runtime files after the previous release. No CSS, backend, endpoint, secret, route or storage changes. The second requested adjustment was an unspecified placeholder and has not been inferred or implemented.

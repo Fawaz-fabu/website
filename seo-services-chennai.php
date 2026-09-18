@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-chennai',
     'city'    => 'Chennai',
     'region'  => 'Tamil Nadu',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Chennai city', 'Guindy', 'OMR and Sholinganallur', 'Ambattur', 'Sriperumbudur', 'Tambaram', 'Anna Nagar'],
 
-    'geo_region'    => 'IN-TN',
-    'geo_placename' => 'Chennai, Tamil Nadu',
-    'geo_position'  => '13.0827;80.2707',
-    'latitude'      => 13.0827,
-    'longitude'     => 80.2707,
 
     'market' => [
         ['Manufacturing and auto ancillary B2B is where I fit best here', 'Chennai and its industrial belt around Sriperumbudur and Ambattur hold a dense cluster of manufacturers, auto ancillary suppliers, engineering firms and industrial exporters. Their buyers are purchasing managers and OEM sourcing teams, they search in English, and they search on specification. Material grades, tolerances, capacity, certifications and compliance decide whether an enquiry happens. Most of these firms have sites that read like printed brochures with no specification detail at all, which makes this the strongest opportunity in the city for the kind of work I do.'],

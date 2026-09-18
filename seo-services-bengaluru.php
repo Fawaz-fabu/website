@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-bengaluru',
     'city'    => 'Bengaluru',
     'region'  => 'Karnataka',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Central Bengaluru', 'Whitefield', 'Indiranagar', 'Koramangala', 'HSR Layout', 'Jayanagar', 'Yelahanka', 'Nelamangala', 'Bengaluru Rural'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Bengaluru, Karnataka',
-    'geo_position'  => '12.9716;77.5946',
-    'latitude'      => 12.9716,
-    'longitude'     => 77.5946,
 
     'market' => [
         ['Near me searches here are neighbourhood searches, not city searches', 'Nobody in Bengaluru sensibly drives from Yelahanka to HSR Layout for a routine service, so Google resolves local intent at neighbourhood level and so does the customer. A business optimising for the city name is competing against everyone in a 40 km radius for traffic that will never convert. The winnable ground is the two or three localities you actually serve, treated properly, with a Google Business Profile whose service area and categories match reality rather than ambition.'],

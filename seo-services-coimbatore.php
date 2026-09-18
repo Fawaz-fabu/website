@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-coimbatore',
     'city'    => 'Coimbatore',
     'region'  => 'Tamil Nadu',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Coimbatore city', 'Peelamedu', 'Ganapathy', 'SIDCO industrial estate', 'Tiruppur', 'Mettupalayam', 'Sulur'],
 
-    'geo_region'    => 'IN-TN',
-    'geo_placename' => 'Coimbatore, Tamil Nadu',
-    'geo_position'  => '11.0168;76.9558',
-    'latitude'      => 11.0168,
-    'longitude'     => 76.9558,
 
     'market' => [
         ['Industrial buyers search on specification, and almost nobody publishes it', 'Coimbatore&#8217;s pump, motor, casting and machinery firms sell to purchasing engineers who need numbers before they will make contact: flow rates, head, power ratings, material grades, tolerances, standards compliance and delivery capability. Those buyers are in Gujarat, Maharashtra, the Gulf or Africa, not down the road. The overwhelming majority of manufacturer sites here publish a photograph and a paragraph of general text, so a firm that actually documents its product range properly is competing against almost nobody. This is the single strongest opportunity in the city.'],

@@ -86,7 +86,7 @@ function render_footer() {
 
         <div class="site-footer__bottom">
           <p>&copy; <?php echo $year; ?> <span class="notranslate" translate="no">Fawaz BH, FawazBHSEO</span>. All rights reserved.</p>
-          <p>Kushal Nagar, Kodagu, Karnataka, India</p>
+          <p>Kushalnagar, Kodagu, Karnataka, India, 571234. Other markets are service areas, not branch offices.</p>
         </div>
 
       </div>

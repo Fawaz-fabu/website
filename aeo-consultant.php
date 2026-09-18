@@ -205,6 +205,9 @@ foreach ($faqs as $f) {
     ];
 }
 
+// After a real review, set its YYYY-MM-DD date here; otherwise leave null.
+$reviewed_on = null;
+
 $schema = json_encode([
     '@context' => 'https://schema.org',
     '@graph'   => [
@@ -214,8 +217,7 @@ $schema = json_encode([
             'url'   => 'https://fawazbhseo.in/aeo-consultant',
             'name'  => 'AEO expert in India and Karnataka, Answer Engine Optimization by Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'dateModified' => '2026-07-30',
-        ],
+        ] + fbh_review_date_schema($reviewed_on),
         [
             '@type'    => 'Person',
             '@id'      => 'https://fawazbhseo.in/#fawaz',
@@ -227,8 +229,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -585,7 +586,7 @@ render_header('services');
           </div>
           <?php endforeach; ?>
         </div>
-        <p class="field-note" style="margin-top:18px">Client AEO performance figures appear on the <a href="/case-studies">case studies page</a> only once verified against Google Search Console, GA4 or Business Profile data. No estimated or illustrative numbers are published.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. No numerical client performance results are published there.</p>
       </div>
 
     </div>
@@ -616,7 +617,7 @@ render_header('services');
         <article class="card card--link reveal">
           <span class="card-index">Evidence and background</span>
           <h3>Case studies and full background</h3>
-          <p>Documented engagements with verified-only metrics live on <a href="/case-studies">case studies</a>. How I got into search in early 2025 and moved into answer-engine work is on <a href="/about">about Fawaz BH</a>. Scopes and published starting rates are on <a href="/seo-services">SEO services</a>.</p>
+          <p>Engagement notes and client-approved testimonials are on <a href="/case-studies">case studies</a>. How I got into search in early 2025 and moved into answer-engine work is on <a href="/about">about Fawaz BH</a>. Scopes and published starting rates are on <a href="/seo-services">SEO services</a>.</p>
         </article>
       </div>
     </div>
@@ -655,9 +656,7 @@ render_header('services');
       'id'      => 'contact',
   ]); ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="2026-07-30">30 July 2026</time>.
-  </p>
+  <?php fbh_render_review_date($reviewed_on); ?>
 
 </main>
 

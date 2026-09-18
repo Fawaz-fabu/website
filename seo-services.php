@@ -304,8 +304,8 @@ $schema = <<<'JSONLD'
     {
       "@type": "ProfessionalService",
       "@id": "https://fawazbhseo.in/#practice",
-      "name": "FawazBHSEO, SEO, AEO, GEO and digital marketing services",
-      "url": "https://fawazbhseo.in/seo-services",
+      "name": "FawazBHSEO",
+      "url": "https://fawazbhseo.in/",
       "telephone": "+91-94810-84038",
       "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
       "priceRange": "INR 11999 to custom",
@@ -314,7 +314,7 @@ $schema = <<<'JSONLD'
       "provider": {"@id": "https://fawazbhseo.in/#fawaz"},
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Kushal Nagar",
+        "addressLocality": "Kushalnagar, Kodagu",
         "addressRegion": "Karnataka",
         "postalCode": "571234",
         "addressCountry": "IN"

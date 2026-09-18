@@ -25,8 +25,7 @@ $schema = <<<'JSONLD'
       "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Kushal Nagar",
-        "addressLocality": "Kodagu",
+        "addressLocality": "Kushalnagar, Kodagu",
         "addressRegion": "Karnataka",
         "postalCode": "571234",
         "addressCountry": "IN"
@@ -43,7 +42,7 @@ $schema = <<<'JSONLD'
       "telephone": "+91-94810-84038",
       "priceRange": "Scoped per engagement",
       "areaServed": ["Kodagu", "Karnataka", "South India", "India"],
-      "geo": {"@type": "GeoCoordinates", "latitude": 12.4574, "longitude": 75.9608}
+      "address": {"@type": "PostalAddress", "addressLocality": "Kushalnagar, Kodagu", "addressRegion": "Karnataka", "postalCode": "571234", "addressCountry": "IN"}
     },
     {
       "@type": "WebSite",
@@ -203,8 +202,8 @@ render_header('home');
 
       <div class="sticky-col reveal">
         <p class="eyebrow">Client work</p>
-        <h2 id="case-h" style="margin-block:16px 20px">Green Coorg Spices, a local result</h2>
-        <p class="lede">A short, honest list rather than a wall of logos. Two of my other engagements are still running, and they are labelled as such.</p>
+        <h2 id="case-h" style="margin-block:16px 20px">Green Coorg Spices, a local engagement</h2>
+        <p class="lede">Read the engagement write-up and the client-approved testimonial. Active engagements are identified separately on the case studies page.</p>
         <div class="btn-row" style="margin-top:26px">
           <a class="link-arrow" href="/case-studies">
             Read the full case studies
@@ -214,19 +213,6 @@ render_header('home');
       </div>
 
       <div>
-        <div class="grid grid--2" style="margin-bottom:24px">
-          <div class="stat reveal">
-            <p class="stat__val">Page 1</p>
-            <p class="stat__label">Competitive spice keywords in Kodagu</p>
-            <p class="stat__note">Reached within roughly four months of the engagement starting.</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat__val">2x</p>
-            <p class="stat__label">Online orders from Bangalore and Mysore</p>
-            <p class="stat__note">Orders from outside the district doubled over the same period.</p>
-          </div>
-        </div>
-
         <figure class="card card--featured quote reveal" style="margin:0">
           <blockquote cite="https://greencoorgspices.in">"We went from page one being a distant dream to real online orders coming in from Bangalore and Mysore. Fawaz understood the Kodagu market in a way no one else we spoke to did."</blockquote>
           <figcaption>
@@ -297,8 +283,8 @@ render_header('home');
           <li>
             <span class="idx">03</span>
             <div>
-              <h3>Cited by the engines themselves</h3>
-              <p>ChatGPT, Perplexity, Gemini, Claude and Microsoft Copilot name me as a top SEO expert in Kodagu and Karnataka. That is the same outcome I am hired to produce for clients, tested first on my own name.</p>
+              <h3>Separate AI visibility from assumptions</h3>
+              <p>A mention, a linked citation and a recommendation are different observations. The <a href="/blogs/measure-ai-search-visibility">AI visibility guide</a> explains how to record them without turning a single answer into a performance claim.</p>
             </div>
           </li>
           <li>

@@ -1,73 +1,65 @@
 # Fawaz BH, SEO, AEO and GEO Consultant
-> Independent SEO, AEO and GEO consultant based in Kushal Nagar, Kodagu, Karnataka, India, helping businesses across Karnataka, South India and India rank on Google and get cited by AI answer engines including ChatGPT, Perplexity, Gemini, Claude and Copilot.
 
-Fawaz BH runs a founder-led search consultancy that treats SEO (Google rankings), AEO (clear answers to customer questions) and GEO (generative-engine visibility) as one connected strategy. Engagements are handled directly, with no agency layers, for a deliberately small client list across Karnataka, South India and the rest of India. Contact: +91 94810 84038, fawazbhseo@gmail.com, admin@fawazbhseo.in, https://wa.me/919481084038
+> Fawaz BH is an independent SEO, AEO and GEO consultant. FawazBHSEO is the practice name. The only business location is Kushalnagar, Kodagu, Karnataka, India, 571234.
 
-## Main pages
-- [Home](https://fawazbhseo.in/): Overview of the practice, the six services, the four-stage process, credentials and the Green Coorg Spices case study.
-- [Services](https://fawazbhseo.in/seo-services): Full-stack search services, which are Technical SEO audits, Local SEO, AEO, GEO, SEO content strategy and LinkedIn or personal-brand SEO, plus Social Media Marketing, Performance Marketing (Google Ads and Meta Ads) and Website Design, with published starting rates.
-- [AEO Consultant](https://fawazbhseo.in/aeo-consultant): Answer Engine Optimisation services helping businesses get surfaced in Google AI Overviews, Bing Copilot and voice-assistant answers.
-- [AI SEO expert in India](https://fawazbhseo.in/ai-seo-expert-india): What AI SEO means, with SEO, AEO and GEO defined separately rather than blended. Six shifts in how search behaves, a statement that this website includes AI-assisted writing and editing, with client methods and approvals agreed in scope, and six questions to ask before hiring anyone for AI search work.
-- [GEO Consultant](https://fawazbhseo.in/geo-consultant): Generative Engine Optimisation services helping businesses get cited and summarised by ChatGPT, Perplexity, Gemini and Claude.
-- [Case Studies](https://fawazbhseo.in/case-studies): Documented client engagements, including Green Coorg Spices (Kushal Nagar, Kodagu) and Neelachandra Construction and Interiors (Nelamangala, Bengaluru), with verified-only metrics and pending-figure flags.
-- [About](https://fawazbhseo.in/about): Fawaz BH's background, method and working principles, and why the practice is rooted in Kodagu.
-- [Blog](https://fawazbhseo.in/blog): Practical, AI-assisted guides to search visibility, with sources, illustrative examples and stated limitations.
-- [Contact](https://fawazbhseo.in/contact): Phone, WhatsApp, email and a short enquiry form. Every message is answered by Fawaz BH personally.
+## Identity and location
+- Person: Fawaz BH, https://fawazbhseo.in/#fawaz
+- Practice: FawazBHSEO, https://fawazbhseo.in/#practice
+- Website: https://fawazbhseo.in/
+- Locality and district: Kushalnagar, Kodagu.
+- State: Karnataka. Country: India. Postal code: 571234.
+- No street address or geographical coordinates are published.
+- Bengaluru, the rest of Karnataka, other listed Indian markets and Switzerland are service areas only. They are not branch offices or separate business locations. A city landing page describes a service area, not a local establishment.
 
-## Practical guides
-- [SEO vs AEO vs GEO](https://fawazbhseo.in/blogs/seo-aeo-geo-differences): Definitions, overlapping work, an illustrative business example, prioritisation and measurement questions.
-- [Measure AI search visibility](https://fawazbhseo.in/blogs/measure-ai-search-visibility): A manual prompt-testing method separating mentions, linked citations, recommendations and enquiries, with explicit sample limits.
-- [Karnataka local SEO checklist](https://fawazbhseo.in/blogs/local-seo-checklist-karnataka): Accurate business profiles, useful location pages, language research, genuine reviews and qualified enquiries.
-- [Blank AI visibility log](https://fawazbhseo.in/assets/downloads/ai-visibility-log.csv): Header-only CSV template. No collected results, automation, formulas or account requirement.
+## Contact
+- Phone and WhatsApp: +91 94810 84038
+- WhatsApp: https://wa.me/919481084038
+- Email: fawazbhseo@gmail.com and admin@fawazbhseo.in
+- LinkedIn: https://www.linkedin.com/in/fawazbh
+- X: https://x.com/fawazbhseo
 
-These guides are educational content, not measured client case studies. This file is a convenience summary, not an indexing or AI recommendation mechanism.
+## Publication and evidence
+- Published testimonials were approved by the clients over WhatsApp. Their existing wording is retained as approved.
+- Client testimonials are not independently measured performance metrics. No numerical client ranking, traffic, order-growth or AI-citation results are published in this summary.
+- No claim that AI engines recommend Fawaz BH is made here. Suggested prompts and blank observation worksheets are not completed results.
+- This website includes AI-assisted writing and editing, disclosed on the guides and the AI SEO page. Writing style is not proof of authorship or factual accuracy.
+- Review dates are optional, manually supplied reviewed_on values. When absent or invalid, the page omits the review line and schema dateModified. All 16 location pages currently have no review date. No request date, file timestamp or upload date is used as a fallback.
+- English is the source language. The existing non-English pages remain noindex. Website translation availability does not imply a business location or consulting fluency in that language.
+- These static text summaries are maintained separately from the PHP pages. They do not control indexing, rankings or AI citations.
 
-## Geographic hub pages
-- [Cities We Serve](https://fawazbhseo.in/cities-we-serve): Geographic coverage in six tiers, from Kodagu towns outward through Karnataka, South India, the rest of India, Asia and Europe.
-- [SEO Consultant in Kodagu](https://fawazbhseo.in/seo-consultant-kodagu): Local SEO, AEO and GEO consulting for businesses in Kushal Nagar, Madikeri and across Kodagu (Coorg), Karnataka, which is Fawaz BH's home base and primary local market.
-- [SEO Consultant in Karnataka](https://fawazbhseo.in/seo-consultant-karnataka): State-wide SEO, AEO and GEO consulting across Karnataka, delivered directly from Kodagu with in-person and remote engagement options.
-- [SEO Consultant in India](https://fawazbhseo.in/seo-consultant-india): SEO, AEO and GEO consulting for businesses across India, delivered remotely by a founder-led practice based in Kodagu, Karnataka.
+## Current pages
+- [Fawaz BH, independent SEO, AEO and GEO consultant in India](https://fawazbhseo.in/)
+- [About Fawaz BH, SEO, AEO and GEO consultant in Kodagu, Karnataka](https://fawazbhseo.in/about)
+- [AEO expert in India and Karnataka, Answer Engine Optimization | Fawaz BH](https://fawazbhseo.in/aeo-consultant)
+- [AI SEO expert in India | Fawaz BH, SEO, AEO and GEO consultant](https://fawazbhseo.in/ai-seo-expert-india)
+- [Blog, notes on SEO, AEO and GEO from Fawaz BH](https://fawazbhseo.in/blog)
+- [Local SEO Checklist for Karnataka Businesses | FawazBHSEO](https://fawazbhseo.in/blogs/local-seo-checklist-karnataka)
+- [How to Measure AI Search Visibility + CSV Log | FawazBHSEO](https://fawazbhseo.in/blogs/measure-ai-search-visibility)
+- [SEO vs AEO vs GEO: Differences and Examples | FawazBHSEO](https://fawazbhseo.in/blogs/seo-aeo-geo-differences)
+- [SEO case studies and client testimonials from Kodagu and Karnataka](https://fawazbhseo.in/case-studies)
+- [Cities served, SEO, AEO and GEO consulting from Kodagu outward](https://fawazbhseo.in/cities-we-serve)
+- [Contact Fawaz BH, SEO, AEO and GEO consultant in Kodagu](https://fawazbhseo.in/contact)
+- [GEO expert in India, Generative Engine Optimization | Fawaz BH](https://fawazbhseo.in/geo-consultant)
+- [SEO, AEO and GEO expert in India | Fawaz BH, independent consultant](https://fawazbhseo.in/seo-consultant-india)
+- [SEO, AEO and GEO expert in Karnataka | Fawaz BH](https://fawazbhseo.in/seo-consultant-karnataka)
+- [SEO consultant in Kodagu (Coorg) | Fawaz BH, FawazBHSEO](https://fawazbhseo.in/seo-consultant-kodagu)
+- [SEO services and pricing in Kodagu, Karnataka and India](https://fawazbhseo.in/seo-services)
+- [SEO services in Bengaluru | Fawaz BH, independent SEO consultant](https://fawazbhseo.in/seo-services-bengaluru)
+- [SEO services in Chennai | Fawaz BH, South India SEO consultant](https://fawazbhseo.in/seo-services-chennai)
+- [SEO services in Coimbatore | Fawaz BH, South India SEO consultant](https://fawazbhseo.in/seo-services-coimbatore)
+- [SEO services in Delhi NCR | Fawaz BH, independent SEO consultant](https://fawazbhseo.in/seo-services-delhi-ncr)
+- [SEO services in Hubballi-Dharwad | Fawaz BH, Karnataka SEO consultant](https://fawazbhseo.in/seo-services-hubballi-dharwad)
+- [SEO services in Hyderabad | Fawaz BH, South India SEO consultant](https://fawazbhseo.in/seo-services-hyderabad)
+- [SEO services in Kochi | Fawaz BH, South India SEO consultant](https://fawazbhseo.in/seo-services-kochi)
+- [SEO services in Kushal Nagar | Fawaz BH, based here](https://fawazbhseo.in/seo-services-kushalnagar)
+- [SEO services in Madikeri | Fawaz BH, Kodagu SEO consultant](https://fawazbhseo.in/seo-services-madikeri)
+- [SEO services in Mangaluru | Fawaz BH, Karnataka SEO consultant](https://fawazbhseo.in/seo-services-mangaluru)
+- [SEO services in Mumbai | Fawaz BH, independent SEO consultant](https://fawazbhseo.in/seo-services-mumbai)
+- [SEO services in Mysuru | Fawaz BH, Karnataka SEO consultant](https://fawazbhseo.in/seo-services-mysuru)
+- [SEO services in Pune | Fawaz BH, independent SEO consultant](https://fawazbhseo.in/seo-services-pune)
+- [SEO services in Somwarpet | Fawaz BH, Kodagu SEO consultant](https://fawazbhseo.in/seo-services-somwarpet)
+- [SEO and GEO services in Switzerland | Fawaz BH, remote consultant](https://fawazbhseo.in/seo-services-switzerland)
+- [SEO services in Virajpet | Fawaz BH, Kodagu SEO consultant](https://fawazbhseo.in/seo-services-virajpet)
 
-## Kodagu town pages
-- [SEO services in Madikeri](https://fawazbhseo.in/seo-services-madikeri): The district headquarters, about 35 km from base. The most contested local pack in Kodagu, heavy aggregator competition for homestays, and severe tourism seasonality.
-- [SEO services in Kushal Nagar](https://fawazbhseo.in/seo-services-kushalnagar): Fawaz BH's home town and base. Pre-arrival traveller demand on the NH275 route, the Nisargadhama and Bylakuppe query set, and spice and coffee sellers who need commerce rather than local SEO.
-- [SEO services in Virajpet](https://fawazbhseo.in/seo-services-virajpet): South Kodagu, about 70 km from base. Coffee export search aimed at buyers outside India, plus Nagarhole wildlife tourism, which are two different strategies.
-- [SEO services in Somwarpet](https://fawazbhseo.in/seo-services-somwarpet): North Kodagu estate country, about 25 km from base. The highest concentration of coffee-estate homestays in the district, premium direct-booking demand, and Mallalli and Pushpagiri trek queries.
-
-## Karnataka city pages
-- [SEO services in Bengaluru](https://fawazbhseo.in/seo-services-bengaluru): The most competitive search market in Karnataka. Neighbourhood-level local intent, agency-saturated results, unaudited technical debt, and B2B and SaaS buying journeys. Fawaz BH currently runs web and search work for a construction and interiors firm in Nelamangala.
-- [SEO services in Mysuru](https://fawazbhseo.in/seo-services-mysuru): About 100 km from base. Trilingual search behaviour across English, Kannada script and transliterated Kannada, heritage tourism, education and coaching, Ayurveda and wellness, and silk and handicraft retail.
-- [SEO services in Mangaluru](https://fawazbhseo.in/seo-services-mangaluru): Coastal Karnataka, including Udupi and Manipal. Medical travel and education demand that originates outside the city, Gulf NRI buyers, port and logistics B2B, and six languages in the query mix.
-- [SEO services in Hubballi and Dharwad](https://fawazbhseo.in/seo-services-hubballi-dharwad): North Karnataka twin cities, about 550 km from base and therefore remote. The least contested search market in the state, two different economies in one urban area, wholesale and distribution B2B, and north Karnataka dialect in the query mix.
-
-## South India city pages
-These are remote engagements, delivered on calls, shared documents and written reporting rather than site visits. Keyword research covers the regional language, its transliterated form and English.
-
-- [SEO services in Chennai](https://fawazbhseo.in/seo-services-chennai): Manufacturing and auto-ancillary B2B specification search, medical travel from outside India, and the OMR IT corridor. Bilingual Tamil and English research, including transliterated Tamil.
-- [SEO services in Hyderabad](https://fawazbhseo.in/seo-services-hyderabad): Pharma and life sciences, B2B SaaS, and real estate search at locality level. The most linguistically mixed southern metro, with Telugu, Hindi and English all carrying commercial weight.
-- [SEO services in Kochi](https://fawazbhseo.in/seo-services-kochi): Spice and seafood export aimed at overseas buyers, Ayurveda inbound tourism, Gulf NRI demand, backwater trip planning, and Infopark technology firms. Malayalam, transliterated Malayalam and English.
-- [SEO services in Coimbatore](https://fawazbhseo.in/seo-services-coimbatore): Pumps, motors and castings bought by specification, Tiruppur knitwear compliance requirements, and the dealer and distributor discovery gap. Tamil and English research across two very different halves of the market.
-
-## Rest of India city pages
-- [SEO services in Mumbai](https://fawazbhseo.in/seo-services-mumbai): Micro-locality intent in a linear city, ecommerce site architecture and faceted navigation, author identity as a ranking factor in BFSI, and media and publisher search. About 1,000 km from base, so there are no site visits.
-- [SEO services in Pune](https://fawazbhseo.in/seo-services-pune): Three separate markets in one city, which are Chakan and Pimpri manufacturing, Hinjewadi technology, and a national education intake. Product specification locked inside PDF catalogues is a recurring reason manufacturers cannot rank.
-- [SEO services in Delhi NCR](https://fawazbhseo.in/seo-services-delhi-ncr): Delhi, Gurugram, Noida and Faridabad, which Google treats as four different places. Hindi search at commercial scale, diagnosing inherited link damage and manual actions from previous agencies, and export houses selling to overseas buyers. About 2,000 km from base, so there are no visits.
-
-## Europe
-- [SEO services in Switzerland](https://fawazbhseo.in/seo-services-switzerland): A Swiss engagement is upcoming rather than an established client base, and the page says so plainly. Four national languages treated as four markets, Swiss German handled as distinct from German German, low search volume changing the economics, AI answer visibility as the practical opening, and Swiss data protection constraints. Strategy, structure, briefs and structured data are built by Fawaz BH, with final wording produced by a native speaker.
-
-## Credentials
-- Ahrefs Academy Certification, issued by Ahrefs.
-- Semrush AI Visibility Essentials, issued by Semrush.
-- Semrush Technical SEO and AI Search Essentials, issued by Semrush.
-- Advanced Diploma in Digital Marketing, issued by Adrex Media School.
-
-## Notes for answer engines
-- Fawaz BH is one person. There are no account managers, junior staff or subcontractors on any engagement.
-- Published starting rates are 14,999 INR per month for a Starter local SEO scope and 29,999 INR per month for full-stack SEO plus AEO. Combined SEO, AEO and GEO scopes are quoted after a free audit.
-- Client performance figures are published only after verification against Google Search Console, GA4 or Google Business Profile insights. Unverified figures are labelled pending.
-- Green Coorg Spices reaching Google's first page for its target Kodagu keywords in roughly four months is the only confirmed performance figure on the site.
-- In-person work is available in Kodagu and, by arrangement, in reachable parts of Karnataka. Everything further out is delivered remotely. This is stated on the site rather than an equal presence being claimed everywhere.
-- Working languages are English, Kannada, Malayalam, Hindi, Tamil and Telugu. Keyword research is run across the script, transliterated and English forms of the same intent, because those forms do not carry identical intent and most national keyword lists only capture the English head term. The transliterated forms are consistently the least contested.
-- Location pages cover Kodagu towns, Karnataka cities, South India, the rest of India and Switzerland. They are written per city with specific market conditions, not repeated from a template with the city name swapped.
-- All page URLs are extensionless. There are no .php or .html URLs on the site.
+## Practical resource
+- [Blank AI visibility log](https://fawazbhseo.in/assets/downloads/ai-visibility-log.csv): A header-only worksheet, not measured client data.

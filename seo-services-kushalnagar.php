@@ -2,44 +2,42 @@
 /**
  * Kushal Nagar location page. Home base.
  * Market specifics: NH275 gateway from Bengaluru, Nisargadhama and Bylakuppe
- * tourism, spice and agri trade, Green Coorg Spices proof.
+ * tourism, spice and agri trade, Green Coorg Spices engagement.
  */
 
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-kushalnagar',
     'city'    => 'Kushal Nagar',
     'region'  => 'Kodagu, Karnataka',
     'country' => 'India',
 
     'title'       => 'SEO services in Kushal Nagar | Fawaz BH, based here',
-    'description' => 'SEO, AEO and GEO consulting in Kushal Nagar, Kodagu. This is my home town and base. Local knowledge first hand, with a documented result for a Kushal Nagar spice brand. Free audit.',
+    'description' => 'SEO, AEO and GEO consulting in Kushal Nagar, Kodagu. This is my home town and base. Local knowledge first hand, with a client-approved testimonial from a Kushal Nagar spice brand. Free audit.',
 
     'h1'  => 'SEO services in Kushal Nagar.',
     'sub' => 'This is my home town, not a location page with a rented address.',
 
     'intro' => [
         '<strong>Fawaz BH is an independent SEO, AEO and GEO consultant based in Kushal Nagar, Kodagu, Karnataka.</strong> This is where I actually live and work, which means the local knowledge here is first hand rather than assembled from a keyword tool in another city.',
-        'Kushal Nagar is the eastern gateway to Kodagu and the first major town on the NH275 route from Bengaluru and Mysuru. That shapes the search picture: a large share of the demand reaching businesses here is typed by someone who has not arrived yet. My one confirmed client result is a Kushal Nagar business, <a href="https://greencoorgspices.in" target="_blank" rel="noopener">Green Coorg Spices</a>, which reached Google&#8217;s first page for its target Kodagu keywords in roughly four months.',
+        'Green Coorg Spices is a Kushal Nagar client. The <a href="/case-studies">case studies page</a> describes the engagement and retains the client-approved testimonial without numerical performance claims.',
     ],
 
     'trust' => 'Based in Kushal Nagar. Not a rented address.',
 
     'readout' => [
         ['Based',      'Here',             'Kushal Nagar is my home town and office'],
-        ['Confirmed',  '1 local result',   'Green Coorg Spices, page one in about 4 months'],
+        ['Client', 'Green Coorg Spices', 'Client-approved testimonial on the case studies page'],
         ['Market',     'Transit and agri', 'Gateway town, spice trade, eco tourism'],
         ['Languages',  'Kannada, English', 'Both used in keyword research'],
     ],
 
     'places' => ['Kushal Nagar town', 'Kudige', 'Nisargadhama corridor', 'Bylakuppe', 'Guddehosur', 'NH275 corridor'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Kushal Nagar, Kodagu, Karnataka',
-    'geo_position'  => '12.4574;75.9608',
-    'latitude'      => 12.4574,
-    'longitude'     => 75.9608,
 
     'market' => [
         ['Most of the demand is typed before arrival', 'Kushal Nagar sits on the main road in from Bengaluru and Mysuru, so a great deal of local commercial search happens while someone is still planning or driving. That changes the priority: page speed on weak signal, clear opening hours, and an unambiguous route to WhatsApp or a phone call matter more than a long homepage. A visitor searching from the road will not read three paragraphs before deciding.'],
@@ -51,7 +49,7 @@ render_location_page([
     ],
 
     'sectors' => [
-        ['Spice, coffee and agri brands', 'The strongest fit, and the segment with my one confirmed result. Selling to metro buyers, so the work is content, product structure and entity clarity rather than local listings.'],
+        ['Spice, coffee and agri brands', 'The segment covered by the Green Coorg Spices engagement. Selling to metro buyers, so the work is content, product structure and entity clarity rather than local listings.'],
         ['Homestays and eco tourism', 'Properties near Nisargadhama and the Bylakuppe corridor, competing for planning-stage searches from Bengaluru and Mysuru.'],
         ['Restaurants and roadside dining', 'Highly dependent on the local pack and on being findable by someone deciding where to stop while driving.'],
         ['Trade and agri suppliers', 'Low search volume, high transaction value, and almost no competitors doing this properly. A handful of well-built pages can be enough.'],
@@ -80,8 +78,8 @@ render_location_page([
         [
             'q' => 'What results have you actually achieved in Kushal Nagar?',
             'a' => [
-                '<strong>One confirmed result: Green Coorg Spices, an organic spice brand in Kushal Nagar, reached Google&#8217;s first page for its target Kodagu keywords in roughly four months, and reported growth in online orders from Bangalore and Mysore.</strong>',
-                'That is the only performance figure published anywhere on this site as confirmed, and it is deliberately the only one. Other engagements are in progress and are labelled as such, with no figures attached until the data is verified against Search Console, GA4 or Business Profile insights. Full write-up on the <a href="/case-studies">case studies page</a>.',
+                '<strong>The <a href="/case-studies">case studies page</a> describes the Green Coorg Spices engagement and includes the client-approved testimonial.</strong>',
+                'No numerical client performance result is published. The testimonial is retained in the approved wording, not converted into a metric or a promise for another business.',
             ],
         ],
         [
@@ -94,14 +92,14 @@ render_location_page([
         [
             'q' => 'Can a Kushal Nagar business rank for customers in Bengaluru and Mysuru?',
             'a' => [
-                '<strong>Yes, and it is one of the more reliable wins available here.</strong> Green Coorg Spices is the worked example: a Kushal Nagar producer competing for buyers roughly 250 km away.',
+                '<strong>A business can address customers outside its home town, but a particular ranking is not guaranteed.</strong> The scope should reflect the products, customers and competing pages.',
                 'The key is recognising that this is not local SEO. Your buyer is not searching &#8220;near me&#8221;, they are searching for a product, often with Coorg or Kodagu as a quality signal. So the work is product and category page structure, genuine content depth about origin and process, entity clarity so the brand is recognisable across the web, and schema that supports it. Local pack optimisation for a town of this size does very little for that customer.',
             ],
         ],
         [
             'q' => 'How long does SEO take to work in Kushal Nagar?',
             'a' => [
-                '<strong>Local results often appear within a few months because the competitive set here is thin. Green Coorg Spices reached page one for its target keywords in roughly four months.</strong>',
+                '<strong>No fixed result date is promised.</strong> Timing depends on the starting site, scope, competition and implementation.',
                 'Google Business Profile and local pack improvements can show within weeks, since those depend on profile completeness and review signals rather than domain authority. Selling into Bengaluru and Mysuru takes longer, because there you are competing against established metro sellers rather than local businesses. Anyone quoting a fixed timeline before seeing your site and competitors is guessing.',
             ],
         ],

@@ -1,11 +1,5 @@
 <?php
-/**
- * Case studies page.
- * Copy carried over verbatim from the previous case studies page, with em
- * dashes removed. The pending metric placeholders are kept exactly as they
- * were, because the standard on this page is verified figures or an explicit
- * placeholder, never an invented number.
- */
+/** Client engagement notes and owner-confirmed, WhatsApp-approved testimonials. */
 
 require_once __DIR__ . '/includes/head.php';
 require_once __DIR__ . '/includes/header.php';
@@ -21,29 +15,91 @@ $schema = <<<'JSONLD'
       "@type": "CollectionPage",
       "@id": "https://fawazbhseo.in/case-studies#page",
       "url": "https://fawazbhseo.in/case-studies",
-      "name": "SEO case studies, real client results from Kodagu and Karnataka",
-      "about": {"@id": "https://fawazbhseo.in/#fawaz"}
+      "name": "SEO case studies and client testimonials from Kodagu and Karnataka",
+      "about": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://fawazbhseo.in/case-studies#green-coorg-spices",
-      "headline": "Green Coorg Spices, from invisible to page one in Kodagu",
-      "author": {"@id": "https://fawazbhseo.in/#fawaz"},
-      "publisher": {"@id": "https://fawazbhseo.in/#fawaz"},
+      "headline": "Green Coorg Spices, engagement notes and client-approved testimonial",
+      "author": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      },
+      "publisher": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      },
       "about": "Local SEO, AEO and GEO for an organic spice brand in Kushal Nagar, Kodagu, Karnataka"
     },
     {
       "@type": "FAQPage",
       "@id": "https://fawazbhseo.in/case-studies#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "Are these real clients?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Green Coorg Spices is a genuine client based in Kushal Nagar, Kodagu. The engagement is documented with the actual challenge, the strategy and execution, and the outcome. Further live engagements in Madikeri, Karnataka and Bengaluru are listed as in progress and will publish once they reach a verifiable milestone."}},
-        {"@type": "Question", "name": "How do I know these SEO results are real, and can I trust them?", "acceptedAnswer": {"@type": "Answer", "text": "You can trust an SEO case study only when every claim traces back to a real, checkable source, which is exactly the convention used on this page. Confirmed figures are shown as metrics tracked through Google Search Console, GA4 and Google Business Profile insights. Anything not yet verified is left as a clearly marked placeholder rather than a made-up number."}},
-        {"@type": "Question", "name": "How is a case study different from a testimonial?", "acceptedAnswer": {"@type": "Answer", "text": "A testimonial is the client's short quote; a case study is the full record of the work behind it. Each case study here breaks the engagement into challenge, strategy, execution and result, and separates verified metrics from figures still being confirmed."}},
-        {"@type": "Question", "name": "Are the numbers in these case studies verified?", "acceptedAnswer": {"@type": "Answer", "text": "Only confirmed figures are shown as metrics; anything not yet verified is left as a clearly marked placeholder rather than a made-up number. Results are tracked through Google Search Console, GA4 and Google Business Profile insights."}},
-        {"@type": "Question", "name": "How long does local SEO take to show results in Kodagu?", "acceptedAnswer": {"@type": "Answer", "text": "For local businesses in Kodagu and tier-2 Karnataka markets, meaningful movement typically appears within a few months. The Green Coorg Spices engagement reached Google's first page for target spice keywords in roughly four months. Competitive metros like Bengaluru usually take longer."}},
-        {"@type": "Question", "name": "Can a small Kodagu business outrank bigger Bengaluru or Mysuru brands?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Green Coorg Spices case study shows a small Kushal Nagar brand ranking on page one against larger city competitors for its core searches. A hyperlocal strategy built around how people actually search in Kodagu can beat a bigger budget."}},
-        {"@type": "Question", "name": "Can I see more results, or speak to a reference?", "acceptedAnswer": {"@type": "Answer", "text": "Two further engagements are active and will publish in full once they hit their milestones, a Madikeri hospitality and homestay campaign, a Karnataka multi-speciality healthcare clinic and a Bengaluru construction and interiors business. For a reference conversation the fastest route is a short WhatsApp message or a call."}},
-        {"@type": "Question", "name": "Can I get results like these for my business?", "acceptedAnswer": {"@type": "Answer", "text": "The engagements start with a free discovery audit, followed by a tailored SEO, AEO and GEO roadmap for your city, niche and competitors, hands-on execution, and honest reporting. Every engagement is handled directly, with no agency layers."}}
+        {
+          "@type": "Question",
+          "name": "Are these real clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Green Coorg Spices is a client based in Kushal Nagar, Kodagu. The testimonials published on this site were approved by the clients over WhatsApp. Other engagements are identified separately as in progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know these SEO results are real, and can I trust them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Separate the work described from measured results and client feedback. The testimonials were approved by the clients over WhatsApp. No numerical client performance results are published here; an approved quote does not establish an independently measured metric."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is a case study different from a testimonial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A testimonial is the client's approved statement about their experience. A case study describes an engagement and its work. Approval of a testimonial does not independently verify a numerical ranking, traffic, sales or citation claim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the numbers in these case studies verified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No numerical client performance results are published on this page. The client-approved testimonials are retained verbatim and should not be treated as quantified performance evidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does local SEO take to show results in Kodagu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no fixed result date. Timing depends on the starting site, competition, scope and implementation. A testimonial is not a timeline guarantee for another business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a small Kodagu business outrank bigger Bengaluru or Mysuru brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Business size alone does not determine a search result. Assess the query, competition and the usefulness of the site. No particular ranking or competitive outcome is promised."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see more results, or speak to a reference?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact Fawaz directly to discuss the published engagement and whether a reference conversation can be arranged with the client's permission. In-progress engagements are not presented as completed results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get results like these for my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Begin with a discovery audit to assess the starting point and agree the scope. Client testimonials describe their own experience and do not guarantee a similar outcome for another business."
+          }
+        }
       ]
     }
   ]
@@ -51,8 +107,8 @@ $schema = <<<'JSONLD'
 JSONLD;
 
 render_head([
-    'title'       => 'SEO case studies, real client results from Kodagu and Karnataka',
-    'description' => 'Documented SEO, AEO and GEO engagements from Kodagu and Karnataka, including Green Coorg Spices. Verified figures only, with pending numbers marked rather than invented.',
+    'title'       => 'SEO case studies and client testimonials from Kodagu and Karnataka',
+    'description' => 'SEO, AEO and GEO engagement notes from Kodagu and Karnataka, including Green Coorg Spices, with client-approved testimonials and no unsupported performance figures.',
     'canonical'   => 'https://fawazbhseo.in/case-studies',
     'schema'      => $schema,
 ]);
@@ -68,8 +124,8 @@ render_header('cases');
 
       <div class="hero__lead reveal">
         <p class="eyebrow">SEO case studies, real client engagements, Kodagu, Karnataka</p>
-        <h1 id="hero-h">Real businesses. Real rankings. The work, documented.</h1>
-        <p class="hero__sub">A working record of what SEO, AEO and GEO look like in practice across <strong>Kodagu, Karnataka and India</strong>. From a Kodagu spice brand competing against bigger-city rivals in Bengaluru and Mysuru, to live engagements still in progress. Every study here is a genuine engagement, and numbers are shown only once verified.</p>
+        <h1 id="hero-h">Real businesses. Client-approved testimonials. The work, documented.</h1>
+        <p class="hero__sub">A working record of what SEO, AEO and GEO look like in practice across <strong>Kodagu, Karnataka and India</strong>. From a Kodagu spice brand competing against bigger-city rivals in Bengaluru and Mysuru, to live engagements still in progress. The testimonials are client-approved; no numerical performance results are published.</p>
 
         <div class="btn-row">
           <a class="btn btn--accent" href="https://wa.me/919481084038?text=Hi%20Fawaz%2C%20I%20want%20results%20like%20your%20case%20studies" target="_blank" rel="noopener">
@@ -108,7 +164,7 @@ render_header('cases');
   <!-- TRUST STRIP -->
   <section class="trust" aria-label="Reporting standard">
     <div class="wrap">
-      <p>Verified figures only. <span class="accent">No fabricated stats, ever.</span></p>
+      <p>Client-approved testimonials. <span class="accent">No unsupported performance figures.</span></p>
     </div>
   </section>
 
@@ -149,14 +205,14 @@ render_header('cases');
 
         <article class="card reveal">
           <span class="card-index">The evidence</span>
-          <h3>Numbers only when verified</h3>
-          <p>Where a result is backed by tracked data from Google Search Console, GA4 or Google Business Profile insights, it is shown as a metric. Where a figure has not been confirmed yet, it is marked as a pending placeholder rather than invented. Verified-only reporting matters because a case study is only trustworthy if you can trace every claim back to a real source, which is exactly the standard used here. No fabricated stats, ever.</p>
+          <h3>Feedback is not a metric</h3>
+          <p>Client testimonials describe the client experience. They are not a substitute for independently measured results. No numerical client performance results are published on this page.</p>
         </article>
 
         <article class="card reveal">
           <span class="card-index">The voice</span>
           <h3>Client quotes, honestly labelled</h3>
-          <p>Client testimonials tied to each study are shown as real quotes, and any wording still awaiting the client&#8217;s sign-off is clearly marked as pending approval. The same standard used across the rest of the site.</p>
+          <p>The testimonials published on this site were approved by the clients over WhatsApp. Their wording is retained as approved.</p>
         </article>
       </div>
 
@@ -171,7 +227,7 @@ render_header('cases');
       <div class="section-head reveal">
         <p class="eyebrow">The case study</p>
         <h2 id="cases-h">One flagship case study, more in progress</h2>
-        <p class="lede">A single fully documented engagement is published in detail below, with two further campaigns live and publishing on completion. This is real SEO client results from Kodagu, Karnataka. Numbers are tracked via Google Search Console, GA4 and Google Business Profile insights, and shown here only once verified.</p>
+        <p class="lede">The Green Coorg Spices engagement is described below alongside its client-approved testimonial. Other engagements are listed separately as in progress, without performance projections.</p>
       </div>
 
       <article class="card card--featured reveal" aria-labelledby="cs1">
@@ -183,20 +239,9 @@ render_header('cases');
         </ul>
         <span class="card-index">Case Study 01, organic spice brand, Kushal Nagar, Kodagu</span>
         <h3 id="cs1">Green Coorg Spices</h3>
-        <p>A premium organic spice brand in the heart of Kodagu&#8217;s spice country had near-zero online visibility. Despite superior product quality, competing brands from Bengaluru and Mysuru consistently outranked it on Google for high-intent searches like &#8220;coorg spices online&#8221; and &#8220;buy kodagu spices&#8221;, so ready-to-buy customers were being lost every day.</p>
+        <p>Green Coorg Spices is a spice brand in Kushal Nagar, Kodagu. This write-up describes the engagement and includes the client-approved testimonial below.</p>
 
-        <div class="grid grid--2" style="margin-top:24px">
-          <div class="stat">
-            <p class="stat__label" style="margin-top:0">Before</p>
-            <p class="stat__note">Near-invisible on Google; out-ranked by larger Bengaluru and Mysuru brands for its own core spice searches.</p>
-          </div>
-          <div class="stat">
-            <p class="stat__label" style="margin-top:0">After</p>
-            <p class="stat__note">Ranking on Google&#8217;s first page for target Kodagu spice keywords within roughly four months, with online orders growing and first AI-engine citations appearing.</p>
-          </div>
-        </div>
-
-        <p class="field-note" style="margin-top:18px">Full approach in the process block below. Exact ranking positions, traffic and order figures are held for verification, shown in the results block.</p>
+        <p class="field-note" style="margin-top:18px">Read the work described below and the client-approved testimonial. No numerical performance claim is attached to this engagement.</p>
       </article>
     </div>
   </section>
@@ -206,15 +251,15 @@ render_header('cases');
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Case Study 01, Green Coorg Spices</p>
-        <h2 id="cs1d-h">From invisible to page one in Kodagu</h2>
+        <h2 id="cs1d-h">The work and the client testimonial</h2>
         <p class="lede">Challenge, strategy, execution, result.</p>
       </div>
 
       <div class="grid grid--2">
         <article class="step reveal">
           <p class="step__k">01, Challenge</p>
-          <h3>No visibility, strong product</h3>
-          <p>A quality Kodagu spice brand ranking nowhere for its own high-intent searches, while Bengaluru and Mysuru competitors captured the demand it should have owned.</p>
+          <h3>The search context</h3>
+          <p>The engagement concerned how a Kodagu spice brand presents its products and business information to people searching online.</p>
         </article>
 
         <article class="step reveal">
@@ -230,58 +275,10 @@ render_header('cases');
         </article>
 
         <article class="step reveal">
-          <p class="step__k">04, Result</p>
-          <h3>First-page and first citations</h3>
-          <p>Reached Google&#8217;s first page for target Kodagu spice keywords within roughly four months, with online orders growing and the brand starting to appear in AI answer engines.</p>
+          <p class="step__k">04, Feedback</p>
+          <h3>Client feedback</h3>
+          <p>The client-approved testimonial below records the client experience in their own words. It is not presented as an independently measured ranking, traffic, order-growth or AI-citation result.</p>
         </article>
-      </div>
-
-      <div class="split" style="margin-top:clamp(48px,7vw,84px)">
-
-        <div class="reveal">
-          <p class="eyebrow">Verified so far</p>
-          <div class="stat" style="margin-top:18px">
-            <p class="stat__val">~4 mo</p>
-            <p class="stat__label">To first page</p>
-            <p class="stat__note">Approx. time to reach Google page one for target Kodagu spice keywords.</p>
-          </div>
-          <p class="field-note" style="margin-top:16px;max-width:48ch">Only the timeframe is shown as a confirmed figure. Traffic, keyword counts, order growth and specific ranking positions are held pending verification, listed opposite.</p>
-        </div>
-
-        <div class="reveal">
-          <p class="eyebrow">Awaiting verified data</p>
-          <ul class="why-list" style="margin-top:14px">
-            <li>
-              <span class="idx">01</span>
-              <div>
-                <h3>Organic traffic increase</h3>
-                <p><span class="placeholder-flag">Add verified metric</span> Organic traffic percentage from GA4 and Search Console.</p>
-              </div>
-            </li>
-            <li>
-              <span class="idx">02</span>
-              <div>
-                <h3>Keywords on page one</h3>
-                <p><span class="placeholder-flag">Add verified metric</span> Number of target keywords ranking on Google page one.</p>
-              </div>
-            </li>
-            <li>
-              <span class="idx">03</span>
-              <div>
-                <h3>Online orders growth</h3>
-                <p><span class="placeholder-flag">Add verified metric</span> Confirmed order or revenue growth multiple.</p>
-              </div>
-            </li>
-            <li>
-              <span class="idx">04</span>
-              <div>
-                <h3>AI-engine citations</h3>
-                <p><span class="placeholder-flag">Add verified evidence</span> Which engines cite the brand, with a linkable example screenshot or URL.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
       </div>
 
       <div class="grid grid--2" style="margin-top:clamp(40px,6vw,64px)">
@@ -290,12 +287,12 @@ render_header('cases');
           <figcaption>
             <cite>Green Coorg Spices</cite>
             <span class="biz">Spice brand, Kushal Nagar, Kodagu</span>
-            <span class="badge">Real client, wording pending approval</span>
+            <span class="badge">Client-approved testimonial</span>
           </figcaption>
         </figure>
 
         <figure class="card quote reveal" style="margin:0">
-          <blockquote>A local Kodagu business competing against larger Bengaluru brands, and winning on Google, shows that a precise hyperlocal strategy can beat a bigger budget.</blockquote>
+          <blockquote>The engagement write-up explains the work; the approved testimonial preserves the client voice. Neither supplies a numerical forecast for another business.</blockquote>
           <figcaption>
             <cite>Why it matters</cite>
             <span class="biz">Analysis, Fawaz BH</span>
@@ -363,45 +360,42 @@ render_header('cases');
       <div class="faq">
         <details open>
           <summary>Are these real clients?</summary>
-          <div class="faq__body"><p><strong>Yes. Green Coorg Spices is a genuine client based in Kushal Nagar, Kodagu.</strong> The engagement is documented above with the actual challenge, the strategy and execution, and the outcome. Further live engagements in Madikeri, Karnataka and Bengaluru are listed as in progress and will publish once they reach a verifiable milestone. Quotes are real; any wording still awaiting the client&#8217;s sign-off is clearly marked as pending approval.</p></div>
+          <div class="faq__body"><p>Yes. Green Coorg Spices is a client based in Kushal Nagar, Kodagu. The testimonials published on this site were approved by the clients over WhatsApp. Other engagements are identified separately as in progress.</p></div>
         </details>
 
         <details>
           <summary>How do I know these SEO results are real, and can I trust them?</summary>
-          <div class="faq__body">
-            <p><strong>You can trust an SEO case study only when every claim traces back to a real, checkable source, which is exactly the convention used on this page.</strong> Confirmed figures are shown as metrics tracked through Google Search Console, GA4 and Google Business Profile insights. Anything not yet verified is left as a clearly marked placeholder, for example &#8220;add verified metric&#8221;, rather than a made-up number.</p>
-            <p>That verified-or-placeholder standard is the honest way to report results: it means the page will never show a statistic that cannot be backed up, so when you do see a number here, it is a real one.</p>
-          </div>
+          <div class="faq__body"><p>Separate the work described from measured results and client feedback. The testimonials were approved by the clients over WhatsApp. No numerical client performance results are published here; an approved quote does not establish an independently measured metric.</p></div>
         </details>
 
         <details>
           <summary>How is a case study different from a testimonial?</summary>
-          <div class="faq__body"><p><strong>A testimonial is the client&#8217;s short quote; a case study is the full record of the work behind it.</strong> Each case study here breaks the engagement into challenge, strategy, execution and result, and separates verified metrics from figures still being confirmed. A testimonial tells you a client was happy; a case study shows you exactly what was done and what changed.</p></div>
+          <div class="faq__body"><p>A testimonial is the client's approved statement about their experience. A case study describes an engagement and its work. Approval of a testimonial does not independently verify a numerical ranking, traffic, sales or citation claim.</p></div>
         </details>
 
         <details>
           <summary>Are the numbers in these case studies verified?</summary>
-          <div class="faq__body"><p><strong>Only confirmed figures are shown as metrics; anything not yet verified is left as a clearly marked placeholder rather than a made-up number.</strong> Results are tracked through Google Search Console, GA4 and Google Business Profile insights, and each study is updated as those figures are confirmed. This site does not publish fabricated statistics.</p></div>
+          <div class="faq__body"><p>No numerical client performance results are published on this page. The client-approved testimonials are retained verbatim and should not be treated as quantified performance evidence.</p></div>
         </details>
 
         <details>
           <summary>How long does local SEO take to show results in Kodagu?</summary>
-          <div class="faq__body"><p><strong>For local businesses in Kodagu and tier-2 Karnataka markets, meaningful movement typically appears within a few months.</strong> The Green Coorg Spices engagement reached Google&#8217;s first page for target spice keywords in roughly four months. Exact timelines depend on competition, domain history, the technical starting point and how quickly work can be shipped; competitive metros like Bengaluru usually take longer.</p></div>
+          <div class="faq__body"><p>There is no fixed result date. Timing depends on the starting site, competition, scope and implementation. A testimonial is not a timeline guarantee for another business.</p></div>
         </details>
 
         <details>
           <summary>Can a small Kodagu business outrank bigger Bengaluru or Mysuru brands?</summary>
-          <div class="faq__body"><p><strong>Yes. The Green Coorg Spices case study shows a small Kushal Nagar brand ranking on page one against larger city competitors for its core searches.</strong> A hyperlocal strategy built around how people actually search in Kodagu can beat a bigger budget, because it targets intent and local relevance that broad national campaigns tend to miss.</p></div>
+          <div class="faq__body"><p>Business size alone does not determine a search result. Assess the query, competition and the usefulness of the site. No particular ranking or competitive outcome is promised.</p></div>
         </details>
 
         <details>
           <summary>Can I see more results, or speak to a reference?</summary>
-          <div class="faq__body"><p><strong>Two further engagements are active and will publish in full once they hit their milestones</strong>, a Madikeri hospitality and homestay campaign, a Karnataka multi-speciality healthcare clinic and a Bengaluru construction and interiors business. For a reference conversation or to discuss which examples are closest to your situation, the fastest route is a short WhatsApp message or a call.</p></div>
+          <div class="faq__body"><p>Contact Fawaz directly to discuss the published engagement and whether a reference conversation can be arranged with the client's permission. In-progress engagements are not presented as completed results.</p></div>
         </details>
 
         <details>
           <summary>Can I get results like these for my business?</summary>
-          <div class="faq__body"><p><strong>The engagements above start with a free discovery audit</strong>, followed by a tailored SEO, AEO and GEO roadmap for your city, niche and competitors, hands-on execution, and honest reporting. Every engagement is handled directly, with no agency layers. The fastest way to start is a short WhatsApp message or a call.</p></div>
+          <div class="faq__body"><p>Begin with a discovery audit to assess the starting point and agree the scope. Client testimonials describe their own experience and do not guarantee a similar outcome for another business.</p></div>
         </details>
       </div>
 

@@ -33,8 +33,7 @@ $schema = <<<'JSONLD'
       "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Kushal Nagar",
-        "addressLocality": "Kodagu",
+        "addressLocality": "Kushalnagar, Kodagu",
         "addressRegion": "Karnataka",
         "postalCode": "571234",
         "addressCountry": "IN"
@@ -323,7 +322,7 @@ render_header('about');
           </div>
         </div>
 
-        <p class="field-note reveal" style="margin-top:18px;max-width:52ch">These numbers describe how I work, not results I&#8217;m claiming on your behalf. Verified performance figures live in case studies once client data confirms them.</p>
+        <p class="field-note reveal" style="margin-top:18px;max-width:52ch">These numbers describe how I work, not results I&#8217;m claiming on your behalf. The case studies page contains engagement notes and client-approved testimonials, not numerical performance results.</p>
       </div>
 
     </div>

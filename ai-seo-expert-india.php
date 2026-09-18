@@ -153,6 +153,9 @@ foreach ($faqs as $f) {
     ];
 }
 
+// After a real review, set its YYYY-MM-DD date here; otherwise leave null.
+$reviewed_on = null;
+
 $schema = json_encode([
     '@context' => 'https://schema.org',
     '@graph'   => [
@@ -162,8 +165,7 @@ $schema = json_encode([
             'url'   => 'https://fawazbhseo.in/ai-seo-expert-india',
             'name'  => 'AI SEO expert in India, Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'dateModified' => '2026-08-21',
-        ],
+        ] + fbh_review_date_schema($reviewed_on),
         [
             '@type' => 'BreadcrumbList',
             'itemListElement' => [
@@ -182,8 +184,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -224,11 +225,8 @@ $schema = json_encode([
 
 render_head([
     'title'       => 'AI SEO expert in India | Fawaz BH, SEO, AEO and GEO consultant',
-    'description' => 'Fawaz BH is an independent AI SEO expert in India, based in Kodagu, Karnataka. Staying visible as search shifts to AI answers, across SEO, AEO and GEO. Content written by a person, not generated.',
+    'description' => 'Fawaz BH is an independent AI SEO consultant in India, based in Kodagu, Karnataka. SEO, AEO and GEO services, with clear disclosure of AI-assisted writing and editing.',
     'canonical'   => 'https://fawazbhseo.in/ai-seo-expert-india',
-    'geo_region'  => 'IN-KA',
-    'geo_placename' => 'Kushal Nagar, Kodagu, Karnataka',
-    'geo_position'  => '12.4574;75.9608',
     'schema'      => $schema,
 ]);
 
@@ -350,7 +348,7 @@ render_header('aiseo');
         <?php endforeach; ?>
       </div>
 
-      <p class="lede reveal" style="margin-top:28px">You can check this claim rather than take it on trust. Read a few pages on this site and look for the tells: generated copy hedges constantly, avoids specific numbers, repeats itself in slightly different words and never says anything that could be wrong. The pages here name distances, admit limitations, decline work that does not fit and tell you when a competitor would serve you better. That is not a writing style a model produces on its own.</p>
+      <p class="lede reveal" style="margin-top:28px">Writing style does not establish authorship or verify a claim. This website includes AI-assisted writing and editing. Judge published information by its sources, disclosures and accuracy; agree the drafting, review and approval responsibilities for client work in the scope.</p>
     </div>
   </section>
 
@@ -416,7 +414,7 @@ render_header('aiseo');
         </article>
       </div>
 
-      <p class="lede reveal" style="margin-top:28px">Deep dives on the two newer disciplines live on the <a href="/aeo-consultant">AEO consultant page</a> and the <a href="/geo-consultant">GEO consultant page</a>. National SEO engagements are on the <a href="/seo-consultant-india">SEO consultant in India page</a>. Documented client work is on the <a href="/case-studies">case studies page</a>, where unverified figures are labelled as pending rather than published as results.</p>
+      <p class="lede reveal" style="margin-top:28px">Deep dives on the two newer disciplines live on the <a href="/aeo-consultant">AEO consultant page</a> and the <a href="/geo-consultant">GEO consultant page</a>. National SEO engagements are on the <a href="/seo-consultant-india">SEO consultant in India page</a>. Documented client work is on the <a href="/case-studies">case studies page</a>, where client-approved testimonials are kept separate from measured performance claims.</p>
     </div>
   </section>
 
@@ -454,9 +452,7 @@ render_header('aiseo');
   ]);
   ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="2026-08-21">21 August 2026</time>.
-  </p>
+  <?php fbh_render_review_date($reviewed_on); ?>
 
 </main>
 

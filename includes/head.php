@@ -7,6 +7,36 @@
 
 require_once __DIR__ . '/i18n.php';
 
+if (!function_exists('fbh_reviewed_on')) {
+/**
+ * Accept only a manually supplied, real YYYY-MM-DD calendar date.
+ * Leave reviewed_on null until a review has actually taken place. Never derive
+ * an editorial date from the request, file modification time or upload time.
+ */
+function fbh_reviewed_on($value) {
+    if (!is_string($value) || !preg_match('/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/', $value, $parts)) {
+        return null;
+    }
+    return checkdate((int) $parts[2], (int) $parts[3], (int) $parts[1]) ? $value : null;
+}
+
+function fbh_review_date_schema($value) {
+    $reviewed = fbh_reviewed_on($value);
+    return $reviewed === null ? [] : ['dateModified' => $reviewed];
+}
+
+function fbh_render_review_date($value) {
+    $reviewed = fbh_reviewed_on($value);
+    if ($reviewed === null) return;
+    $date = DateTimeImmutable::createFromFormat('!Y-m-d', $reviewed);
+    printf(
+        '<p class="wrap field-note" style="padding-bottom:40px">Written and maintained by Fawaz BH. Last reviewed <time datetime="%s">%s</time>.</p>',
+        htmlspecialchars($reviewed, ENT_QUOTES, 'UTF-8'),
+        htmlspecialchars($date->format('j F Y'), ENT_QUOTES, 'UTF-8')
+    );
+}
+}
+
 if (!function_exists('render_head')) {
 
 /**
@@ -51,10 +81,10 @@ function render_head(array $meta = []) {
         $canonical = fbh_locale_url($lang, fbh_current_path());
     }
 
-    // Geo tags default to the home base and are overridden by location pages.
-    $geoRegion    = $meta['geo_region']    ?? 'IN-KA';
-    $geoPlacename = $meta['geo_placename'] ?? 'Kushal Nagar, Kodagu, Karnataka';
-    $geoPosition  = $meta['geo_position']  ?? '12.4574;75.9608';
+    // The only business location is Kushalnagar, Kodagu. Other markets are
+    // service areas, not premises. The owner has not supplied coordinates.
+    $geoRegion    = 'IN-KA';
+    $geoPlacename = 'Kushalnagar, Kodagu, Karnataka, India';
     $ogType       = $meta['og_type']       ?? 'website';
     ?>
 <!DOCTYPE html>
@@ -84,8 +114,6 @@ $mtFile = !empty($locale['has_file']) && !fbh_is_default_lang();
 <meta name="author" content="Fawaz BH">
 <meta name="geo.region" content="<?php echo htmlspecialchars($geoRegion, ENT_QUOTES, 'UTF-8'); ?>">
 <meta name="geo.placename" content="<?php echo htmlspecialchars($geoPlacename, ENT_QUOTES, 'UTF-8'); ?>">
-<meta name="geo.position" content="<?php echo htmlspecialchars($geoPosition, ENT_QUOTES, 'UTF-8'); ?>">
-<meta name="ICBM" content="<?php echo htmlspecialchars(str_replace(';', ', ', $geoPosition), ENT_QUOTES, 'UTF-8'); ?>">
 
 <meta property="og:type" content="<?php echo htmlspecialchars($ogType, ENT_QUOTES, 'UTF-8'); ?>">
 <meta property="og:title" content="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>">

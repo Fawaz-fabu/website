@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-kochi',
     'city'    => 'Kochi',
     'region'  => 'Kerala',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Kochi city', 'Ernakulam', 'Fort Kochi', 'Kakkanad and Infopark', 'Willingdon Island', 'Aluva', 'Vypin'],
 
-    'geo_region'    => 'IN-KL',
-    'geo_placename' => 'Kochi, Kerala',
-    'geo_position'  => '9.9312;76.2673',
-    'latitude'      => 9.9312,
-    'longitude'     => 76.2673,
 
     'market' => [
         ['Export buyers judge you on specification, not on adjectives', 'Kochi&#8217;s spice, seafood, coir and cashew exporters sell to purchasing managers who may be anywhere in the world. Local pack visibility is irrelevant to them. What matters is whether your site answers a buyer&#8217;s real questions: grades and varieties, processing and packing detail, certifications and food safety approvals stated plainly, volumes you can actually supply, and documentation you can provide. Most exporter sites here read like a printed brochure from a decade ago, which makes this the strongest opportunity in the city for the kind of work I do.'],

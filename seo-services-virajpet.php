@@ -8,6 +8,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-virajpet',
     'city'    => 'Virajpet',
     'region'  => 'Kodagu, Karnataka',
@@ -35,11 +38,6 @@ render_location_page([
 
     'places' => ['Virajpet town', 'Gonikoppal', 'Ponnampet', 'Ammathi', 'Nagarhole fringe', 'Kutta'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Virajpet, Kodagu, Karnataka',
-    'geo_position'  => '12.1969;75.8036',
-    'latitude'      => 12.1969,
-    'longitude'     => 75.8036,
 
     'market' => [
         ['Coffee exporters need an English site built for buyers abroad', 'A Virajpet coffee trader selling to buyers outside India has almost no use for local pack work. What they need is a site that reads credibly to an international buyer: clear origin and processing detail, certifications stated plainly, specifications a purchasing manager can act on, and enough structure that the business resolves as a real, verifiable entity rather than an unverifiable listing. Most estates in this area either have no site or have one that reads like a printed brochure.'],

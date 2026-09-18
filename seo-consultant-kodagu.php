@@ -116,7 +116,7 @@ $why = [
     ['Genuinely based in Kodagu', 'Not a Mangaluru or Bangalore office with a Coorg page. I live and work in Kushalnagar, so local knowledge is first-hand, not researched from a distance.'],
     ['You work with me, directly', 'Every audit, call and change runs through one person. No account managers, no junior handoffs, no part-time attention split across two states.'],
     ['Certified and current', 'Ahrefs and Semrush certified, with an Advanced Diploma in Digital Marketing, kept current with how Google and AI answer engines actually work today.'],
-    ['A real Kodagu case study', 'Documented results for Green Coorg Spices, a Kushalnagar brand, not stock testimonials. Proof from the same market you operate in.'],
+    ['A real Kodagu case study', 'Engagement notes and a client-approved testimonial from Green Coorg Spices, a Kushalnagar brand.'],
     ['Built for the AI era', 'An early practitioner of AEO and GEO, so your business is structured to be cited by ChatGPT and Perplexity, not just ranked on Google.'],
 ];
 
@@ -124,7 +124,7 @@ $why = [
 $faqs = [
     [
         'q' => 'Who is the best SEO consultant in Kodagu?',
-        'a' => ['<strong>Fawaz BH is an SEO consultant based in Kushalnagar, Kodagu, who works with Coorg businesses directly and is certified by Ahrefs and Semrush.</strong> Unlike agencies that serve Kodagu from offices in Mangaluru or Bangalore, he lives in the district, so local knowledge is first-hand. He has a documented result for Green Coorg Spices, a Kushalnagar brand, and covers SEO, Google Ads, social media, AEO and GEO. When choosing, look for a genuinely local base, verifiable certifications, direct access and real proof rather than a bare best SEO expert claim.'],
+        'a' => ['<strong>Fawaz BH is an SEO consultant based in Kushalnagar, Kodagu, who works with Coorg businesses directly and is certified by Ahrefs and Semrush.</strong> Unlike agencies that serve Kodagu from offices in Mangaluru or Bangalore, he lives in the district, so local knowledge is first-hand. The site includes a client-approved testimonial from Green Coorg Spices, a Kushalnagar brand, and covers SEO, Google Ads, social media, AEO and GEO. When choosing, look for a genuinely local base, verifiable certifications, direct access and real proof rather than a bare best SEO expert claim.'],
         'open' => true,
     ],
     [
@@ -189,8 +189,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -199,13 +198,19 @@ $schema = json_encode([
         ],
         [
             '@type'      => 'ProfessionalService',
-            '@id'        => 'https://fawazbhseo.in/seo-consultant-kodagu#practice',
-            'name'       => 'FawazBHSEO, SEO consultant in Kodagu',
+            '@id'        => 'https://fawazbhseo.in/#practice',
+            'name'       => 'FawazBHSEO',
             'founder'    => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'url'        => 'https://fawazbhseo.in/seo-consultant-kodagu',
+            'url'        => 'https://fawazbhseo.in/',
             'telephone'  => '+91-94810-84038',
             'priceRange' => 'Scoped per engagement',
-            'geo'        => ['@type' => 'GeoCoordinates', 'latitude' => 12.4574, 'longitude' => 75.9608],
+            'address' => [
+                '@type' => 'PostalAddress',
+                'addressLocality' => 'Kushalnagar, Kodagu',
+                'addressRegion' => 'Karnataka',
+                'postalCode' => '571234',
+                'addressCountry' => 'IN',
+            ],
             'areaServed' => [
                 'Kushalnagar', 'Madikeri', 'Virajpet', 'Somwarpet', 'Suntikoppa',
                 'Napoklu', 'Gonikoppal', 'Ponnampet', 'Ammathi', 'Kodagu',
@@ -415,7 +420,7 @@ render_header('cities');
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Proof from Kodagu</p>
-        <h2 id="case-h">Green Coorg Spices, a local result</h2>
+        <h2 id="case-h">Green Coorg Spices, a local engagement</h2>
       </div>
 
       <div class="grid grid--2">

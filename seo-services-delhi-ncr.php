@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-delhi-ncr',
     'city'    => 'Delhi NCR',
     'region'  => 'Delhi, Haryana and Uttar Pradesh',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['New Delhi', 'Gurugram', 'Noida', 'Greater Noida', 'Faridabad', 'Ghaziabad', 'Dwarka', 'Connaught Place'],
 
-    'geo_region'    => 'IN-DL',
-    'geo_placename' => 'Delhi NCR, India',
-    'geo_position'  => '28.6139;77.2090',
-    'latitude'      => 28.6139,
-    'longitude'     => 77.2090,
 
     'market' => [
         ['One economy, four places, and Google treats them as four places', 'Customers move freely between Delhi, Gurugram, Noida and Faridabad and think of it as one city. Google does not: these are separate administrative areas and local results are computed accordingly. A business physically in Gurugram will struggle to appear for Noida-qualified searches no matter how well optimised it is, because proximity and jurisdiction both count. Getting this right means deciding honestly which parts of NCR you can realistically serve and win, rather than claiming the whole region and ranking properly in none of it.'],
