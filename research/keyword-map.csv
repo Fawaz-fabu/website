@@ -1,0 +1,51 @@
+id,discipline,keyword,evidence,source,intent,priority,current_target,recommended_primary_target,target_status,volume,difficulty,reason
+K01,SEO,seo consultant india,observed,S01,hire,P1,/seo-consultant-india,/seo-consultant-india,existing,unknown,unknown,Direct consultant positioning
+K02,SEO,seo expert india,observed,S01,hire,P1,/seo-consultant-india,/seo-consultant-india,existing,unknown,unknown,Secondary variant on same national page
+K03,SEO,seo specialist india,observed,S01,hire,P2,/seo-consultant-india,/seo-consultant-india,existing,unknown,unknown,Do not create a duplicate specialist page
+K04,SEO,search engine optimization services india,observed,S01,service,P1,/seo-services,/seo-services,existing,unknown,unknown,Explain deliverables and pricing
+K05,SEO,seo consultant bangalore,observed,S11,hire_local,P1,/seo-services-bengaluru,/seo-services-bengaluru,existing,unknown,unknown,Use Bangalore as a natural Bengaluru variant
+K06,SEO,seo services bangalore,observed,S11,service_local,P1,/seo-services-bengaluru,/seo-services-bengaluru,existing,unknown,unknown,Local intent on the same city page
+K07,SEO,seo consultant karnataka,negative_observation,S07,hire_local,P1,/seo-consultant-karnataka,/seo-consultant-karnataka,existing,unknown,unknown,Relevant home market despite empty suggestion sample
+K08,SEO,seo consultant kodagu,candidate,F03,hire_local,P1,/seo-consultant-kodagu,/seo-consultant-kodagu,existing,unknown,unknown,Real home region rather than invented office
+K09,SEO,seo services kushalnagar,candidate,F03,service_local,P1,/seo-services-kushalnagar,/seo-services-kushalnagar,existing,unknown,unknown,Home-town page owns service intent
+K10,SEO,technical seo audit india,candidate,F01,service,P2,/seo-services#technical-seo,/seo-services#technical-seo,existing_section,unknown,unknown,Validate demand before splitting a technical service URL
+K11,SEO,how long does seo take to work,observed,S08,question,P1,/seo-services,/seo-services,existing,unknown,unknown,Explain dependencies without a fixed ranking promise
+K12,SEO,how long does seo take to work for a new website,observed,S08,question,P2,/seo-services,/seo-services,existing,unknown,unknown,Address new sites as a separate scenario
+K13,AEO,answer engine optimization services,observed,S02,service,P1,/aeo-consultant,/aeo-consultant,existing,unknown,unknown,Primary AEO buying intent
+K14,AEO,answer engine optimization definition,observed,S02,learn,P2,/aeo-consultant,/aeo-consultant,existing,unknown,unknown,Short plain-language definition supports buyers
+K15,AEO,answer engine optimization examples,observed,S02,learn,P2,/aeo-consultant,/aeo-consultant,existing,unknown,unknown,Use labelled examples rather than invented client wins
+K16,AEO,aeo vs seo,observed,S14,compare,P1,/aeo-consultant,/aeo-consultant,existing,unknown,unknown,Explain overlap and differences
+K17,AEO,aeo vs seo vs geo,observed,S14,compare,P1,/ai-seo-expert-india,/ai-seo-expert-india,existing,unknown,unknown,Comparison intent separate from each service detail page
+K18,AEO,aeo consultant india,candidate,F01,hire,P1,/aeo-consultant,/aeo-consultant,existing,unknown,unknown,Consultant variant needs SERP validation
+K19,AEO,answer engine optimization companies,observed,S02,compare_providers,P2,/aeo-consultant,/aeo-consultant,existing,unknown,unknown,Explain consultant versus agency fit without changing business identity
+K20,GEO,generative engine optimization meaning,observed,S03,learn,P2,/geo-consultant,/geo-consultant,existing,unknown,unknown,Clear answer before the detailed work
+K21,GEO,generative engine optimization strategies,observed,S03,learn_service,P1,/geo-consultant,/geo-consultant,existing,unknown,unknown,Explain actions and limits with evidence
+K22,GEO,generative engine optimization companies,observed,S03,compare_providers,P2,/geo-consultant,/geo-consultant,existing,unknown,unknown,Support evaluation rather than self-awarded rankings
+K23,GEO,geo consultant india,candidate,F01,hire,P1,/geo-consultant,/geo-consultant,existing,unknown,unknown,Commercial consultant variant
+K24,GEO,how to get my business on chatgpt,observed,S09,question,P1,/geo-consultant,/geo-consultant,existing,unknown,unknown,Explain that there is no guaranteed organic listing application
+K25,GEO,how to get your business recommended on chatgpt,observed,S09,question,P1,/geo-consultant,/geo-consultant,existing,unknown,unknown,Separate mentions from citations and recommendations
+K26,GEO,ai visibility audit india,candidate,F01,service,P2,/geo-consultant,/geo-consultant,existing,unknown,unknown,Describe repeatable prompt evaluation without guaranteed outcomes
+K27,Performance marketing,performance marketing services in india,observed,S04,service,P1,/seo-services#pricing-ads,/performance-marketing,proposed_not_created,unknown,unknown,Dedicated explanation missing beyond the rate card
+K28,Performance marketing,performance marketing services,observed,S04,service,P1,/seo-services#pricing-ads,/performance-marketing,proposed_not_created,unknown,unknown,One page for service scope and qualification
+K29,Performance marketing,google ads vs facebook ads which is better,observed,S12,compare,P1,/seo-services#pricing-ads,/performance-marketing,proposed_not_created,unknown,unknown,Answer based on buyer intent and economics
+K30,Performance marketing,google ads vs facebook ads cost,observed,S12,price_compare,P1,/seo-services#pricing-ads,/performance-marketing,proposed_not_created,unknown,unknown,Keep management fee separate from media spend
+K31,Performance marketing,google ads vs facebook ads for ecommerce,observed,S12,compare,P2,/seo-services#pricing-ads,/performance-marketing,proposed_not_created,unknown,unknown,Qualify fit without inventing ecommerce results
+K32,Performance marketing,google ads consultant karnataka,candidate,F01,hire_local,P1,/seo-services#pricing-ads,/performance-marketing,proposed_not_created,unknown,unknown,Regional service candidate requiring validation
+K33,Performance marketing,meta ads consultant india,candidate,F01,hire,P2,/seo-services#pricing-ads,/performance-marketing,proposed_not_created,unknown,unknown,Existing offering supports a candidate cluster
+K34,Social media marketing,social media marketing services packages,observed,S05,price_service,P1,/seo-services#pricing-social,/social-media-marketing,proposed_not_created,unknown,unknown,Published package detail is a useful source
+K35,Social media marketing,social media marketing services list,observed,S05,scope,P1,/seo-services#pricing-social,/social-media-marketing,proposed_not_created,unknown,unknown,Explain what a buyer receives
+K36,Social media marketing,social media marketing services near me,observed,S05,hire_local,P2,/seo-services#pricing-social,/social-media-marketing,proposed_not_created,unknown,unknown,Use real base and service area not the phrase everywhere
+K37,Social media marketing,how much does social media management cost,observed,S13,price_question,P1,/seo-services#pricing-social,/social-media-marketing,proposed_not_created,unknown,unknown,Explain scope variables and published starting fee
+K38,Social media marketing,how much does social media management cost per month,observed,S13,price_question,P1,/seo-services#pricing-social,/social-media-marketing,proposed_not_created,unknown,unknown,Consolidate with the main pricing answer
+K39,Social media marketing,social media marketing consultant karnataka,candidate,F01,hire_local,P1,/seo-services#pricing-social,/social-media-marketing,proposed_not_created,unknown,unknown,Consultant and region match the business
+K40,Social media marketing,instagram marketing for small businesses,candidate,F01,service,P2,/seo-services#pricing-social,/social-media-marketing,proposed_not_created,unknown,unknown,Validate platform demand and scope before claiming specialism
+K41,Digital marketing,digital marketing consultant,observed,S06,hire,P1,/seo-consultant-kodagu,/digital-marketing-consultant,proposed_not_created,unknown,unknown,Create a strategy hub not a duplicate SEO page
+K42,Digital marketing,digital marketing consultant near me,observed,S06,hire_local,P2,/seo-consultant-kodagu,/digital-marketing-consultant,proposed_not_created,unknown,unknown,Accurate local identity instead of fabricated offices
+K43,Digital marketing,how much does digital marketing cost,observed,S10,price_question,P1,/seo-services,/digital-marketing-consultant,proposed_not_created,unknown,unknown,Separate channels and scopes rather than invent a universal fee
+K44,Digital marketing,how much does digital marketing cost for a small business,observed,S10,price_question,P1,/seo-services,/digital-marketing-consultant,proposed_not_created,unknown,unknown,Explain prioritisation for a limited budget
+K45,Digital marketing,digital marketing consultant india,candidate,F01,hire,P1,/seo-consultant-india,/digital-marketing-consultant,proposed_not_created,unknown,unknown,National digital strategy is distinct from national SEO
+K46,Digital marketing,digital marketing consultant karnataka,candidate,F03,hire_local,P1,/seo-consultant-karnataka,/digital-marketing-consultant,proposed_not_created,unknown,unknown,Keep strong genuine regional positioning
+K47,Digital marketing,digital marketing consultant asia,candidate,user_goal,hire_international,P3,/cities-we-serve,/cities-we-serve,existing,unknown,unknown,Defer dedicated Asia page until delivery evidence and buyer demand are validated
+K48,Brand,Fawaz BH SEO consultant,candidate,F02,navigational,P1,/,/,existing,unknown,unknown,Homepage owns the brand entity
+K49,Brand,best seo consultant in india,candidate,user_goal,compare_providers,P2,/seo-consultant-india,/seo-consultant-india,existing,unknown,unknown,Offer evaluation criteria not an unverified number-one claim
+K50,Brand,best digital marketing consultant in asia,candidate,user_goal,compare_providers,P3,/cities-we-serve,/cities-we-serve,existing,unknown,unknown,Research candidate only and not an earned market position
