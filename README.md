@@ -18,6 +18,14 @@ Built as PHP pages with function-wrapped shared includes. The design follows the
 
 ## 2. Currently completed
 
+### Compact chat grounding and repo-only coverage report
+
+- Added `/llms-chat.txt` as a static grounding resource: 22,662 characters and 22,684 UTF-8 bytes, below the owner's 40,000-character backend truncation limit. It covers 32 page purposes, services, published package prices/inclusions, service areas, contact, background and case-study facts; it does not reproduce long-form guides.
+- All 32 live URLs returned HTTP 200 during source checking, but the public site was still behind the corrected repository. The chat file therefore uses live-page-supported facts, excludes owner-rejected claims still present there, and omits newer unpublished repository-only testing/status/engagement details. Reconcile those details after the corrected pages are uploaded; do not restore rejected claims merely because stale live copy contains them.
+- The owner will repoint the chat backend. No chat.php, /api/ file, PHP page, existing LLM summary, asset, routing, canonical, i18n or sitemap was changed in this task. No runtime dependency, build step or storage service was added.
+- Added private `research/service-coverage-report.md`: repo-only scope/location mapping for seven requested service categories, 105 exact quoted scope/package entries, all 32 page classifications (4 service, 19 location, 3 guide, 6 other), current specialist headings/FAQs/schema types and body-link coverage. A residual Coorg-homestay client assertion on About is flagged for review rather than silently edited.
+- Deployment remains manual Hostinger upload. Upload only llms-chat.txt for this addition; do not upload research, README or .audit-work. No hosting deployment or GitHub push was performed. The existing full text was analysed but left unchanged.
+
 ### Owner-approved restoration and corrected engagement facts
 
 This release supersedes earlier descriptions of the removed AI-testing statement, starting-price schema and shortened LLM summaries below. It remains plain PHP, manually uploaded to Apache/Hostinger, without new runtime dependencies or a build step.
