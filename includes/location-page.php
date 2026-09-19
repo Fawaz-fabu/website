@@ -105,6 +105,7 @@ function fbh_location_schema(array $loc) {
         'url'        => $base,
         'telephone'  => '+91-94810-84038',
         'email'      => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
+        'priceRange' => 'From INR 14999 per month',
         'address'    => [
             '@type'           => 'PostalAddress',
             'addressLocality' => 'Kushalnagar, Kodagu',

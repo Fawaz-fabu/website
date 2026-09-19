@@ -73,7 +73,7 @@ $criteria = [
     ['Criterion 02', 'Who does the work after the pitch', 'Ask directly: will the person on this call implement the fixes, or will you be handed to an account manager and a junior team? Every audit, schema deployment, content brief and technical fix on my engagements is carried out by me, which is also why the client list is deliberately short. That is a capacity limit, and I will tell you when I am at it.'],
     ['Criterion 03', 'All three disciplines, or SEO with an AI upsell', 'Most Karnataka providers sell SEO and attach AEO or GEO as an add-on line item. Ask how they measure AI visibility and whether they can name the engines separately. I scope SEO, AEO and GEO as one connected strategy because entity clarity, structured data and answer-first content earn Google rankings and AI citations with the same work.'],
     ['Criterion 04', 'Genuine bilingual and local-market knowledge', 'Ask them to describe how a customer in Mysuru or Hubballi-Dharwad actually types a query. If they cannot discuss Kannada-script, transliterated and English variants of the same intent, they are running a national template on a Karnataka market. Keyword research on my engagements is built in Kannada and English together.'],
-    ['Criterion 05', 'Separate evidence from claims', 'Ask what supports a claimed result. Client-approved testimonials describe a client experience; they do not independently verify ranking, traffic, order-growth or AI-citation metrics. No numerical client performance result is published here.'],
+    ['Criterion 05', 'Separate evidence from claims', 'Ask what supports a claimed result. Client-approved testimonials describe a client experience; they do not independently verify ranking, traffic, order-growth or AI-citation metrics. The historical first-page ranking is stated separately; no time-to-rank, traffic increase or order-growth figure is published.'],
     ['Criterion 06', 'Honesty about what cannot be guaranteed', 'Anyone guaranteeing a Google position or a ChatGPT citation is either misinformed or misleading you, because nobody controls a ranking algorithm or what a language model chooses to quote. What can be committed to is process, cadence and scope: a free written audit you keep, a scope agreed in writing before invoicing, and plain-English reporting on rankings, traffic and AI citations.'],
 ];
 
@@ -146,7 +146,8 @@ $clients = [
         'biz'   => 'Organic spice brand, Kushal Nagar, Kodagu, greencoorgspices.in',
         'badge' => 'Client-approved testimonial',
         'accent'=> true,
-        'href'  => 'https://greencoorgspices.in',
+        'href'  => null,
+        'status_note' => 'Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. The site is currently offline because hosting expired; a rebuilt version is in progress.',
     ],
     [
         'quote' => 'Website design and build, technical fixes and digital marketing support for a construction and interiors firm in Nelamangala, Bengaluru. Engagement in progress, no testimonial until the client gives one in their own words.',
@@ -157,20 +158,20 @@ $clients = [
         'href'  => 'https://neelachandra.com',
     ],
     [
-        'quote' => 'Hospitality and homestay client in Madikeri, Kodagu, local ranking campaign active. Case study and verified figures will be published on completion.',
-        'cite'  => 'Homestay and hospitality, Madikeri',
-        'biz'   => 'Tourism, Kodagu, Karnataka',
-        'badge' => 'Campaign active',
-        'accent'=> false,
-        'href'  => null,
-    ],
-    [
-        'quote' => 'Multi-speciality healthcare clinic in Karnataka, local ranking campaign in progress. Metrics will be published only once confirmed in Search Console and Business Profile insights.',
-        'cite'  => 'Multi-speciality clinic, Karnataka',
-        'biz'   => 'Healthcare, Karnataka',
+        'quote' => 'Current digital work for neelachandrainteriors.com. This is an active engagement, not a completed-results claim or a client testimonial.',
+        'cite'  => 'Neelachandra Interiors',
+        'biz'   => 'neelachandrainteriors.com',
         'badge' => 'In progress',
         'accent'=> false,
-        'href'  => null,
+        'href'  => 'https://neelachandrainteriors.com',
+    ],
+    [
+        'quote' => 'I am co-founder of ILMERA Study Abroad and run its digital work. This is my own venture, not an arm&#8217;s-length client or a client testimonial.',
+        'cite'  => 'ILMERA Study Abroad',
+        'biz'   => 'ilmerastudyabroad.com',
+        'badge' => 'Own venture, disclosed',
+        'accent'=> false,
+        'href'  => 'https://ilmerastudyabroad.com',
     ],
 ];
 
@@ -267,7 +268,7 @@ $schema = json_encode([
             'founder'    => ['@id' => 'https://fawazbhseo.in/#fawaz'],
             'url'        => 'https://fawazbhseo.in/',
             'telephone'  => '+91-94810-84038',
-            'priceRange' => 'Scoped per engagement',
+            'priceRange' => 'From INR 14999 per month',
             'address' => [
                 '@type' => 'PostalAddress',
                 'addressLocality' => 'Kushalnagar, Kodagu',
@@ -567,7 +568,7 @@ render_header('cities');
           </div>
           <?php endforeach; ?>
         </div>
-        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. No numerical client performance results are published there.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
       </div>
 
     </div>
@@ -591,6 +592,9 @@ render_header('cities');
             <cite><?php echo $c['cite']; ?></cite>
             <span class="biz"><?php echo $c['biz']; ?></span>
           </figcaption>
+          <?php if (!empty($c['status_note'])): ?>
+          <p class="field-note"><?php echo htmlspecialchars($c['status_note'], ENT_QUOTES, 'UTF-8'); ?></p>
+          <?php endif; ?>
           <?php if (!empty($c['href'])): ?>
           <p style="margin-top:18px"><a class="link-arrow" href="<?php echo $c['href']; ?>" target="_blank" rel="noopener">Visit website</a></p>
           <?php endif; ?>

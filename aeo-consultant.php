@@ -586,7 +586,7 @@ render_header('services');
           </div>
           <?php endforeach; ?>
         </div>
-        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. No numerical client performance results are published there.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
       </div>
 
     </div>

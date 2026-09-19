@@ -200,8 +200,8 @@ $creds = [
 
 /* ── Proof ────────────────────────────────────────────────────────────── */
 $patterns = [
-    ['Engagement', 'Green Coorg Spices, Kodagu', 'Read the engagement notes and the client-approved testimonial on the <a href="/case-studies">case studies page</a>. No numerical client performance result is presented.'],
-    ['Pattern', 'Live engagements, marked live', 'Two construction and interiors domains in outer Bengaluru, a homestay client in Madikeri, and a multi-speciality clinic in Karnataka are currently in progress. No testimonials or performance figures are published for any of them yet, and none will be until the client provides them or the data is verified.'],
+    ['Engagement', 'Green Coorg Spices, Kodagu', 'Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. It is currently offline because hosting expired; a rebuilt version is in progress. Read the engagement notes and approved testimonial on the <a href="/case-studies">case studies page</a>.'],
+    ['Pattern', 'Live engagements, marked live', 'Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. I am co-founder of ILMERA Study Abroad and run its digital work; it is my own venture, not an arm&#8217;s-length client. These are current engagements, not completed-results claims.'],
     ['Background', 'The longer version', 'How I got into search in early 2025 and why I moved into answer-engine work as it was forming is on the <a href="/about">about page</a>. The full service and pricing breakdown, including published starting rates, is on the <a href="/seo-services">SEO services page</a>.'],
 ];
 
@@ -544,7 +544,7 @@ render_header('cities');
           </div>
           <?php endforeach; ?>
         </div>
-        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. No numerical client performance results are published there.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
       </div>
 
     </div>
@@ -644,13 +644,13 @@ render_header('cities');
 
       <div class="grid grid--2">
         <figure class="card card--featured quote reveal">
-          <span class="badge badge--accent">Completed engagement</span>
+          <span class="badge badge--accent">Site offline; rebuild in progress</span>
           <blockquote>&#8220;Fawaz helped us reach the first page of Google, and our online orders from Bangalore and Mysore have grown. He genuinely understood the Kodagu market.&#8221;</blockquote>
           <figcaption>
             <cite>Green Coorg Spices</cite>
             <span class="biz">Organic spice brand, Kushal Nagar, Kodagu, greencoorgspices.in</span>
           </figcaption>
-          <p style="margin-top:18px"><a class="link-arrow" href="https://greencoorgspices.in" target="_blank" rel="noopener">Visit website</a></p>
+          <p class="field-note" style="margin-top:18px">The site is currently offline because hosting expired. A rebuilt version is in progress; the historical ranking is not a claim of current visibility.</p>
         </figure>
 
         <figure class="card quote reveal">

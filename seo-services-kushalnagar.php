@@ -24,7 +24,7 @@ render_location_page([
 
     'intro' => [
         '<strong>Fawaz BH is an independent SEO, AEO and GEO consultant based in Kushal Nagar, Kodagu, Karnataka.</strong> This is where I actually live and work, which means the local knowledge here is first hand rather than assembled from a keyword tool in another city.',
-        'Green Coorg Spices is a Kushal Nagar client. The <a href="/case-studies">case studies page</a> describes the engagement and retains the client-approved testimonial without numerical performance claims.',
+        'Green Coorg Spices is a Kushal Nagar client. It had no prior website or digital presence. I built its website, which reached first-page Google rankings. The site is currently offline because hosting expired, and a rebuilt version is in progress. Read the <a href="/case-studies">case studies page</a> for the engagement and approved testimonial.',
     ],
 
     'trust' => 'Based in Kushal Nagar. Not a rented address.',
@@ -79,7 +79,7 @@ render_location_page([
             'q' => 'What results have you actually achieved in Kushal Nagar?',
             'a' => [
                 '<strong>The <a href="/case-studies">case studies page</a> describes the Green Coorg Spices engagement and includes the client-approved testimonial.</strong>',
-                'No numerical client performance result is published. The testimonial is retained in the approved wording, not converted into a metric or a promise for another business.',
+                'Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. It is currently offline because hosting expired; a rebuilt version is in progress. No time-to-rank or order-growth figure is asserted, and the approved testimonial is not a promise for another business.',
             ],
         ],
         [

@@ -30,7 +30,8 @@ $schema = <<<'JSONLD'
       "publisher": {
         "@id": "https://fawazbhseo.in/#fawaz"
       },
-      "about": "Local SEO, AEO and GEO for an organic spice brand in Kushal Nagar, Kodagu, Karnataka"
+      "about": "Local SEO, AEO and GEO for an organic spice brand in Kushal Nagar, Kodagu, Karnataka",
+      "description": "Green Coorg Spices had no prior website or digital presence. Fawaz BH built its website, which reached first-page Google rankings. The site is currently offline because hosting expired; a rebuilt version is in progress."
     },
     {
       "@type": "FAQPage",
@@ -41,7 +42,7 @@ $schema = <<<'JSONLD'
           "name": "Are these real clients?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Green Coorg Spices is a client based in Kushal Nagar, Kodagu. The testimonials published on this site were approved by the clients over WhatsApp. Other engagements are identified separately as in progress."
+            "text": "Yes. Green Coorg Spices is a client based in Kushal Nagar, Kodagu. The testimonials published on this site were approved by the clients over WhatsApp. Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. I am co-founder of ILMERA and run its digital work; it is not an arm’s-length client."
           }
         },
         {
@@ -49,7 +50,7 @@ $schema = <<<'JSONLD'
           "name": "How do I know these SEO results are real, and can I trust them?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Separate the work described from measured results and client feedback. The testimonials were approved by the clients over WhatsApp. No numerical client performance results are published here; an approved quote does not establish an independently measured metric."
+            "text": "Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. The site is currently offline because hosting expired, and a rebuilt version is in progress. No time-to-rank, traffic increase or order-growth figure is asserted. The testimonials were approved by the clients over WhatsApp."
           }
         },
         {
@@ -65,7 +66,7 @@ $schema = <<<'JSONLD'
           "name": "Are the numbers in these case studies verified?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No numerical client performance results are published on this page. The client-approved testimonials are retained verbatim and should not be treated as quantified performance evidence."
+            "text": "The first-page ranking is a historical result, not a claim of current visibility while the site is offline. No time-to-rank, traffic increase or order-growth figure is published. The client-approved testimonials are retained verbatim."
           }
         },
         {
@@ -125,7 +126,7 @@ render_header('cases');
       <div class="hero__lead reveal">
         <p class="eyebrow">SEO case studies, real client engagements, Kodagu, Karnataka</p>
         <h1 id="hero-h">Real businesses. Client-approved testimonials. The work, documented.</h1>
-        <p class="hero__sub">A working record of what SEO, AEO and GEO look like in practice across <strong>Kodagu, Karnataka and India</strong>. From a Kodagu spice brand competing against bigger-city rivals in Bengaluru and Mysuru, to live engagements still in progress. The testimonials are client-approved; no numerical performance results are published.</p>
+        <p class="hero__sub">A working record of what SEO, AEO and GEO look like in practice across <strong>Kodagu, Karnataka and India</strong>. From a Kodagu spice brand competing against bigger-city rivals in Bengaluru and Mysuru, to live engagements still in progress. The testimonials are client-approved. The historical first-page ranking and current offline/rebuild status are explained below.</p>
 
         <div class="btn-row">
           <a class="btn btn--accent" href="https://wa.me/919481084038?text=Hi%20Fawaz%2C%20I%20want%20results%20like%20your%20case%20studies" target="_blank" rel="noopener">
@@ -153,7 +154,7 @@ render_header('cases');
       <dl class="readout reveal">
         <div class="readout__row"><dt>Focus</dt><dd>SEO, AEO, GEO<small>One connected strategy</small></dd></div>
         <div class="readout__row"><dt>Published study</dt><dd>1 documented<small>Kushal Nagar, Kodagu</small></dd></div>
-        <div class="readout__row"><dt>Markets</dt><dd>Karnataka and India<small>2+ campaigns live</small></dd></div>
+        <div class="readout__row"><dt>Markets</dt><dd>Karnataka and India<small>Current work listed below</small></dd></div>
         <div class="readout__row"><dt>Data source</dt><dd>GSC, GA4, GBP<small>No fabricated stats</small></dd></div>
         <div class="readout__row"><dt>Engagement</dt><dd>Founder led<small>No agency middlemen</small></dd></div>
       </dl>
@@ -206,7 +207,7 @@ render_header('cases');
         <article class="card reveal">
           <span class="card-index">The evidence</span>
           <h3>Feedback is not a metric</h3>
-          <p>Client testimonials describe the client experience. They are not a substitute for independently measured results. No numerical client performance results are published on this page.</p>
+          <p>Client testimonials describe the client experience. The first-page Google ranking is stated separately as a historical result. No time-to-rank, traffic increase or order-growth figure is published.</p>
         </article>
 
         <article class="card reveal">
@@ -239,9 +240,9 @@ render_header('cases');
         </ul>
         <span class="card-index">Case Study 01, organic spice brand, Kushal Nagar, Kodagu</span>
         <h3 id="cs1">Green Coorg Spices</h3>
-        <p>Green Coorg Spices is a spice brand in Kushal Nagar, Kodagu. This write-up describes the engagement and includes the client-approved testimonial below.</p>
+        <p>Green Coorg Spices is a spice brand in Kushal Nagar, Kodagu. It had no prior website or digital presence. I built its website, which reached first-page Google rankings.</p>
 
-        <p class="field-note" style="margin-top:18px">Read the work described below and the client-approved testimonial. No numerical performance claim is attached to this engagement.</p>
+        <p class="field-note" style="margin-top:18px">The site is currently offline because hosting expired. A rebuilt version is in progress. The ranking describes the previous website, not current visibility; the external link is disabled until the site returns.</p>
       </article>
     </div>
   </section>
@@ -259,7 +260,7 @@ render_header('cases');
         <article class="step reveal">
           <p class="step__k">01, Challenge</p>
           <h3>The search context</h3>
-          <p>The engagement concerned how a Kodagu spice brand presents its products and business information to people searching online.</p>
+          <p>Green Coorg Spices had no prior website or digital presence.</p>
         </article>
 
         <article class="step reveal">
@@ -270,14 +271,14 @@ render_header('cases');
 
         <article class="step reveal">
           <p class="step__k">03, Execution</p>
-          <h3>Audit to local to content</h3>
-          <p>Site audit and technical fixes, Core Web Vitals and conversion tracking set up; Google Business Profile optimised and local citations built; geo-targeted landing pages and pillar articles with FAQ schema and entity-rich AEO formatting published.</p>
+          <h3>Website build, local search and content</h3>
+          <p>I built the website. Site audit and technical fixes, Core Web Vitals and conversion tracking set up; Google Business Profile optimised and local citations built; geo-targeted landing pages and pillar articles with FAQ schema and entity-rich AEO formatting published.</p>
         </article>
 
         <article class="step reveal">
-          <p class="step__k">04, Feedback</p>
-          <h3>Client feedback</h3>
-          <p>The client-approved testimonial below records the client experience in their own words. It is not presented as an independently measured ranking, traffic, order-growth or AI-citation result.</p>
+          <p class="step__k">04, Historical result and current status</p>
+          <h3>First-page Google rankings; rebuild in progress</h3>
+          <p>The website reached first-page Google rankings. It is currently offline because hosting expired, and a rebuilt version is in progress. No time-to-rank or order-growth figure is asserted. The approved testimonial below is retained in the client&#8217;s own words.</p>
         </article>
       </div>
 
@@ -309,39 +310,28 @@ render_header('cases');
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">In progress</p>
-        <h2 id="ip-h">Live campaigns, publishing on completion</h2>
-        <p class="lede">Active engagements across Karnataka and Bengaluru that will be written up in full once they hit a verifiable milestone, with real numbers rather than projections.</p>
+        <h2 id="ip-h">Current engagements and own venture</h2>
+        <p class="lede">Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. ILMERA is my own venture, not an arm&#8217;s-length client.</p>
       </div>
 
       <div class="grid grid--3">
         <article class="card reveal" aria-labelledby="ip1">
-          <span class="card-index">Campaign active</span>
-          <h3 id="ip1">Hospitality and homestay, Madikeri</h3>
-          <p>A hospitality and homestay client in Madikeri, Kodagu, with a campaign actively underway. The full case study publishes once a verifiable milestone is reached and results are confirmed.</p>
-          <ul class="tags" style="margin:16px 0 0">
-            <li class="tag">Hospitality</li>
-            <li class="tag">Madikeri, Kodagu</li>
-          </ul>
+          <span class="card-index">Current engagement</span>
+          <h3 id="ip1"><a href="https://neelachandra.com" target="_blank" rel="noopener nofollow">Neelachandra Construction and Interiors</a>, Bengaluru</h3>
+          <p>A construction and interiors business in Bengaluru with a live engagement covering web development and digital marketing, including SEO, technical fixes and social content. The full case study publishes once the engagement reaches a verifiable milestone.</p>
+          <p>Domain: neelachandra.com.</p>
         </article>
 
         <article class="card reveal" aria-labelledby="ip2">
-          <span class="card-index">Campaign active</span>
-          <h3 id="ip2">Multi-speciality healthcare clinic, Karnataka</h3>
-          <p>A multi-speciality healthcare clinic in Karnataka with a local ranking campaign in progress. A detailed case study is scheduled for publication once the engagement&#8217;s results are confirmed.</p>
-          <ul class="tags" style="margin:16px 0 0">
-            <li class="tag">Healthcare</li>
-            <li class="tag">Karnataka</li>
-          </ul>
+          <span class="card-index">Current engagement</span>
+          <h3 id="ip2"><a href="https://neelachandrainteriors.com" target="_blank" rel="noopener nofollow">Neelachandra Interiors</a></h3>
+          <p>Current digital work for neelachandrainteriors.com. This is an active engagement, not a completed-results claim or a client testimonial.</p>
         </article>
 
         <article class="card reveal" aria-labelledby="ip3">
-          <span class="card-index">Campaign active</span>
-          <h3 id="ip3"><a href="https://neelachandra.com" target="_blank" rel="noopener nofollow">Neelachandra Construction and Interiors</a>, Bengaluru</h3>
-          <p>A construction and interiors business in Bengaluru with a live engagement covering web development and digital marketing, including SEO, technical fixes and social content. The full case study publishes once the engagement reaches a verifiable milestone.</p>
-          <ul class="tags" style="margin:16px 0 0">
-            <li class="tag">Construction and interiors</li>
-            <li class="tag">Bengaluru</li>
-          </ul>
+          <span class="card-index">Own venture, disclosed</span>
+          <h3 id="ip3"><a href="https://ilmerastudyabroad.com" target="_blank" rel="noopener">ILMERA Study Abroad</a></h3>
+          <p>I am co-founder of ILMERA Study Abroad and run its digital work. It is my own venture, not an arm&#8217;s-length client. It is listed for transparency, not as an independent client reference.</p>
         </article>
       </div>
     </div>
@@ -360,12 +350,12 @@ render_header('cases');
       <div class="faq">
         <details open>
           <summary>Are these real clients?</summary>
-          <div class="faq__body"><p>Yes. Green Coorg Spices is a client based in Kushal Nagar, Kodagu. The testimonials published on this site were approved by the clients over WhatsApp. Other engagements are identified separately as in progress.</p></div>
+          <div class="faq__body"><p>Yes. Green Coorg Spices is a client based in Kushal Nagar, Kodagu. The testimonials published on this site were approved by the clients over WhatsApp. Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. I am co-founder of ILMERA and run its digital work; it is not an arm’s-length client.</p></div>
         </details>
 
         <details>
           <summary>How do I know these SEO results are real, and can I trust them?</summary>
-          <div class="faq__body"><p>Separate the work described from measured results and client feedback. The testimonials were approved by the clients over WhatsApp. No numerical client performance results are published here; an approved quote does not establish an independently measured metric.</p></div>
+          <div class="faq__body"><p>Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. The site is currently offline because hosting expired, and a rebuilt version is in progress. No time-to-rank, traffic increase or order-growth figure is asserted. The testimonials were approved by the clients over WhatsApp.</p></div>
         </details>
 
         <details>
@@ -375,7 +365,7 @@ render_header('cases');
 
         <details>
           <summary>Are the numbers in these case studies verified?</summary>
-          <div class="faq__body"><p>No numerical client performance results are published on this page. The client-approved testimonials are retained verbatim and should not be treated as quantified performance evidence.</p></div>
+          <div class="faq__body"><p>The first-page ranking is a historical result, not a claim of current visibility while the site is offline. No time-to-rank, traffic increase or order-growth figure is published. The client-approved testimonials are retained verbatim.</p></div>
         </details>
 
         <details>

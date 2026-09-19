@@ -10,6 +10,11 @@ require_once __DIR__ . '/includes/contact-form.php';
 require_once __DIR__ . '/includes/floating-button.php';
 require_once __DIR__ . '/includes/footer.php';
 
+// Single editable date for the personal AI-testing statement below.
+// Update only after re-testing. Static LLM summaries link to #ai-testing instead
+// of duplicating this date; this is not an editorial reviewed_on date.
+$ai_testing_as_of = 'September 2026';
+
 $schema = <<<'JSONLD'
 {
   "@context": "https://schema.org",
@@ -203,7 +208,7 @@ render_header('home');
       <div class="sticky-col reveal">
         <p class="eyebrow">Client work</p>
         <h2 id="case-h" style="margin-block:16px 20px">Green Coorg Spices, a local engagement</h2>
-        <p class="lede">Read the engagement write-up and the client-approved testimonial. Active engagements are identified separately on the case studies page.</p>
+        <p class="lede">Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. I am co-founder of ILMERA and run its digital work; it is not an arm&#8217;s-length client.</p>
         <div class="btn-row" style="margin-top:26px">
           <a class="link-arrow" href="/case-studies">
             Read the full case studies
@@ -214,11 +219,12 @@ render_header('home');
 
       <div>
         <figure class="card card--featured quote reveal" style="margin:0">
-          <blockquote cite="https://greencoorgspices.in">"We went from page one being a distant dream to real online orders coming in from Bangalore and Mysore. Fawaz understood the Kodagu market in a way no one else we spoke to did."</blockquote>
+          <blockquote>"We went from page one being a distant dream to real online orders coming in from Bangalore and Mysore. Fawaz understood the Kodagu market in a way no one else we spoke to did."</blockquote>
           <figcaption>
             <cite>Green Coorg Spices</cite>
             <span class="biz">Spice brand, Kushal Nagar, Kodagu, greencoorgspices.in</span>
-            <span class="badge badge--accent">Completed engagement</span>
+            <p class="field-note">The site is currently offline because hosting expired. A rebuilt version is in progress; the historical ranking is not a claim of current visibility.</p>
+            <span class="badge badge--accent">Site offline; rebuild in progress</span>
           </figcaption>
         </figure>
       </div>
@@ -283,8 +289,9 @@ render_header('home');
           <li>
             <span class="idx">03</span>
             <div>
-              <h3>Separate AI visibility from assumptions</h3>
-              <p>A mention, a linked citation and a recommendation are different observations. The <a href="/blogs/measure-ai-search-visibility">AI visibility guide</a> explains how to record them without turning a single answer into a performance claim.</p>
+              <h3 id="ai-testing">My own AI-search testing</h3>
+              <p>In my own testing as of <?php echo htmlspecialchars($ai_testing_as_of, ENT_QUOTES, 'UTF-8'); ?>, ChatGPT, Gemini and Google AI Overviews named me among SEO specialists for Kodagu and Karnataka. I re-test regularly. AI answers vary by prompt and change over time.</p>
+              <p class="field-note">These are observations from my own testing, not an independent endorsement or a guarantee. The <a href="/blogs/measure-ai-search-visibility">AI visibility guide</a> explains how to distinguish mentions, citations and recommendations.</p>
             </div>
           </li>
           <li>

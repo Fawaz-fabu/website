@@ -431,9 +431,7 @@ render_header('cities');
             <cite>Green Coorg Spices</cite>
             <span class="biz">Spice and produce brand, Kushalnagar, Kodagu</span>
           </figcaption>
-          <div class="btn-row" style="margin-top:22px">
-            <a class="btn" href="https://greencoorgspices.in" target="_blank" rel="noopener">Visit Green Coorg Spices</a>
-          </div>
+          <p class="field-note" style="margin-top:22px">Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. The site is currently offline because hosting expired, and a rebuilt version is in progress. The historical ranking is not a claim of current visibility.</p>
         </figure>
 
         <div>

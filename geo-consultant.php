@@ -586,7 +586,7 @@ render_header('services');
           <?php endforeach; ?>
         </div>
 
-        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. No numerical client performance results are published there.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
       </div>
 
     </div>
@@ -654,7 +654,7 @@ render_header('services');
         <article class="card card--link reveal">
           <span class="card-index">Record</span>
           <h3><a href="/case-studies">Case studies</a></h3>
-          <p>Engagement notes and client-approved testimonials, without numerical performance claims. Background on how the practice started in early 2025 and moved into AEO and GEO as those disciplines formed is on the <a href="/about">about page</a>, and full service scope on <a href="/seo-services">SEO services</a>.</p>
+          <p>Engagement notes, client-approved testimonials and the historical first-page Google ranking for Green Coorg Spices, with its current offline/rebuild status. Background on how the practice started in early 2025 and moved into AEO and GEO as those disciplines formed is on the <a href="/about">about page</a>, and full service scope on <a href="/seo-services">SEO services</a>.</p>
         </article>
       </div>
     </div>
