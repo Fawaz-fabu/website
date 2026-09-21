@@ -338,12 +338,187 @@ render_head([
     'schema'      => $schema,
 ]);
 
+
+/* Source context added for owner review. Existing claims/FAQ answers remain unchanged.
+ * The source dates below are not page review dates or service commitments. */
+$research_sources = json_decode(<<<'RESEARCH_SOURCES'
+{
+  "S01": {
+    "title": "Google Search Central: AI features and your website",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "date": "Publication date not stated in the retrieved text; accessed 21 September 2026",
+    "sample": "Official product guidance, not a study"
+  },
+  "S02": {
+    "title": "Google Search Central: Optimizing your website for generative AI features",
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "date": "Last updated 10 July 2026, as displayed",
+    "sample": "Official product guidance, not a study"
+  },
+  "S03": {
+    "title": "Google Search Console: Generative AI performance report",
+    "url": "https://support.google.com/webmasters/answer/16984139",
+    "date": "Publication date not stated; rollout note dated 31 August 2026",
+    "sample": "Official report documentation; impressions grouped by page, country, date and device"
+  },
+  "S04": {
+    "title": "Google Search Console: Search generative AI control",
+    "url": "https://support.google.com/webmasters/answer/16908024",
+    "date": "Publication date not stated; rollout note dated 31 August 2026",
+    "sample": "Official control documentation, not a study"
+  },
+  "S05": {
+    "title": "Microsoft Bing: Intents, Topics, Citation Share and Compare",
+    "url": "https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare",
+    "date": "16 June 2026",
+    "sample": "Official announcement of four preview capabilities"
+  },
+  "S06": {
+    "title": "Cyrus Shepard, Zyppy Signal: AI Citation Ranking Factors Analysis",
+    "url": "https://signal.zyppy.com/p/ai-citation-ranking-factors",
+    "date": "7 May 2026",
+    "sample": "Synthesis of 54 selected experiments, studies, explainers and patents; 23 scored factors"
+  },
+  "S07": {
+    "title": "Ahrefs: Update, 38% of AI Overview Citations Pull From the Top 10",
+    "url": "https://ahrefs.com/blog/ai-overview-citations-top-10/",
+    "date": "2 March 2026",
+    "sample": "863,000 keyword SERPs; 4 million AI Overview URLs"
+  },
+  "S08": {
+    "title": "Ahrefs: An Analysis of AI Overview Brand Visibility Factors",
+    "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/",
+    "date": "26 May 2025",
+    "sample": "75,000 brands selected; approximately 74% with mentions studied; DR above 40 and a high-volume top keyword used in selection"
+  },
+  "S09": {
+    "title": "Ahrefs: Do AI Assistants Prefer to Cite Fresher Content?",
+    "url": "https://ahrefs.com/blog/do-ai-assistants-prefer-to-cite-fresh-content/",
+    "date": "28 July 2025",
+    "sample": "16.975 million cited URLs; seven reported platform/citation categories"
+  },
+  "S10": {
+    "title": "BuzzStream: What Kind of Content Does AI Cite, Based on Prompt Type?",
+    "url": "https://www.buzzstream.com/blog/ai-citation-prompt-type-study/",
+    "date": "Published 2 April 2026; updated 9 April 2026 (article metadata)",
+    "sample": "4 million citations; 3,600 prompts; 10 industries; week starting 27 January 2026; ChatGPT, AI Mode, AI Overviews and Gemini"
+  },
+  "S11": {
+    "title": "BuzzStream: The Role of News Publications in AI Citations",
+    "url": "https://www.buzzstream.com/blog/news-publications-ai-citations/",
+    "date": "Published 9 March 2026; updated 8 April 2026 (article metadata)",
+    "sample": "4 million citations; 3,600 prompts; 10 industries; week starting 27 January 2026"
+  },
+  "S12": {
+    "title": "Seer Interactive: AIO Impact on Google CTR, 2026 Update",
+    "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update",
+    "date": "24 April 2026, displayed article date",
+    "sample": "53 accounts; 5,471,127 queries; 2.43 billion organic impressions; January 2025 to February 2026 actuals"
+  },
+  "S13": {
+    "title": "SparkToro: In 2026, Less Than One Third of Google Searches Still Send a Click",
+    "url": "https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/",
+    "date": "8 June 2026",
+    "sample": "Similarweb US desktop/mobile-browser panel, January to April 2026; exact observation count not stated"
+  },
+  "S14": {
+    "title": "Seer Interactive: 87% of SearchGPT Citations Match Bing's Top Results",
+    "url": "https://www.seerinteractive.com/insights/87-percent-of-searchgpt-citations-match-bings-top-results",
+    "date": "6 February 2025",
+    "sample": "100 queries; more than 500 citations; many top/best queries"
+  },
+  "S15": {
+    "title": "Ahrefs: Are AI Mode and AI Overviews Just Different Versions of the Same Answer?",
+    "url": "https://ahrefs.com/blog/ai-overviews-vs-ai-mode/",
+    "date": "15 December 2025",
+    "sample": "September 2025 US data; 540,000 query pairs for URL/citation analysis and 730,000 for content similarity"
+  },
+  "S16": {
+    "title": "BrightEdge: Rank Overlap After 16 Months of AI Overviews",
+    "url": "https://www.brightedge.com/resources/weekly-ai-search-insights/rank-overlap-after-16-months-of-aio",
+    "date": "18 September 2025",
+    "sample": "Nine industries, May 2024 to September 2025; exact query count not stated"
+  },
+  "S17": {
+    "title": "OpenAI: ChatGPT Search",
+    "url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    "date": "Absolute publication/update date not stated in retrieved text; accessed 21 September 2026",
+    "sample": "Official product documentation, not a study"
+  },
+  "S18": {
+    "title": "Perplexity: How Does Perplexity Work?",
+    "url": "https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work",
+    "date": "Absolute publication/update date not stated in retrieved text; accessed 21 September 2026",
+    "sample": "Official product documentation, not a study"
+  },
+  "S19": {
+    "title": "Anthropic: Claude Can Now Search the Web",
+    "url": "https://claude.com/blog/web-search",
+    "date": "20 March 2025; availability update 27 May 2025",
+    "sample": "Official product announcement, not a study"
+  },
+  "S20": {
+    "title": "Microsoft Learn: Microsoft 365 Copilot Architecture",
+    "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-architecture",
+    "date": "Publication date not established in this check; accessed 21 September 2026",
+    "sample": "Official architecture documentation for the Microsoft 365 product context"
+  },
+  "S21": {
+    "title": "Google Search Central: FAQ rich-result deprecation and documentation removal",
+    "url": "https://developers.google.com/search/updates#removing-faq-rich-result",
+    "date": "Deprecation notice 8 May 2026; documentation-removal entry 15 June 2026",
+    "sample": "Official documentation changelog"
+  },
+  "S22": {
+    "title": "Google Search Central: Speakable structured data",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/speakable",
+    "date": "Publication date not established in this check; accessed 21 September 2026",
+    "sample": "Official beta feature documentation"
+  }
+}
+RESEARCH_SOURCES
+, true);
+$research_rules = json_decode(<<<'RESEARCH_RULES'
+[["Generative AI performance report|Search Console AI feature inclusion|included in Search generative AI", ["S01", "S02", "S03", "S04"], ["R01"]], ["Bing Webmaster|Intents|Citation Share", ["S05"], []], ["37\\.9|38%|31\\.2|31\\.0|76%|863|4 million AI Overview|four million AI Overview", ["S07"], ["R06"]], ["0\\.664|0\\.218|0\\.527|0\\.392|0\\.326|169.*14|75,000|3 times.*strong|three times.*strong", ["S08"], ["R07", "R04"]], ["Zyppy|meta-analysis|9\\.5|9\\.4|9\\.3|9\\.2|8\\.9|8\\.8|8\\.6|8\\.0|7\\.0|2\\.0|highest-evidence|second-strongest|scored citation factor", ["S06"], ["R05"]], ["1,064|1,432|16\\.97|16\\.98|25\\.7|958|4\\.3|freshness.*moderate", ["S09"], ["R08"]], ["53\\.46|53%|0\\.04|80%|BuzzStream|3,600|4 million citations|four-million-citation", ["S10", "S11"], ["R11"]], ["120%|5\\.47|53 brands", ["S12"], ["R13"]], ["68%|SparkToro|zero.click", ["S13"], ["R13"]], ["87%|SearchGPT", ["S14"], ["R03"]], ["13\\.7", ["S15"], ["R10"]], ["BrightEdge", ["S16"], ["R12"]], ["680|11%|71%", [], ["R09"]], ["Bing-backed|ChatGPT retrieves|Bing.*ChatGPT|ChatGPT.*Bing|Invisible in|engine-specific bottleneck|actual cause|specific bottleneck|lever that most reliably", ["S17", "S14"], ["R03"]], ["Perplexity.*(freshness|live|query)|freshness.*Perplexity|multi-API", ["S18"], ["R03"]], ["Brave-backed|Claude.*Live web", ["S19"], ["R03"]], ["Microsoft Graph|Copilot.*Bing index", ["S20"], ["R03"]], ["Google.*(documentation|guidance|explicit|confirms|states|position)|query fan-out|retrieval-augmented|RAG|Business Profile.*AI responses|no special markup|llms\\.txt.*(Google|ranking)|Google.*llms\\.txt", ["S01", "S02"], []], ["AEO targets|AEO optimises|GEO optimises|different selection mechanisms|different surfaces|extracted.*synth|extraction.*synthesis|passage.*direct answer", ["S01", "S02"], ["R02"]], ["40 to 80|one recommendation|higher-stakes", ["S02"], ["R16"]], ["HowTo|FAQPage|Speakable", ["S02", "S21", "S22"], ["R16"]], ["paywalled|simply skipped|do not recall|Nothing is lifted verbatim|Context-dependent prose does not|zero out citations|excluded before any", ["S01", "S02", "S06"], ["R17"]], ["That reorders the budget|do more for AEO|what earns repeat selection|Breadth across|breadth across|only honest evidence|too wide to be noise|three different causes|three different fixes|stops a model|work landed", [], ["R04"]], ["few weeks|three to six months|six to twelve weeks|within days of indexing", [], ["R14"]], ["15,000.*50,000|100 to.*150|Rates vary widely", [], ["R15"]], ["barely two years old|national vendor usually skips|most agencies|routinely misreads|most single-score tools", [], ["R18"]]]
+RESEARCH_RULES
+, true);
+$research_note = static function ($source_ids, $review_ids = '') use ($research_sources) {
+    $ids = preg_split('/\s+/', trim($source_ids), -1, PREG_SPLIT_NO_EMPTY);
+    if (!$ids && $review_ids === '') return;
+    echo '<p class="field-note research-note">';
+    if ($ids) {
+        echo 'Source context: ';
+        $links = [];
+        foreach ($ids as $id) {
+            $source = $research_sources[$id];
+            $links[] = '<a href="' . htmlspecialchars($source['url'], ENT_QUOTES, 'UTF-8') . '">' . $id . '</a> (<a href="#source-' . $id . '">date and sample</a>)';
+        }
+        echo implode('; ', $links) . '.';
+    }
+    if ($review_ids !== '') {
+        echo ' <a href="#source-status">Owner review pending</a>: ' . htmlspecialchars($review_ids, ENT_QUOTES, 'UTF-8') . '.';
+    }
+    echo '</p>';
+};
+$research_context = static function ($text) use ($research_rules, $research_note) {
+    $plain = html_entity_decode(strip_tags($text), ENT_QUOTES, 'UTF-8');
+    $sources = []; $reviews = [];
+    foreach ($research_rules as $rule) {
+        if (preg_match('~' . $rule[0] . '~i', $plain)) {
+            $sources = array_merge($sources, $rule[1]);
+            $reviews = array_merge($reviews, $rule[2]);
+        }
+    }
+    $sources = array_unique($sources); $reviews = array_unique($reviews);
+    sort($sources); sort($reviews);
+    $research_note(implode(' ', $sources), implode(' ', $reviews));
+};
+
 render_header('geo');
 ?>
 
 <main id="main">
 
-  <!-- 1. HERO -->
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap hero__grid">
 
@@ -354,6 +529,7 @@ render_header('geo');
         <h1 id="hero-h">GEO expert in India, working from Karnataka.</h1>
         <p class="hero__sub">Make your information useful in AI answers. Measure mentions, citations and recommendations separately.</p>
         <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is a GEO (Generative Engine Optimization) expert based in Kushal Nagar, Kodagu, Karnataka, India,</strong> helping businesses across Karnataka and India get cited inside AI-generated answers from ChatGPT, Perplexity, Google Gemini and AI Overviews, Claude and Microsoft Copilot. Every engagement is delivered directly by him, with no account managers and no junior handoffs. Each of the five engines is measured separately, because they do not share a source pool, and no engagement promises a guaranteed citation, because nobody controls what a language model quotes.</p>
+          <?php $research_note('S18', 'R03'); ?>
         <p style="margin-top:14px;color:var(--text-2)">Start with <a href="/blogs/seo-aeo-geo-differences">SEO vs AEO vs GEO</a> if you are comparing the approaches. For a practical baseline, use the <a href="/blogs/measure-ai-search-visibility">AI visibility guide and free CSV log</a>. A citation is not automatically a recommendation or a customer enquiry.</p>
 
         <div class="btn-row">
@@ -379,93 +555,28 @@ render_header('geo');
     </div>
   </section>
 
-  <!-- 2. TRUST STRIP -->
-  <section class="trust" aria-label="Engines tracked">
+
+  <section class="section" id="service-overview" aria-labelledby="service-overview-h">
     <div class="wrap">
-      <p>Five generative engines tracked. <span class="accent">Measured separately, never averaged into one score.</span></p>
+      <div class="section-head reveal"><h2 id="service-overview-h">What the GEO service is</h2></div>
+<p class="lede">This service brings together a prompt-set baseline, website and business-identity work, content organisation, third-party corroboration and per-engine reporting. Start with the business information and questions you need to assess, then agree the work against the audit findings.</p>
+      <p><a href="#fit">Check the fit</a> · <a href="#handovers">See the supported handovers</a> · <a href="#scoping">Discuss scope</a> · <a href="#research-sources">Check sources and review status</a></p>
     </div>
   </section>
 
-  <!-- 3. ENGINE MATRIX -->
-  <section class="section" id="engines" aria-labelledby="eng-h">
+
+
+  <section class="section" id="fit" aria-labelledby="fit-h">
     <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Generative engines tracked</p>
-        <h2 id="eng-h">Five surfaces, five different jobs</h2>
-        <p class="lede">Same symptom, different jobs. Invisible in ChatGPT and Copilot is usually a Bing problem. Invisible in Perplexity is usually a freshness problem. Invisible in Gemini is usually an entity problem.</p>
-      </div>
-
-      <div class="table-wrap reveal">
-        <table class="data-table">
-          <caption>How each generative engine is grounded, and the lever that most reliably moves a citation there.</caption>
-          <thead>
-            <tr><th scope="col">Engine</th><th scope="col">Grounded in</th><th scope="col">Primary citation lever</th></tr>
-          </thead>
-          <tbody>
-            <?php foreach ($engines as $e): ?>
-            <tr><th scope="row"><?php echo $e[0]; ?></th><td><?php echo $e[1]; ?></td><td><?php echo $e[2]; ?></td></tr>
-            <?php endforeach; ?>
-          </tbody>
-        </table>
+      <div class="section-head reveal"><h2 id="fit-h">Who this work suits, and when it does not</h2></div>
+<div class="grid grid--2">
+        <article class="card"><h3>A founder-led engagement</h3><p>Consider this scope if you want one consultant to connect your existing search foundations, business information and answer-engine visibility, with the work delivered directly rather than through an account-management layer.</p></article>
+        <article class="card"><h3>Know the limits before starting</h3><p>This is not a fit if you require guaranteed citations or a large team covering many markets in parallel. If you are still choosing between disciplines, compare the <a href="/ai-seo-expert-india">AI SEO scope explanation</a> and the <a href="/seo-services">published service catalogue</a> before agreeing an engagement.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- 4. KEY FACTS -->
-  <section class="section section--alt" id="key-facts" aria-labelledby="kf-h">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Quick reference</p>
-        <h2 id="kf-h">Key facts, before the detail</h2>
-      </div>
 
-      <ol class="why-list reveal">
-        <?php $n = 1; foreach ($keyfacts as $kf): ?>
-        <li>
-          <span class="idx"><?php echo str_pad((string) $n, 2, '0', STR_PAD_LEFT); ?></span>
-          <div>
-            <h3><?php echo $kf[0]; ?></h3>
-            <p><?php echo $kf[1]; ?></p>
-          </div>
-        </li>
-        <?php $n++; endforeach; ?>
-      </ol>
-    </div>
-  </section>
-
-  <!-- 5. SEO vs AEO vs GEO -->
-  <section class="section" id="seo-aeo-geo" aria-labelledby="split-h">
-    <div class="wrap split">
-
-      <div class="sticky-col reveal">
-        <p class="eyebrow">The distinction</p>
-        <h2 id="split-h">SEO, AEO and GEO are three different surfaces</h2>
-        <p class="lede">These three terms get used interchangeably, including by people selling them. They are not the same thing. They target different surfaces, are earned by different mechanisms, and are measured with different instruments, which is precisely why running them as one connected strategy works better than buying them as three retainers.</p>
-        <p style="margin-top:18px"><a class="link-arrow" href="/">Full practice overview: SEO, AEO and GEO consultant in India</a></p>
-      </div>
-
-      <div>
-        <?php foreach ($surfaces as $i => $s): ?>
-        <article class="card<?php echo $s['featured'] ? ' card--featured' : ''; ?> reveal"<?php echo $i ? ' style="margin-top:22px"' : ''; ?>>
-          <span class="card-index"><?php echo $s['k']; ?></span>
-          <h3><?php echo $s['title']; ?></h3>
-          <?php echo $s['body']; ?>
-          <?php if (!empty($s['link'])): ?>
-          <div class="btn-row" style="margin-top:14px">
-            <a class="link-arrow" href="<?php echo $s['link'][0]; ?>"><?php echo $s['link'][1]; ?></a>
-            <?php if (!empty($s['link2'])): ?>
-            <a class="link-arrow" href="<?php echo $s['link2'][0]; ?>"><?php echo $s['link2'][1]; ?></a>
-            <?php endif; ?>
-          </div>
-          <?php endif; ?>
-        </article>
-        <?php endforeach; ?>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 6. GEO SERVICES -->
   <section class="section section--alt" id="geo-services" aria-labelledby="svc-h">
     <div class="wrap">
       <div class="section-head reveal">
@@ -479,6 +590,7 @@ render_header('geo');
         <article class="card<?php echo $w['featured'] ? ' card--featured' : ''; ?> reveal">
           <h3><?php echo $w['title']; ?></h3>
           <p><?php echo $w['body']; ?></p>
+          <?php $research_context($w['body']); ?>
           <ul class="tags">
             <?php foreach ($w['tags'] as $t): ?>
             <li class="tag"><?php echo $t; ?></li>
@@ -490,31 +602,35 @@ render_header('geo');
     </div>
   </section>
 
-  <!-- 7. EVIDENCE -->
-  <section class="section" id="how-geo-works" aria-labelledby="geo-how-h">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Evidence, July 2026</p>
-        <h2 id="geo-how-h">How generative engines choose what to cite</h2>
-        <p class="lede">This is the section most GEO pages skip. Every claim below is attributed to a named study with its scale and date, and where a popular statistic does not survive checking, it is corrected rather than repeated. Correlation is not causation, and the original authors say so. Treat these as a prioritised map, not guaranteed levers.</p>
-      </div>
 
+  <section class="section" id="handovers" aria-labelledby="handovers-h">
+    <div class="wrap">
+      <div class="section-head reveal"><h2 id="handovers-h">What the published scope supports handing over</h2></div>
+<p>This is a practical reading of the work already described on this page, not a new package or an additional output allowance.</p>
+      <div class="table-wrap"><table class="data-table"><caption>Existing scope and details to settle before work starts</caption><thead><tr><th scope="col">Work already described</th><th scope="col">Concrete output supported by the page</th><th scope="col">Confirm in the engagement scope</th></tr></thead><tbody>
+        <tr><th scope="row">Discovery audit</th><td>A written audit or baseline that you keep whether or not you hire Fawaz.</td><td>Document format and the boundary between the free consultation and paid implementation.</td></tr>
+        <tr><th scope="row">Prompt mapping</th><td>A buyer-language set of 20 to 40 prompts, with related questions grouped for the work.</td><td>Selected questions, products/modes, markets and access to the underlying prompt records.</td></tr>
+        <tr><th scope="row">Content and identity work</th><td>The page describes content restructuring, entity/profile consistency work and structured-data implementation.</td><td>Which pages and profiles, who approves and publishes changes, and any revision or access limits.</td></tr>
+        <tr><th scope="row">Reporting</th><td>Repeated observations reported separately by engine, using the outcome categories already described below.</td><td>Report format, review cadence, included evidence and the data available for your property.</td></tr>
+      </tbody></table></div>
+      <p class="field-note">File formats, revision counts, page quantities, turnaround times and additional reporting fields are not specified here. Agree them before work begins; they should not be inferred from an example or a research statistic.</p>
+    </div>
+  </section>
+
+
+
+  <section class="section" id="inputs" aria-labelledby="inputs-h">
+    <div class="wrap">
+      <div class="section-head reveal"><h2 id="inputs-h">Inputs and responsibilities to discuss</h2></div>
+<p>Use this as a pre-scope discussion checklist, not as a request to send passwords or confidential customer data.</p>
       <div class="grid grid--2">
-        <?php foreach ($evidence as $ev): ?>
-        <article class="card<?php echo in_array($ev['k'], ['Evidence hierarchy', 'What to ignore'], true) ? ' card--featured' : ''; ?> reveal">
-          <span class="card-index"><?php echo $ev['k']; ?></span>
-          <h3><?php echo $ev['title']; ?></h3>
-          <?php foreach ($ev['paras'] as $para): ?>
-          <p><?php echo $para; ?></p>
-          <?php endforeach; ?>
-          <p class="stat__note" style="margin-top:14px"><?php echo $ev['src']; ?></p>
-        </article>
-        <?php endforeach; ?>
+        <article class="card"><h3>Business information and priorities</h3><ul><li>Public website and relevant business-profile URLs.</li><li>The services, locations and buyer questions you want to assess.</li><li>Accurate business facts and evidence you are willing to publish.</li><li>A person who can verify facts and approve changes.</li></ul></article>
+        <article class="card"><h3>Access and implementation</h3><p>Discuss which analytics and search reports are available, which changes can be made within the agreed scope, and who can approve or publish them. The existing service description assigns audit, implementation and reporting to Fawaz; access permissions, approval timing and any client-side dependencies still need to be agreed.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- 8. PROCESS -->
+
   <section class="section section--alt" id="process" aria-labelledby="proc-h">
     <div class="wrap">
       <div class="section-head reveal">
@@ -532,67 +648,153 @@ render_header('geo');
           <p class="step__k">02 &nbsp; DIAGNOSIS</p>
           <h3>Engine-specific bottleneck</h3>
           <p>Each gap is attributed to its actual cause rather than a generic fix: Bing indexation and third-party mentions for ChatGPT and Copilot, freshness and answer structure for Perplexity, entity and fan-out cluster coverage for Gemini and AI Overviews.</p>
+          <?php $research_note('S01 S02 S14 S17 S18', 'R03'); ?>
         </article>
         <article class="step reveal">
           <p class="step__k">03 &nbsp; EXECUTION</p>
           <h3>Hands-on implementation</h3>
           <p>Accessibility fixes first, then entity and schema work, then answer-first restructuring and cluster coverage, then mention-building. Carried out directly by me, in the evidence order above rather than the order that looks busiest.</p>
+          <?php $research_note('S01 S02', ''); ?>
         </article>
         <article class="step reveal">
           <p class="step__k">04 &nbsp; RE-RUN</p>
           <h3>Fixed-schedule measurement</h3>
           <p>The identical prompt set is re-run at fixed intervals and reported as a trend per engine. Generative answers are volatile enough that one check proves nothing. A trend across repeated runs is the only honest evidence that work landed.</p>
+          <?php $research_note('', 'R04'); ?>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- 9. CHOOSING WELL -->
-  <section class="section" id="choosing" aria-labelledby="best-h">
-    <div class="wrap split">
 
-      <div class="reveal">
-        <p class="eyebrow">Choosing well</p>
-        <h2 id="best-h" style="margin-block:16px 18px">How to judge the best GEO expert in India</h2>
-        <p class="lede">There is no single best GEO expert in India, and any page claiming the title, including this one, is making a marketing statement rather than a measurable one. What can be evaluated is fit. Here are six checks that separate a working GEO practitioner from a rebranded SEO package, in the order worth asking about.</p>
+  <section class="section" id="measurement" aria-labelledby="measurement-h">
+    <div class="wrap">
+      <div class="section-head reveal"><h2 id="measurement-h">How the work is measured</h2></div>
+<p>The published method uses a repeatable prompt set, with results reported separately by engine. The existing categories are cited, mentioned without citation and absent. Use the <a href="/blogs/measure-ai-search-visibility">measurement guide and blank observation log</a> to see how the site distinguishes mentions, citations and recommendations.</p>
+      <article class="card"><h3>Illustration only: reading an observation</h3><p>If an answer names a business but provides no link to its website, record a mention without a citation. If it links to a page, record that citation. A recommendation is a separate observation about what the answer actually says. This is an explanation of the categories, not a client result, a measured improvement or a promise that an answer will appear.</p></article>
+    </div>
+  </section>
 
-        <ol class="why-list" style="margin-top:26px">
-          <?php $n = 1; foreach ($checks as $c): ?>
-          <li>
-            <span class="idx"><?php echo str_pad((string) $n, 2, '0', STR_PAD_LEFT); ?></span>
-            <div>
-              <h3><?php echo $c[0]; ?></h3>
-              <p><?php echo $c[1]; ?></p>
-            </div>
-          </li>
-          <?php $n++; endforeach; ?>
-        </ol>
 
-        <p style="margin-top:26px;color:var(--text-2)">Measured against those six, <strong>Fawaz BH is a reasonable option if you want one certified consultant running SEO, AEO and GEO as a single strategy, with per-engine reporting and no agency layer.</strong> He is the wrong option if you need twelve markets covered in parallel next quarter, or a large team on standby. That is an agency&#8217;s job, and saying so is more useful than pretending otherwise.</p>
+
+  <section class="section" id="evidence" aria-labelledby="evidence-h">
+    <div class="wrap">
+      <div class="section-head reveal"><h2 id="evidence-h">Evidence, mechanisms and background</h2></div>
+<p>Read the research alongside its linked publication dates and samples. Existing factual wording is retained pending the owner decisions noted below; a citation link is not an approval of every inference.</p>
+    </div>
+  </section>
+
+
+  <section class="trust" aria-label="Engines tracked">
+    <div class="wrap">
+      <p>Five generative engines tracked. <span class="accent">Measured separately, never averaged into one score.</span></p>
+          <?php $research_note('S01 S02', ''); ?>
+    </div>
+  </section>
+
+  <section class="section" id="engines" aria-labelledby="eng-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Generative engines tracked</p>
+        <h2 id="eng-h">Five surfaces, five different jobs</h2>
+        <p class="lede">Same symptom, different jobs. Invisible in ChatGPT and Copilot is usually a Bing problem. Invisible in Perplexity is usually a freshness problem. Invisible in Gemini is usually an entity problem.</p>
+          <?php $research_note('S14 S17 S18', 'R03'); ?>
       </div>
 
-      <div class="sticky-col reveal">
-        <p class="eyebrow">GEO expert in Karnataka</p>
-        <h3 style="margin-block:14px">Karnataka coverage, from inside Karnataka</h3>
-        <p style="color:var(--text-2);margin-bottom:24px"><strong>Fawaz BH is a GEO expert based in Karnataka, specifically in Kushal Nagar, Kodagu (Coorg), in the state&#8217;s south-west.</strong> GEO work itself is location-independent: entity resolution, structured data, cluster coverage and prompt-set measurement are delivered remotely to clients in Bengaluru, Mysuru, Mangaluru, Hubli-Dharwad, Udupi, Belagavi, Shivamogga, Madikeri and across India. Being physically in Karnataka matters for one specific reason: bilingual Kannada and English query behaviour and tier-2 market dynamics show up in the prompts people actually type, and a Bengaluru-only or Delhi-only playbook routinely misreads them.</p>
+      <div class="table-wrap reveal">
+        <table class="data-table">
+          <caption>How each generative engine is grounded, and the lever that most reliably moves a citation there.</caption>
+          <thead>
+            <tr><th scope="col">Engine</th><th scope="col">Grounded in</th><th scope="col">Primary citation lever</th><th scope="col">Source context</th></tr>
+          </thead>
+          <tbody>
+            <?php foreach ($engines as $e): ?>
+            <tr><th scope="row"><?php echo $e[0]; ?></th><td><?php echo $e[1]; ?></td><td><?php echo $e[2]; ?></td><td><?php $research_context(implode(' ', $e)); ?></td></tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-        <div class="stat-stack">
-          <?php foreach ($stats as $s): ?>
-          <div class="stat">
-            <p class="stat__val"><?php echo $s[0]; ?></p>
-            <p class="stat__label"><?php echo $s[1]; ?></p>
-            <p class="stat__note"><?php echo $s[2]; ?></p>
+  <section class="section section--alt" id="key-facts" aria-labelledby="kf-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Quick reference</p>
+        <h2 id="kf-h">Key facts, before the detail</h2>
+      </div>
+
+      <ol class="why-list reveal">
+        <?php $n = 1; foreach ($keyfacts as $kf): ?>
+        <li>
+          <span class="idx"><?php echo str_pad((string) $n, 2, '0', STR_PAD_LEFT); ?></span>
+          <div>
+            <h3><?php echo $kf[0]; ?></h3>
+            <p><?php echo $kf[1]; ?></p>
+          <?php $research_context($kf[1]); ?>
           </div>
-          <?php endforeach; ?>
-        </div>
+        </li>
+        <?php $n++; endforeach; ?>
+      </ol>
+    </div>
+  </section>
 
-        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
+  <section class="section" id="seo-aeo-geo" aria-labelledby="split-h">
+    <div class="wrap split">
+
+      <div class="sticky-col reveal">
+        <p class="eyebrow">The distinction</p>
+        <h2 id="split-h">SEO, AEO and GEO are three different surfaces</h2>
+        <p class="lede">These three terms get used interchangeably, including by people selling them. They are not the same thing. They target different surfaces, are earned by different mechanisms, and are measured with different instruments, which is precisely why running them as one connected strategy works better than buying them as three retainers.</p>
+          <?php $research_note('S01 S02', 'R02'); ?>
+        <p style="margin-top:18px"><a class="link-arrow" href="/">Full practice overview: SEO, AEO and GEO consultant in India</a></p>
+      </div>
+
+      <div>
+        <?php foreach ($surfaces as $i => $s): ?>
+        <article class="card<?php echo $s['featured'] ? ' card--featured' : ''; ?> reveal"<?php echo $i ? ' style="margin-top:22px"' : ''; ?>>
+          <span class="card-index"><?php echo $s['k']; ?></span>
+          <h3><?php echo $s['title']; ?></h3>
+          <?php echo $s['body']; $research_context($s['body']); ?>
+          <?php if (!empty($s['link'])): ?>
+          <div class="btn-row" style="margin-top:14px">
+            <a class="link-arrow" href="<?php echo $s['link'][0]; ?>"><?php echo $s['link'][1]; ?></a>
+            <?php if (!empty($s['link2'])): ?>
+            <a class="link-arrow" href="<?php echo $s['link2'][0]; ?>"><?php echo $s['link2'][1]; ?></a>
+            <?php endif; ?>
+          </div>
+          <?php endif; ?>
+        </article>
+        <?php endforeach; ?>
       </div>
 
     </div>
   </section>
 
-  <!-- 10. CREDENTIALS -->
+  <section class="section" id="how-geo-works" aria-labelledby="geo-how-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Evidence, July 2026</p>
+        <h2 id="geo-how-h">How generative engines choose what to cite</h2>
+        <p class="lede">This is the section most GEO pages skip. Every claim below is attributed to a named study with its scale and date, and where a popular statistic does not survive checking, it is corrected rather than repeated. Correlation is not causation, and the original authors say so. Treat these as a prioritised map, not guaranteed levers.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <?php foreach ($evidence as $ev): ?>
+        <article class="card<?php echo in_array($ev['k'], ['Evidence hierarchy', 'What to ignore'], true) ? ' card--featured' : ''; ?> reveal">
+          <span class="card-index"><?php echo $ev['k']; ?></span>
+          <h3><?php echo $ev['title']; ?></h3>
+          <?php foreach ($ev['paras'] as $para): ?>
+          <p><?php echo $para; ?></p>
+          <?php $research_context($para); ?>
+          <?php endforeach; ?>
+          <p class="stat__note" style="margin-top:14px"><?php echo $ev['src']; ?></p>
+        </article>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
   <section class="section section--alt" id="credentials" aria-labelledby="cred-h">
     <div class="wrap">
       <div class="section-head reveal">
@@ -612,12 +814,14 @@ render_header('geo');
           <span class="badge badge--accent">Issued by Semrush</span>
           <h3>Semrush Technical SEO and AI Search Essentials</h3>
           <p>Crawlability, indexation, site health and structured data, plus how those foundations feed AI search surfaces. In GEO terms this is the highest-evidence layer: URL accessibility scored 9.5 out of 10 in Zyppy&#8217;s 2026 meta-analysis, above every content tactic.</p>
+          <?php $research_note('S06', 'R05'); ?>
         </article>
 
         <article class="card reveal">
           <span class="badge">Issued by Ahrefs</span>
           <h3>Ahrefs Academy Certification</h3>
           <p>Keyword research, backlink analysis, competitive research and technical site auditing. Still the base layer of GEO, because classic search rank remains the second-strongest evidenced citation factor.</p>
+          <?php $research_note('S06', 'R05'); ?>
         </article>
 
         <article class="card reveal">
@@ -629,7 +833,52 @@ render_header('geo');
     </div>
   </section>
 
-  <!-- 11. GO DEEPER -->
+  <section class="section" id="choosing" aria-labelledby="best-h">
+    <div class="wrap split">
+
+      <div class="reveal">
+        <p class="eyebrow">Choosing well</p>
+        <h2 id="best-h" style="margin-block:16px 18px">How to judge the best GEO expert in India</h2>
+        <p class="lede">There is no single best GEO expert in India, and any page claiming the title, including this one, is making a marketing statement rather than a measurable one. What can be evaluated is fit. Here are six checks that separate a working GEO practitioner from a rebranded SEO package, in the order worth asking about.</p>
+
+        <ol class="why-list" style="margin-top:26px">
+          <?php $n = 1; foreach ($checks as $c): ?>
+          <li>
+            <span class="idx"><?php echo str_pad((string) $n, 2, '0', STR_PAD_LEFT); ?></span>
+            <div>
+              <h3><?php echo $c[0]; ?></h3>
+              <p><?php echo $c[1]; ?></p>
+          <?php $research_context($c[1]); ?>
+            </div>
+          </li>
+          <?php $n++; endforeach; ?>
+        </ol>
+
+        <p style="margin-top:26px;color:var(--text-2)">Measured against those six, <strong>Fawaz BH is a reasonable option if you want one certified consultant running SEO, AEO and GEO as a single strategy, with per-engine reporting and no agency layer.</strong> He is the wrong option if you need twelve markets covered in parallel next quarter, or a large team on standby. That is an agency&#8217;s job, and saying so is more useful than pretending otherwise.</p>
+      </div>
+
+      <div class="sticky-col reveal">
+        <p class="eyebrow">GEO expert in Karnataka</p>
+        <h3 style="margin-block:14px">Karnataka coverage, from inside Karnataka</h3>
+        <p style="color:var(--text-2);margin-bottom:24px"><strong>Fawaz BH is a GEO expert based in Karnataka, specifically in Kushal Nagar, Kodagu (Coorg), in the state&#8217;s south-west.</strong> GEO work itself is location-independent: entity resolution, structured data, cluster coverage and prompt-set measurement are delivered remotely to clients in Bengaluru, Mysuru, Mangaluru, Hubli-Dharwad, Udupi, Belagavi, Shivamogga, Madikeri and across India. Being physically in Karnataka matters for one specific reason: bilingual Kannada and English query behaviour and tier-2 market dynamics show up in the prompts people actually type, and a Bengaluru-only or Delhi-only playbook routinely misreads them.</p>
+          <?php $research_note('S01 S02', 'R18'); ?>
+
+        <div class="stat-stack">
+          <?php foreach ($stats as $s): ?>
+          <div class="stat">
+            <p class="stat__val"><?php echo $s[0]; ?></p>
+            <p class="stat__label"><?php echo $s[1]; ?></p>
+            <p class="stat__note"><?php echo $s[2]; ?></p>
+          </div>
+          <?php endforeach; ?>
+        </div>
+
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
+      </div>
+
+    </div>
+  </section>
+
   <section class="section" id="proof" aria-labelledby="proof-h">
     <div class="wrap">
       <div class="section-head reveal">
@@ -643,6 +892,7 @@ render_header('geo');
           <span class="card-index">Sibling discipline</span>
           <h3><a href="/aeo-consultant">AEO consultant</a></h3>
           <p>Answer engine optimisation in depth: featured snippets, People Also Ask, voice results and direct-answer surfaces, and why extraction is a different job from synthesis. Read alongside this page if you are unsure which one you actually need.</p>
+          <?php $research_note('S01 S02', 'R02'); ?>
         </article>
 
         <article class="card card--link reveal">
@@ -660,7 +910,36 @@ render_header('geo');
     </div>
   </section>
 
-  <!-- 12. FAQ -->
+
+  <section class="section" id="research-sources" aria-labelledby="research-sources-h">
+    <div class="wrap">
+      <div class="section-head reveal"><h2 id="research-sources-h">Source records and review status</h2></div>
+
+      <p id="source-status" class="field-note">Existing research and workflow claims have been retained while factual corrections await owner approval. Source links identify the material being checked; they do not validate every inference in the surrounding text. Publication, update and sample dates below belong to the sources, not to a review of this page. Items marked R01 to R18 are in the owner review queue.</p>
+      <p class="field-note">Primary-source verification remains unresolved for the 680-million / 11% / 71% overlap attribution, universal engine-provider or best-lever rules, general results timelines and external market-rate comparisons. These retained claims are not verified benchmarks or promised outcomes.</p>
+      <ol class="source-records">
+        <?php foreach ($research_sources as $source_id => $source): ?>
+        <li id="source-<?php echo $source_id; ?>" style="margin-bottom:18px">
+          <strong><?php echo $source_id; ?>:</strong> <a href="<?php echo htmlspecialchars($source['url'], ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($source['title'], ENT_QUOTES, 'UTF-8'); ?></a>.
+          <span><?php echo htmlspecialchars($source['date'], ENT_QUOTES, 'UTF-8'); ?>.</span>
+          <span>Sample/type: <?php echo htmlspecialchars($source['sample'], ENT_QUOTES, 'UTF-8'); ?>.</span>
+        </li>
+        <?php endforeach; ?>
+      </ol>
+    </div>
+  </section>
+
+
+
+  <section class="section" id="scoping" aria-labelledby="scoping-h">
+    <div class="wrap">
+      <div class="section-head reveal"><h2 id="scoping-h">Scoping and the next decision</h2></div>
+<p>Start with the free audit and agree the work and price in writing before implementation or invoicing. Published packages remain on the <a href="/seo-services#pricing">services and pricing page</a>; this page does not add a new price or a separate package.</p>
+      <p>Use the scope discussion to confirm priorities, pages and profiles, selected engines and modes, approval responsibilities, reporting cadence and any access constraints. The format and extent of handovers are to be agreed, rather than assumed from the workstream names.</p>
+    </div>
+  </section>
+
+
   <section class="section section--alt" id="faq" aria-labelledby="faq-h">
     <div class="wrap split">
 
@@ -677,6 +956,7 @@ render_header('geo');
           <div class="faq__body">
             <?php foreach ($f['a'] as $para): ?>
             <p><?php echo $para; ?></p>
+          <?php $research_context($para); ?>
             <?php endforeach; ?>
           </div>
         </details>
@@ -694,6 +974,8 @@ render_header('geo');
   ]); ?>
 
   <?php fbh_render_review_date($reviewed_on); ?>
+
+
 
 </main>
 
