@@ -155,7 +155,7 @@ render_header('about');
         <article class="card reveal">
           <span class="card-index">What I learned</span>
           <h3>SEO first, then AEO and GEO</h3>
-          <p>I started in SEO in early 2025, building my foundation in the fundamentals: technical SEO, on-page architecture and local search, because they still decide who gets found. As Answer Engine Optimisation and Generative Engine Optimisation emerged as distinct disciplines, I expanded into them: the newer skills that get a brand cited inside AI-generated answers, not just ranked in a list of blue links. Treating all of it as one connected system, rather than separate services, is the core of how I work as a combined SEO, AEO and GEO consultant.</p>
+          <p>I started in SEO in early 2025, building my foundation in the fundamentals: technical SEO, on-page architecture and local search, because they still decide who gets found. As <a href="/aeo-consultant">Answer Engine Optimisation</a> and <a href="/geo-consultant">Generative Engine Optimisation</a> emerged as distinct disciplines, I expanded into them: the newer skills that get a brand cited inside AI-generated answers, not just ranked in a list of blue links. Treating all of it as one connected system, rather than separate services, is the core of how I work as a combined SEO, AEO and GEO consultant.</p>
         </article>
 
         <article class="card reveal">

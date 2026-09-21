@@ -125,19 +125,19 @@ render_header('home');
         <article class="card card--featured reveal">
           <span class="card-index">02</span>
           <h3>AEO, answer engine optimisation</h3>
-          <p>A large and growing share of buyers now research on ChatGPT and Perplexity before they visit a website. AEO is the discipline of becoming the answer those AI engines choose to cite.</p>
+          <p>A large and growing share of buyers now research on ChatGPT and Perplexity before they visit a website. AEO is the discipline of <a href="/aeo-consultant">becoming the answer those AI engines choose to cite</a>.</p>
         </article>
 
         <article class="card card--featured reveal">
           <span class="card-index">03</span>
           <h3>GEO, generative engine optimisation</h3>
-          <p>The newest frontier of search, the discipline of being preferred, paraphrased and recommended by generative AI inside Google's AI Overviews, Perplexity, ChatGPT Search and Bing Copilot.</p>
+          <p>The newest frontier of search, the discipline of <a href="/geo-consultant">being preferred, paraphrased and recommended by generative AI</a> inside Google's AI Overviews, Perplexity, ChatGPT Search and Bing Copilot.</p>
         </article>
 
         <article class="card reveal">
           <span class="card-index">04</span>
           <h3>Local SEO for Kodagu, Bengaluru and Karnataka</h3>
-          <p>Hyperlocal search is winnable. Geo targeted strategies that help you rank in Google's Local Pack, Maps and near me searches across Karnataka.</p>
+          <p>Hyperlocal search is winnable. Geo targeted strategies that help you rank in Google's Local Pack, Maps and near me searches <a href="/cities-we-serve">across Karnataka</a>.</p>
         </article>
 
         <article class="card reveal">

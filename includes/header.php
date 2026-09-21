@@ -12,24 +12,19 @@ if (!function_exists('fbh_nav_items')) {
  * Single source of truth for the primary navigation.
  */
 function fbh_nav_items() {
-    /* Kept deliberately short. "AI SEO" sits next to Services because it is the
-       discipline page people arrive looking for by name, and until it was added
-       here the only site-wide link to it was in the footer. Adding a ninth item
-       will overflow the desktop row, so if something new has to go in, something
-       existing has to come out. */
-    /* Labels come from t() so the navigation is translated even while page
-       bodies are still English. hrefs go through fbh_link(), so every link
-       keeps the visitor inside their chosen language instead of dropping them
-       back into English on the first click. */
+    /* Seven primary destinations; the logo remains the homepage link.
+       AI SEO and service areas remain available in context and in the footer.
+       All destinations still use the existing language-aware link helper.
+       New English labels use the existing runtime translator; protect only
+       the acronyms and labels already translated by t(), not the whole nav. */
     return [
-        'home'     => ['label' => t('nav.home'),     'href' => fbh_link('/')],
-        'services' => ['label' => t('nav.services'), 'href' => fbh_link('/seo-services')],
-        'aiseo'    => ['label' => t('nav.aiseo'),    'href' => fbh_link('/ai-seo-expert-india')],
-        'cities'   => ['label' => t('nav.cities'),   'href' => fbh_link('/cities-we-serve')],
-        'cases'    => ['label' => t('nav.cases'),    'href' => fbh_link('/case-studies')],
-        'blog'     => ['label' => t('nav.blog'),     'href' => fbh_link('/blog')],
-        'about'    => ['label' => t('nav.about'),    'href' => fbh_link('/about')],
-        'contact'  => ['label' => t('nav.contact'),  'href' => fbh_link('/contact')],
+        'aeo'      => ['label' => 'AEO',                'href' => fbh_link('/aeo-consultant'), 'mt_attr' => ' translate="no"'],
+        'geo'      => ['label' => 'GEO',                'href' => fbh_link('/geo-consultant'), 'mt_attr' => ' translate="no"'],
+        'services' => ['label' => 'Services & pricing', 'href' => fbh_link('/seo-services'), 'mt_attr' => ''],
+        'cases'    => ['label' => 'Work',               'href' => fbh_link('/case-studies'), 'mt_attr' => ''],
+        'blog'     => ['label' => 'Guides',             'href' => fbh_link('/blog'), 'mt_attr' => ''],
+        'about'    => ['label' => t('nav.about'),       'href' => fbh_link('/about'), 'mt_attr' => fbh_mt_attr()],
+        'contact'  => ['label' => t('nav.contact'),     'href' => fbh_link('/contact'), 'mt_attr' => fbh_mt_attr()],
     ];
 }
 
@@ -81,18 +76,11 @@ function render_header($active_page = '') {
 
         <?php fbh_logo(); ?>
 
-        <?php
-        /* fbh_mt_attr() prints translate="no" only on a locale that has a
-           file, where these labels came out of that file already translated.
-           On a language with no file the labels are still English and the
-           runtime engine is left free to translate them along with everything
-           else, which is what makes every language in the menu work. */
-        ?>
-        <nav class="site-nav" aria-label="Primary"<?php echo fbh_mt_attr(); ?>>
+        <nav class="site-nav" aria-label="Primary">
           <ul>
             <?php foreach ($items as $key => $item): ?>
             <li>
-              <a href="<?php echo htmlspecialchars($item['href'], ENT_QUOTES, 'UTF-8'); ?>"<?php
+              <a href="<?php echo htmlspecialchars($item['href'], ENT_QUOTES, 'UTF-8'); ?>"<?php echo $item['mt_attr']; ?><?php
                 echo $key === $active_page ? ' aria-current="page"' : ''; ?>><?php
                 echo htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8'); ?></a>
             </li>
@@ -117,12 +105,12 @@ function render_header($active_page = '') {
 
       </div>
 
-      <nav class="mobile-nav" id="mobileNav" aria-label="Primary, mobile"<?php echo fbh_mt_attr(); ?>>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Primary, mobile">
         <div class="wrap">
           <ul>
             <?php $i = 1; foreach ($items as $key => $item): ?>
             <li>
-              <a href="<?php echo htmlspecialchars($item['href'], ENT_QUOTES, 'UTF-8'); ?>"<?php
+              <a href="<?php echo htmlspecialchars($item['href'], ENT_QUOTES, 'UTF-8'); ?>"<?php echo $item['mt_attr']; ?><?php
                 echo $key === $active_page ? ' aria-current="page"' : ''; ?>>
                 <span class="idx"><?php echo str_pad((string) $i, 2, '0', STR_PAD_LEFT); ?></span>
                 <span><?php echo htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8'); ?></span>

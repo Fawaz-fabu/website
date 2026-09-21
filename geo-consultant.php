@@ -338,7 +338,7 @@ render_head([
     'schema'      => $schema,
 ]);
 
-render_header('services');
+render_header('geo');
 ?>
 
 <main id="main">

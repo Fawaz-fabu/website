@@ -299,6 +299,7 @@ render_header('aiseo');
       </div>
 
       <p class="lede reveal" style="margin-top:28px">The order matters. GEO depends on AEO foundations, and AEO depends on SEO foundations. Buying the newest one first is the most common and most expensive mistake in this market, which is why the free audit says which of the three your money should go to rather than assuming it is all three.</p>
+      <p id="service-choice" class="reveal" style="margin-top:18px">Choose the scope you want to explore: <a href="/aeo-consultant">AEO for direct answers</a>, <a href="/geo-consultant">GEO for AI-generated visibility</a>, or <a href="/seo-services#technical-seo">SEO foundations and deliverables</a>.</p>
     </div>
   </section>
 

@@ -18,6 +18,23 @@ Built as PHP pages with function-wrapped shared includes. The design follows the
 
 ## 2. Currently completed
 
+### Section 4.2: navigation and contextual internal links
+
+This release is limited to navigation and internal linking. It supersedes older navigation descriptions below. No page, offer, price, research claim or testimonial was rewritten, and no page was added or removed.
+
+- Desktop and mobile primary navigation: AEO, GEO, Services & pricing, Work, Guides, About, Contact. Destinations are `/aeo-consultant`, `/geo-consultant`, `/seo-services`, `/case-studies`, `/blog`, `/about`, `/contact`. The logo remains the homepage link. Specialist pages now mark their own menu item active.
+- Existing language-aware `fbh_link()` routing is retained. AEO/GEO acronyms are protected from translation. New English navigation labels use the existing runtime translator; About and Contact retain `t()` and their per-label translation protection. No locale file, i18n function, route or translation JavaScript changed. New English labels remain readable if third-party translation is unavailable.
+- Existing homepage AEO/GEO service descriptions now link to their specialist pages. The local-SEO description also links to `/cities-we-serve`, and Service areas is explicitly retained in the footer. `/ai-seo-expert-india` retains contextual links from the AEO page and comparison guide, and its existing footer link.
+- `/seo-services#aeo` and `#geo` link from their existing descriptions to their specialist pages. The comparison guide links from its AEO/GEO explanation rows, not just the later service paragraph. About's statement describing its expansion into Answer Engine Optimisation and Generative Engine Optimisation links to both pages.
+- `/ai-seo-expert-india#service-choice` adds only this navigation sentence after the overlap/dependency explanation: "Choose the scope you want to explore: AEO for direct answers, GEO for AI-generated visibility, or SEO foundations and deliverables." Its links target `/aeo-consultant`, `/geo-consultant`, `/seo-services#technical-seo`.
+- The AEO/GEO pages already contain reciprocal contextual links in their comparison sections; those links and their wording are preserved rather than duplicated. All 12 newly added body anchors have distinct wording.
+- Validation passed: 54 PHP syntax checks; 33 English and 33 Kannada template renders; correct desktop/mobile order, active items and locale-prefixed navigation; all new link targets and the SEO fragment; preserved reciprocal links; unchanged existing body text except the one added link-choice sentence; unchanged testimonials, head metadata, canonicals and JSON-LD; identical sitemap output; all other tracked files unchanged except this README.
+- Unchanged: `includes/i18n.php`, locale files, routing code, `sitemap.php`, `robots.txt`, all LLM summaries, assets and backend/API paths. No Node, npm, package file, build step, runtime dependency or storage service was added.
+- Source limitation: implemented against local commit `6223eef`. The owner reports `.htaccess` is now committed remotely, but GitHub authorization remains unavailable in this session and the dotfile is absent locally. No remote fetch, ancestry confirmation, merge, push or deployment was possible/performed; this release does not create, replace or remove `.htaccess`.
+- Manual upload set (preserve paths): `includes/header.php`, `includes/footer.php`, `index.php`, `seo-services.php`, `ai-seo-expert-india.php`, `blogs/seo-aeo-geo-differences.php`, `about.php`, `aeo-consultant.php`, `geo-consultant.php`. README and all private QA/release materials are not public upload files. Keep the existing Hostinger `.htaccess` and backend intact.
+- Post-upload: verify the seven-item menu on desktop and mobile; click the logo; check AEO/GEO active states; follow each new contextual link and the SEO fragment; confirm AI SEO and service-area access from both body/footer links; test the language switcher and locale-preserving navigation; check the unchanged canonical/robots output and 32-URL `/sitemap.xml`; check keyboard focus/menu operation, light/dark layout and absence of PHP errors. Live Apache rewrites, browser layout and the external translation service still require host-level checks.
+- Next steps remain owner review and manual Hostinger upload. The broader service structure plan, copy revisions and new service/location pages are not implemented by this release.
+
 ### Approved wording fixes and bounded full/chat summaries
 
 This release supersedes the older summary sizes and testing-date snapshot notes below.
