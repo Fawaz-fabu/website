@@ -1,0 +1,255 @@
+# ============================================================================
+# fawazbhseo.in  |  Apache configuration
+# ----------------------------------------------------------------------------
+# WHY THIS FILE MATTERS MORE THAN IT LOOKS.
+#
+# Every internal link, every <link rel="canonical"> and every <loc> in the
+# sitemap on this site is EXTENSIONLESS, for example:
+#
+#   https://fawazbhseo.in/seo-services-madikeri
+#
+# The actual file on disk is seo-services-madikeri.php. Without the rewrite in
+# section 2 below, that URL is a 404. Google would then discover the URL from
+# the sitemap, fetch it, receive a 404, and park it as "Discovered, currently
+# not indexed", which is exactly the symptom reported on the location pages.
+#
+# If you ever move hosts, this file is the first thing to check. On Nginx the
+# equivalent is `try_files $uri $uri.php $uri/ =404;`.
+# ============================================================================
+
+
+# ----------------------------------------------------------------------------
+# 1. Basics
+# ----------------------------------------------------------------------------
+Options -Indexes +FollowSymLinks
+DirectoryIndex index.php index.html
+
+# Send the custom 404 rather than Apache's default.
+ErrorDocument 404 /404.php
+
+<IfModule mod_headers.c>
+  # The includes directory holds PHP partials only. Nothing in it should ever
+  # be requested directly or indexed.
+  <FilesMatch "\.(md|txt~|bak|log)$">
+    Header set X-Robots-Tag "noindex"
+  </FilesMatch>
+</IfModule>
+
+# llms.txt and llms-full.txt must be served as readable UTF-8 text. The
+# assistant fetches llms-full.txt at runtime, so a wrong charset here shows up
+# as mojibake in the chat panel.
+AddType text/plain .txt
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .txt .css .js .xml .json .svg
+</IfModule>
+
+
+# ----------------------------------------------------------------------------
+# 2. Canonical URLs and extensionless rewrites
+# ----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# --- 2a. Force HTTPS -------------------------------------------------------
+# Behind a proxy or CDN, HTTPS is often off while X-Forwarded-Proto is set, so
+# both are checked. Otherwise this can cause a redirect loop.
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --- 2b. Force the canonical www-less host ---------------------------------
+# The canonicals all say https://fawazbhseo.in/, so www must redirect to it.
+# Serving both hosts without this splits ranking signals between two URLs.
+RewriteCond %{HTTP_HOST} ^www\.fawazbhseo\.in$ [NC]
+RewriteRule ^ https://fawazbhseo.in%{REQUEST_URI} [R=301,L]
+
+# --- 2b2. Exclude the API endpoint from all URL cosmetics ------------------
+# /api/chat.php is called by fetch() from assistant.js. It is an endpoint, not
+# a page: it has no canonical URL, is never linked, and must never be indexed
+# or prettified.
+#
+# THIS MUST STAY ABOVE 2c AND 2d. Rules run top to bottom, so if 2c runs first
+# it sees ".php" in THE_REQUEST and issues a 301 to /api/chat. A 301 on a POST
+# makes the browser re-issue the request as GET and DISCARD the JSON body, so
+# the endpoint receives no message and the chat panel reports an unreadable
+# response. This exact bug cost an afternoon; do not "tidy" this rule to the
+# bottom of the file.
+#
+# Placed AFTER 2a and 2b deliberately, so API calls are still forced onto
+# HTTPS and onto the canonical host before this short-circuit applies.
+#
+# [L] stops rewrite processing for anything under /api/, so every future
+# endpoint added to that directory is protected automatically.
+RewriteRule ^api/ - [L]
+
+# Article migration: the archive remains /blog; articles live under /blogs/.
+# Redirect the old public paths, including visible .php and slash variants.
+RewriteRule ^blogs/?$ /blog [R=301,L]
+RewriteRule ^(seo-aeo-geo-differences|measure-ai-search-visibility|local-seo-checklist-karnataka)(?:\.php)?/?$ /blogs/$1 [R=301,L]
+RewriteRule ^([A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})?)/(seo-aeo-geo-differences|measure-ai-search-visibility|local-seo-checklist-karnataka)(?:\.php)?/?$ /$1/blogs/$2 [R=301,L]
+
+# --- 2c. Strip a visible .php extension ------------------------------------
+# If anyone links to /about.php, redirect once to /about so there is only ever
+# one indexable URL per page. THE_REQUEST is used because REQUEST_URI has
+# already been rewritten by the time later rules run.
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# --- 2d. Remove trailing slashes on file-backed URLs -----------------------
+# /about/ and /about must not both resolve. Real directories are excluded.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+?)/$ /$1 [R=301,L]
+
+# --- 2e. Serve sitemap.xml from the dynamic generator ----------------------
+# sitemap.php derives its URL list and every <lastmod> from the files on disk,
+# so it cannot drift out of date the way the old hand-edited XML file did.
+# Crawlers and Search Console keep using the familiar .xml address.
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+
+# --- 2e2. Language prefixes ------------------------------------------------
+# /kn/about serves about.php with FBH_LANG=kn. There is no kn/ directory and
+# there are no duplicated PHP files: one set of pages is rendered in the
+# requested language by includes/i18n.php.
+#
+# NO LANGUAGE CODES ARE LISTED HERE, AND NONE SHOULD EVER BE ADDED.
+#
+# The oldest version of this block hardcoded (kn|hi|ml|ta|te), which meant every
+# new language needed an .htaccess edit, on a dotfile that FTP clients hide and
+# that takes the whole site down when it has a typo.
+#
+# THE BUG THAT REPLACED IT, AND WHY THESE RULES NO LONGER TEST locales/.
+#
+# The next version asked the filesystem for locales/<code>.php and only fired
+# when that file existed. That was correct while a locale file was the thing
+# that made a language readable. It stopped being correct the moment full page
+# translation shipped: the site then offered every language in the registry,
+# around a hundred, while only ten had a file. The other ninety-odd matched
+# none of these rules, fell through to the extensionless rule in 2f, found no
+# /ja.php on disk and returned 404. The language menu offered them and the
+# server refused them.
+#
+# So the filesystem test is gone. These rules now accept any code-shaped prefix
+# and PHP decides whether it is a real language, in fbh_guard_lang_prefix(),
+# which 404s anything the registry does not list. That is the right split:
+# Apache cannot read the registry and should not be made to guess at it, and
+# PHP already had to validate the code anyway before touching a file path.
+#
+# A REAL PAGE ALWAYS WINS. The !-f and !-d conditions, and the check that
+# $1.php does not exist, exist so a genuine page whose name happens to be two
+# or three letters can never be swallowed as a language prefix. No such page
+# exists today; this is so adding one later cannot break routing silently.
+#
+# CASE. The code is passed through as written, so /zh-Hans works. PHP resolves
+# it case-insensitively, so a mixed-case link still works.
+#
+# MUST come before 2f. If the extensionless rule ran first it would look for
+# a literal kn/about.php, fail to find it and 404.
+#
+# English deliberately has NO prefix. Its URLs are the ones already indexed and
+# ranking, so /about must never become /en/about. If anyone links to /en/...,
+# 301 it back to the clean path rather than serving the same page at two URLs.
+RewriteRule ^en(/.*)?$ /$1 [R=301,L]
+
+# Language root, for example /kn or /ja serves the homepage in that language.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.php !-f
+RewriteRule ^([A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})?)/?$ /index.php [E=FBH_LANG:$1,L,QSA]
+
+# Language plus an extensionless page path, for example /ja/about.
+# The PAGE must exist on disk. The language does not need a file, because the
+# translation happens at runtime; PHP validates the code against the registry.
+RewriteCond %{DOCUMENT_ROOT}/$2.php -f
+RewriteRule ^([A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})?)/(.+?)/?$ /$2.php [E=FBH_LANG:$1,L,QSA]
+
+# Some FastCGI and LiteSpeed setups drop the E= variable. Passing it through as
+# a REDIRECT_ prefixed var too means fbh_lang() can still find it. This one
+# cannot test the filesystem, so it may set the variable for a prefix that has
+# no translation. That is harmless: fbh_lang() validates the code against the
+# available locales and falls back to English when it does not resolve.
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "^/([A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})?)(/|$)" FBH_LANG=$1
+</IfModule>
+
+# --- 2f. THE IMPORTANT ONE: map extensionless URLs to .php files -----------
+# Only rewrites when the .php file genuinely exists, so a real typo still
+# returns a proper 404 instead of being silently swallowed.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.+?)/?$ /$1.php [L]
+
+# --- 2g. Block direct access to the PHP partials ---------------------------
+# These are function libraries meant to be require_once'd, never requested.
+RewriteRule ^includes/ - [F,L]
+
+# Translation data files, same reasoning. Requesting /locales/kn.php directly
+# would render nothing useful and would expose the internal string keys.
+# Blocking the URL does not affect language routing: rule 2e2 above no longer
+# consults this directory at all, and PHP reads these files from disk with
+# include() rather than by making an HTTP request.
+RewriteRule ^locales/ - [F,L]
+</IfModule>
+
+
+# ----------------------------------------------------------------------------
+# 3. Compression
+# ----------------------------------------------------------------------------
+# PageSpeed's "Enable text compression" audit. HTML, CSS, JS, SVG, JSON and the
+# llms text files all compress by roughly 70 to 80 percent, which is the single
+# cheapest performance win available here.
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml image/svg+xml
+</IfModule>
+
+
+# ----------------------------------------------------------------------------
+# 4. Caching
+# ----------------------------------------------------------------------------
+# PageSpeed's "efficient cache policy" audit. CSS and JS are safe to cache for
+# a year because head.php appends ?v=FBH_ASSET_VER to their URLs, so bumping
+# that constant is what invalidates them. HTML is never cached, so content and
+# schema changes go live immediately.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                              "access plus 1 month"
+
+  ExpiresByType text/css                      "access plus 1 year"
+  ExpiresByType application/javascript        "access plus 1 year"
+  ExpiresByType image/webp                    "access plus 1 year"
+  ExpiresByType image/svg+xml                 "access plus 1 year"
+  ExpiresByType image/x-icon                  "access plus 1 year"
+  ExpiresByType font/woff2                    "access plus 1 year"
+
+  # Content and machine-readable summaries: short, so edits surface quickly.
+  ExpiresByType text/html                     "access plus 0 seconds"
+  ExpiresByType text/plain                    "access plus 1 hour"
+  ExpiresByType application/xml               "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|webp|svg|ico|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.php$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Sensible baseline security headers. None of these affect rendering.
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always unset X-Powered-By
+ 
+</IfModule>
+
+RewriteRule ^_audit/ - [F,L]
