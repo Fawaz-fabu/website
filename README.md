@@ -18,6 +18,16 @@ Built as PHP pages with function-wrapped shared includes. The design follows the
 
 ## 2. Currently completed
 
+### GitHub review branch and private-file exclusions
+
+This branch-preparation record supersedes the earlier blocked-Git/absent-local-htaccess status below. Those entries remain historical release records.
+
+- With explicit owner approval, created `seo-audit-fixes` from `fec609de0cfb866458d30c68ac6f9f01b50f650b` and merged `origin/main` (`bc61c0150b7578e38411502aa49c186db6f343eb`) without conflicts. Merge commit: `d806dc684c16d9545aeffc81ba9316d5b34b2b57`. No rebase, history rewrite, force-push or direct change to either main branch is authorized by this workflow.
+- The remote `.htaccess` was brought in unchanged by that merge. Its blob remains `c4106347ddda7b8e9db0304aa700487344bf359b`; there is no `.htaccess` difference against remote main. No routing edit or backend/API change accompanies this branch-preparation step.
+- Added `.gitignore` for `.audit-work/`, `_audit/`, generated archives, release/review/rollback bundles, manifests, GSC/PageSpeed exports, `ai-config.php`, `.env` variants, `diag*.php` and local temporary files. README and the research markdown reports remain permitted, except the expressly excluded source manifest.
+- All eight pre-existing local-only commits were inspected for excluded-path changes; none adds these artifacts. Nine `_audit/` exports and `research/sources/manifest.md` were already tracked in the shared remote history. They are removed from the PR branch's index with local copies retained. Their deletion entries are intentional exclusions, not website-file deletions. A `.gitignore` does not erase files from Git history: those historical copies remain on GitHub because history rewriting is prohibited.
+- The push target is only `seo-audit-fixes`, with a pull request against `main`. The PR is for review, not an automatic merge or Hostinger deployment. Existing factual-review proposals remain unapplied; R01-R18 and H01-H06 still need owner decisions. No runtime content is changed by the Git preparation.
+
 ### Sections 4.3 and 4.4: AEO/GEO structural draft and Section 4.6 decision queue
 
 This release adds service depth and source context without applying factual corrections awaiting the owner's decision. It supersedes the older summary sizes and Git authorization status below, not the earlier approved business facts. The latest instruction requiring owner decisions on factual corrections takes precedence over the historical broad authorization recorded in Project goals.
