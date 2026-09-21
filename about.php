@@ -167,7 +167,7 @@ render_header('about');
         <article class="card reveal">
           <span class="card-index">What I do now</span>
           <h3>One person, whole strategy</h3>
-          <p>Today I work directly with a deliberately small list of clients, from Coorg homestays and spice brands to founders and B2B operators further afield. Every engagement is handled personally, end to end. No account managers, no junior handoffs, no diluted execution. Just me, your search visibility, and a method built for both Google and the answer engines. That is what being an independent SEO, AEO and GEO consultant in Karnataka means in practice.</p>
+          <p>My current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. I am co-founder of ILMERA Study Abroad and run its digital work; it is my own venture, not an arm&#8217;s-length client. Every engagement is handled personally, end to end. No account managers, no junior handoffs, no diluted execution. Just me, your search visibility, and a method built for both Google and the answer engines. That is what being an independent SEO, AEO and GEO consultant in Karnataka means in practice.</p>
         </article>
       </div>
 

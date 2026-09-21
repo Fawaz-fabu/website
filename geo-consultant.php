@@ -397,7 +397,7 @@ render_header('services');
 
       <div class="table-wrap reveal">
         <table class="data-table">
-          <caption>How each generative engine is grounded, and the lever that most reliably moves a citation there. Reviewed July 2026.</caption>
+          <caption>How each generative engine is grounded, and the lever that most reliably moves a citation there.</caption>
           <thead>
             <tr><th scope="col">Engine</th><th scope="col">Grounded in</th><th scope="col">Primary citation lever</th></tr>
           </thead>

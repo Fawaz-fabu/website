@@ -8,11 +8,19 @@ Fawaz grew up in Kushal Nagar and began working in SEO in early 2025. His founda
 
 The qualifications listed on the website are Ahrefs Academy Certification, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing from Adrex Media School. The Ahrefs training covers keyword research, on-page and technical SEO, and link analysis. The Semrush qualifications cover AI visibility and technical SEO/AI-search foundations. The diploma provides a broader digital-marketing foundation.
 
-Fawaz is co-founder and Marketing Head at ILMERA Study Abroad. ILMERA is his own business, not a client reference. Its search and AI visibility are his responsibility.
+Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. Fawaz is co-founder of ILMERA Study Abroad and runs its digital work. ILMERA is his own venture, not an arm’s-length client or an independent client reference.
 
 The phone and WhatsApp number is +91 94810 84038. WhatsApp enquiries can be sent to https://wa.me/919481084038. The email addresses are fawazbhseo@gmail.com and admin@fawazbhseo.in. LinkedIn is https://www.linkedin.com/in/fawazbh. Contact-page working hours are Monday to Saturday, India Standard Time. Fawaz normally replies within a working day, but does not promise an immediate response; urgent enquiries can be made by phone.
 
 The first message only needs a website, city and a short explanation of what needs improvement. A prospect does not need technical vocabulary or analytics access ready before making contact. The free discovery audit produces a written summary of problems and recommended priorities. The prospect keeps it whether or not they hire Fawaz. If work proceeds, scope and price are agreed in writing before paid work or invoicing. The contact form prepares a WhatsApp message for the visitor to review, edit and send. It does not send or save that message on the website; WhatsApp is a separate service.
+
+## Personal testing and case-study status
+
+Fawaz BH states: "In my own testing as of September 2026, ChatGPT, Gemini and Google AI Overviews named me among SEO specialists for Kodagu and Karnataka. I re-test regularly. AI answers vary by prompt and change over time." These are his own observations, not an independent endorsement or a guarantee. Source: https://fawazbhseo.in/#ai-testing. The as-of date is generated from the single editable $ai_testing_as_of value in index.php; regenerate this static grounding file after that value changes.
+
+Green Coorg Spices had no prior website or digital presence. Fawaz BH built its website, which reached first-page Google rankings. The site is currently offline because hosting expired; a rebuilt version is in progress. This is a historical result, not a claim of current visibility. No time-to-rank or order-growth figure is asserted. External links to the offline site are disabled.
+
+The existing published testimonials were approved by the clients over WhatsApp. Their wording is client feedback, not a quantified traffic/sales result or a promise for another business.
 
 ## What the services involve
 
@@ -90,7 +98,7 @@ The GEO page, /geo-consultant, explains visibility inside synthesised AI answers
 
 The AI SEO page, /ai-seo-expert-india, explains what AI SEO means and separates SEO, AEO and GEO. It discusses changes in search, the distinction between using AI tools and being visible in AI answers, content preparation and questions to ask a potential provider.
 
-The case-studies page, /case-studies, describes the Green Coorg Spices engagement in Kushal Nagar, including technical work, Business Profile work, citations, location content and the client's own feedback. The client reports reaching Google's first page. The page also describes web-development and digital-marketing work for Neelachandra Construction and Interiors in Bengaluru. These examples do not promise the same outcome for another business.
+The case-studies page, /case-studies, describes the Green Coorg Spices website build, its historical first-page Google rankings and the current expired-hosting/offline status while a rebuilt version is in progress. It also lists current work for neelachandra.com and neelachandrainteriors.com, and ILMERA as the co-founder’s own venture rather than an arm’s-length client. These examples do not promise the same outcome for another business.
 
 The geographic overview, /cities-we-serve, explains local versus remote delivery and groups coverage from Kodagu through Karnataka, South India, India and selected international enquiry markets. It explains meetings, time-zone arrangements and how an unlisted city can be discussed.
 

@@ -18,6 +18,19 @@ Built as PHP pages with function-wrapped shared includes. The design follows the
 
 ## 2. Currently completed
 
+### Approved wording fixes and bounded full/chat summaries
+
+This release supersedes the older summary sizes and testing-date snapshot notes below.
+
+- `about.php`: replaced the residual Coorg-homestay client sentence with the approved current domains, explicitly identifying ILMERA as the co-founder's own venture whose digital work he runs, not an arm's-length client. All other paragraph wording is unchanged.
+- `geo-consultant.php`: removed only the arbitrary `Reviewed July 2026` engine-table caption suffix. No other page wording, research assertion or page-level review date changed.
+- `llms-full.txt`: reduced from 539,059 to 138,683 UTF-8 bytes (138.683 decimal kB; 74.27% smaller). Common identity/contact/credential furniture is centralised, 19 geographic pages are condensed to context/coverage/delivery differences, and three guides have linked summaries instead of full extracts. Published prices and package inclusions, AEO/GEO workstreams, research paragraphs with their source attributions and qualifications, and historical case-study status remain. This is editorial condensation, not an independent revalidation of research claims.
+- `llms-chat.txt`: now 23,861 characters / 23,889 UTF-8 bytes, below the 40,000-character backend limit. It includes the approved dated personal testing statement, all three approved current domains, ILMERA's relationship, and Green Coorg Spices' historical result plus expired-hosting/offline/rebuild status.
+- Single editable testing-date source remains `$ai_testing_as_of` in `index.php`. The full/chat snapshots now include its rendered date, obtained from that variable rather than manually hardcoded in the maintenance script. After a real re-test, change the variable, regenerate the two static snapshots, and upload them. They do not update automatically when PHP changes. `llms.txt` remains unchanged and still refers to the dated homepage statement. The local maintenance/test scripts are private QA artifacts, not a runtime dependency or site build step.
+- Validation: 54 PHP syntax checks; 33 English template renders; five approved testimonial instances preserved; 91 catalogue/package entries checked; 46 AEO/GEO research paragraphs/source attributions and all eight workstream bodies retained; 37 complete selected source sections retained; 19 location summaries and three linked guide summaries; exact two-edit PHP scope checked. All other tracked site files are unchanged, including chat.php/API paths, index.php, llms.txt, routing, canonicals, i18n and the 32-entry undated sitemap.
+- The owner reports prior releases are live, but public homepage/case-study requests from this environment still returned older content, including on a cache-busted retry. This release uses the approved repository and owner-supplied facts; external deployment was not independently verified.
+- Manual release: upload only about.php, geo-consultant.php, llms-full.txt and llms-chat.txt. Keep README, research and .audit-work private. No GitHub push, Hostinger upload or backend changes were performed. Verify the About wording, removed caption date, summary sizes and testing/status facts after upload; inspect hosting/CDN caches if the old content remains visible.
+
 ### Compact chat grounding and repo-only coverage report
 
 - Added `/llms-chat.txt` as a static grounding resource: 22,662 characters and 22,684 UTF-8 bytes, below the owner's 40,000-character backend truncation limit. It covers 32 page purposes, services, published package prices/inclusions, service areas, contact, background and case-study facts; it does not reproduce long-form guides.
