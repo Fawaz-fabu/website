@@ -27,7 +27,10 @@ $schema = <<<'JSONLD'
       "url": "https://fawazbhseo.in/",
       "image": "https://fawazbhseo.in/assets/images/fawazbh.webp",
       "telephone": "+91-94810-84038",
-      "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
+      "email": [
+        "fawazbhseo@gmail.com",
+        "admin@fawazbhseo.in"
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kushalnagar, Kodagu",
@@ -35,34 +38,70 @@ $schema = <<<'JSONLD'
         "postalCode": "571234",
         "addressCountry": "IN"
       },
-      "sameAs": ["https://www.linkedin.com/in/fawazbh", "https://x.com/fawazbhseo"],
-      "knowsAbout": ["Search Engine Optimization", "Answer Engine Optimization", "Generative Engine Optimization", "Local SEO", "Technical SEO"]
+      "sameAs": [
+        "https://www.linkedin.com/in/fawazbh",
+        "https://x.com/fawazbhseo"
+      ],
+      "knowsAbout": [
+        "Search Engine Optimization",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization",
+        "Local SEO",
+        "Technical SEO"
+      ],
+      "worksFor": {
+        "@id": "https://fawazbhseo.in/#practice"
+      },
+      "mainEntityOfPage": [
+        "https://fawazbhseo.in/",
+        "https://fawazbhseo.in/about"
+      ]
     },
     {
       "@type": "ProfessionalService",
       "@id": "https://fawazbhseo.in/#practice",
       "name": "FawazBHSEO",
-      "founder": {"@id": "https://fawazbhseo.in/#fawaz"},
+      "founder": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      },
       "url": "https://fawazbhseo.in/",
       "telephone": "+91-94810-84038",
       "priceRange": "Scoped per engagement",
-      "areaServed": ["Kodagu", "Karnataka", "South India", "India"],
-      "address": {"@type": "PostalAddress", "addressLocality": "Kushalnagar, Kodagu", "addressRegion": "Karnataka", "postalCode": "571234", "addressCountry": "IN"}
+      "areaServed": [
+        "Kodagu",
+        "Karnataka",
+        "South India",
+        "India"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kushalnagar, Kodagu",
+        "addressRegion": "Karnataka",
+        "postalCode": "571234",
+        "addressCountry": "IN"
+      },
+      "alternateName": "Fawaz BH SEO",
+      "email": [
+        "fawazbhseo@gmail.com",
+        "admin@fawazbhseo.in"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://fawazbhseo.in/#website",
       "url": "https://fawazbhseo.in/",
       "name": "FawazBHSEO",
-      "publisher": {"@id": "https://fawazbhseo.in/#fawaz"}
+      "publisher": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      }
     }
   ]
 }
 JSONLD;
 
 render_head([
-    'title'       => 'Fawaz BH, independent SEO, AEO and GEO consultant in India',
-    'description' => 'Fawaz BH is an independent SEO, AEO and GEO consultant in India, based in Kodagu, Karnataka. Ahrefs and Semrush certified. You work with him directly, with no agency layers.',
+    'title'       => 'Fawaz BH | Independent SEO Consultant, FawazBHSEO',
+    'description' => 'Meet Fawaz BH, the independent consultant behind FawazBHSEO in Kushalnagar, Kodagu. Explore his SEO services, background and work, with direct personal delivery.',
     'canonical'   => 'https://fawazbhseo.in/',
     'schema'      => $schema,
 ]);
@@ -78,8 +117,9 @@ render_header('home');
 
       <div class="hero__lead reveal">
         <p class="eyebrow">Independent SEO, AEO and GEO consultant, India</p>
-        <h1 id="hero-h">Rank on Google. Get cited by the engines that answer.</h1>
-        <p class="hero__sub">One certified consultant running SEO, AEO and GEO as a single strategy, from Kushal Nagar, Kodagu to the rest of India.</p>
+        <h1 id="hero-h">Fawaz BH, your independent SEO consultant.</h1>
+        <p class="hero__sub">I run FawazBHSEO from Kushalnagar, Kodagu, Karnataka. You work directly with me on technical SEO, content and local search, with AEO and GEO as connected parts of the practice. Explore my background, services and documented work here.</p>
+        <p id="ai-seo-route" style="margin-top:18px">Looking specifically at AI search? Read about <a href="/ai-seo-expert-india">my AI SEO consulting approach</a>, including scope, tool use and measurement.</p>
         <div class="btn-row">
           <a class="btn btn--accent" href="https://wa.me/919481084038?text=Hi%20Fawaz%2C%20I%20would%20like%20an%20SEO%20audit" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21a9 9 0 1 0-8.5-6.1L2 22l6.5-1.6A9 9 0 0 0 12 21Z"/></svg>

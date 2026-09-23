@@ -482,20 +482,23 @@ $research_rules = json_decode(<<<'RESEARCH_RULES'
 [["Generative AI performance report|Search Console AI feature inclusion|included in Search generative AI", ["S01", "S02", "S03", "S04"]], ["Bing Webmaster|Intents|Citation Share", ["S05"]], ["37\\.9|38%|31\\.2|31\\.0|76%|863|4 million AI Overview|four million AI Overview", ["S07"]], ["0\\.664|0\\.218|0\\.527|0\\.392|0\\.326|169.*14|75,000|3 times.*strong|three times.*strong", ["S08"]], ["Zyppy|meta-analysis|9\\.5|9\\.4|9\\.3|9\\.2|8\\.9|8\\.8|8\\.6|8\\.0|7\\.0|2\\.0|highest-evidence|second-strongest|scored citation factor", ["S06"]], ["1,064|1,432|16\\.97|16\\.98|25\\.7|958|4\\.3|freshness.*moderate", ["S09"]], ["53\\.46|53%|0\\.04|80%|BuzzStream|3,600|4 million citations|four-million-citation", ["S10", "S11"]], ["120%|5\\.47|53 brands", ["S12"]], ["68%|SparkToro|zero.click", ["S13"]], ["87%|SearchGPT", ["S14"]], ["13\\.7", ["S15"]], ["BrightEdge", ["S16"]], ["Bing-backed|ChatGPT retrieves|Bing.*ChatGPT|ChatGPT.*Bing|Invisible in|engine-specific bottleneck|actual cause|specific bottleneck|lever that most reliably", ["S17", "S14"]], ["Perplexity.*(freshness|live|query)|freshness.*Perplexity|multi-API", ["S18"]], ["Brave-backed|Claude.*Live web", ["S19"]], ["Microsoft Graph|Copilot.*Bing index", ["S20"]], ["Google.*(documentation|guidance|explicit|confirms|states|position)|query fan-out|retrieval-augmented|RAG|Business Profile.*AI responses|no special markup|llms\\.txt.*(Google|ranking)|Google.*llms\\.txt", ["S01", "S02"]], ["AEO targets|AEO optimises|GEO optimises|different selection mechanisms|different surfaces|extracted.*synth|extraction.*synthesis|passage.*direct answer", ["S01", "S02"]], ["40 to 80|one recommendation|higher-stakes", ["S02"]], ["HowTo|FAQPage|Speakable", ["S02", "S21", "S22"]], ["paywalled|simply skipped|do not recall|Nothing is lifted verbatim|Context-dependent prose does not|zero out citations|excluded before any", ["S01", "S02", "S06"]]]
 RESEARCH_RULES
 , true);
-$research_note = static function ($source_ids) use ($research_sources) {
-    $ids = preg_split('/\s+/', trim($source_ids), -1, PREG_SPLIT_NO_EMPTY);
-    if (!$ids) return;
-    echo '<p class="field-note research-note">';
-    if ($ids) {
-        echo 'Source context: ';
-        $links = [];
-        foreach ($ids as $id) {
-            $source = $research_sources[$id];
-            $links[] = '<a href="' . htmlspecialchars($source['url'], ENT_QUOTES, 'UTF-8') . '">' . $id . '</a> (<a href="#source-' . $id . '">date and sample</a>)';
-        }
-        echo implode('; ', $links) . '.';
+$section_source_ids = [];
+$research_note = static function ($source_ids) use (&$section_source_ids) {
+    foreach (preg_split('/\s+/', trim($source_ids), -1, PREG_SPLIT_NO_EMPTY) as $id) {
+        $section_source_ids[$id] = true;
     }
-    echo '</p>';
+};
+$render_section_sources = static function () use (&$section_source_ids, $research_sources) {
+    if (!$section_source_ids) return;
+    $ids = array_keys($section_source_ids);
+    sort($ids);
+    $links = [];
+    foreach ($ids as $id) {
+        $source = $research_sources[$id];
+        $links[] = '<a href="' . htmlspecialchars($source['url'], ENT_QUOTES, 'UTF-8') . '">' . $id . '</a> (<a href="#source-' . $id . '">date and sample</a>)';
+    }
+    echo '<div class="wrap"><p class="field-note section-sources">Sources: ' . implode('; ', $links) . '.</p></div>';
+    $section_source_ids = [];
 };
 $research_context = static function ($text) use ($research_rules, $research_note) {
     $plain = html_entity_decode(strip_tags($text), ENT_QUOTES, 'UTF-8');
@@ -549,6 +552,7 @@ render_header('geo');
       </div>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -558,6 +562,7 @@ render_header('geo');
 <p class="lede">This service brings together a prompt-set baseline, website and business-identity work, content organisation, third-party corroboration and per-engine reporting. Start with the business information and questions you need to assess, then agree the work against the audit findings.</p>
       <p><a href="#fit">Check the fit</a> · <a href="#handovers">See the supported handovers</a> · <a href="#scoping">Discuss scope</a> · <a href="#research-sources">Check sources and review status</a></p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -570,6 +575,7 @@ render_header('geo');
         <article class="card"><h3>Know the limits before starting</h3><p>This is not a fit if you require guaranteed citations or a large team covering many markets in parallel. If you are still choosing between disciplines, compare the <a href="/ai-seo-expert-india">AI SEO scope explanation</a> and the <a href="/seo-services">published service catalogue</a> before agreeing an engagement.</p></article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -596,6 +602,7 @@ render_header('geo');
         <?php endforeach; ?>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -611,6 +618,7 @@ render_header('geo');
       </tbody></table></div>
       <p class="field-note">File formats, revision counts, page quantities, turnaround times and additional reporting fields are not specified here. Agree them before work begins; they should not be inferred from an example or a research statistic.</p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -624,6 +632,7 @@ render_header('geo');
         <article class="card"><h3>Access and implementation</h3><p>Discuss which analytics and search reports are available, which changes can be made within the agreed scope, and who can approve or publish them. The existing service description assigns audit, implementation and reporting to Fawaz; access permissions, approval timing and any client-side dependencies still need to be agreed.</p></article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -659,6 +668,7 @@ render_header('geo');
         </article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -668,6 +678,7 @@ render_header('geo');
 <p>The published method uses a repeatable prompt set, with results reported separately by engine. The existing categories are cited, mentioned without citation and absent. Use the <a href="/blogs/measure-ai-search-visibility">measurement guide and blank observation log</a> to see how the site distinguishes mentions, citations and recommendations.</p>
       <article class="card"><h3>Illustration only: reading an observation</h3><p>If an answer names a business but provides no link to its website, record a mention without a citation. If it links to a page, record that citation. A recommendation is a separate observation about what the answer actually says. This is an explanation of the categories, not a client result, a measured improvement or a promise that an answer will appear.</p></article>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -677,6 +688,7 @@ render_header('geo');
       <div class="section-head reveal"><h2 id="evidence-h">Evidence, mechanisms and background</h2></div>
 <p>Read the research alongside its linked publication dates and samples. Existing factual wording is retained pending the owner decisions noted below; a citation link is not an approval of every inference.</p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -685,6 +697,7 @@ render_header('geo');
       <p>Five generative engines tracked. <span class="accent">Measured separately, never averaged into one score.</span></p>
           <?php $research_note('S01 S02'); ?>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="engines" aria-labelledby="eng-h">
@@ -700,16 +713,18 @@ render_header('geo');
         <table class="data-table">
           <caption>How each generative engine is grounded, and the lever that most reliably moves a citation there.</caption>
           <thead>
-            <tr><th scope="col">Engine</th><th scope="col">Grounded in</th><th scope="col">Primary citation lever</th><th scope="col">Source context</th></tr>
+            <tr><th scope="col">Engine</th><th scope="col">Grounded in</th><th scope="col">Primary citation lever</th></tr>
           </thead>
           <tbody>
             <?php foreach ($engines as $e): ?>
-            <tr><th scope="row"><?php echo $e[0]; ?></th><td><?php echo $e[1]; ?></td><td><?php echo $e[2]; ?></td><td><?php $research_context(implode(' ', $e)); ?></td></tr>
+            <tr><th scope="row"><?php echo $e[0]; ?></th><td><?php echo $e[1]; ?></td><td><?php echo $e[2]; ?></td></tr>
+            <?php $research_context(implode(' ', $e)); ?>
             <?php endforeach; ?>
           </tbody>
         </table>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section section--alt" id="key-facts" aria-labelledby="kf-h">
@@ -732,6 +747,7 @@ render_header('geo');
         <?php $n++; endforeach; ?>
       </ol>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="seo-aeo-geo" aria-labelledby="split-h">
@@ -764,6 +780,7 @@ render_header('geo');
       </div>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="how-geo-works" aria-labelledby="geo-how-h">
@@ -788,6 +805,7 @@ render_header('geo');
         <?php endforeach; ?>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section section--alt" id="credentials" aria-labelledby="cred-h">
@@ -826,6 +844,7 @@ render_header('geo');
         </article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="choosing" aria-labelledby="best-h">
@@ -872,6 +891,7 @@ render_header('geo');
       </div>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="proof" aria-labelledby="proof-h">
@@ -903,6 +923,7 @@ render_header('geo');
         </article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -920,6 +941,7 @@ render_header('geo');
         <?php endforeach; ?>
       </ol>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -930,6 +952,7 @@ render_header('geo');
 <p>Start with the free audit and agree the work and price in writing before implementation or invoicing. Published packages remain on the <a href="/seo-services#pricing">services and pricing page</a>; this page does not add a new price or a separate package.</p>
       <p>Use the scope discussion to confirm priorities, pages and profiles, selected engines and modes, approval responsibilities, reporting cadence and any access constraints. The format and extent of handovers are to be agreed, rather than assumed from the workstream names.</p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -957,6 +980,7 @@ render_header('geo');
       </div>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <!-- 13. CONTACT -->

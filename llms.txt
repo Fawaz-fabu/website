@@ -4,10 +4,10 @@
 Fawaz BH runs a founder-led search consultancy that treats SEO (Google rankings), AEO (clear answers to customer questions) and GEO (generative-engine visibility) as one connected strategy. Engagements are handled directly, with no agency layers, for a deliberately small client list across Karnataka, South India and the rest of India. Contact: +91 94810 84038, fawazbhseo@gmail.com, admin@fawazbhseo.in, https://wa.me/919481084038
 
 ## Main pages
-- [Home](https://fawazbhseo.in/): Overview of the practice, the six services, the four-stage process, credentials and the Green Coorg Spices case study.
+- [Fawaz BH, your independent SEO consultant](https://fawazbhseo.in/): The homepage, /, introduces Fawaz BH and FawazBHSEO, his background, services and documented work. It links to the dedicated AI SEO page for AI search scope, tool use and measurement.
 - [Services](https://fawazbhseo.in/seo-services): Full-stack search services, which are Technical SEO audits, Local SEO, AEO, GEO, SEO content strategy and LinkedIn or personal-brand SEO, plus Social Media Marketing, Performance Marketing (Google Ads and Meta Ads) and Website Design, with published starting rates.
 - [AEO Consultant](https://fawazbhseo.in/aeo-consultant): Answer Engine Optimisation services helping businesses get surfaced in Google AI Overviews, Bing Copilot and voice-assistant answers.
-- [AI SEO expert in India](https://fawazbhseo.in/ai-seo-expert-india): What AI SEO means, with SEO, AEO and GEO defined separately rather than blended. Six shifts in how search behaves, a statement that this website includes AI-assisted writing and editing, with client methods and approvals agreed in scope, and six questions to ask before hiring anyone for AI search work.
+- [AI SEO expert and consultant in India](https://fawazbhseo.in/ai-seo-expert-india): The AI SEO page, /ai-seo-expert-india, is the dedicated AI SEO expert and consultant page for India. Question-shaped sections explain AI search visibility and AI-assisted delivery, existing scope, inputs, measurement, qualifications and provider selection. Published FAQs and starting rates remain on the page.
 - [GEO Consultant](https://fawazbhseo.in/geo-consultant): Generative Engine Optimisation services helping businesses get cited and summarised by ChatGPT, Perplexity, Gemini and Claude.
 - [Case Studies](https://fawazbhseo.in/case-studies): Green Coorg Spices website build, historical first-page Google ranking and current offline/rebuild status, with approved testimonials. Current work covers neelachandra.com, neelachandrainteriors.com and ILMERA, disclosed as the co-founder’s own venture rather than an arm’s-length client.
 - [About](https://fawazbhseo.in/about): Fawaz BH's background, method and working principles, and why the practice is rooted in Kodagu.
@@ -25,8 +25,8 @@ These guides are educational content, not measured client case studies. This fil
 ## Geographic hub pages
 - [Cities We Serve](https://fawazbhseo.in/cities-we-serve): Geographic coverage in six tiers, from Kodagu towns outward through Karnataka, South India, the rest of India, Asia and Europe.
 - [SEO Consultant in Kodagu](https://fawazbhseo.in/seo-consultant-kodagu): Local SEO, AEO and GEO consulting for businesses in Kushal Nagar, Madikeri and across Kodagu (Coorg), Karnataka, which is Fawaz BH's home base and primary local market.
-- [SEO Consultant in Karnataka](https://fawazbhseo.in/seo-consultant-karnataka): State-wide SEO, AEO and GEO consulting across Karnataka, delivered directly from Kodagu with in-person and remote engagement options.
-- [SEO Consultant in India](https://fawazbhseo.in/seo-consultant-india): SEO, AEO and GEO consulting for businesses across India, delivered remotely by a founder-led practice based in Kodagu, Karnataka.
+- [SEO consultant in Karnataka, based in Kodagu](https://fawazbhseo.in/seo-consultant-karnataka): The state page, /seo-consultant-karnataka, focuses on SEO consulting in Karnataka, local search, technical SEO, content and Kannada-English keyword research. Existing AEO/GEO capabilities remain; the introduction links to the dedicated AI SEO page. ILMERA remains the consultant’s own venture, not an arm’s-length client.
+- [Independent SEO consultant in India](https://fawazbhseo.in/seo-consultant-india): The national page, /seo-consultant-india, focuses on independent SEO consulting across India, national search strategy, technical SEO, content and remote delivery from Kodagu. Existing AEO/GEO capabilities remain; the introduction links to the dedicated AI SEO page.
 
 ## Kodagu town pages
 - [SEO services in Madikeri](https://fawazbhseo.in/seo-services-madikeri): The district headquarters, about 35 km from base. The most contested local pack in Kodagu, heavy aggregator competition for homestays, and severe tourism seasonality.
@@ -73,6 +73,7 @@ These are remote engagements, delivered on calls, shared documents and written r
 - Canonical page URLs are HTTPS, non-www and extensionless.
 
 ## Current identity, testing and engagement notes
+- FawazBHSEO is also styled Fawaz BH SEO. The homepage and About page link the practice and its founder, Fawaz BH, using the same entity IDs and address. Existing personal profile references: https://www.linkedin.com/in/fawazbh, https://x.com/fawazbhseo.
 - The only business location is Kushalnagar, Kodagu, Karnataka, India, 571234. No street address or geographical coordinates are supplied. All other markets, including Bengaluru and Switzerland, are service areas, not branch offices.
 - Person ID: https://fawazbhseo.in/#fawaz. Practice ID: https://fawazbhseo.in/#practice. Practice name: FawazBHSEO.
 - Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. Fawaz is co-founder of ILMERA Study Abroad and runs its digital work. ILMERA is his own venture, not an arm’s-length client or an independent client reference.
@@ -81,6 +82,7 @@ These are remote engagements, delivered on calls, shared documents and written r
 - English is authoritative. The runtime offers 103 locales; the ten non-English locale files are marked machine and unpublished. Translation availability does not imply consulting fluency or a local office.
 
 ## Full source-linked text
+- [AEO source records](https://fawazbhseo.in/aeo-consultant#research-sources) and [GEO source records](https://fawazbhseo.in/geo-consultant#research-sources): the full source lists remain visible, with one consolidated citation line per applicable section.
 - [Full site text](https://fawazbhseo.in/llms-full.txt): the published research statistics and their source links, market descriptions, service deliverables, pricing, process commitments, credentials, background and engagement details, taken from the current English pages rather than independently rewritten.
-- Both text files are static. The personal testing date is deliberately referenced, not duplicated: read https://fawazbhseo.in/#ai-testing for its current as-of month/year. Updating that one PHP value does not require a date edit here.
+- All three text resources are static. The personal testing date is deliberately referenced, not duplicated: read https://fawazbhseo.in/#ai-testing for its current as-of month/year. Updating that one PHP value does not require a date edit here.
 - These summaries do not guarantee rankings or AI citations and do not establish the grounding source of the separately managed /api/chat.php endpoint.

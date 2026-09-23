@@ -287,7 +287,7 @@ $schema = json_encode([
             '@type' => 'WebPage',
             '@id'   => 'https://fawazbhseo.in/seo-consultant-india#page',
             'url'   => 'https://fawazbhseo.in/seo-consultant-india',
-            'name'  => 'SEO, AEO and GEO expert in India, Fawaz BH',
+            'name'  => 'SEO Consultant in India, Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
             'inLanguage'   => 'en-IN',
         ] + fbh_review_date_schema($reviewed_on),
@@ -366,8 +366,8 @@ $schema = json_encode([
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 render_head([
-    'title'       => 'SEO, AEO and GEO expert in India | Fawaz BH, independent consultant',
-    'description' => 'Looking for the best SEO expert in India? Fawaz BH is an independent SEO, AEO and GEO expert serving clients across India remotely from Kodagu, Karnataka. Ahrefs and Semrush certified. Six checkable criteria inside.',
+    'title'       => 'SEO Consultant in India | Fawaz BH, Independent Specialist',
+    'description' => 'Independent SEO consulting across India from Kodagu, Karnataka. Work directly with Fawaz BH on technical SEO, content and national search strategy.',
     'canonical'   => 'https://fawazbhseo.in/seo-consultant-india',
     'schema'      => $schema,
 ]);
@@ -385,10 +385,11 @@ render_header('cities');
         <nav class="eyebrow" aria-label="Breadcrumb">
           <a href="/">Fawaz BH</a> / <span aria-current="page">SEO consultant in India</span>
         </nav>
-        <h1 id="hero-h">SEO, AEO and GEO expert in India.</h1>
-        <p class="hero__sub">Searching for the best SEO expert in India? Start by defining best, then check me against it.</p>
+        <h1 id="hero-h">Independent SEO consultant in India.</h1>
+        <p class="hero__sub">National search strategy, technical SEO and content work, delivered remotely and personally from Kodagu, Karnataka.</p>
 
-        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an independent SEO, AEO and GEO expert serving clients across India, based in Kushal Nagar, Kodagu, Karnataka.</strong> He holds four qualifications, which are an Ahrefs Academy certification, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing from Adrex Media School, and runs search engine optimisation, answer engine optimisation and generative engine optimisation as one connected strategy rather than three separate retainers.</p>
+        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an independent SEO consultant serving businesses across India remotely from Kushalnagar, Kodagu, Karnataka.</strong> He holds four qualifications, which are an Ahrefs Academy certification, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing from Adrex Media School, and runs search engine optimisation, answer engine optimisation and generative engine optimisation as one connected strategy rather than three separate retainers.</p>
+        <p id="ai-seo-route" style="margin-top:16px">This page covers national SEO consulting and delivery. For work focused on AI answers and the use of AI in SEO, see <a href="/ai-seo-expert-india">AI SEO services for businesses in India</a>.</p>
         <p style="margin-top:14px;color:var(--text-2)">Engagements across India are delivered fully remotely and personally: the person who runs your audit is the person who implements the fixes. There are no account managers, no junior handoffs and no subcontracting. Deep dives live on the <a href="/aeo-consultant">AEO consultant</a> and <a href="/geo-consultant">GEO consultant</a> pages; state-level work is on the <a href="/seo-consultant-karnataka">Karnataka SEO consultant</a> page. If what you are actually asking is how search behaves now that AI answers sit above the results, the <a href="/ai-seo-expert-india">AI SEO expert in India</a> page answers that directly, including which tools I use and which I refuse to.</p>
 
         <div class="btn-row">

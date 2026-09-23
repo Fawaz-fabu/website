@@ -417,20 +417,23 @@ $research_rules = json_decode(<<<'RESEARCH_RULES'
 [["Generative AI performance report|Search Console AI feature inclusion|included in Search generative AI", ["S01", "S02", "S03", "S04"]], ["Bing Webmaster|Intents|Citation Share", ["S05"]], ["37\\.9|38%|31\\.2|31\\.0|76%|863|4 million AI Overview|four million AI Overview", ["S07"]], ["0\\.664|0\\.218|0\\.527|0\\.392|0\\.326|169.*14|75,000|3 times.*strong|three times.*strong", ["S08"]], ["Zyppy|meta-analysis|9\\.5|9\\.4|9\\.3|9\\.2|8\\.9|8\\.8|8\\.6|8\\.0|7\\.0|2\\.0|highest-evidence|second-strongest|scored citation factor", ["S06"]], ["1,064|1,432|16\\.97|16\\.98|25\\.7|958|4\\.3|freshness.*moderate", ["S09"]], ["53\\.46|53%|0\\.04|80%|BuzzStream|3,600|4 million citations|four-million-citation", ["S10", "S11"]], ["120%|5\\.47|53 brands", ["S12"]], ["68%|SparkToro|zero.click", ["S13"]], ["87%|SearchGPT", ["S14"]], ["13\\.7", ["S15"]], ["BrightEdge", ["S16"]], ["Bing-backed|ChatGPT retrieves|Bing.*ChatGPT|ChatGPT.*Bing|Invisible in|engine-specific bottleneck|actual cause|specific bottleneck|lever that most reliably", ["S17", "S14"]], ["Perplexity.*(freshness|live|query)|freshness.*Perplexity|multi-API", ["S18"]], ["Brave-backed|Claude.*Live web", ["S19"]], ["Microsoft Graph|Copilot.*Bing index", ["S20"]], ["Google.*(documentation|guidance|explicit|confirms|states|position)|query fan-out|retrieval-augmented|RAG|Business Profile.*AI responses|no special markup|llms\\.txt.*(Google|ranking)|Google.*llms\\.txt", ["S01", "S02"]], ["AEO targets|AEO optimises|GEO optimises|different selection mechanisms|different surfaces|extracted.*synth|extraction.*synthesis|passage.*direct answer", ["S01", "S02"]], ["40 to 80|one recommendation|higher-stakes", ["S02"]], ["HowTo|FAQPage|Speakable", ["S02", "S21", "S22"]], ["paywalled|simply skipped|do not recall|Nothing is lifted verbatim|Context-dependent prose does not|zero out citations|excluded before any", ["S01", "S02", "S06"]]]
 RESEARCH_RULES
 , true);
-$research_note = static function ($source_ids) use ($research_sources) {
-    $ids = preg_split('/\s+/', trim($source_ids), -1, PREG_SPLIT_NO_EMPTY);
-    if (!$ids) return;
-    echo '<p class="field-note research-note">';
-    if ($ids) {
-        echo 'Source context: ';
-        $links = [];
-        foreach ($ids as $id) {
-            $source = $research_sources[$id];
-            $links[] = '<a href="' . htmlspecialchars($source['url'], ENT_QUOTES, 'UTF-8') . '">' . $id . '</a> (<a href="#source-' . $id . '">date and sample</a>)';
-        }
-        echo implode('; ', $links) . '.';
+$section_source_ids = [];
+$research_note = static function ($source_ids) use (&$section_source_ids) {
+    foreach (preg_split('/\s+/', trim($source_ids), -1, PREG_SPLIT_NO_EMPTY) as $id) {
+        $section_source_ids[$id] = true;
     }
-    echo '</p>';
+};
+$render_section_sources = static function () use (&$section_source_ids, $research_sources) {
+    if (!$section_source_ids) return;
+    $ids = array_keys($section_source_ids);
+    sort($ids);
+    $links = [];
+    foreach ($ids as $id) {
+        $source = $research_sources[$id];
+        $links[] = '<a href="' . htmlspecialchars($source['url'], ENT_QUOTES, 'UTF-8') . '">' . $id . '</a> (<a href="#source-' . $id . '">date and sample</a>)';
+    }
+    echo '<div class="wrap"><p class="field-note section-sources">Sources: ' . implode('; ', $links) . '.</p></div>';
+    $section_source_ids = [];
 };
 $research_context = static function ($text) use ($research_rules, $research_note) {
     $plain = html_entity_decode(strip_tags($text), ENT_QUOTES, 'UTF-8');
@@ -478,6 +481,7 @@ render_header('aeo');
       </figure>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -487,6 +491,7 @@ render_header('aeo');
 <p class="lede">This service brings together question mapping, answer-first content, business-identity and structured-data work, and separate checks of answer-engine visibility. The published workstreams below describe the scope; the free audit is the starting point for deciding which work is needed.</p>
       <p><a href="#fit">Check the fit</a> · <a href="#handovers">See the supported handovers</a> · <a href="#scoping">Discuss scope</a> · <a href="#research-sources">Check sources and review status</a></p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -511,6 +516,7 @@ render_header('aeo');
       </div>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -522,6 +528,7 @@ render_header('aeo');
         <article class="card"><h3>Know the limits before starting</h3><p>This is not a fit if you require guaranteed citations or a large team covering many markets in parallel. If you are still choosing between disciplines, compare the <a href="/ai-seo-expert-india">AI SEO scope explanation</a> and the <a href="/seo-services">published service catalogue</a> before agreeing an engagement.</p></article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -549,6 +556,7 @@ render_header('aeo');
         <?php $n++; endforeach; ?>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -564,6 +572,7 @@ render_header('aeo');
       </tbody></table></div>
       <p class="field-note">File formats, revision counts, page quantities, turnaround times and additional reporting fields are not specified here. Agree them before work begins; they should not be inferred from an example or a research statistic.</p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -577,6 +586,7 @@ render_header('aeo');
         <article class="card"><h3>Access and implementation</h3><p>Discuss which analytics and search reports are available, which changes can be made within the agreed scope, and who can approve or publish them. The existing service description assigns audit, implementation and reporting to Fawaz; access permissions, approval timing and any client-side dependencies still need to be agreed.</p></article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -613,6 +623,7 @@ render_header('aeo');
         </article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -630,6 +641,7 @@ render_header('aeo');
           <?php $research_note('S01 S02 S03 S04 S05'); ?>
         </article>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -639,6 +651,7 @@ render_header('aeo');
       <div class="section-head reveal"><h2 id="evidence-h">Evidence, mechanisms and background</h2></div>
 <p>Read the research alongside its linked publication dates and samples. Existing factual wording is retained pending the owner decisions noted below; a citation link is not an approval of every inference.</p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -646,6 +659,7 @@ render_header('aeo');
     <div class="wrap">
       <p>Google AI Overviews. Google AI Mode. ChatGPT. Perplexity. Gemini. Claude. <span class="accent">Copilot. Each one measured separately.</span></p>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -660,6 +674,7 @@ render_header('aeo');
           <?php $research_note('S01 S02 S07'); ?>
         </article>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -709,6 +724,7 @@ render_header('aeo');
         </div>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="aeo-vs" aria-labelledby="vs-h">
@@ -747,6 +763,7 @@ render_header('aeo');
         </article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="method" aria-labelledby="method-h">
@@ -771,6 +788,7 @@ render_header('aeo');
         <?php endforeach; ?>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="credentials" aria-labelledby="cred-h">
@@ -809,6 +827,7 @@ render_header('aeo');
         </article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section section--alt" id="why" aria-labelledby="why-h">
@@ -845,6 +864,7 @@ render_header('aeo');
       </div>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <section class="section" id="proof" aria-labelledby="proof-h">
@@ -876,6 +896,7 @@ render_header('aeo');
         </article>
       </div>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -893,6 +914,7 @@ render_header('aeo');
         <?php endforeach; ?>
       </ol>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -914,6 +936,7 @@ render_header('aeo');
           </div>
         </article>
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
 
@@ -941,6 +964,7 @@ render_header('aeo');
       </div>
 
     </div>
+    <?php $render_section_sources(); ?>
   </section>
 
   <!-- 13. CONTACT -->

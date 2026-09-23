@@ -233,7 +233,7 @@ $schema = json_encode([
             '@type' => 'WebPage',
             '@id'   => 'https://fawazbhseo.in/seo-consultant-karnataka#page',
             'url'   => 'https://fawazbhseo.in/seo-consultant-karnataka',
-            'name'  => 'SEO, AEO and GEO expert in Karnataka, Fawaz BH',
+            'name'  => 'SEO Consultant in Karnataka, Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
         ] + fbh_review_date_schema($reviewed_on),
         [
@@ -290,8 +290,8 @@ $schema = json_encode([
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 render_head([
-    'title'       => 'SEO, AEO and GEO expert in Karnataka | Fawaz BH',
-    'description' => 'Fawaz BH is an SEO, AEO and GEO expert in Karnataka, based in Kushal Nagar, Kodagu. Serving Bengaluru, Mysuru, Mangaluru, Hubballi-Dharwad and the whole state, with bilingual Kannada and English keyword research.',
+    'title'       => 'SEO Consultant in Karnataka | Fawaz BH, Kodagu',
+    'description' => 'SEO consultant in Karnataka, based in Kushalnagar, Kodagu. Local search, technical SEO and Kannada-English keyword research for businesses across the state.',
     'canonical'   => 'https://fawazbhseo.in/seo-consultant-karnataka',
     'schema'      => $schema,
 ]);
@@ -307,12 +307,13 @@ render_header('cities');
 
       <div class="hero__lead reveal">
         <nav class="eyebrow" aria-label="Breadcrumb">
-          <a href="/">Fawaz BH</a> / <span aria-current="page">SEO, AEO and GEO expert in Karnataka</span>
+          <a href="/">Fawaz BH</a> / <span aria-current="page">SEO consultant in Karnataka</span>
         </nav>
-        <h1 id="hero-h">SEO, AEO and GEO expert in Karnataka.</h1>
-        <p class="hero__sub">Help the right customers find your business in search and AI answers.</p>
+        <h1 id="hero-h">SEO consultant in Karnataka, based in Kodagu.</h1>
+        <p class="hero__sub">Local search, technical SEO and content work informed by Karnataka markets and Kannada-English keyword research.</p>
         <p style="margin-top:14px;color:var(--text-2)">Want to check the basics first? Use the <a href="/blogs/local-seo-checklist-karnataka">local SEO checklist for Karnataka businesses</a>, covering business profiles, useful location pages, languages, reviews and enquiries.</p>
-        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an SEO, AEO and GEO expert based in Kushal Nagar, Kodagu, Karnataka</strong>, working with businesses across Bengaluru, Mysuru, Mangaluru, Hubballi-Dharwad, Udupi, Belagavi, Shivamogga, Davangere and Kodagu. He holds four verifiable qualifications, which are Ahrefs Academy, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing, and runs keyword research in both Kannada and English. If you are trying to judge who the <strong>best SEO expert in Karnataka</strong> is, the section below sets out six criteria you can verify yourself before you hire anyone, including me.</p>
+        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an SEO consultant based in Kushalnagar, Kodagu, Karnataka</strong>, working with businesses across Bengaluru, Mysuru, Mangaluru, Hubballi-Dharwad, Udupi, Belagavi, Shivamogga, Davangere and Kodagu. He holds four verifiable qualifications, which are Ahrefs Academy, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing, and runs keyword research in both Kannada and English. If you are trying to judge who the <strong>best SEO expert in Karnataka</strong> is, the section below sets out six criteria you can verify yourself before you hire anyone, including me.</p>
+        <p id="ai-seo-route" style="margin-top:16px">For the connected AEO and GEO capability, tool-use disclosure and measurement questions, explore <a href="/ai-seo-expert-india">how I approach AI SEO</a>. This page focuses on Karnataka SEO and regional delivery.</p>
 
         <div class="btn-row">
           <a class="btn btn--accent" href="https://wa.me/919481084038?text=Hi%20Fawaz%2C%20I%20would%20like%20a%20free%20SEO%20audit%20for%20my%20Karnataka%20business" target="_blank" rel="noopener">

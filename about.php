@@ -20,7 +20,9 @@ $schema = <<<'JSONLD'
       "@id": "https://fawazbhseo.in/about#page",
       "url": "https://fawazbhseo.in/about",
       "name": "About Fawaz BH, SEO, AEO and GEO consultant in Kodagu, Karnataka",
-      "mainEntity": {"@id": "https://fawazbhseo.in/#fawaz"}
+      "mainEntity": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      }
     },
     {
       "@type": "Person",
@@ -30,7 +32,10 @@ $schema = <<<'JSONLD'
       "url": "https://fawazbhseo.in/",
       "image": "https://fawazbhseo.in/assets/images/fawazbh.webp",
       "telephone": "+91-94810-84038",
-      "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
+      "email": [
+        "fawazbhseo@gmail.com",
+        "admin@fawazbhseo.in"
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kushalnagar, Kodagu",
@@ -38,27 +43,156 @@ $schema = <<<'JSONLD'
         "postalCode": "571234",
         "addressCountry": "IN"
       },
-      "sameAs": ["https://www.linkedin.com/in/fawazbh", "https://x.com/fawazbhseo"],
-      "knowsAbout": ["Search Engine Optimization", "Answer Engine Optimization", "Generative Engine Optimization", "Local SEO", "Technical SEO"],
+      "sameAs": [
+        "https://www.linkedin.com/in/fawazbh",
+        "https://x.com/fawazbhseo"
+      ],
+      "knowsAbout": [
+        "Search Engine Optimization",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization",
+        "Local SEO",
+        "Technical SEO"
+      ],
       "hasCredential": [
-        {"@type": "EducationalOccupationalCredential", "name": "Ahrefs Academy Certification", "recognizedBy": {"@type": "Organization", "name": "Ahrefs"}},
-        {"@type": "EducationalOccupationalCredential", "name": "Semrush AI Visibility Essentials", "recognizedBy": {"@type": "Organization", "name": "Semrush"}},
-        {"@type": "EducationalOccupationalCredential", "name": "Semrush Technical SEO and AI Search Essentials", "recognizedBy": {"@type": "Organization", "name": "Semrush"}},
-        {"@type": "EducationalOccupationalCredential", "name": "Advanced Diploma in Digital Marketing", "recognizedBy": {"@type": "Organization", "name": "Adrex Media School"}}
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Ahrefs Academy Certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Ahrefs"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Semrush AI Visibility Essentials",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Semrush"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Semrush Technical SEO and AI Search Essentials",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Semrush"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Advanced Diploma in Digital Marketing",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Adrex Media School"
+          }
+        }
+      ],
+      "worksFor": {
+        "@id": "https://fawazbhseo.in/#practice"
+      },
+      "mainEntityOfPage": [
+        "https://fawazbhseo.in/",
+        "https://fawazbhseo.in/about"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://fawazbhseo.in/#practice",
+      "name": "FawazBHSEO",
+      "founder": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      },
+      "url": "https://fawazbhseo.in/",
+      "telephone": "+91-94810-84038",
+      "priceRange": "Scoped per engagement",
+      "areaServed": [
+        "Kodagu",
+        "Karnataka",
+        "South India",
+        "India"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kushalnagar, Kodagu",
+        "addressRegion": "Karnataka",
+        "postalCode": "571234",
+        "addressCountry": "IN"
+      },
+      "alternateName": "Fawaz BH SEO",
+      "email": [
+        "fawazbhseo@gmail.com",
+        "admin@fawazbhseo.in"
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://fawazbhseo.in/about#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "Who is Fawaz BH?", "acceptedAnswer": {"@type": "Answer", "text": "Fawaz BH is an independent SEO, AEO and GEO consultant based in Kushal Nagar, Kodagu, Karnataka, India. He helps businesses across Karnataka and South India rank on Google and structure their expertise so AI answer engines like ChatGPT, Perplexity and Gemini cite them as the source. Every engagement is handled directly by Fawaz, without agency layers."}},
-        {"@type": "Question", "name": "What certifications does Fawaz BH have?", "acceptedAnswer": {"@type": "Answer", "text": "Fawaz BH holds an Ahrefs Academy certification, a Semrush AI Visibility Essentials certification, a Semrush Technical SEO and AI Search Essentials certification, and an Advanced Diploma in Digital Marketing from Adrex Media School."}},
-        {"@type": "Question", "name": "Why work with an independent consultant instead of an agency?", "acceptedAnswer": {"@type": "Answer", "text": "You work directly with one consultant on every part of the engagement. There are no account managers, no junior handoffs and no black-box reporting. The trade-off is deliberate scale: a small client list rather than a factory, which means deeper attention and hands-on execution on each project."}},
-        {"@type": "Question", "name": "Does Fawaz BH work alone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and that is a deliberate choice. You work directly with Fawaz on every part of an engagement: the audit, the strategy, the structured data, the content direction. The client list is kept small on purpose so each project gets real attention rather than being processed through a factory."}},
-        {"@type": "Question", "name": "What is the background of Fawaz BH?", "acceptedAnswer": {"@type": "Answer", "text": "Fawaz BH started in SEO in early 2025, building a foundation in technical SEO, on-page architecture and local search, then expanded into AEO and GEO as those disciplines emerged. He now runs SEO, AEO and GEO as one connected strategy, backed by certifications from Ahrefs and Semrush and an Advanced Diploma in Digital Marketing from Adrex Media School."}},
-        {"@type": "Question", "name": "Why is Fawaz BH based in Kodagu?", "acceptedAnswer": {"@type": "Answer", "text": "Being genuinely local somewhere makes Fawaz better at search everywhere. Kodagu is home, and living in a tier-2 market gives first-hand understanding of bilingual Kannada-English queries, seasonal tourism demand around Coorg, and how people here actually search."}},
-        {"@type": "Question", "name": "Does Fawaz BH only work with businesses in Karnataka?", "acceptedAnswer": {"@type": "Answer", "text": "No. The local expertise of Fawaz BH is strongest in Kodagu and Karnataka, but he takes remote engagements across South India, including Hyderabad, Chennai, Kochi and Coimbatore, and the rest of India, plus a small number of AEO and GEO projects beyond India."}},
-        {"@type": "Question", "name": "How do I start working with Fawaz BH?", "acceptedAnswer": {"@type": "Answer", "text": "Reach out directly for a free discovery audit. Message Fawaz on WhatsApp or LinkedIn, or call, and he will review where you are losing visibility on Google and in AI answers, and lay out the path to fixing it before you commit to anything."}}
+        {
+          "@type": "Question",
+          "name": "Who is Fawaz BH?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fawaz BH is an independent SEO, AEO and GEO consultant based in Kushal Nagar, Kodagu, Karnataka, India. He helps businesses across Karnataka and South India rank on Google and structure their expertise so AI answer engines like ChatGPT, Perplexity and Gemini cite them as the source. Every engagement is handled directly by Fawaz, without agency layers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What certifications does Fawaz BH have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fawaz BH holds an Ahrefs Academy certification, a Semrush AI Visibility Essentials certification, a Semrush Technical SEO and AI Search Essentials certification, and an Advanced Diploma in Digital Marketing from Adrex Media School."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why work with an independent consultant instead of an agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You work directly with one consultant on every part of the engagement. There are no account managers, no junior handoffs and no black-box reporting. The trade-off is deliberate scale: a small client list rather than a factory, which means deeper attention and hands-on execution on each project."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Fawaz BH work alone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and that is a deliberate choice. You work directly with Fawaz on every part of an engagement: the audit, the strategy, the structured data, the content direction. The client list is kept small on purpose so each project gets real attention rather than being processed through a factory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the background of Fawaz BH?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fawaz BH started in SEO in early 2025, building a foundation in technical SEO, on-page architecture and local search, then expanded into AEO and GEO as those disciplines emerged. He now runs SEO, AEO and GEO as one connected strategy, backed by certifications from Ahrefs and Semrush and an Advanced Diploma in Digital Marketing from Adrex Media School."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Fawaz BH based in Kodagu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Being genuinely local somewhere makes Fawaz better at search everywhere. Kodagu is home, and living in a tier-2 market gives first-hand understanding of bilingual Kannada-English queries, seasonal tourism demand around Coorg, and how people here actually search."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Fawaz BH only work with businesses in Karnataka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The local expertise of Fawaz BH is strongest in Kodagu and Karnataka, but he takes remote engagements across South India, including Hyderabad, Chennai, Kochi and Coimbatore, and the rest of India, plus a small number of AEO and GEO projects beyond India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I start working with Fawaz BH?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reach out directly for a free discovery audit. Message Fawaz on WhatsApp or LinkedIn, or call, and he will review where you are losing visibility on Google and in AI answers, and lay out the path to fixing it before you commit to anything."
+          }
+        }
       ]
     }
   ]

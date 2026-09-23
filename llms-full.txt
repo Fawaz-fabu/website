@@ -14,6 +14,8 @@ The phone and WhatsApp number is +91 94810 84038. WhatsApp enquiries can be sent
 
 The first message only needs a website, city and a short explanation of what needs improvement. A prospect does not need technical vocabulary or analytics access ready before making contact. The free discovery audit produces a written summary of problems and recommended priorities. The prospect keeps it whether or not they hire Fawaz. If work proceeds, scope and price are agreed in writing before paid work or invoicing. The contact form prepares a WhatsApp message for the visitor to review, edit and send. It does not send or save that message on the website; WhatsApp is a separate service.
 
+FawazBHSEO is also styled Fawaz BH SEO. The homepage and About page link the practice and its founder, Fawaz BH, using the same entity IDs and address. Existing personal profile references: https://www.linkedin.com/in/fawazbh, https://x.com/fawazbhseo.
+
 ## Personal testing and historical case-study status
 
 Fawaz BH states: "In my own testing as of September 2026, ChatGPT, Gemini and Google AI Overviews named me among SEO specialists for Kodagu and Karnataka. I re-test regularly. AI answers vary by prompt and change over time." These are his own observations, not an independent endorsement or a guarantee. Source: https://fawazbhseo.in/#ai-testing. The as-of date is generated from the single editable $ai_testing_as_of value in index.php; regenerate this static grounding file after that value changes.
@@ -489,11 +491,9 @@ Answer Engine Optimization is a young enough discipline that most pages selling 
 
 **Answer Engine Optimization (AEO) is the practice of structuring content, entities and markup so that answer engines can extract a specific passage from a page and present it as the direct answer to a question.** Where classic SEO competes for a ranked link that a person clicks, AEO competes to be the answer the person is given, inside a featured snippet, a People Also Ask box, a voice response, or a Google AI Overview.
 
-Source context: S01, S02.
-
 The practical unit of AEO is not the page. It is the **passage**: a self-contained block of 40 to 80 words that answers one question completely, without needing the paragraph above it for context.
 
-Source context: S01, S02.
+Section sources: S01, S02.
 
 ## Who this work suits, and when it does not
 
@@ -513,25 +513,19 @@ Everything below is delivered directly by me. Deliverables are named because AI 
 
 An answer engine can only name you if it knows unambiguously who you are. This workstream builds a consistent entity: Person, Organization or ProfessionalService schema with a real `sameAs` graph, FAQPage and HowTo markup where the content genuinely warrants it, Speakable markup for voice surfaces, credential markup, and NAP and name consistency across every profile that mentions you. Google is explicit that no special markup is *required* for AI features, so this is done for entity resolution and rich results, not as a hack.
 
-Source context: S01, S02, S21, S22.
-
 ### Answer-first content architecture
 
 Question-shaped H2s and H3s, the answer in the first 40 to 80 words of each section, self-contained passages that survive extraction, tables where comparison is the intent, and specific checkable claims instead of adjectives. Editorial content does the heavy lifting here: one 2026 analysis of 4 million citations found blog and content pages accounted for about 53% of all AI citations, while syndicated press releases accounted for 0.04%.
-
-Source context: S02, S10, S11.
 
 ### Per-engine citation measurement
 
 A fixed set of 20 to 40 buyer-language prompts, run separately through AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Claude and Copilot, re-run on a schedule and reported per engine, never averaged. Cross-referenced against Search Console’s Generative AI performance report and Bing Webmaster Tools’ AI Performance data.
 
-Source context: S01, S02, S03, S04, S05, S14, S17.
-
 ### Local AEO for Karnataka and Kodagu
 
 Local questions are where answer engines are most decisive, because they usually return one recommendation rather than ten options. This workstream maps the bilingual Kannada and English questions people actually ask about your category, aligns your Google Business Profile, categories, services and reviews with the on-site entity, and builds location-question pages for Kushal Nagar, Madikeri, Bengaluru, Mysuru and Mangaluru. Google’s guidance is explicit that Business Profile and Merchant Center data can feed AI responses, so local AEO is partly a data-hygiene job, not only a content one.
 
-Source context: S01, S02.
+Section sources: S01, S02, S03, S04, S05, S10, S11, S14, S17, S21, S22.
 
 ## What the published scope supports handing over
 
@@ -569,8 +563,6 @@ Discuss which analytics and search reports are available, which changes can be m
 
 Accessibility and preview check first, so robots, status codes, `nosnippet`, snippet eligibility and Search Console AI feature inclusion, then entity, schema and passage review, then a baseline prompt run across all engines. Delivered as a written document you keep either way.
 
-Source context: S01, S02, S03, S04.
-
 ### Buyer-language prompt map
 
 20 to 40 prompts written the way your customers actually talk to an assistant, clustered into the sub-question themes fan-out is likely to expand into. Not a keyword list. The two produce different answers.
@@ -579,13 +571,11 @@ Source context: S01, S02, S03, S04.
 
 Passage rewrites, question-shaped headings, structured data, entity cleanup across profiles, and third-party corroboration work, because branded web mentions correlate roughly 3 times more strongly with AI Overview visibility than raw backlink counts.
 
-Source context: S08.
-
 ### Trend reporting, per engine
 
 The identical prompt set re-run on a fixed schedule, reported engine by engine and split into cited, mentioned-only and absent, cross-checked against Search Console and Bing Webmaster Tools first-party data.
 
-Source context: S05.
+Section sources: S01, S02, S03, S04, S05, S08.
 
 ## How the work is measured
 
@@ -599,11 +589,9 @@ If an answer names a business but provides no link to its website, record a ment
 
 **AEO is measured with a fixed prompt set, re-run on a schedule, reported per engine and split three ways: cited, mentioned-without-citation, and absent.** Those three outcomes have three different causes and three different fixes, and any tool that averages them into a single AI visibility score hides the thing you needed to know.
 
-Source context: S01, S02.
-
 First-party data now exists for both major ecosystems: Google Search Console has a Generative AI performance report, and Bing Webmaster Tools’ AI Performance report added Intents, Topics, Citation Share and period Compare in preview in June 2026. I use both alongside manual prompt testing rather than relying on a single third-party score.
 
-Source context: S01, S02, S03, S04, S05.
+Section sources: S01, S02, S03, S04, S05.
 
 ## What actually gets a page selected as the answer
 
@@ -613,19 +601,13 @@ Six things the 2026 evidence supports, in rough priority order, with sources nam
 
 **The highest-evidence AI citation factor is simply whether the URL can be reached and previewed.** In Cyrus Shepard’s May 2026 meta-analysis of 54 studies, URL accessibility scored 9.5/10 and preview control 9.2/10, meaning a page blocked by robots.txt, returning a non-200, sitting behind a paywall, or suppressing snippets via `nosnippet` is excluded before any content quality is assessed.
 
-Source context: S01, S02, S06.
-
 Google adds a second gate that is easy to miss: to be eligible for generative AI features, a page must be indexed, eligible to appear with a snippet, *and* the site must be included in Search generative AI features in Search Console.
-
-Source context: S01, S02, S03, S04.
 
 Sources: Zyppy AI Citation Ranking Factors, May 2026. Google Search Central, AI optimisation guide, updated 10 July 2026.
 
 ### Classic ranking is still the base layer
 
 **Search rank scored 9.4/10, the second-highest factor, so AEO does not replace SEO, it compounds it.** But the relationship has loosened sharply: Ahrefs’ analysis of 863,000 SERPs and 4 million AI Overview URLs found only 37.9% of cited URLs rank in the organic top 10, versus about 76% in mid-2025, with 31.2% ranking 11 to 100 and 31.0% outside the top 100 entirely.
-
-Source context: S06, S07.
 
 The practical consequence: ranking number one for a head term is neither necessary nor sufficient. Ranking respectably across the whole cluster of sub-questions is what earns repeat selection.
 
@@ -635,8 +617,6 @@ Sources: Ahrefs, AI Overview citations and top 10, 2026. Zyppy, May 2026.
 
 **Google’s documentation confirms AI features use query fan-out: a set of concurrent related queries generated to fetch additional results before an answer is composed.** Fan-out rank scored 9.3/10 and topic-cluster ranking 8.9/10 in the same meta-analysis, the strongest content-strategy signals measured.
 
-Source context: S01, S02, S06.
-
 So AEO content planning starts from a question map, not a keyword list. Google also warns against the obvious abuse of this: spinning up a page per fan-out variant is scaled content abuse under its spam policies, and it does not work.
 
 Sources: Google Search Central, AI features and AI optimisation guides. Zyppy, May 2026.
@@ -644,8 +624,6 @@ Sources: Google Search Central, AI features and AI optimisation guides. Zyppy, M
 ### Mentions outperform links
 
 **Across 75,000 brands, branded web mentions correlated 0.664 with AI Overview visibility, against 0.218 for raw backlink counts, roughly 3 times stronger.** Branded anchor text at 0.527 and branded search volume at 0.392 also outranked Domain Rating at 0.326.
-
-Source context: S08.
 
 That reorders the budget: digital PR, genuine unlinked mentions, podcasts, community answers and category presence do more for AEO than link acquisition. Note the caveat the original authors state and I will repeat, these are correlations, and strong brands plausibly earn both.
 
@@ -655,11 +633,7 @@ Source: Ahrefs, 75,000-brand AI visibility correlation study.
 
 **Answer-near-the-top scored 8.8/10, AI-ready structure 8.6/10, self-contained passages 8.0/10 and freshness only 7.0/10.** Freshness is real but moderate: across 16.97 million cited URLs, AI-cited content averaged 1,064 days old against 1,432 days for Google’s organic top ten, a 25.7% advantage, not a multiplier.
 
-Source context: S01, S02, S06, S09.
-
 The widely repeated claim that fresh content is cited 4.3 times more does not trace to any primary study and should not be repeated. ChatGPT does skew freshest of the major engines at about 958 days.
-
-Source context: S09.
 
 Sources: Zyppy, May 2026. Ahrefs content-freshness study, 16.975M citations.
 
@@ -669,13 +643,11 @@ Sources: Zyppy, May 2026. Ahrefs content-freshness study, 16.975M citations.
 
 **No llms.txt as a ranking factor.** Google states plainly that Google Search does not use llms.txt, and it scored lowest of 23 factors at 2.0/10. I will implement one if you want it for other crawlers. I will not bill it as AEO.
 
-Source context: S01, S02, S06.
-
 **No AEO instead of SEO.** Google’s position and the citation data agree: generative features are grounded in core Search systems. Anyone selling AEO as a replacement for SEO is selling you half a strategy.
 
-Source context: S01, S02.
-
 Sources: Google Search Central AI optimisation guide, updated 10 July 2026. Zyppy, May 2026.
+
+Section sources: S01, S02, S03, S04, S06, S07, S08, S09.
 
 ## Scoping and the next decision
 
@@ -698,11 +670,7 @@ What is Answer Engine Optimization (AEO)?
 
 **Answer Engine Optimization (AEO) is the practice of structuring content, entities and markup so that answer engines can extract a passage from a page and present it as the direct answer to a question.** Where SEO competes for a ranked link someone clicks, AEO competes to be the answer itself, inside a featured snippet, a People Also Ask box, a voice response or a Google AI Overview.
 
-Source context: S01, S02.
-
 The working unit of AEO is the passage, not the page: a self-contained block of roughly 40 to 80 words that answers one question completely without depending on the text around it.
-
-Source context: S02.
 
 Who is the best AEO expert in India?
 
@@ -716,13 +684,9 @@ Is there an AEO expert in Karnataka?
 
 Local questions are where answer engines are most decisive, because they tend to return one recommendation instead of ten links, which makes local AEO higher-stakes than local SEO ever was.
 
-Source context: S02.
-
 What is the difference between AEO, SEO and GEO?
 
 **SEO optimises for ranked positions in traditional search. AEO optimises for an answer extracted from your page and shown in place of a result, so featured snippets, People Also Ask, voice results and Google AI Overviews. GEO optimises for being cited inside a synthesised AI answer from a generative engine such as ChatGPT, Perplexity, Gemini or Claude.**
-
-Source context: S01, S02.
 
 They share foundations but differ in selection mechanism, which is why all three are run as one strategy here rather than three separate retainers. Deeper breakdown on the [GEO consultant](https://fawazbhseo.in/geo-consultant) page, and a plain-language separation of all three on the [AI SEO expert](https://fawazbhseo.in/ai-seo-expert-india) page.
 
@@ -730,25 +694,17 @@ How do you optimise a page for Google AI Overviews?
 
 **Google states that AI Overviews and AI Mode are grounded in its core Search ranking systems using retrieval-augmented generation and query fan-out, so a page must first be indexed, eligible to appear with a snippet, and included in Search generative AI features in Search Console.** After that, the highest-leverage work is keeping URLs crawlable and previewable, ranking across the sub-queries fan-out expands into rather than one head term, and answering each question in a self-contained passage near the top of its section.
 
-Source context: S01, S02, S03, S04.
-
 Two 2026 numbers frame why breadth matters: only about 38% of AI Overview citations come from pages ranking in Google’s organic top 10, down from roughly 76% a year earlier, and nearly two-thirds of citations now go to pages outside the top 10.
-
-Source context: S07.
 
 Do I need llms.txt or special schema markup for AEO?
 
 **No. Google’s official generative-AI optimisation guide states that Google Search does not use llms.txt files, does not require content chunking, and needs no special schema.org markup for AI features.** In Cyrus Shepard’s May 2026 meta-analysis of 54 AI-citation studies, llms.txt scored lowest of 23 factors at 2.0 out of 10.
-
-Source context: S01, S02, S06.
 
 Structured data is still worth implementing, for rich results, for entity resolution, and because other crawlers and engines behave differently from Google. Just do not buy it as an AI ranking hack.
 
 How long does AEO take to show results?
 
 **Extracted-answer wins such as featured snippets and People Also Ask placements can appear within a few weeks when an already-ranking page is restructured, while entity-level and brand-level AEO visibility typically takes three to six months.** Recency-weighted engines move fastest: across nearly 17 million cited URLs, ChatGPT cited the freshest content of the major engines at about 958 days average age, versus 1,432 days for Google’s organic top ten.
-
-Source context: S01, S02, S09.
 
 Generative answers are also volatile, the same prompt can return different sources hours apart, so a single check is anecdote. Only a repeated prompt set shows a trend.
 
@@ -757,6 +713,8 @@ How much does an AEO expert in India charge?
 **Rates vary widely: published AEO and AI-visibility packages in India commonly run from roughly ₹15,000 to over ₹50,000 per month, while international AEO specialists typically bill $100 to $150 per hour.** With Fawaz BH, full-stack SEO plus AEO starts at ₹29,999 per month, and AEO-only or enterprise SEO plus AEO plus GEO scopes are quoted after a free audit.
 
 The audit is free, you keep the written document either way, and scope and price are agreed in writing before any work or invoicing starts. Published starting rates are on the [SEO services](https://fawazbhseo.in/seo-services) page.
+
+Section sources: S01, S02, S03, S04, S06, S07, S09.
 
 ## GEO: scope, handovers, method, retained research and questions
 
@@ -786,25 +744,19 @@ Four workstreams, priced against a defined scope after a free audit. Deliverable
 
 The engagement starts with 20 to 40 prompts written in the words a real buyer would use with an assistant, not keywords. Each prompt is run separately through ChatGPT, Perplexity, Gemini, Claude and Copilot, and every result is scored as **cited**, **mentioned without a citation**, or **absent**, three outcomes that need three different fixes and that most single-score tools collapse into one number. The audit also covers the highest-evidence technical factors: crawlability for AI user agents, HTTP status codes, and any `nosnippet` or `max-snippet` directives, since suppressing previews can quietly suppress citations too.
 
-Source context: S06.
-
 ### 2. Entity resolution and structured data
 
 A generative engine has to know who you are before it can recommend you. This is Schema.org implementation, so Organization or Person, Service, FAQPage and BreadcrumbList, a `sameAs` graph across the profiles that already describe you, and consistency auditing so your name, location, role and claims match everywhere they appear. Structured data is not a Google ranking requirement, Google says so plainly, but it is how machines verify an entity cheaply, and consistency across domains is what stops a model hedging on your name.
-
-Source context: S02, S21, S22.
 
 ### 3. Answer-first content architecture and cluster coverage
 
 Because generative engines fan a question out into sub-queries and retrieve across all of them, breadth across a topic beats owning one head term. The work is cluster mapping, then rewriting so each section leads with its answer and stands alone as a complete, quotable unit, plus tables, named sources and specific figures instead of adjectives. Ahrefs measured AI-cited pages at an average 1,064 days old against 1,432 days for organic top-10 results, so a refresh cadence is built into the plan rather than bolted on.
 
-Source context: S01, S02, S09.
-
 ### 4. Brand mention building and honest measurement
 
 The strongest evidenced off-page signal in the current data is not links but mentions: Ahrefs’ 75,000-brand study put branded web mentions at r=0.664 with AI Overview visibility against r=0.218 for backlink count, and BuzzStream’s four-million-citation analysis found editorial content supplied roughly 53% of citations while syndicated press releases supplied about 0.04%. So budget goes into genuine editorial coverage, real community participation and category presence, not wire distribution and not manufactured mentions, which Google explicitly names as ineffective. The same prompt set is then re-run on a fixed schedule and reported as a trend, because a single check is anecdote, not measurement.
 
-Source context: S01, S02, S08, S10, S11.
+Section sources: S01, S02, S06, S08, S09, S10, S11, S21, S22.
 
 ## What the published scope supports handing over
 
@@ -846,17 +798,15 @@ A 20 to 40 prompt set is written in buyer language and run separately through fi
 
 Each gap is attributed to its actual cause rather than a generic fix: Bing indexation and third-party mentions for ChatGPT and Copilot, freshness and answer structure for Perplexity, entity and fan-out cluster coverage for Gemini and AI Overviews.
 
-Source context: S01, S02, S14, S17, S18.
-
 ### Hands-on implementation
 
 Accessibility fixes first, then entity and schema work, then answer-first restructuring and cluster coverage, then mention-building. Carried out directly by me, in the evidence order above rather than the order that looks busiest.
 
-Source context: S01, S02.
-
 ### Fixed-schedule measurement
 
 The identical prompt set is re-run at fixed intervals and reported as a trend per engine. Generative answers are volatile enough that one check proves nothing. A trend across repeated runs is the only honest evidence that work landed.
+
+Section sources: S01, S02, S14, S17, S18.
 
 ## How the work is measured
 
@@ -870,17 +820,17 @@ If an answer names a business but provides no link to its website, record a ment
 
 Same symptom, different jobs. Invisible in ChatGPT and Copilot is usually a Bing problem. Invisible in Perplexity is usually a freshness problem. Invisible in Gemini is usually an entity problem.
 
-Source context: S14, S17, S18.
-
 How each generative engine is grounded, and the lever that most reliably moves a citation there.
 
-| Engine | Grounded in | Primary citation lever | Source context |
-| --- | --- | --- | --- |
-| ChatGPT | Bing-backed retrieval plus training data | **Bing indexation** plus third-party mentions | Source context: S14, S17. |
-| Perplexity | Live multi-API web search, every query | **Freshness** plus question-shaped structure | Source context: S18. |
-| Gemini and AI Overviews | Google index, RAG grounding plus query fan-out | **Cluster rank** across fan-out sub-queries | Source context: S01, S02. |
-| Claude | Live web search, reported as Brave-backed | **Extractable**, self-contained passages | Source context: S19. |
-| Copilot | Bing index and Microsoft Graph surfaces | **Bing rank** plus entity consistency | Source context: S20. |
+| Engine | Grounded in | Primary citation lever |
+| --- | --- | --- |
+| ChatGPT | Bing-backed retrieval plus training data | **Bing indexation** plus third-party mentions |
+| Perplexity | Live multi-API web search, every query | **Freshness** plus question-shaped structure |
+| Gemini and AI Overviews | Google index, RAG grounding plus query fan-out | **Cluster rank** across fan-out sub-queries |
+| Claude | Live web search, reported as Brave-backed | **Extractable**, self-contained passages |
+| Copilot | Bing index and Microsoft Graph surfaces | **Bing rank** plus entity consistency |
+
+Section sources: S01, S02, S14, S17, S18, S19, S20.
 
 ## How generative engines choose what to cite
 
@@ -890,19 +840,13 @@ This is the section most GEO pages skip. Every claim below is attributed to a na
 
 For live queries, generative engines do not recall your page from training. They retrieve it. Google describes its own generative features as using retrieval-augmented generation to pull current pages from the Search index, plus **query fan-out**: the model spawns several related sub-queries and retrieves across all of them before writing an answer.
 
-Source context: S01, S02, S06.
-
 The practical consequence is that one page ranking for one head term is a weak position. Coverage across the cluster of sub-questions a topic fans out into is a strong one.
-
-Source context: S01, S02.
 
 Source: Google Search Central, AI features and your website guide, updated 10 July 2026.
 
 ### The five best-evidenced citation factors
 
 Cyrus Shepard’s May 2026 Zyppy meta-analysis scored 23 factors across 54 experiments, patents and case studies. The top five by evidence strength were **URL accessibility, 9.5/10**, **classic search rank, 9.4**, **fan-out rank, 9.3**, **preview control, 9.2** and **query-to-answer match, 9.2**. Freshness scored a moderate 7.0. `llms.txt` scored lowest of all, at 2.0.
-
-Source context: S06, S09.
 
 Read plainly: engines cite pages they can reach, that already rank, that match the exact question, and that permit a preview.
 
@@ -912,19 +856,13 @@ Source: Zyppy Signal, AI Citation Ranking Factors, 7 May 2026, 54 studies scored
 
 Ahrefs analysed 863,000 keywords and four million AI Overview URLs in March 2026 and found **38% of AI Overview citations came from pages ranking in Google’s top 10**, down from roughly 76% in mid-2025. About 31.2% came from positions 11 to 100, and about 31.0% from beyond position 100.
 
-Source context: S01, S02, S07.
-
 Other datasets disagree on the exact figure. BrightEdge has reported both much lower and much higher overlap depending on window and industry, which is itself the point: the number is unstable, so treating rank as a proxy for AI visibility is unsafe. Measure the answer surface directly.
-
-Source context: S16.
 
 Sources: Ahrefs, 863K keywords and 4M AIO URLs, March 2026. BrightEdge rank-overlap tracking, 2026.
 
 ### Mentions correlate about 3 times more strongly than backlinks
 
 Ahrefs’ 75,000-brand study found branded web mentions correlated at **r=0.664** with AI Overview visibility, branded anchors at 0.527 and branded search volume at 0.392, while Domain Rating came in at 0.326 and raw backlink count last at **r=0.218**. The top quartile of brands by web mentions averaged 169 AI Overview mentions against 14 for the next quartile.
-
-Source context: S01, S02, S08.
 
 The honest caveat the authors themselves add: already-strong brands may simply earn both. Correlation, not proof.
 
@@ -934,8 +872,6 @@ Source: Ahrefs, 75,000-brand Spearman correlation study, 2026.
 
 A widely repeated claim says fresh content is cited 4.3 times more often. That figure traces to no primary study and should not be repeated. The verified measurement, across **16.98 million cited URLs on seven platforms**, is that AI-cited content averages **1,064 days old** versus **1,432 days** for organic top-10 results, a real but moderate 25.7% freshness advantage. ChatGPT skewed freshest at 958 days.
 
-Source context: S01, S02, S09.
-
 So refresh cadence matters, and it still ranks below accessibility, rank and brand presence in the evidence hierarchy.
 
 Source: Ahrefs content-age study, 16.975M cited URLs, seven platforms, 2026.
@@ -943,8 +879,6 @@ Source: Ahrefs content-age study, 16.975M cited URLs, seven platforms, 2026.
 ### Five engines, five different source pools
 
 A 680-million-citation analysis found only about **11% domain overlap between ChatGPT and Perplexity**, and Google’s AI Overviews and AI Mode returned the same URLs only around 13.7% of the time despite reaching similar conclusions. Seer Interactive separately found **87% of SearchGPT citations matched Bing’s top results**, while Perplexity performs live retrieval on every query and cites far more sources per answer.
-
-Source context: S14, S15, S17, S18.
 
 This is why a single blended AI visibility score hides the information you need, and why this practice reports each engine apart.
 
@@ -954,19 +888,13 @@ Sources: AI Platform Citation Source Index 2026, 680M citations. Seer Interactiv
 
 Google’s July 2026 guidance names specific tactics as unnecessary for Google Search and its AI features: **llms.txt and other special AI files**, **artificially chunking content**, **rewriting content specifically for AI systems**, **seeking inauthentic mentions**, and **over-focusing on structured data** as if it were a citation requirement.
 
-Source context: S01, S02.
-
 This site publishes an [llms.txt](https://fawazbhseo.in/llms.txt) anyway, not as a ranking play, but because it is a useful, human-auditable canonical summary of the entity. That distinction is the whole difference between GEO practice and GEO folklore.
-
-Source context: S01, S02.
 
 Source: Google Search Central, generative AI features guide, mythbusting section, July 2026.
 
 ### Editorial depth does the heavy lifting
 
 BuzzStream analysed four million citations from 3,600 prompts across ten industries and found **blog and content pages supplied 53.46% of citations**, news 14.09% and social 8.71%. With brand-owned queries excluded, earned editorial content accounted for roughly 80%. Syndicated press releases accounted for **0.04%** of the entire dataset.
-
-Source context: S10, S11.
 
 Directional rather than permanent, since the sample covers a single week from late January 2026, but the gap is too wide to be noise.
 
@@ -976,11 +904,11 @@ Source: BuzzStream citation-format analysis, 4M citations, 3,600 prompts, 2026.
 
 Seer Interactive’s April 2026 study of 53 brands across 5.47 million queries found pages cited in AI Overviews were associated with roughly **120% more organic clicks per impression** than uncited pages. SparkToro’s June 2026 study found 68% of US Google searches ended without a click at all.
 
-Source context: S12, S13.
-
 Read together: fewer searches produce a visit, and the ones that do increasingly favour cited sources. Seer’s authors flag that stronger brands may earn both, again, correlation.
 
 Sources: Seer Interactive, 53 brands and 5.47M queries, April 2026. SparkToro zero-click study, June 2026.
+
+Section sources: S01, S02, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, S16, S17, S18.
 
 ## Scoping and the next decision
 
@@ -996,8 +924,6 @@ What is Generative Engine Optimization (GEO)?
 
 **Generative Engine Optimization (GEO) is the practice of structuring a website, its entity signals and its off-site presence so that AI systems cite it inside generated answers.** The target surfaces are ChatGPT, Perplexity, Google Gemini and AI Overviews, Claude and Microsoft Copilot. Unlike SEO, the unit of success is a citation inside an answer rather than a ranked position on a results page.
 
-Source context: S01, S02.
-
 Who is the best GEO expert in India?
 
 **There is no single best GEO expert in India, because GEO is barely two years old as a named discipline and no independent body ranks practitioners.** The useful question is which consultant fits your situation, judged on checks you can verify: do they measure each AI engine separately, do they distinguish mentioned from cited, do they refuse to guarantee citations, and can they attribute every statistic they quote to a named study?
@@ -1008,13 +934,9 @@ Is there a GEO expert in Karnataka?
 
 **Yes. Fawaz BH is a GEO consultant based in Kushal Nagar, Kodagu, Karnataka, serving clients in Bengaluru, Mysuru, Mangaluru, Hubli-Dharwad, Udupi, Belagavi, Shivamogga, Madikeri and across India.** Generative engine optimisation is delivered remotely, since entity work, structured data, cluster coverage and prompt-set measurement do not require being on site. Being based in Karnataka matters mainly for reading bilingual Kannada and English query behaviour and tier-2 market dynamics accurately.
 
-Source context: S01, S02.
-
 How is GEO different from SEO and AEO?
 
 **SEO targets ranked results in traditional search engines. AEO targets answers extracted from your page onto a results surface, such as featured snippets and voice results. GEO targets citation inside an AI-generated answer that a model synthesises from several sources.**
-
-Source context: S01, S02.
 
 The mechanism is the real difference: AEO wins when an engine lifts one passage from you, while GEO wins when a model reads many documents and decides yours is worth crediting. They share foundations, so crawlability, entity clarity and answer-first writing, which is why running all three together is more efficient than buying them separately. See the [AEO consultant](https://fawazbhseo.in/aeo-consultant) page for the extraction side.
 
@@ -1022,17 +944,11 @@ How do I get my business cited by ChatGPT and Perplexity?
 
 **Make sure your pages are crawlable and previewable, rank in classic search for the sub-queries the engines fan out into, state facts in self-contained passages near the top of the page, and earn genuine third-party mentions.** Then treat the two engines differently: ChatGPT retrieves through Bing, so Bing indexation and established third-party coverage matter most there, while Perplexity searches live on every query and rewards freshness and question-shaped structure.
 
-Source context: S01, S02, S14, S17, S18.
-
 Seer Interactive found 87% of SearchGPT citations matched Bing’s top results, which is why Bing visibility is a separate task from Google visibility rather than a by-product of it.
-
-Source context: S14.
 
 Does llms.txt help with GEO or AI citations?
 
 **No, on current evidence.** Google’s own July 2026 guidance states that you do not need llms.txt or other special AI files to appear in Google Search or its generative features, and Zyppy’s May 2026 meta-analysis of 54 studies scored llms.txt lowest of all 23 factors at 2.0 out of 10.
-
-Source context: S01, S02, S06.
 
 It remains harmless and mildly useful as a human-auditable summary of your entity, and this site publishes one, but it is not a ranking or citation lever, and any consultant selling it as one is overstating the evidence.
 
@@ -1040,19 +956,15 @@ Does ranking number one on Google get me into AI answers?
 
 **Not reliably.** Ahrefs analysed 863,000 keywords and four million AI Overview URLs in March 2026 and found only about 38% of AI Overview citations came from pages ranking in Google’s top 10, down from roughly 76% in mid-2025, with the remainder spread across positions 11 to 100 and beyond position 100.
 
-Source context: S01, S02, S07.
-
 Classic ranking still helps and still scores as the second-strongest evidenced citation factor, but it has to be paired with cluster coverage across fan-out sub-queries, entity clarity and off-site brand presence.
-
-Source context: S01, S02, S06.
 
 How long does GEO take, and what does it cost in India?
 
 **Structural changes such as entity resolution, schema and answer-first restructuring typically start showing up in AI answers within roughly six to twelve weeks, with mention-building compounding over three to six months. On freshness-sensitive engines like Perplexity, new content can surface within days of indexing.** Pricing is scoped against what the free audit finds rather than sold as a fixed tier, agreed in writing before any work or invoicing begins.
 
-Source context: S18.
-
 Published starting rates for the SEO, AEO and GEO tiers are listed on the [services and pricing page](https://fawazbhseo.in/seo-services). GEO sits in the top tier because it depends on the SEO and AEO foundations being in place first.
+
+Section sources: S01, S02, S06, S07, S14, S17, S18.
 
 ## Shared primary-source register
 
@@ -1127,33 +1039,33 @@ Source: https://fawazbhseo.in/aeo-consultant
     Publication date not established in this check; accessed 21 September 2026.
     Sample/type: Official beta feature documentation.
 
-## AI SEO: distinctions, current shifts, drafting and buying criteria
+## AI SEO: scope, inputs, measurement, tool use and buying criteria
 
 Source: https://fawazbhseo.in/ai-seo-expert-india
 
-## SEO, AEO and GEO are three different jobs
+## What does AI SEO mean for a business in India?
 
-Most confusion about AI SEO comes from these three being used interchangeably by people selling all of them as one thing. They answer different questions, they are measured differently, and they are not equally urgent for every business. Here they are separated properly.
+AI SEO covers search visibility as engines generate answers, as well as the use of AI tools within SEO delivery. Fawaz BH works across technical SEO, answer-focused content, entity information and per-engine observation. The sections below separate those activities so you can discuss the work you need rather than buy an undefined AI label.
 
-### Search Engine Optimisation
-
-**Can people find my site in a list of results?**
+### Can people find my site in a list of results?
 
 The original discipline and still the foundation. Crawlability, indexation, site speed, information architecture, internal linking, content that matches intent, and earned links. The measurable outcome is a ranking position and a click. Nothing in AI search has made this obsolete, and the evidence points the other way: classic ranking remains one of the strongest predictors of whether an AI engine cites you at all, because most engines retrieve from a search index before they generate anything.
 
-### Answer Engine Optimisation
+**Search Engine Optimisation**
 
-**Does the engine give my answer when someone asks a question?**
+### Does the engine give my answer when someone asks a question?
 
 Optimising to be the answer rather than a result. Question-shaped content, self-contained passages an engine can lift without needing the surrounding page, clean entity identity, structured data where it genuinely applies, and Google Business Profile accuracy for local questions. The outcome is being surfaced in an AI Overview, a featured snippet, a Copilot answer or a voice response. Often without a click, which is exactly why measurement has to change too.
 
+**Answer Engine Optimisation**
+
 [AEO consultant in India](https://fawazbhseo.in/aeo-consultant)
 
-### Generative Engine Optimisation
-
-**When a model recommends someone, is it my name?**
+### When a model recommends someone, is it my name?
 
 The newest of the three and the least understood. Getting cited and recommended inside generated answers from ChatGPT, Perplexity, Gemini, Claude and Copilot. Each engine has a different source pool, so each has to be measured separately rather than treated as one channel. This depends heavily on off-site corroboration: what other credible sources say about you, not only what your own site claims.
+
+**Generative Engine Optimisation**
 
 [GEO consultant in India](https://fawazbhseo.in/geo-consultant)
 
@@ -1161,97 +1073,115 @@ The order matters. GEO depends on AEO foundations, and AEO depends on SEO founda
 
 Choose the scope you want to explore: [AEO for direct answers](https://fawazbhseo.in/aeo-consultant), [GEO for AI-generated visibility](https://fawazbhseo.in/geo-consultant), or [SEO foundations and deliverables](https://fawazbhseo.in/seo-services#technical-seo).
 
-## Six real shifts, and one thing that did not change
+## What changes when a search engine answers the question?
 
-Stripped of the urgency that usually gets sold alongside it. These are the changes that show up in real client data, and the last one is the part most AI SEO pitches leave out because it is not exciting enough to charge a premium for.
+Rankings, visits and appearances in generated answers describe different outcomes. AI SEO work considers answer visibility alongside the existing technical and content foundations, rather than treating a mention as a website visit. The points below explain the distinctions already covered by this practice and the limits on what a consultant can promise.
 
 - 01
 
-  ### The query no longer always produces a list
+  ### Why might a search query produce an answer instead of a list?
 
   For a growing share of informational queries the engine composes an answer instead of presenting ten links. If your visibility strategy is entirely built on ranking positions, part of your addressable demand has moved somewhere you are not measuring. The position may be unchanged while the click never happens.
 - 02
 
-  ### Impressions can rise while clicks fall, and that is not a bug
+  ### Why can impressions rise while clicks fall?
 
   This is the pattern that worries people most, and it is worth understanding before panicking about it. Being cited in an answer can register as an impression while the user gets what they needed without visiting. That is a real loss of traffic and a real gain in influence at the same time. It needs different reporting rather than a different rank tracker.
 - 03
 
-  ### Queries have got longer and more conversational
+  ### How do conversational questions affect content planning?
 
   People type full questions and follow-up questions now, because the interface invites it. Short head terms still exist but a larger share of demand arrives as specific, qualified, sometimes multi-part questions. Content built only around head terms captures progressively less of it.
 - 04
 
-  ### Off-site mentions matter more than they used to
+  ### Why consider what other sources say about a business?
 
   When a model is deciding who to name, what independent sources say about you carries weight your own marketing copy cannot. Directory profiles, genuine press, association listings, review presence and credible third-party references all feed the picture. This is slower and less controllable than on-site work, and it is increasingly the part that separates two otherwise similar businesses.
 - 05
 
-  ### Nobody controls what a model says, including consultants selling it
+  ### Can a consultant control what an AI model says?
 
   You cannot buy a citation, guarantee one, or file a ticket when a model gets you wrong. You can make yourself the easiest correct answer to assemble. Anyone promising a guaranteed AI mention is selling something they cannot deliver, and that is worth knowing before you pay for it.
 - 06
 
-  ### The foundations did not get replaced, they got more load-bearing
+  ### Does AI SEO replace technical and content foundations?
 
   The uncomfortable answer for anyone hoping AI search rewards a clever new tactic is that crawlability, clear structure, factual accuracy and genuine subject depth got more important rather than less. Most of what fails an AI visibility audit is ordinary technical and content debt, not a missing AI-specific trick.
 
-## Where AI is used in this work, and where it is not
+## What can an AI SEO engagement include?
 
-If you are hiring someone for AI SEO it is fair to ask how much AI is doing the job you are paying a person for. Most consultancies will not answer this directly. Here it is in three lines.
+The existing service scope includes technical review, question and prompt mapping, answer-focused content, business-identity and structured-data work, and separate observations of AI visibility. The audit determines priorities; the written agreement defines what is included. An AI SEO label does not add a new package, page quantity, revision allowance or guaranteed result.
 
-### Used for
+Explore the [AEO workstreams](https://fawazbhseo.in/aeo-consultant#services), [GEO workstreams](https://fawazbhseo.in/geo-consultant#geo-services) and [published services and starting prices](https://fawazbhseo.in/seo-services#pricing). Technical foundations are described in the [technical SEO service section](https://fawazbhseo.in/seo-services#technical-seo).
 
-Clustering large query sets, spotting patterns across hundreds of URLs in a crawl, first-pass competitive comparison, and summarising research I then verify myself. Genuinely faster with no cost to quality, because the output gets checked before it is used.
+## What information and decisions are needed before work starts?
 
-### Content preparation
+Bring your public website and profile URLs, services, markets, buyer questions and the facts you can approve for publication. Identify who checks information and who approves or publishes changes. Available reports, access, reporting cadence and handover format are discussion points for the scope, not assumptions made from the AI SEO label.
+
+The existing [inputs and responsibilities checklist](https://fawazbhseo.in/aeo-consultant#inputs) and [handover discussion](https://fawazbhseo.in/geo-consultant#handovers) explain these boundaries. Do not send passwords or confidential customer data with an initial enquiry.
+
+## How are AI SEO observations measured?
+
+Record mentions, linked citations and recommendations as separate observations, and keep each engine separate rather than combining them into one score. Read those observations alongside available rankings, traffic and enquiries. A business name in an answer is not automatically a website visit, a recommendation or a measured client outcome.
+
+The [AI search visibility guide](https://fawazbhseo.in/blogs/measure-ai-search-visibility) includes a blank observation log. The specialist pages explain [measurement categories](https://fawazbhseo.in/aeo-consultant#measurement) and [how reporting is scoped](https://fawazbhseo.in/geo-consultant#scoping).
+
+## How is AI used in the SEO work?
+
+AI assists query clustering, crawl-pattern analysis, comparisons and research summaries that Fawaz checks. This website also discloses AI-assisted writing and editing. That does not verify a claim or establish first-hand experience. For client content, the drafting method, evidence, specialist review and publication approval belong in the agreed scope.
+
+### Which SEO tasks use AI assistance?
+
+Clustering large query sets, spotting patterns across hundreds of URLs in a crawl, first-pass competitive comparison, and summarising research I then verify myself. Genuinely faster with no cost to quality, because the output gets checked before it is used. Client content methods and approvals are agreed in scope.
+
+### How is content prepared and checked?
 
 This website includes AI-assisted writing and editing, identified on the new guides. Tool use does not establish first-hand experience or verify a factual claim. Client content methods, specialist review and approval responsibilities should be agreed in the scope rather than inferred from this site.
 
-### Never used for
+### Who makes strategy and interpretation decisions?
 
-Deciding strategy or interpreting client data. A model has no context on your market, your margins or what you can actually deliver operationally. Handing it that judgement produces plausible recommendations that quietly do not fit your business.
+Deciding strategy or interpreting client data. A model has no context on your market, your margins or what you can actually deliver operationally. Handing it that judgement produces plausible recommendations that quietly do not fit your business. Fawaz handles the strategy and implementation decisions directly.
 
 Writing style does not establish authorship or verify a claim. This website includes AI-assisted writing and editing. Judge published information by its sources, disclosures and accuracy; agree the drafting, review and approval responsibilities for client work in the scope.
 
-## Six questions that separate AI SEO from a renamed retainer
+## How should you choose an AI SEO consultant in India?
 
-AI SEO is the easiest thing in this industry to sell badly, because the terminology is new enough that almost nobody can check the claims. These six questions are ones you can ask without any technical background, and the answers are revealing. Ask me them too.
+Choose an AI SEO specialist by checking the proposed work, evidence and responsibilities, not the label alone. Ask which engines are observed, how results are recorded, who checks content and what is outside the scope. The questions below can be put to Fawaz directly before you decide whether the engagement fits.
 
 - 01
 
-  ### Ask them to define AEO and GEO separately, without notes
+  ### Can the consultant explain AEO and GEO clearly?
 
   The fastest filter available to you. If the two terms collapse into one vague answer about AI, or into a repackaged description of ordinary SEO, the offer is a renamed retainer. They should also be able to say which engine each one primarily affects and why the measurement differs.
 - 02
 
-  ### Ask which engines they measure and how
+  ### Which engines are measured, and how?
 
   ChatGPT, Perplexity, Gemini, Claude and Copilot do not share a source pool and do not respond to the same signals. Anyone treating AI visibility as one number has not looked closely. Ask specifically how they distinguish being retrieved from being cited, because those are different outcomes with different fixes.
 - 03
 
-  ### Ask what they will not promise
+  ### What will the consultant not promise?
 
   This is more revealing than what they do promise. Citations cannot be guaranteed, timelines vary by engine, and freshness-sensitive engines behave differently from training-weighted ones. A practitioner who guarantees an AI mention either misunderstands the mechanism or is willing to mislead you, and neither is a good start.
 - 04
 
-  ### Ask them to attribute a statistic they quote
+  ### Can the consultant trace a statistic to its source?
 
-  AI search is full of confidently repeated numbers with no traceable source. Ask where a figure came from, who ran the study, on what sample. If nothing can be attributed, treat the whole assessment as decoration.
+  AI search is full of confidently repeated numbers with no traceable source. Ask where a figure came from, who ran the study, on what sample. If nothing can be attributed, treat the whole assessment as decoration. Sources, examples and limitations should be clear before publication.
 - 05
 
-  ### Ask how content is prepared and checked
+  ### Who supplies evidence and approves content?
 
   Ask who supplies first-hand information, whether AI assists drafting, who checks sources and who approves publication. Judge the usefulness and accuracy of the result, not a blanket claim about the tool. Generated copy must not be presented as personal experience or a verified client result.
 - 06
 
-  ### Ask whether your foundations are ready before buying anything AI-flavoured
+  ### Are the SEO foundations ready for additional AI visibility work?
 
   If your site is slow, badly structured, thin on real detail or unclear about who you are, AEO and GEO work will underperform and the budget is better spent on the foundations first. Anyone who sells you the AI tier without checking this is prioritising their invoice over your outcome. My audit says which of the three you actually need, and sometimes the answer is that the newest one should wait.
 
-## AI SEO, answered plainly
+## What else should you know before commissioning AI SEO?
 
-The questions people actually ask about this, including the two most consultants avoid, which are whether AI writes the content and whether traffic is going to fall.
+Start with the distinction between AI search visibility and AI-assisted delivery, then discuss scope, evidence and cost. The answers below cover the existing service description, content disclosure, qualifications and published starting rates. They should be read alongside the written scope for your business, not as a guarantee that an engine will recommend it.
 
 What is AI SEO?
 
@@ -1602,11 +1532,11 @@ Somwarpet holds the highest concentration of coffee-estate homestays in Kodagu, 
 
 [SEO services in Somwarpet](https://fawazbhseo.in/seo-services-somwarpet)
 
-### SEO, AEO and GEO expert in Karnataka.
+### SEO consultant in Karnataka, based in Kodagu.
 
 Source: https://fawazbhseo.in/seo-consultant-karnataka
 
-The state page, /seo-consultant-karnataka, explains statewide SEO/AEO/GEO consulting, bilingual Kannada/English research, differences between Karnataka markets, provider-selection criteria, a visibility-measurement process, credentials and pricing. It distinguishes ILMERA as the consultant's own company rather than a client.
+The state page, /seo-consultant-karnataka, focuses on SEO consulting in Karnataka, local search, technical SEO, content and Kannada-English keyword research. Existing AEO/GEO capabilities remain; the introduction links to the dedicated AI SEO page. ILMERA remains the consultant’s own venture, not an arm’s-length client.
 
 ## Local detail: seo-consultant-karnataka
 
@@ -1643,11 +1573,11 @@ North Karnataka is the state’s least-contested search opportunity: fewer optim
 
 [SEO consultant in India](https://fawazbhseo.in/seo-consultant-india)
 
-### SEO, AEO and GEO expert in India.
+### Independent SEO consultant in India.
 
 Source: https://fawazbhseo.in/seo-consultant-india
 
-The national page, /seo-consultant-india, explains remote work across India, national search and entity strategy, technical SEO for larger sites, AEO/GEO, access requirements, written working documents, pricing and how to assess an independent consultant.
+The national page, /seo-consultant-india, focuses on independent SEO consulting across India, national search strategy, technical SEO, content and remote delivery from Kodagu. Existing AEO/GEO capabilities remain; the introduction links to the dedicated AI SEO page.
 
 ## Local detail: seo-consultant-india
 
@@ -1892,7 +1822,7 @@ Delivery: I am based in Kushal Nagar, Kodagu, India, so a Swiss engagement is en
 
 ## Guides and remaining page purposes
 
-The homepage, /, introduces Fawaz's independent practice, the connected SEO/AEO/GEO approach, the six search disciplines, the audit-to-reporting process, credentials and routes to contact or further detail.
+The homepage, /, introduces Fawaz BH and FawazBHSEO, his background, services and documented work. It links to the dedicated AI SEO page for AI search scope, tool use and measurement.
 
 The services page, /seo-services, is the main service catalogue and published rate card. It explains technical SEO, local SEO, AEO, GEO, SEO content strategy and LinkedIn/personal-brand SEO, and publishes the SEO, social media, performance-marketing and website-design packages described above.
 
@@ -1900,7 +1830,7 @@ The AEO page, /aeo-consultant, explains answer extraction, the search and answer
 
 The GEO page, /geo-consultant, explains visibility inside synthesised AI answers. It covers engine differences, GEO workstreams, research and sources, measurement, buying criteria, qualifications, scope/pricing guidance, limitations and prospective-client questions.
 
-The AI SEO page, /ai-seo-expert-india, explains what AI SEO means and separates SEO, AEO and GEO. It discusses changes in search, the distinction between using AI tools and being visible in AI answers, content preparation and questions to ask a potential provider.
+The AI SEO page, /ai-seo-expert-india, is the dedicated AI SEO expert and consultant page for India. Question-shaped sections explain AI search visibility and AI-assisted delivery, existing scope, inputs, measurement, qualifications and provider selection. Published FAQs and starting rates remain on the page.
 
 The case-studies page, /case-studies, describes the Green Coorg Spices website build, its historical first-page Google rankings and the current expired-hosting/offline status while a rebuilt version is in progress. It also lists current work for neelachandra.com and neelachandrainteriors.com, and ILMERA as the co-founder’s own venture rather than an arm’s-length client. These examples do not promise the same outcome for another business.
 
