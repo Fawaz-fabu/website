@@ -1,5 +1,5 @@
 # AEO/GEO source review and owner decision queue
-Status: proposals only. No factual corrections below have been applied to the PHP pages or substituted into the summaries. Original claim text is retained in the structural draft. Citation links identify source context, not validation of every inference. Do not upload this private report to Hostinger.
+Status: private proposals only. Public review-status markup has been removed at the owner's request; this does not approve or apply any factual correction. No factual corrections below have been applied to the PHP pages or substituted into the summaries. Original claim text is retained in the structural draft. Citation links identify source context, not validation of every inference. Do not upload this private report to Hostinger.
 Baseline: 22c08c75f82f172dd62974ed98c3efc7064cb02b. Source checks: 21 September 2026. Publication dates are distinguished from update, observation and rollout dates. No date was assigned to reviewed_on.
 ## Already resolved
 - GEO caption “Reviewed July 2026”: remains removed.
@@ -963,3 +963,559 @@ Verification note: Feature-specific restrictions must be checked; this is not a 
 
 ## Git and routing status
 Remote main bc61c0150b7578e38411502aa49c186db6f343eb contains two remote-only commits; local baseline has seven local-only commits. They diverge. No merge, rebase, cherry-pick or push was performed. The committed remote .htaccess blob c4106347ddda7b8e9db0304aa700487344bf359b was read, not modified or copied over local files.
+
+## Private quotation index for removed public markers
+
+The R01-R18 markers now live in this report, not in the PHP pages or public summaries. Existing decision items above remain unchanged. The entries below quote the affected rendered passage (or engine-table row), with its current section location at removal. Use the quotation to find the claim even if a section later moves. No source citation or claim was removed.
+
+### R01 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#services`
+
+> A fixed set of 20 to 40 buyer-language prompts, run separately through AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Claude and Copilot, re-run on a schedule and reported per engine, never averaged. Cross-referenced against Search Console’s Generative AI performance report and Bing Webmaster Tools’ AI Performance data.
+
+`/home/user/webapp/aeo-consultant.php#process`
+
+> Accessibility and preview check first, so robots, status codes, nosnippet , snippet eligibility and Search Console AI feature inclusion, then entity, schema and passage review, then a baseline prompt run across all engines. Delivered as a written document you keep either way.
+
+`/home/user/webapp/aeo-consultant.php#measurement`
+
+> First-party data now exists for both major ecosystems: Google Search Console has a Generative AI performance report, and Bing Webmaster Tools’ AI Performance report added Intents, Topics, Citation Share and period Compare in preview in June 2026. I use both alongside manual prompt testing rather than relying on a single third-party score.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Google adds a second gate that is easy to miss: to be eligible for generative AI features, a page must be indexed, eligible to appear with a snippet, and the site must be included in Search generative AI features in Search Console.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> Google states that AI Overviews and AI Mode are grounded in its core Search ranking systems using retrieval-augmented generation and query fan-out, so a page must first be indexed, eligible to appear with a snippet, and included in Search generative AI features in Search Console. After that, the highest-leverage work is keeping URLs crawlable and previewable, ranking across the sub-queries fan-out expands into rather than one head term, and answering each question in a self-contained passage near the top of its section.
+
+### R02 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#what-is-aeo`
+
+> Answer Engine Optimization (AEO) is the practice of structuring content, entities and markup so that answer engines can extract a specific passage from a page and present it as the direct answer to a question. Where classic SEO competes for a ranked link that a person clicks, AEO competes to be the answer the person is given, inside a featured snippet, a People Also Ask box, a voice response, or a Google AI Overview.
+
+`/home/user/webapp/aeo-consultant.php#aeo-vs`
+
+> These three terms are used interchangeably and should not be. They share foundations but target different selection mechanisms, which is why I run all three as one strategy instead of three retainers.
+
+`/home/user/webapp/aeo-consultant.php#aeo-vs`
+
+> AEO optimises for an answer that is extracted from your page and displayed in place of a result. The unit of success is a passage selected for a featured snippet, a People Also Ask entry, a voice response or a Google AI Overview.
+
+`/home/user/webapp/aeo-consultant.php#aeo-vs`
+
+> GEO optimises for being cited inside a synthesised AI answer from a generative engine such as ChatGPT, Perplexity, Gemini or Claude. The unit of success is your domain appearing as a named source in prose the model wrote itself.
+
+`/home/user/webapp/aeo-consultant.php#proof`
+
+> Where AEO wins the extracted answer, GEO wins the citation inside a synthesised one. The GEO consultant page covers engine-by-engine source selection, corroboration strategy and how citation share is tracked across ChatGPT, Perplexity, Gemini and Claude. If the three terms still blur together, the AI SEO expert in India page separates them and says which one to spend on first.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> Answer Engine Optimization (AEO) is the practice of structuring content, entities and markup so that answer engines can extract a passage from a page and present it as the direct answer to a question. Where SEO competes for a ranked link someone clicks, AEO competes to be the answer itself, inside a featured snippet, a People Also Ask box, a voice response or a Google AI Overview.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> SEO optimises for ranked positions in traditional search. AEO optimises for an answer extracted from your page and shown in place of a result, so featured snippets, People Also Ask, voice results and Google AI Overviews. GEO optimises for being cited inside a synthesised AI answer from a generative engine such as ChatGPT, Perplexity, Gemini or Claude.
+
+`/home/user/webapp/geo-consultant.php#key-facts`
+
+> AEO targets answers extracted onto a results page. GEO targets synthesis , where a model reads several sources and credits some of them.
+
+`/home/user/webapp/geo-consultant.php#seo-aeo-geo`
+
+> These three terms get used interchangeably, including by people selling them. They are not the same thing. They target different surfaces, are earned by different mechanisms, and are measured with different instruments, which is precisely why running them as one connected strategy works better than buying them as three retainers.
+
+`/home/user/webapp/geo-consultant.php#seo-aeo-geo`
+
+> Instrument: snippet and PAA capture, Speakable and FAQPage markup.
+
+`/home/user/webapp/geo-consultant.php#seo-aeo-geo`
+
+> Instrument: fixed prompt sets re-run per engine, mentioned, cited or absent scoring.
+
+`/home/user/webapp/geo-consultant.php#proof`
+
+> Answer engine optimisation in depth: featured snippets, People Also Ask, voice results and direct-answer surfaces, and why extraction is a different job from synthesis. Read alongside this page if you are unsure which one you actually need.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> SEO targets ranked results in traditional search engines. AEO targets answers extracted from your page onto a results surface, such as featured snippets and voice results. GEO targets citation inside an AI-generated answer that a model synthesises from several sources.
+
+### R03 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#hero`
+
+> I am Fawaz BH , an independent Answer Engine Optimization consultant based in Kushal Nagar, Kodagu, Karnataka, working with clients across India. AEO is the work of making a page the answer rather than one of ten links: structured so Google AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Claude and Microsoft Copilot can extract, trust and cite a specific passage. I am certified by Ahrefs Academy and Semrush, including AI Visibility Essentials , I query all five answer engines separately for every client because they do not share a source pool, and every engagement is delivered directly, with no account managers. This page is the demonstration: it is written, structured and marked up using exactly the method described below.
+
+`/home/user/webapp/aeo-consultant.php#services`
+
+> A fixed set of 20 to 40 buyer-language prompts, run separately through AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Claude and Copilot, re-run on a schedule and reported per engine, never averaged. Cross-referenced against Search Console’s Generative AI performance report and Bing Webmaster Tools’ AI Performance data.
+
+`/home/user/webapp/aeo-consultant.php#aeo-vs`
+
+> GEO leans harder on cross-domain entity resolution, third-party corroboration and freshness, because these engines do not share a source pool: independent 2026 analyses put domain-citation overlap between ChatGPT and Perplexity at roughly 11%, with about 71% of cited sources appearing on only one platform. Full breakdown on the GEO consultant page.
+
+`/home/user/webapp/aeo-consultant.php#why`
+
+> Invisible in ChatGPT and Copilot usually points to a Bing indexing or third-party-mention gap. Invisible in Perplexity usually points to freshness or answer structure. Invisible in AI Overviews and Gemini usually points to entity or eligibility problems. Same symptom, three different jobs.
+
+`/home/user/webapp/geo-consultant.php#hero`
+
+> Fawaz BH is a GEO (Generative Engine Optimization) expert based in Kushal Nagar, Kodagu, Karnataka, India, helping businesses across Karnataka and India get cited inside AI-generated answers from ChatGPT, Perplexity, Google Gemini and AI Overviews, Claude and Microsoft Copilot. Every engagement is delivered directly by him, with no account managers and no junior handoffs. Each of the five engines is measured separately, because they do not share a source pool, and no engagement promises a guaranteed citation, because nobody controls what a language model quotes.
+
+`/home/user/webapp/geo-consultant.php#process`
+
+> Each gap is attributed to its actual cause rather than a generic fix: Bing indexation and third-party mentions for ChatGPT and Copilot, freshness and answer structure for Perplexity, entity and fan-out cluster coverage for Gemini and AI Overviews.
+
+`/home/user/webapp/geo-consultant.php#engines`
+
+> Same symptom, different jobs. Invisible in ChatGPT and Copilot is usually a Bing problem. Invisible in Perplexity is usually a freshness problem. Invisible in Gemini is usually an entity problem.
+
+`/home/user/webapp/geo-consultant.php#engines`
+
+> ChatGPT Bing-backed retrieval plus training data Bing indexation plus third-party mentions
+
+`/home/user/webapp/geo-consultant.php#engines`
+
+> Perplexity Live multi-API web search, every query Freshness plus question-shaped structure
+
+`/home/user/webapp/geo-consultant.php#engines`
+
+> Claude Live web search, reported as Brave-backed Extractable , self-contained passages
+
+`/home/user/webapp/geo-consultant.php#engines`
+
+> Copilot Bing index and Microsoft Graph surfaces Bing rank plus entity consistency
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> A 680-million-citation analysis found only about 11% domain overlap between ChatGPT and Perplexity , and Google’s AI Overviews and AI Mode returned the same URLs only around 13.7% of the time despite reaching similar conclusions. Seer Interactive separately found 87% of SearchGPT citations matched Bing’s top results , while Perplexity performs live retrieval on every query and cites far more sources per answer.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> Make sure your pages are crawlable and previewable, rank in classic search for the sub-queries the engines fan out into, state facts in self-contained passages near the top of the page, and earn genuine third-party mentions. Then treat the two engines differently: ChatGPT retrieves through Bing, so Bing indexation and established third-party coverage matter most there, while Perplexity searches live on every query and rewards freshness and question-shaped structure.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> Seer Interactive found 87% of SearchGPT citations matched Bing’s top results, which is why Bing visibility is a separate task from Google visibility rather than a by-product of it.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> Structural changes such as entity resolution, schema and answer-first restructuring typically start showing up in AI answers within roughly six to twelve weeks, with mention-building compounding over three to six months. On freshness-sensitive engines like Perplexity, new content can surface within days of indexing. Pricing is scoped against what the free audit finds rather than sold as a fixed tier, agreed in writing before any work or invoicing begins.
+
+### R04 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#process`
+
+> Passage rewrites, question-shaped headings, structured data, entity cleanup across profiles, and third-party corroboration work, because branded web mentions correlate roughly 3 times more strongly with AI Overview visibility than raw backlink counts.
+
+`/home/user/webapp/aeo-consultant.php#measurement`
+
+> AEO is measured with a fixed prompt set, re-run on a schedule, reported per engine and split three ways: cited, mentioned-without-citation, and absent. Those three outcomes have three different causes and three different fixes, and any tool that averages them into a single AI visibility score hides the thing you needed to know.
+
+`/home/user/webapp/aeo-consultant.php#answer-surfaces`
+
+> Two structural facts change the strategy. First, Google’s own documentation confirms AI Overviews and AI Mode are grounded in its core Search ranking systems using retrieval-augmented generation plus query fan-out. Second, Ahrefs’ 2026 analysis of 4 million AI Overview URLs found only about 38% of cited pages rank in the organic top 10, with roughly 31% ranking 11 to 100 and another 31% not ranking in the top 100 at all. Breadth across a question cluster now beats owning one head term.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> 0.664 vs 0.218
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Correlation with AI Overview visibility: branded web mentions versus raw backlink count, roughly 3 times stronger.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Ahrefs, 75,000-brand study
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> The practical consequence: ranking number one for a head term is neither necessary nor sufficient. Ranking respectably across the whole cluster of sub-questions is what earns repeat selection.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Across 75,000 brands, branded web mentions correlated 0.664 with AI Overview visibility, against 0.218 for raw backlink counts, roughly 3 times stronger. Branded anchor text at 0.527 and branded search volume at 0.392 also outranked Domain Rating at 0.326.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> That reorders the budget: digital PR, genuine unlinked mentions, podcasts, community answers and category presence do more for AEO than link acquisition. Note the caveat the original authors state and I will repeat, these are correlations, and strong brands plausibly earn both.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> The engagement starts with 20 to 40 prompts written in the words a real buyer would use with an assistant, not keywords. Each prompt is run separately through ChatGPT, Perplexity, Gemini, Claude and Copilot, and every result is scored as cited , mentioned without a citation , or absent , three outcomes that need three different fixes and that most single-score tools collapse into one number. The audit also covers the highest-evidence technical factors: crawlability for AI user agents, HTTP status codes, and any nosnippet or max-snippet directives, since suppressing previews can quietly suppress citations too.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> A generative engine has to know who you are before it can recommend you. This is Schema.org implementation, so Organization or Person, Service, FAQPage and BreadcrumbList, a sameAs graph across the profiles that already describe you, and consistency auditing so your name, location, role and claims match everywhere they appear. Structured data is not a Google ranking requirement, Google says so plainly, but it is how machines verify an entity cheaply, and consistency across domains is what stops a model hedging on your name.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> Because generative engines fan a question out into sub-queries and retrieve across all of them, breadth across a topic beats owning one head term. The work is cluster mapping, then rewriting so each section leads with its answer and stands alone as a complete, quotable unit, plus tables, named sources and specific figures instead of adjectives. Ahrefs measured AI-cited pages at an average 1,064 days old against 1,432 days for organic top-10 results, so a refresh cadence is built into the plan rather than bolted on.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> The strongest evidenced off-page signal in the current data is not links but mentions: Ahrefs’ 75,000-brand study put branded web mentions at r=0.664 with AI Overview visibility against r=0.218 for backlink count, and BuzzStream’s four-million-citation analysis found editorial content supplied roughly 53% of citations while syndicated press releases supplied about 0.04%. So budget goes into genuine editorial coverage, real community participation and category presence, not wire distribution and not manufactured mentions, which Google explicitly names as ineffective. The same prompt set is then re-run on a fixed schedule and reported as a trend, because a single check is anecdote, not measurement.
+
+`/home/user/webapp/geo-consultant.php#process`
+
+> The identical prompt set is re-run at fixed intervals and reported as a trend per engine. Generative answers are volatile enough that one check proves nothing. A trend across repeated runs is the only honest evidence that work landed.
+
+`/home/user/webapp/geo-consultant.php#key-facts`
+
+> Ahrefs’ 75,000-brand study put branded web mentions at r=0.664 against AI Overview visibility, versus r=0.218 for backlink count.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Ahrefs’ 75,000-brand study found branded web mentions correlated at r=0.664 with AI Overview visibility, branded anchors at 0.527 and branded search volume at 0.392, while Domain Rating came in at 0.326 and raw backlink count last at r=0.218 . The top quartile of brands by web mentions averaged 169 AI Overview mentions against 14 for the next quartile.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Directional rather than permanent, since the sample covers a single week from late January 2026, but the gap is too wide to be noise.
+
+`/home/user/webapp/geo-consultant.php#choosing`
+
+> Being named in an answer, being named with a clickable citation, and being absent are three outcomes with three different fixes. A practitioner who does not separate them cannot prescribe correctly.
+
+### R05 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> 9.5/10
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Evidence score for plain URL accessibility, the highest-rated AI citation factor of 23 assessed. llms.txt scored 2.0.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Zyppy meta-analysis of 54 studies, May 2026
+
+`/home/user/webapp/aeo-consultant.php#aeo-vs`
+
+> SEO is still the base layer, not a legacy channel: search rank scored 9.4/10 in the 2026 Zyppy evidence ranking of AI citation factors, second only to plain URL accessibility.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> The highest-evidence AI citation factor is simply whether the URL can be reached and previewed. In Cyrus Shepard’s May 2026 meta-analysis of 54 studies, URL accessibility scored 9.5/10 and preview control 9.2/10, meaning a page blocked by robots.txt, returning a non-200, sitting behind a paywall, or suppressing snippets via nosnippet is excluded before any content quality is assessed.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Search rank scored 9.4/10, the second-highest factor, so AEO does not replace SEO, it compounds it. But the relationship has loosened sharply: Ahrefs’ analysis of 863,000 SERPs and 4 million AI Overview URLs found only 37.9% of cited URLs rank in the organic top 10, versus about 76% in mid-2025, with 31.2% ranking 11 to 100 and 31.0% outside the top 100 entirely.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Google’s documentation confirms AI features use query fan-out: a set of concurrent related queries generated to fetch additional results before an answer is composed. Fan-out rank scored 9.3/10 and topic-cluster ranking 8.9/10 in the same meta-analysis, the strongest content-strategy signals measured.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Answer-near-the-top scored 8.8/10, AI-ready structure 8.6/10, self-contained passages 8.0/10 and freshness only 7.0/10. Freshness is real but moderate: across 16.97 million cited URLs, AI-cited content averaged 1,064 days old against 1,432 days for Google’s organic top ten, a 25.7% advantage, not a multiplier.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> No llms.txt as a ranking factor. Google states plainly that Google Search does not use llms.txt, and it scored lowest of 23 factors at 2.0/10. I will implement one if you want it for other crawlers. I will not bill it as AEO.
+
+`/home/user/webapp/aeo-consultant.php#credentials`
+
+> Crawlability, indexation, site health and structured data, plus how those foundations feed modern AI search surfaces. This matters more than it sounds: URL accessibility is the single highest-evidence AI citation factor, and a stray nosnippet directive can zero out citations a page would otherwise have earned.
+
+`/home/user/webapp/aeo-consultant.php#credentials`
+
+> Keyword research, backlink analysis, competitive research and technical site auditing. AEO does not replace this layer. It sits on top of it, because classic ranking is still the second-strongest citation signal in the current evidence.
+
+`/home/user/webapp/aeo-consultant.php#why`
+
+> Every statistic on this page names its study and sample size, and one popular statistic is corrected rather than repeated. That is not decoration. Citing sources internally is itself a scored citation factor, and it is the standard I hold client content to.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> No. Google’s official generative-AI optimisation guide states that Google Search does not use llms.txt files, does not require content chunking, and needs no special schema.org markup for AI features. In Cyrus Shepard’s May 2026 meta-analysis of 54 AI-citation studies, llms.txt scored lowest of 23 factors at 2.0 out of 10.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> The engagement starts with 20 to 40 prompts written in the words a real buyer would use with an assistant, not keywords. Each prompt is run separately through ChatGPT, Perplexity, Gemini, Claude and Copilot, and every result is scored as cited , mentioned without a citation , or absent , three outcomes that need three different fixes and that most single-score tools collapse into one number. The audit also covers the highest-evidence technical factors: crawlability for AI user agents, HTTP status codes, and any nosnippet or max-snippet directives, since suppressing previews can quietly suppress citations too.
+
+`/home/user/webapp/geo-consultant.php#seo-aeo-geo`
+
+> Google’s own July 2026 guidance is explicit that its generative AI features are rooted in its core Search ranking systems, and Zyppy’s May 2026 meta-analysis of 54 studies scored classic search rank as the second-strongest evidenced AI-citation factor at 9.4 out of 10. Entity clarity, crawlability, structured data and answer-first writing serve all three surfaces at once. Splitting them into separate invoices is a commercial decision, not a technical one.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Cyrus Shepard’s May 2026 Zyppy meta-analysis scored 23 factors across 54 experiments, patents and case studies. The top five by evidence strength were URL accessibility, 9.5/10 , classic search rank, 9.4 , fan-out rank, 9.3 , preview control, 9.2 and query-to-answer match, 9.2 . Freshness scored a moderate 7.0. llms.txt scored lowest of all, at 2.0.
+
+`/home/user/webapp/geo-consultant.php#credentials`
+
+> Crawlability, indexation, site health and structured data, plus how those foundations feed AI search surfaces. In GEO terms this is the highest-evidence layer: URL accessibility scored 9.5 out of 10 in Zyppy’s 2026 meta-analysis, above every content tactic.
+
+`/home/user/webapp/geo-consultant.php#credentials`
+
+> Keyword research, backlink analysis, competitive research and technical site auditing. Still the base layer of GEO, because classic search rank remains the second-strongest evidenced citation factor.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> No, on current evidence. Google’s own July 2026 guidance states that you do not need llms.txt or other special AI files to appear in Google Search or its generative features, and Zyppy’s May 2026 meta-analysis of 54 studies scored llms.txt lowest of all 23 factors at 2.0 out of 10.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> Classic ranking still helps and still scores as the second-strongest evidenced citation factor, but it has to be paired with cluster coverage across fan-out sub-queries, entity clarity and off-site brand presence.
+
+### R06 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#answer-surfaces`
+
+> Two structural facts change the strategy. First, Google’s own documentation confirms AI Overviews and AI Mode are grounded in its core Search ranking systems using retrieval-augmented generation plus query fan-out. Second, Ahrefs’ 2026 analysis of 4 million AI Overview URLs found only about 38% of cited pages rank in the organic top 10, with roughly 31% ranking 11 to 100 and another 31% not ranking in the top 100 at all. Breadth across a question cluster now beats owning one head term.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> 37.9%
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> of AI Overview citations come from pages ranking in Google’s organic top 10, down from roughly 76% in mid-2025.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Ahrefs, 863K SERPs and 4M AIO URLs
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Search rank scored 9.4/10, the second-highest factor, so AEO does not replace SEO, it compounds it. But the relationship has loosened sharply: Ahrefs’ analysis of 863,000 SERPs and 4 million AI Overview URLs found only 37.9% of cited URLs rank in the organic top 10, versus about 76% in mid-2025, with 31.2% ranking 11 to 100 and 31.0% outside the top 100 entirely.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> Two 2026 numbers frame why breadth matters: only about 38% of AI Overview citations come from pages ranking in Google’s organic top 10, down from roughly 76% a year earlier, and nearly two-thirds of citations now go to pages outside the top 10.
+
+`/home/user/webapp/geo-consultant.php#key-facts`
+
+> Ahrefs, March 2026, found roughly 38% of AI Overview citations came from top-10 organic pages, down from about 76% in mid-2025.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Ahrefs analysed 863,000 keywords and four million AI Overview URLs in March 2026 and found 38% of AI Overview citations came from pages ranking in Google’s top 10 , down from roughly 76% in mid-2025. About 31.2% came from positions 11 to 100, and about 31.0% from beyond position 100.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> Not reliably. Ahrefs analysed 863,000 keywords and four million AI Overview URLs in March 2026 and found only about 38% of AI Overview citations came from pages ranking in Google’s top 10, down from roughly 76% in mid-2025, with the remainder spread across positions 11 to 100 and beyond position 100.
+
+### R07 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#process`
+
+> Passage rewrites, question-shaped headings, structured data, entity cleanup across profiles, and third-party corroboration work, because branded web mentions correlate roughly 3 times more strongly with AI Overview visibility than raw backlink counts.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> 0.664 vs 0.218
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Correlation with AI Overview visibility: branded web mentions versus raw backlink count, roughly 3 times stronger.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Ahrefs, 75,000-brand study
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Across 75,000 brands, branded web mentions correlated 0.664 with AI Overview visibility, against 0.218 for raw backlink counts, roughly 3 times stronger. Branded anchor text at 0.527 and branded search volume at 0.392 also outranked Domain Rating at 0.326.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> The strongest evidenced off-page signal in the current data is not links but mentions: Ahrefs’ 75,000-brand study put branded web mentions at r=0.664 with AI Overview visibility against r=0.218 for backlink count, and BuzzStream’s four-million-citation analysis found editorial content supplied roughly 53% of citations while syndicated press releases supplied about 0.04%. So budget goes into genuine editorial coverage, real community participation and category presence, not wire distribution and not manufactured mentions, which Google explicitly names as ineffective. The same prompt set is then re-run on a fixed schedule and reported as a trend, because a single check is anecdote, not measurement.
+
+`/home/user/webapp/geo-consultant.php#key-facts`
+
+> Ahrefs’ 75,000-brand study put branded web mentions at r=0.664 against AI Overview visibility, versus r=0.218 for backlink count.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Ahrefs’ 75,000-brand study found branded web mentions correlated at r=0.664 with AI Overview visibility, branded anchors at 0.527 and branded search volume at 0.392, while Domain Rating came in at 0.326 and raw backlink count last at r=0.218 . The top quartile of brands by web mentions averaged 169 AI Overview mentions against 14 for the next quartile.
+
+### R08 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> Answer-near-the-top scored 8.8/10, AI-ready structure 8.6/10, self-contained passages 8.0/10 and freshness only 7.0/10. Freshness is real but moderate: across 16.97 million cited URLs, AI-cited content averaged 1,064 days old against 1,432 days for Google’s organic top ten, a 25.7% advantage, not a multiplier.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> The widely repeated claim that fresh content is cited 4.3 times more does not trace to any primary study and should not be repeated. ChatGPT does skew freshest of the major engines at about 958 days.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> Extracted-answer wins such as featured snippets and People Also Ask placements can appear within a few weeks when an already-ranking page is restructured, while entity-level and brand-level AEO visibility typically takes three to six months. Recency-weighted engines move fastest: across nearly 17 million cited URLs, ChatGPT cited the freshest content of the major engines at about 958 days average age, versus 1,432 days for Google’s organic top ten.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> Because generative engines fan a question out into sub-queries and retrieve across all of them, breadth across a topic beats owning one head term. The work is cluster mapping, then rewriting so each section leads with its answer and stands alone as a complete, quotable unit, plus tables, named sources and specific figures instead of adjectives. Ahrefs measured AI-cited pages at an average 1,064 days old against 1,432 days for organic top-10 results, so a refresh cadence is built into the plan rather than bolted on.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Cyrus Shepard’s May 2026 Zyppy meta-analysis scored 23 factors across 54 experiments, patents and case studies. The top five by evidence strength were URL accessibility, 9.5/10 , classic search rank, 9.4 , fan-out rank, 9.3 , preview control, 9.2 and query-to-answer match, 9.2 . Freshness scored a moderate 7.0. llms.txt scored lowest of all, at 2.0.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> A widely repeated claim says fresh content is cited 4.3 times more often. That figure traces to no primary study and should not be repeated. The verified measurement, across 16.98 million cited URLs on seven platforms , is that AI-cited content averages 1,064 days old versus 1,432 days for organic top-10 results, a real but moderate 25.7% freshness advantage. ChatGPT skewed freshest at 958 days.
+
+`/home/user/webapp/geo-consultant.php#choosing`
+
+> Ask where a claimed statistic comes from, with study name, sample size and date. The GEO field is full of numbers that trace back to nothing, the widely quoted 4.3 times freshness figure among them.
+
+### R09 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#aeo-vs`
+
+> GEO leans harder on cross-domain entity resolution, third-party corroboration and freshness, because these engines do not share a source pool: independent 2026 analyses put domain-citation overlap between ChatGPT and Perplexity at roughly 11%, with about 71% of cited sources appearing on only one platform. Full breakdown on the GEO consultant page.
+
+`/home/user/webapp/aeo-consultant.php#why`
+
+> ChatGPT, Perplexity, Gemini, Claude, Copilot and Google’s AI surfaces are queried independently, because they do not share a source pool. Independent 2026 studies put domain-citation overlap between ChatGPT and Perplexity at around 11%. A blended AI visibility score would hide exactly which engine is failing you.
+
+`/home/user/webapp/geo-consultant.php#key-facts`
+
+> A 680-million-citation analysis found only about 11% domain overlap between ChatGPT and Perplexity citations.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> A 680-million-citation analysis found only about 11% domain overlap between ChatGPT and Perplexity , and Google’s AI Overviews and AI Mode returned the same URLs only around 13.7% of the time despite reaching similar conclusions. Seer Interactive separately found 87% of SearchGPT citations matched Bing’s top results , while Perplexity performs live retrieval on every query and cites far more sources per answer.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> BuzzStream analysed four million citations from 3,600 prompts across ten industries and found blog and content pages supplied 53.46% of citations , news 14.09% and social 8.71%. With brand-owned queries excluded, earned editorial content accounted for roughly 80%. Syndicated press releases accounted for 0.04% of the entire dataset.
+
+`/home/user/webapp/geo-consultant.php#choosing`
+
+> If the deliverable is one blended AI visibility score, ask which engine moved. Given roughly 11% domain overlap between ChatGPT and Perplexity citations, an average across engines conceals the only actionable detail.
+
+### R10 quotation keys
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> A 680-million-citation analysis found only about 11% domain overlap between ChatGPT and Perplexity , and Google’s AI Overviews and AI Mode returned the same URLs only around 13.7% of the time despite reaching similar conclusions. Seer Interactive separately found 87% of SearchGPT citations matched Bing’s top results , while Perplexity performs live retrieval on every query and cites far more sources per answer.
+
+### R11 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#services`
+
+> Question-shaped H2s and H3s, the answer in the first 40 to 80 words of each section, self-contained passages that survive extraction, tables where comparison is the intent, and specific checkable claims instead of adjectives. Editorial content does the heavy lifting here: one 2026 analysis of 4 million citations found blog and content pages accounted for about 53% of all AI citations, while syndicated press releases accounted for 0.04%.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> The strongest evidenced off-page signal in the current data is not links but mentions: Ahrefs’ 75,000-brand study put branded web mentions at r=0.664 with AI Overview visibility against r=0.218 for backlink count, and BuzzStream’s four-million-citation analysis found editorial content supplied roughly 53% of citations while syndicated press releases supplied about 0.04%. So budget goes into genuine editorial coverage, real community participation and category presence, not wire distribution and not manufactured mentions, which Google explicitly names as ineffective. The same prompt set is then re-run on a fixed schedule and reported as a trend, because a single check is anecdote, not measurement.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> BuzzStream analysed four million citations from 3,600 prompts across ten industries and found blog and content pages supplied 53.46% of citations , news 14.09% and social 8.71%. With brand-owned queries excluded, earned editorial content accounted for roughly 80%. Syndicated press releases accounted for 0.04% of the entire dataset.
+
+### R12 quotation keys
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Other datasets disagree on the exact figure. BrightEdge has reported both much lower and much higher overlap depending on window and industry, which is itself the point: the number is unstable, so treating rank as a proxy for AI visibility is unsafe. Measure the answer surface directly.
+
+### R13 quotation keys
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> Seer Interactive’s April 2026 study of 53 brands across 5.47 million queries found pages cited in AI Overviews were associated with roughly 120% more organic clicks per impression than uncited pages. SparkToro’s June 2026 study found 68% of US Google searches ended without a click at all.
+
+### R14 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> Extracted-answer wins such as featured snippets and People Also Ask placements can appear within a few weeks when an already-ranking page is restructured, while entity-level and brand-level AEO visibility typically takes three to six months. Recency-weighted engines move fastest: across nearly 17 million cited URLs, ChatGPT cited the freshest content of the major engines at about 958 days average age, versus 1,432 days for Google’s organic top ten.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> Structural changes such as entity resolution, schema and answer-first restructuring typically start showing up in AI answers within roughly six to twelve weeks, with mention-building compounding over three to six months. On freshness-sensitive engines like Perplexity, new content can surface within days of indexing. Pricing is scoped against what the free audit finds rather than sold as a fixed tier, agreed in writing before any work or invoicing begins.
+
+### R15 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> Rates vary widely: published AEO and AI-visibility packages in India commonly run from roughly ₹15,000 to over ₹50,000 per month, while international AEO specialists typically bill $100 to $150 per hour. With Fawaz BH, full-stack SEO plus AEO starts at ₹29,999 per month, and AEO-only or enterprise SEO plus AEO plus GEO scopes are quoted after a free audit.
+
+### R16 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#what-is-aeo`
+
+> The practical unit of AEO is not the page. It is the passage : a self-contained block of 40 to 80 words that answers one question completely, without needing the paragraph above it for context.
+
+`/home/user/webapp/aeo-consultant.php#services`
+
+> An answer engine can only name you if it knows unambiguously who you are. This workstream builds a consistent entity: Person, Organization or ProfessionalService schema with a real sameAs graph, FAQPage and HowTo markup where the content genuinely warrants it, Speakable markup for voice surfaces, credential markup, and NAP and name consistency across every profile that mentions you. Google is explicit that no special markup is required for AI features, so this is done for entity resolution and rich results, not as a hack.
+
+`/home/user/webapp/aeo-consultant.php#services`
+
+> Question-shaped H2s and H3s, the answer in the first 40 to 80 words of each section, self-contained passages that survive extraction, tables where comparison is the intent, and specific checkable claims instead of adjectives. Editorial content does the heavy lifting here: one 2026 analysis of 4 million citations found blog and content pages accounted for about 53% of all AI citations, while syndicated press releases accounted for 0.04%.
+
+`/home/user/webapp/aeo-consultant.php#services`
+
+> Local questions are where answer engines are most decisive, because they usually return one recommendation rather than ten options. This workstream maps the bilingual Kannada and English questions people actually ask about your category, aligns your Google Business Profile, categories, services and reviews with the on-site entity, and builds location-question pages for Kushal Nagar, Madikeri, Bengaluru, Mysuru and Mangaluru. Google’s guidance is explicit that Business Profile and Merchant Center data can feed AI responses, so local AEO is partly a data-hygiene job, not only a content one.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> The working unit of AEO is the passage, not the page: a self-contained block of roughly 40 to 80 words that answers one question completely without depending on the text around it.
+
+`/home/user/webapp/aeo-consultant.php#faq`
+
+> Local questions are where answer engines are most decisive, because they tend to return one recommendation instead of ten links, which makes local AEO higher-stakes than local SEO ever was.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> A generative engine has to know who you are before it can recommend you. This is Schema.org implementation, so Organization or Person, Service, FAQPage and BreadcrumbList, a sameAs graph across the profiles that already describe you, and consistency auditing so your name, location, role and claims match everywhere they appear. Structured data is not a Google ranking requirement, Google says so plainly, but it is how machines verify an entity cheaply, and consistency across domains is what stops a model hedging on your name.
+
+`/home/user/webapp/geo-consultant.php#seo-aeo-geo`
+
+> Instrument: snippet and PAA capture, Speakable and FAQPage markup.
+
+### R17 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> Retrieval-augmented generation pulls specific passages from indexed, snippet-eligible pages. Blocked, paywalled or nosnippet pages are simply skipped.
+
+`/home/user/webapp/aeo-consultant.php#pipeline`
+
+> The model writes a single response from several retrieved passages. Self-contained passages that answer the exact phrasing survive this step. Context-dependent prose does not.
+
+`/home/user/webapp/aeo-consultant.php#method`
+
+> The highest-evidence AI citation factor is simply whether the URL can be reached and previewed. In Cyrus Shepard’s May 2026 meta-analysis of 54 studies, URL accessibility scored 9.5/10 and preview control 9.2/10, meaning a page blocked by robots.txt, returning a non-200, sitting behind a paywall, or suppressing snippets via nosnippet is excluded before any content quality is assessed.
+
+`/home/user/webapp/aeo-consultant.php#credentials`
+
+> Crawlability, indexation, site health and structured data, plus how those foundations feed modern AI search surfaces. This matters more than it sounds: URL accessibility is the single highest-evidence AI citation factor, and a stray nosnippet directive can zero out citations a page would otherwise have earned.
+
+`/home/user/webapp/geo-consultant.php#seo-aeo-geo`
+
+> Instrument: fixed prompt sets re-run per engine, mentioned, cited or absent scoring.
+
+`/home/user/webapp/geo-consultant.php#how-geo-works`
+
+> For live queries, generative engines do not recall your page from training. They retrieve it. Google describes its own generative features as using retrieval-augmented generation to pull current pages from the Search index, plus query fan-out : the model spawns several related sub-queries and retrieves across all of them before writing an answer.
+
+### R18 quotation keys
+
+`/home/user/webapp/aeo-consultant.php#scoping`
+
+> Fawaz BH is an AEO expert based in Kushal Nagar, Kodagu, Karnataka, delivering Answer Engine Optimization for clients across Karnataka, South India and the rest of India. Karnataka work adds two things a national vendor usually skips: bilingual Kannada and English question mapping, and local entity consistency across Google Business Profile, citations and the site itself, which is what lets an engine answer near me and in Bengaluru questions with your name.
+
+`/home/user/webapp/geo-consultant.php#geo-services`
+
+> The engagement starts with 20 to 40 prompts written in the words a real buyer would use with an assistant, not keywords. Each prompt is run separately through ChatGPT, Perplexity, Gemini, Claude and Copilot, and every result is scored as cited , mentioned without a citation , or absent , three outcomes that need three different fixes and that most single-score tools collapse into one number. The audit also covers the highest-evidence technical factors: crawlability for AI user agents, HTTP status codes, and any nosnippet or max-snippet directives, since suppressing previews can quietly suppress citations too.
+
+`/home/user/webapp/geo-consultant.php#choosing`
+
+> Ask directly whether you will be handed to an account manager after signing. With a founder-led practice the answer is structurally no. With most agencies it is structurally yes. Neither is wrong, but you should know which you are buying.
+
+`/home/user/webapp/geo-consultant.php#choosing`
+
+> Fawaz BH is a GEO expert based in Karnataka, specifically in Kushal Nagar, Kodagu (Coorg), in the state’s south-west. GEO work itself is location-independent: entity resolution, structured data, cluster coverage and prompt-set measurement are delivered remotely to clients in Bengaluru, Mysuru, Mangaluru, Hubli-Dharwad, Udupi, Belagavi, Shivamogga, Madikeri and across India. Being physically in Karnataka matters for one specific reason: bilingual Kannada and English query behaviour and tier-2 market dynamics show up in the prompts people actually type, and a Bengaluru-only or Delhi-only playbook routinely misreads them.
+
+`/home/user/webapp/geo-consultant.php#faq`
+
+> There is no single best GEO expert in India, because GEO is barely two years old as a named discipline and no independent body ranks practitioners. The useful question is which consultant fits your situation, judged on checks you can verify: do they measure each AI engine separately, do they distinguish mentioned from cited, do they refuse to guarantee citations, and can they attribute every statistic they quote to a named study?

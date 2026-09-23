@@ -479,12 +479,12 @@ $research_sources = json_decode(<<<'RESEARCH_SOURCES'
 RESEARCH_SOURCES
 , true);
 $research_rules = json_decode(<<<'RESEARCH_RULES'
-[["Generative AI performance report|Search Console AI feature inclusion|included in Search generative AI", ["S01", "S02", "S03", "S04"], ["R01"]], ["Bing Webmaster|Intents|Citation Share", ["S05"], []], ["37\\.9|38%|31\\.2|31\\.0|76%|863|4 million AI Overview|four million AI Overview", ["S07"], ["R06"]], ["0\\.664|0\\.218|0\\.527|0\\.392|0\\.326|169.*14|75,000|3 times.*strong|three times.*strong", ["S08"], ["R07", "R04"]], ["Zyppy|meta-analysis|9\\.5|9\\.4|9\\.3|9\\.2|8\\.9|8\\.8|8\\.6|8\\.0|7\\.0|2\\.0|highest-evidence|second-strongest|scored citation factor", ["S06"], ["R05"]], ["1,064|1,432|16\\.97|16\\.98|25\\.7|958|4\\.3|freshness.*moderate", ["S09"], ["R08"]], ["53\\.46|53%|0\\.04|80%|BuzzStream|3,600|4 million citations|four-million-citation", ["S10", "S11"], ["R11"]], ["120%|5\\.47|53 brands", ["S12"], ["R13"]], ["68%|SparkToro|zero.click", ["S13"], ["R13"]], ["87%|SearchGPT", ["S14"], ["R03"]], ["13\\.7", ["S15"], ["R10"]], ["BrightEdge", ["S16"], ["R12"]], ["680|11%|71%", [], ["R09"]], ["Bing-backed|ChatGPT retrieves|Bing.*ChatGPT|ChatGPT.*Bing|Invisible in|engine-specific bottleneck|actual cause|specific bottleneck|lever that most reliably", ["S17", "S14"], ["R03"]], ["Perplexity.*(freshness|live|query)|freshness.*Perplexity|multi-API", ["S18"], ["R03"]], ["Brave-backed|Claude.*Live web", ["S19"], ["R03"]], ["Microsoft Graph|Copilot.*Bing index", ["S20"], ["R03"]], ["Google.*(documentation|guidance|explicit|confirms|states|position)|query fan-out|retrieval-augmented|RAG|Business Profile.*AI responses|no special markup|llms\\.txt.*(Google|ranking)|Google.*llms\\.txt", ["S01", "S02"], []], ["AEO targets|AEO optimises|GEO optimises|different selection mechanisms|different surfaces|extracted.*synth|extraction.*synthesis|passage.*direct answer", ["S01", "S02"], ["R02"]], ["40 to 80|one recommendation|higher-stakes", ["S02"], ["R16"]], ["HowTo|FAQPage|Speakable", ["S02", "S21", "S22"], ["R16"]], ["paywalled|simply skipped|do not recall|Nothing is lifted verbatim|Context-dependent prose does not|zero out citations|excluded before any", ["S01", "S02", "S06"], ["R17"]], ["That reorders the budget|do more for AEO|what earns repeat selection|Breadth across|breadth across|only honest evidence|too wide to be noise|three different causes|three different fixes|stops a model|work landed", [], ["R04"]], ["few weeks|three to six months|six to twelve weeks|within days of indexing", [], ["R14"]], ["15,000.*50,000|100 to.*150|Rates vary widely", [], ["R15"]], ["barely two years old|national vendor usually skips|most agencies|routinely misreads|most single-score tools", [], ["R18"]]]
+[["Generative AI performance report|Search Console AI feature inclusion|included in Search generative AI", ["S01", "S02", "S03", "S04"]], ["Bing Webmaster|Intents|Citation Share", ["S05"]], ["37\\.9|38%|31\\.2|31\\.0|76%|863|4 million AI Overview|four million AI Overview", ["S07"]], ["0\\.664|0\\.218|0\\.527|0\\.392|0\\.326|169.*14|75,000|3 times.*strong|three times.*strong", ["S08"]], ["Zyppy|meta-analysis|9\\.5|9\\.4|9\\.3|9\\.2|8\\.9|8\\.8|8\\.6|8\\.0|7\\.0|2\\.0|highest-evidence|second-strongest|scored citation factor", ["S06"]], ["1,064|1,432|16\\.97|16\\.98|25\\.7|958|4\\.3|freshness.*moderate", ["S09"]], ["53\\.46|53%|0\\.04|80%|BuzzStream|3,600|4 million citations|four-million-citation", ["S10", "S11"]], ["120%|5\\.47|53 brands", ["S12"]], ["68%|SparkToro|zero.click", ["S13"]], ["87%|SearchGPT", ["S14"]], ["13\\.7", ["S15"]], ["BrightEdge", ["S16"]], ["Bing-backed|ChatGPT retrieves|Bing.*ChatGPT|ChatGPT.*Bing|Invisible in|engine-specific bottleneck|actual cause|specific bottleneck|lever that most reliably", ["S17", "S14"]], ["Perplexity.*(freshness|live|query)|freshness.*Perplexity|multi-API", ["S18"]], ["Brave-backed|Claude.*Live web", ["S19"]], ["Microsoft Graph|Copilot.*Bing index", ["S20"]], ["Google.*(documentation|guidance|explicit|confirms|states|position)|query fan-out|retrieval-augmented|RAG|Business Profile.*AI responses|no special markup|llms\\.txt.*(Google|ranking)|Google.*llms\\.txt", ["S01", "S02"]], ["AEO targets|AEO optimises|GEO optimises|different selection mechanisms|different surfaces|extracted.*synth|extraction.*synthesis|passage.*direct answer", ["S01", "S02"]], ["40 to 80|one recommendation|higher-stakes", ["S02"]], ["HowTo|FAQPage|Speakable", ["S02", "S21", "S22"]], ["paywalled|simply skipped|do not recall|Nothing is lifted verbatim|Context-dependent prose does not|zero out citations|excluded before any", ["S01", "S02", "S06"]]]
 RESEARCH_RULES
 , true);
-$research_note = static function ($source_ids, $review_ids = '') use ($research_sources) {
+$research_note = static function ($source_ids) use ($research_sources) {
     $ids = preg_split('/\s+/', trim($source_ids), -1, PREG_SPLIT_NO_EMPTY);
-    if (!$ids && $review_ids === '') return;
+    if (!$ids) return;
     echo '<p class="field-note research-note">';
     if ($ids) {
         echo 'Source context: ';
@@ -495,23 +495,19 @@ $research_note = static function ($source_ids, $review_ids = '') use ($research_
         }
         echo implode('; ', $links) . '.';
     }
-    if ($review_ids !== '') {
-        echo ' <a href="#source-status">Owner review pending</a>: ' . htmlspecialchars($review_ids, ENT_QUOTES, 'UTF-8') . '.';
-    }
     echo '</p>';
 };
 $research_context = static function ($text) use ($research_rules, $research_note) {
     $plain = html_entity_decode(strip_tags($text), ENT_QUOTES, 'UTF-8');
-    $sources = []; $reviews = [];
+    $sources = [];
     foreach ($research_rules as $rule) {
         if (preg_match('~' . $rule[0] . '~i', $plain)) {
             $sources = array_merge($sources, $rule[1]);
-            $reviews = array_merge($reviews, $rule[2]);
         }
     }
-    $sources = array_unique($sources); $reviews = array_unique($reviews);
-    sort($sources); sort($reviews);
-    $research_note(implode(' ', $sources), implode(' ', $reviews));
+    $sources = array_unique($sources);
+    sort($sources);
+    $research_note(implode(' ', $sources));
 };
 
 render_header('geo');
@@ -529,7 +525,7 @@ render_header('geo');
         <h1 id="hero-h">GEO expert in India, working from Karnataka.</h1>
         <p class="hero__sub">Make your information useful in AI answers. Measure mentions, citations and recommendations separately.</p>
         <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is a GEO (Generative Engine Optimization) expert based in Kushal Nagar, Kodagu, Karnataka, India,</strong> helping businesses across Karnataka and India get cited inside AI-generated answers from ChatGPT, Perplexity, Google Gemini and AI Overviews, Claude and Microsoft Copilot. Every engagement is delivered directly by him, with no account managers and no junior handoffs. Each of the five engines is measured separately, because they do not share a source pool, and no engagement promises a guaranteed citation, because nobody controls what a language model quotes.</p>
-          <?php $research_note('S18', 'R03'); ?>
+          <?php $research_note('S18'); ?>
         <p style="margin-top:14px;color:var(--text-2)">Start with <a href="/blogs/seo-aeo-geo-differences">SEO vs AEO vs GEO</a> if you are comparing the approaches. For a practical baseline, use the <a href="/blogs/measure-ai-search-visibility">AI visibility guide and free CSV log</a>. A citation is not automatically a recommendation or a customer enquiry.</p>
 
         <div class="btn-row">
@@ -648,19 +644,18 @@ render_header('geo');
           <p class="step__k">02 &nbsp; DIAGNOSIS</p>
           <h3>Engine-specific bottleneck</h3>
           <p>Each gap is attributed to its actual cause rather than a generic fix: Bing indexation and third-party mentions for ChatGPT and Copilot, freshness and answer structure for Perplexity, entity and fan-out cluster coverage for Gemini and AI Overviews.</p>
-          <?php $research_note('S01 S02 S14 S17 S18', 'R03'); ?>
+          <?php $research_note('S01 S02 S14 S17 S18'); ?>
         </article>
         <article class="step reveal">
           <p class="step__k">03 &nbsp; EXECUTION</p>
           <h3>Hands-on implementation</h3>
           <p>Accessibility fixes first, then entity and schema work, then answer-first restructuring and cluster coverage, then mention-building. Carried out directly by me, in the evidence order above rather than the order that looks busiest.</p>
-          <?php $research_note('S01 S02', ''); ?>
+          <?php $research_note('S01 S02'); ?>
         </article>
         <article class="step reveal">
           <p class="step__k">04 &nbsp; RE-RUN</p>
           <h3>Fixed-schedule measurement</h3>
           <p>The identical prompt set is re-run at fixed intervals and reported as a trend per engine. Generative answers are volatile enough that one check proves nothing. A trend across repeated runs is the only honest evidence that work landed.</p>
-          <?php $research_note('', 'R04'); ?>
         </article>
       </div>
     </div>
@@ -688,7 +683,7 @@ render_header('geo');
   <section class="trust" aria-label="Engines tracked">
     <div class="wrap">
       <p>Five generative engines tracked. <span class="accent">Measured separately, never averaged into one score.</span></p>
-          <?php $research_note('S01 S02', ''); ?>
+          <?php $research_note('S01 S02'); ?>
     </div>
   </section>
 
@@ -698,7 +693,7 @@ render_header('geo');
         <p class="eyebrow">Generative engines tracked</p>
         <h2 id="eng-h">Five surfaces, five different jobs</h2>
         <p class="lede">Same symptom, different jobs. Invisible in ChatGPT and Copilot is usually a Bing problem. Invisible in Perplexity is usually a freshness problem. Invisible in Gemini is usually an entity problem.</p>
-          <?php $research_note('S14 S17 S18', 'R03'); ?>
+          <?php $research_note('S14 S17 S18'); ?>
       </div>
 
       <div class="table-wrap reveal">
@@ -746,7 +741,7 @@ render_header('geo');
         <p class="eyebrow">The distinction</p>
         <h2 id="split-h">SEO, AEO and GEO are three different surfaces</h2>
         <p class="lede">These three terms get used interchangeably, including by people selling them. They are not the same thing. They target different surfaces, are earned by different mechanisms, and are measured with different instruments, which is precisely why running them as one connected strategy works better than buying them as three retainers.</p>
-          <?php $research_note('S01 S02', 'R02'); ?>
+          <?php $research_note('S01 S02'); ?>
         <p style="margin-top:18px"><a class="link-arrow" href="/">Full practice overview: SEO, AEO and GEO consultant in India</a></p>
       </div>
 
@@ -814,14 +809,14 @@ render_header('geo');
           <span class="badge badge--accent">Issued by Semrush</span>
           <h3>Semrush Technical SEO and AI Search Essentials</h3>
           <p>Crawlability, indexation, site health and structured data, plus how those foundations feed AI search surfaces. In GEO terms this is the highest-evidence layer: URL accessibility scored 9.5 out of 10 in Zyppy&#8217;s 2026 meta-analysis, above every content tactic.</p>
-          <?php $research_note('S06', 'R05'); ?>
+          <?php $research_note('S06'); ?>
         </article>
 
         <article class="card reveal">
           <span class="badge">Issued by Ahrefs</span>
           <h3>Ahrefs Academy Certification</h3>
           <p>Keyword research, backlink analysis, competitive research and technical site auditing. Still the base layer of GEO, because classic search rank remains the second-strongest evidenced citation factor.</p>
-          <?php $research_note('S06', 'R05'); ?>
+          <?php $research_note('S06'); ?>
         </article>
 
         <article class="card reveal">
@@ -861,7 +856,7 @@ render_header('geo');
         <p class="eyebrow">GEO expert in Karnataka</p>
         <h3 style="margin-block:14px">Karnataka coverage, from inside Karnataka</h3>
         <p style="color:var(--text-2);margin-bottom:24px"><strong>Fawaz BH is a GEO expert based in Karnataka, specifically in Kushal Nagar, Kodagu (Coorg), in the state&#8217;s south-west.</strong> GEO work itself is location-independent: entity resolution, structured data, cluster coverage and prompt-set measurement are delivered remotely to clients in Bengaluru, Mysuru, Mangaluru, Hubli-Dharwad, Udupi, Belagavi, Shivamogga, Madikeri and across India. Being physically in Karnataka matters for one specific reason: bilingual Kannada and English query behaviour and tier-2 market dynamics show up in the prompts people actually type, and a Bengaluru-only or Delhi-only playbook routinely misreads them.</p>
-          <?php $research_note('S01 S02', 'R18'); ?>
+          <?php $research_note('S01 S02'); ?>
 
         <div class="stat-stack">
           <?php foreach ($stats as $s): ?>
@@ -892,7 +887,7 @@ render_header('geo');
           <span class="card-index">Sibling discipline</span>
           <h3><a href="/aeo-consultant">AEO consultant</a></h3>
           <p>Answer engine optimisation in depth: featured snippets, People Also Ask, voice results and direct-answer surfaces, and why extraction is a different job from synthesis. Read alongside this page if you are unsure which one you actually need.</p>
-          <?php $research_note('S01 S02', 'R02'); ?>
+          <?php $research_note('S01 S02'); ?>
         </article>
 
         <article class="card card--link reveal">
@@ -913,10 +908,8 @@ render_header('geo');
 
   <section class="section" id="research-sources" aria-labelledby="research-sources-h">
     <div class="wrap">
-      <div class="section-head reveal"><h2 id="research-sources-h">Source records and review status</h2></div>
+      <div class="section-head reveal"><h2 id="research-sources-h">Source records</h2></div>
 
-      <p id="source-status" class="field-note">Existing research and workflow claims have been retained while factual corrections await owner approval. Source links identify the material being checked; they do not validate every inference in the surrounding text. Publication, update and sample dates below belong to the sources, not to a review of this page. Items marked R01 to R18 are in the owner review queue.</p>
-      <p class="field-note">Primary-source verification remains unresolved for the 680-million / 11% / 71% overlap attribution, universal engine-provider or best-lever rules, general results timelines and external market-rate comparisons. These retained claims are not verified benchmarks or promised outcomes.</p>
       <ol class="source-records">
         <?php foreach ($research_sources as $source_id => $source): ?>
         <li id="source-<?php echo $source_id; ?>" style="margin-bottom:18px">

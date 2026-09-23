@@ -414,12 +414,12 @@ $research_sources = json_decode(<<<'RESEARCH_SOURCES'
 RESEARCH_SOURCES
 , true);
 $research_rules = json_decode(<<<'RESEARCH_RULES'
-[["Generative AI performance report|Search Console AI feature inclusion|included in Search generative AI", ["S01", "S02", "S03", "S04"], ["R01"]], ["Bing Webmaster|Intents|Citation Share", ["S05"], []], ["37\\.9|38%|31\\.2|31\\.0|76%|863|4 million AI Overview|four million AI Overview", ["S07"], ["R06"]], ["0\\.664|0\\.218|0\\.527|0\\.392|0\\.326|169.*14|75,000|3 times.*strong|three times.*strong", ["S08"], ["R07", "R04"]], ["Zyppy|meta-analysis|9\\.5|9\\.4|9\\.3|9\\.2|8\\.9|8\\.8|8\\.6|8\\.0|7\\.0|2\\.0|highest-evidence|second-strongest|scored citation factor", ["S06"], ["R05"]], ["1,064|1,432|16\\.97|16\\.98|25\\.7|958|4\\.3|freshness.*moderate", ["S09"], ["R08"]], ["53\\.46|53%|0\\.04|80%|BuzzStream|3,600|4 million citations|four-million-citation", ["S10", "S11"], ["R11"]], ["120%|5\\.47|53 brands", ["S12"], ["R13"]], ["68%|SparkToro|zero.click", ["S13"], ["R13"]], ["87%|SearchGPT", ["S14"], ["R03"]], ["13\\.7", ["S15"], ["R10"]], ["BrightEdge", ["S16"], ["R12"]], ["680|11%|71%", [], ["R09"]], ["Bing-backed|ChatGPT retrieves|Bing.*ChatGPT|ChatGPT.*Bing|Invisible in|engine-specific bottleneck|actual cause|specific bottleneck|lever that most reliably", ["S17", "S14"], ["R03"]], ["Perplexity.*(freshness|live|query)|freshness.*Perplexity|multi-API", ["S18"], ["R03"]], ["Brave-backed|Claude.*Live web", ["S19"], ["R03"]], ["Microsoft Graph|Copilot.*Bing index", ["S20"], ["R03"]], ["Google.*(documentation|guidance|explicit|confirms|states|position)|query fan-out|retrieval-augmented|RAG|Business Profile.*AI responses|no special markup|llms\\.txt.*(Google|ranking)|Google.*llms\\.txt", ["S01", "S02"], []], ["AEO targets|AEO optimises|GEO optimises|different selection mechanisms|different surfaces|extracted.*synth|extraction.*synthesis|passage.*direct answer", ["S01", "S02"], ["R02"]], ["40 to 80|one recommendation|higher-stakes", ["S02"], ["R16"]], ["HowTo|FAQPage|Speakable", ["S02", "S21", "S22"], ["R16"]], ["paywalled|simply skipped|do not recall|Nothing is lifted verbatim|Context-dependent prose does not|zero out citations|excluded before any", ["S01", "S02", "S06"], ["R17"]], ["That reorders the budget|do more for AEO|what earns repeat selection|Breadth across|breadth across|only honest evidence|too wide to be noise|three different causes|three different fixes|stops a model|work landed", [], ["R04"]], ["few weeks|three to six months|six to twelve weeks|within days of indexing", [], ["R14"]], ["15,000.*50,000|100 to.*150|Rates vary widely", [], ["R15"]], ["barely two years old|national vendor usually skips|most agencies|routinely misreads|most single-score tools", [], ["R18"]]]
+[["Generative AI performance report|Search Console AI feature inclusion|included in Search generative AI", ["S01", "S02", "S03", "S04"]], ["Bing Webmaster|Intents|Citation Share", ["S05"]], ["37\\.9|38%|31\\.2|31\\.0|76%|863|4 million AI Overview|four million AI Overview", ["S07"]], ["0\\.664|0\\.218|0\\.527|0\\.392|0\\.326|169.*14|75,000|3 times.*strong|three times.*strong", ["S08"]], ["Zyppy|meta-analysis|9\\.5|9\\.4|9\\.3|9\\.2|8\\.9|8\\.8|8\\.6|8\\.0|7\\.0|2\\.0|highest-evidence|second-strongest|scored citation factor", ["S06"]], ["1,064|1,432|16\\.97|16\\.98|25\\.7|958|4\\.3|freshness.*moderate", ["S09"]], ["53\\.46|53%|0\\.04|80%|BuzzStream|3,600|4 million citations|four-million-citation", ["S10", "S11"]], ["120%|5\\.47|53 brands", ["S12"]], ["68%|SparkToro|zero.click", ["S13"]], ["87%|SearchGPT", ["S14"]], ["13\\.7", ["S15"]], ["BrightEdge", ["S16"]], ["Bing-backed|ChatGPT retrieves|Bing.*ChatGPT|ChatGPT.*Bing|Invisible in|engine-specific bottleneck|actual cause|specific bottleneck|lever that most reliably", ["S17", "S14"]], ["Perplexity.*(freshness|live|query)|freshness.*Perplexity|multi-API", ["S18"]], ["Brave-backed|Claude.*Live web", ["S19"]], ["Microsoft Graph|Copilot.*Bing index", ["S20"]], ["Google.*(documentation|guidance|explicit|confirms|states|position)|query fan-out|retrieval-augmented|RAG|Business Profile.*AI responses|no special markup|llms\\.txt.*(Google|ranking)|Google.*llms\\.txt", ["S01", "S02"]], ["AEO targets|AEO optimises|GEO optimises|different selection mechanisms|different surfaces|extracted.*synth|extraction.*synthesis|passage.*direct answer", ["S01", "S02"]], ["40 to 80|one recommendation|higher-stakes", ["S02"]], ["HowTo|FAQPage|Speakable", ["S02", "S21", "S22"]], ["paywalled|simply skipped|do not recall|Nothing is lifted verbatim|Context-dependent prose does not|zero out citations|excluded before any", ["S01", "S02", "S06"]]]
 RESEARCH_RULES
 , true);
-$research_note = static function ($source_ids, $review_ids = '') use ($research_sources) {
+$research_note = static function ($source_ids) use ($research_sources) {
     $ids = preg_split('/\s+/', trim($source_ids), -1, PREG_SPLIT_NO_EMPTY);
-    if (!$ids && $review_ids === '') return;
+    if (!$ids) return;
     echo '<p class="field-note research-note">';
     if ($ids) {
         echo 'Source context: ';
@@ -430,23 +430,19 @@ $research_note = static function ($source_ids, $review_ids = '') use ($research_
         }
         echo implode('; ', $links) . '.';
     }
-    if ($review_ids !== '') {
-        echo ' <a href="#source-status">Owner review pending</a>: ' . htmlspecialchars($review_ids, ENT_QUOTES, 'UTF-8') . '.';
-    }
     echo '</p>';
 };
 $research_context = static function ($text) use ($research_rules, $research_note) {
     $plain = html_entity_decode(strip_tags($text), ENT_QUOTES, 'UTF-8');
-    $sources = []; $reviews = [];
+    $sources = [];
     foreach ($research_rules as $rule) {
         if (preg_match('~' . $rule[0] . '~i', $plain)) {
             $sources = array_merge($sources, $rule[1]);
-            $reviews = array_merge($reviews, $rule[2]);
         }
     }
-    $sources = array_unique($sources); $reviews = array_unique($reviews);
-    sort($sources); sort($reviews);
-    $research_note(implode(' ', $sources), implode(' ', $reviews));
+    $sources = array_unique($sources);
+    sort($sources);
+    $research_note(implode(' ', $sources));
 };
 
 render_header('aeo');
@@ -463,7 +459,7 @@ render_header('aeo');
         <p class="hero__sub">Clear answers, accurate business information and evidence customers can check.</p>
         <p style="margin-top:14px;color:var(--text-2)">New to the terminology? Read <a href="/blogs/seo-aeo-geo-differences">SEO vs AEO vs GEO, with examples</a>. To assess results, use the <a href="/blogs/measure-ai-search-visibility">AI mention and citation measurement guide</a>.</p>
         <p style="margin-top:18px;color:var(--text-2)">I am <strong>Fawaz BH</strong>, an independent Answer Engine Optimization consultant based in Kushal Nagar, Kodagu, Karnataka, working with clients across India. AEO is the work of making a page the <strong>answer</strong> rather than one of ten links: structured so Google AI Overviews, AI Mode, ChatGPT, Perplexity, Gemini, Claude and Microsoft Copilot can extract, trust and cite a specific passage. I am certified by Ahrefs Academy and Semrush, including <strong>AI Visibility Essentials</strong>, I query all five answer engines separately for every client because they do not share a source pool, and every engagement is delivered directly, with no account managers. This page is the demonstration: it is written, structured and marked up using exactly the method described below.</p>
-          <?php $research_note('S18', 'R03'); ?>
+          <?php $research_note('S18'); ?>
 
         <div class="btn-row">
           <a class="btn btn--accent" href="https://wa.me/919481084038?text=Hi%20Fawaz%2C%20I%20would%20like%20an%20AEO%20audit" target="_blank" rel="noopener">
@@ -508,9 +504,9 @@ render_header('aeo');
           <span class="card-index">Definition</span>
           <h3>Answer Engine Optimization, defined</h3>
           <p><strong>Answer Engine Optimization (AEO) is the practice of structuring content, entities and markup so that answer engines can extract a specific passage from a page and present it as the direct answer to a question.</strong> Where classic SEO competes for a ranked link that a person clicks, AEO competes to be the answer the person is given, inside a featured snippet, a People Also Ask box, a voice response, or a Google AI Overview.</p>
-          <?php $research_note('S01 S02', 'R02'); ?>
+          <?php $research_note('S01 S02'); ?>
           <p>The practical unit of AEO is not the page. It is the <strong>passage</strong>: a self-contained block of 40 to 80 words that answers one question completely, without needing the paragraph above it for context.</p>
-          <?php $research_note('S01 S02', 'R16'); ?>
+          <?php $research_note('S01 S02'); ?>
         </article>
       </div>
 
@@ -596,7 +592,7 @@ render_header('aeo');
           <p class="step__k">01 &nbsp; AUDIT</p>
           <h3>Free AEO discovery audit</h3>
           <p>Accessibility and preview check first, so robots, status codes, <code>nosnippet</code>, snippet eligibility and Search Console AI feature inclusion, then entity, schema and passage review, then a baseline prompt run across all engines. Delivered as a written document you keep either way.</p>
-          <?php $research_note('S01 S02 S03 S04', 'R01'); ?>
+          <?php $research_note('S01 S02 S03 S04'); ?>
         </article>
         <article class="step reveal">
           <p class="step__k">02 &nbsp; PROMPT SET</p>
@@ -607,13 +603,13 @@ render_header('aeo');
           <p class="step__k">03 &nbsp; EXECUTION</p>
           <h3>Structure, markup, corroboration</h3>
           <p>Passage rewrites, question-shaped headings, structured data, entity cleanup across profiles, and third-party corroboration work, because branded web mentions correlate roughly 3 times more strongly with AI Overview visibility than raw backlink counts.</p>
-          <?php $research_note('S08', 'R04 R07'); ?>
+          <?php $research_note('S08'); ?>
         </article>
         <article class="step reveal">
           <p class="step__k">04 &nbsp; RE-RUN</p>
           <h3>Trend reporting, per engine</h3>
           <p>The identical prompt set re-run on a fixed schedule, reported engine by engine and split into cited, mentioned-only and absent, cross-checked against Search Console and Bing Webmaster Tools first-party data.</p>
-          <?php $research_note('S05', ''); ?>
+          <?php $research_note('S05'); ?>
         </article>
       </div>
     </div>
@@ -629,9 +625,9 @@ render_header('aeo');
           <span class="card-index">Measurement</span>
           <h3>How AEO gets measured honestly</h3>
           <p><strong>AEO is measured with a fixed prompt set, re-run on a schedule, reported per engine and split three ways: cited, mentioned-without-citation, and absent.</strong> Those three outcomes have three different causes and three different fixes, and any tool that averages them into a single AI visibility score hides the thing you needed to know.</p>
-          <?php $research_note('S01 S02', 'R04'); ?>
+          <?php $research_note('S01 S02'); ?>
           <p>First-party data now exists for both major ecosystems: Google Search Console has a Generative AI performance report, and Bing Webmaster Tools&#8217; AI Performance report added Intents, Topics, Citation Share and period Compare in preview in June 2026. I use both alongside manual prompt testing rather than relying on a single third-party score.</p>
-          <?php $research_note('S01 S02 S03 S04 S05', 'R01'); ?>
+          <?php $research_note('S01 S02 S03 S04 S05'); ?>
         </article>
     </div>
   </section>
@@ -661,7 +657,7 @@ render_header('aeo');
           <h3>The surfaces AEO targets</h3>
           <p>AEO work is aimed at every place a search system answers instead of listing: <strong>Google AI Overviews and AI Mode, featured snippets, People Also Ask, Google Assistant and voice results, Bing and Microsoft Copilot answers, and the direct-answer panels that now sit above organic results.</strong></p>
           <p>Two structural facts change the strategy. First, Google&#8217;s own documentation confirms AI Overviews and AI Mode are grounded in its core Search ranking systems using retrieval-augmented generation plus query fan-out. Second, Ahrefs&#8217; 2026 analysis of 4 million AI Overview URLs found only about 38% of cited pages rank in the organic top 10, with roughly 31% ranking 11 to 100 and another 31% not ranking in the top 100 at all. Breadth across a question cluster now beats owning one head term.</p>
-          <?php $research_note('S01 S02 S07', 'R04 R06'); ?>
+          <?php $research_note('S01 S02 S07'); ?>
         </article>
     </div>
   </section>
@@ -689,27 +685,27 @@ render_header('aeo');
       <div class="grid grid--3" style="margin-top:clamp(34px,4vw,52px)">
         <div class="stat reveal">
           <p class="stat__val">37.9%</p>
-          <?php $research_note('S07', 'R06'); ?>
+          <?php $research_note('S07'); ?>
           <p class="stat__label">of AI Overview citations come from pages ranking in Google&#8217;s organic top 10, down from roughly 76% in mid-2025.</p>
-          <?php $research_note('S07', 'R06'); ?>
+          <?php $research_note('S07'); ?>
           <p class="stat__note">Ahrefs, 863K SERPs and 4M AIO URLs</p>
-          <?php $research_note('S07', 'R06'); ?>
+          <?php $research_note('S07'); ?>
         </div>
         <div class="stat reveal">
           <p class="stat__val">0.664 vs 0.218</p>
-          <?php $research_note('S08', 'R04 R07'); ?>
+          <?php $research_note('S08'); ?>
           <p class="stat__label">Correlation with AI Overview visibility: branded web mentions versus raw backlink count, roughly 3 times stronger.</p>
-          <?php $research_note('S08', 'R04 R07'); ?>
+          <?php $research_note('S08'); ?>
           <p class="stat__note">Ahrefs, 75,000-brand study</p>
-          <?php $research_note('S08', 'R04 R07'); ?>
+          <?php $research_note('S08'); ?>
         </div>
         <div class="stat reveal">
           <p class="stat__val">9.5/10</p>
-          <?php $research_note('S06', 'R05'); ?>
+          <?php $research_note('S06'); ?>
           <p class="stat__label">Evidence score for plain URL accessibility, the highest-rated AI citation factor of 23 assessed. <code>llms.txt</code> scored 2.0.</p>
-          <?php $research_note('S06', 'R05'); ?>
+          <?php $research_note('S06'); ?>
           <p class="stat__note">Zyppy meta-analysis of 54 studies, May 2026</p>
-          <?php $research_note('S06', 'R05'); ?>
+          <?php $research_note('S06'); ?>
         </div>
       </div>
     </div>
@@ -721,7 +717,7 @@ render_header('aeo');
         <p class="eyebrow">Terminology</p>
         <h2 id="vs-h">AEO vs SEO vs GEO, in one screen</h2>
         <p class="lede">These three terms are used interchangeably and should not be. They share foundations but target different selection mechanisms, which is why I run all three as one strategy instead of three retainers.</p>
-          <?php $research_note('S01 S02', 'R02'); ?>
+          <?php $research_note('S01 S02'); ?>
       </div>
 
       <div class="grid grid--3">
@@ -730,14 +726,14 @@ render_header('aeo');
           <h3>Search Engine Optimization</h3>
           <p><strong>SEO optimises for ranked positions in traditional search results.</strong> The unit of success is a link in the top ten that someone clicks. The levers are crawlability, indexation, page experience, on-page relevance, internal linking and off-site authority.</p>
           <p>SEO is still the base layer, not a legacy channel: search rank scored 9.4/10 in the 2026 Zyppy evidence ranking of AI citation factors, second only to plain URL accessibility.</p>
-          <?php $research_note('S06', 'R05'); ?>
+          <?php $research_note('S06'); ?>
         </article>
 
         <article class="card card--featured reveal">
           <span class="card-index">AEO</span>
           <h3>Answer Engine Optimization</h3>
           <p><strong>AEO optimises for an answer that is <em>extracted</em> from your page and displayed in place of a result.</strong> The unit of success is a passage selected for a featured snippet, a People Also Ask entry, a voice response or a Google AI Overview.</p>
-          <?php $research_note('S01 S02', 'R02'); ?>
+          <?php $research_note('S01 S02'); ?>
           <p>The work is question-shaped headings, answers placed near the top of each section, self-contained passages, unambiguous entity signals and clean structured data. This page is a live example of all five.</p>
         </article>
 
@@ -745,9 +741,9 @@ render_header('aeo');
           <span class="card-index">GEO</span>
           <h3>Generative Engine Optimization</h3>
           <p><strong>GEO optimises for being <em>cited inside</em> a synthesised AI answer from a generative engine such as ChatGPT, Perplexity, Gemini or Claude.</strong> The unit of success is your domain appearing as a named source in prose the model wrote itself.</p>
-          <?php $research_note('S01 S02', 'R02'); ?>
+          <?php $research_note('S01 S02'); ?>
           <p>GEO leans harder on cross-domain entity resolution, third-party corroboration and freshness, because these engines do not share a source pool: independent 2026 analyses put domain-citation overlap between ChatGPT and Perplexity at roughly 11%, with about 71% of cited sources appearing on only one platform. Full breakdown on the <a href="/geo-consultant">GEO consultant</a> page.</p>
-          <?php $research_note('S18', 'R03 R09'); ?>
+          <?php $research_note('S18'); ?>
         </article>
       </div>
     </div>
@@ -796,14 +792,14 @@ render_header('aeo');
           <span class="badge badge--accent">Issued by Semrush</span>
           <h3>Semrush Technical SEO and AI Search Essentials</h3>
           <p>Crawlability, indexation, site health and structured data, plus how those foundations feed modern AI search surfaces. This matters more than it sounds: URL accessibility is the single highest-evidence AI citation factor, and a stray <code>nosnippet</code> directive can zero out citations a page would otherwise have earned.</p>
-          <?php $research_note('S01 S02 S06', 'R05 R17'); ?>
+          <?php $research_note('S01 S02 S06'); ?>
         </article>
 
         <article class="card reveal">
           <span class="badge">Issued by Ahrefs</span>
           <h3>Ahrefs Academy Certification</h3>
           <p>Keyword research, backlink analysis, competitive research and technical site auditing. AEO does not replace this layer. It sits on top of it, because classic ranking is still the second-strongest citation signal in the current evidence.</p>
-          <?php $research_note('S06', 'R05'); ?>
+          <?php $research_note('S06'); ?>
         </article>
 
         <article class="card reveal">
@@ -864,7 +860,7 @@ render_header('aeo');
           <span class="card-index">Sibling discipline</span>
           <h3><a href="/geo-consultant">GEO consultant, generative engine optimization</a></h3>
           <p>Where AEO wins the extracted answer, GEO wins the citation inside a synthesised one. The <a href="/geo-consultant">GEO consultant page</a> covers engine-by-engine source selection, corroboration strategy and how citation share is tracked across ChatGPT, Perplexity, Gemini and Claude. If the three terms still blur together, the <a href="/ai-seo-expert-india">AI SEO expert in India</a> page separates them and says which one to spend on first.</p>
-          <?php $research_note('S01 S02 S05', 'R02'); ?>
+          <?php $research_note('S01 S02 S05'); ?>
         </article>
 
         <article class="card card--link reveal">
@@ -885,10 +881,8 @@ render_header('aeo');
 
   <section class="section" id="research-sources" aria-labelledby="research-sources-h">
     <div class="wrap">
-      <div class="section-head reveal"><h2 id="research-sources-h">Source records and review status</h2></div>
+      <div class="section-head reveal"><h2 id="research-sources-h">Source records</h2></div>
 
-      <p id="source-status" class="field-note">Existing research and workflow claims have been retained while factual corrections await owner approval. Source links identify the material being checked; they do not validate every inference in the surrounding text. Publication, update and sample dates below belong to the sources, not to a review of this page. Items marked R01 to R18 are in the owner review queue.</p>
-      <p class="field-note">Primary-source verification remains unresolved for the 680-million / 11% / 71% overlap attribution, universal engine-provider or best-lever rules, general results timelines and external market-rate comparisons. These retained claims are not verified benchmarks or promised outcomes.</p>
       <ol class="source-records">
         <?php foreach ($research_sources as $source_id => $source): ?>
         <li id="source-<?php echo $source_id; ?>" style="margin-bottom:18px">
@@ -912,7 +906,6 @@ render_header('aeo');
           <span class="card-index">Scope</span>
           <h3>AEO expert in Karnataka, serving all of India</h3>
           <p><strong>Fawaz BH is an AEO expert based in Kushal Nagar, Kodagu, Karnataka, delivering Answer Engine Optimization for clients across Karnataka, South India and the rest of India.</strong> Karnataka work adds two things a national vendor usually skips: bilingual Kannada and English question mapping, and local entity consistency across Google Business Profile, citations and the site itself, which is what lets an engine answer near me and in Bengaluru questions with your name.</p>
-          <?php $research_note('', 'R18'); ?>
           <p><strong>Karnataka:</strong> Kushal Nagar, Madikeri, Kodagu (Coorg), Bengaluru, Mysuru, Mangaluru, Hubli-Dharwad, Udupi, Belagavi, Shivamogga.<br>
              <strong>Remote:</strong> Hyderabad, Chennai, Kochi, Coimbatore, Mumbai, Delhi NCR, Pune, pan-India.</p>
           <div class="btn-row" style="margin-top:18px">

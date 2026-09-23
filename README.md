@@ -18,6 +18,14 @@ Built as PHP pages with function-wrapped shared includes. The design follows the
 
 ## 2. Currently completed
 
+### Urgent removal of visitor-facing review notices
+
+- Removed only the public owner-review markers, the source-status paragraph, the unresolved-verification paragraph and review-status heading suffix from `aeo-consultant.php` and `geo-consultant.php`. This supersedes earlier descriptions of visible review warnings below. Claims, source records, source links, metadata, FAQs and section order are unchanged.
+- Review tracking remains private in `research/aeo-geo-review-queue.md`, including the original decision proposals and a quotation/location index for all removed public markers. Removal of a notice is not approval of a factual correction. Do not upload the research report to the website.
+- Regenerated public summaries without review IDs or approval-status apparatus: `llms-full.txt` is 147,005 bytes; `llms-chat.txt` is 29,352 characters / 29,380 bytes. The generator retains citation IDs and does not reintroduce review notices.
+- Validation: 54 PHP syntax checks; both specialist pages rendered in English and Kannada. After removing only the authorized apparatus from the baseline, the rendered DOM matches; all source-register records and citation links match. Summary contents likewise match the baseline after only review-apparatus removals. No factual or structural edits were made. `.htaccess`, backend/API files and unrelated runtime files remain unchanged.
+- Manual hotfix: upload only `aeo-consultant.php`, `geo-consultant.php`, `llms-full.txt` and `llms-chat.txt` as complete replacements to the existing Hostinger document root; clear relevant caches and check both specialist pages and text resources. This repository change does not itself update Hostinger. README, the research ledger and private QA/release artifacts are not website upload files.
+
 ### GitHub review branch and private-file exclusions
 
 This branch-preparation record supersedes the earlier blocked-Git/absent-local-htaccess status below. Those entries remain historical release records.

@@ -22,8 +22,6 @@ Green Coorg Spices had no prior website or digital presence. Fawaz BH built its 
 
 The existing published testimonials were approved by the clients over WhatsApp. Their wording is client feedback, not a quantified traffic/sales result or a promise for another business.
 
-Owner-review status: the AEO/GEO pages retain existing research, reporting-workflow, definition, engine-grounding, results-timeline and market-rate wording pending owner decisions. Linked sources are context, not validation of every inference. Do not present pending claims as verified research or promised outcomes. Corrected wording in the private review ledger has NOT been applied.
-
 ## What the services involve
 
 SEO addresses discovery and performance in traditional search. Technical SEO work includes Core Web Vitals optimisation for LCP, INP and CLS; JavaScript rendering and crawl-budget fixes; relevant structured data matching visible content and eligibility rules; canonical, hreflang and indexation cleanup; and XML sitemap, robots.txt and log-file analysis.
@@ -66,7 +64,7 @@ How the work is measured The published method uses a repeatable prompt set, with
 
 Scoping and the next decision Start with the free audit and agree the work and price in writing before implementation or invoicing. Published packages remain on the services and pricing page ; this page does not add a new price or a separate package. Use the scope discussion to confirm priorities, pages and profiles, selected engines and modes, approval responsibilities, reporting cadence and any access constraints. The format and extent of handovers are to be agreed, rather than assumed from the workstream names. Source: https://fawazbhseo.in/aeo-consultant#scoping (shared scoping guidance also on /geo-consultant).
 
-Source records and outstanding verification are linked from https://fawazbhseo.in/aeo-consultant#research-sources and https://fawazbhseo.in/geo-consultant#research-sources. No new price, turnaround, revision count or measured client example is supplied. The observation example is explicitly an illustration.
+Source records are linked from https://fawazbhseo.in/aeo-consultant#research-sources and https://fawazbhseo.in/geo-consultant#research-sources. No new price, turnaround, revision count or measured client example is supplied. The observation example is explicitly an illustration.
 
 ## Published starting prices and inclusions
 
