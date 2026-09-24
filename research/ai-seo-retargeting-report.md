@@ -215,10 +215,19 @@ H2: Ask about the work
 ## Ownership decision
 The homepage owns the Fawaz BH brand/person and practice overview. /ai-seo-expert-india owns AI SEO expert, consultant and specialist vocabulary. /seo-consultant-india owns national SEO consulting and remote delivery. /seo-consultant-karnataka owns regional/local SEO consulting in Karnataka. AEO and GEO specialist routes remain intact. Existing overlap is semantic rather than four identical exact-match titles; no ranking outcome is promised.
 
+## Confirmed entity profiles
+
+The owner confirmed the following exact URLs. Organization sameAs was added to the existing FawazBHSEO practice node on Home/About; the already-correct Person arrays were retained. The supplied Maps URL is stored verbatim, not converted into geo coordinates.
+
+Organization:
+- https://www.linkedin.com/company/fawazbhseo/
+- https://www.google.com/maps/place/FAWAZ+BH/@12.4545471,75.9570314,17z/data=!4m6!3m5!1s0x3ba509f61947deaf:0x8e001f641054a1df
+
+Person:
+- https://www.linkedin.com/in/fawazbh
+- https://x.com/fawazbhseo
+
 ## Owner input still needed
-- Person alternateName: no independently supported personal alias or expanded legal name was found. Supply an actual publicly used variant before one is added. Do not use the practice brand as an invented personal alias.
-- Existing Person sameAs URLs retained: https://www.linkedin.com/in/fawazbh and https://x.com/fawazbhseo. Confirm they are current and owner-controlled.
-- Supply the official FawazBHSEO business/profile URLs, if any: Google Business Profile public URL, LinkedIn company page, Facebook business page, Instagram business account, YouTube channel. Do not reuse personal profiles as organization profiles without confirmation.
 - Qualification verification URLs remain an owner input, not invented links.
 - Existing AI-page results timeline, fixed engine-grounding/selection and causal statements are not independently verified by repository presence. They remain retained as existing wording pending the earlier private decision process; no new timeline is added.
 - No missing engine value was found: the fourth column contained citations only. Its removal and source consolidation will preserve the original three data values for all five engines.
@@ -301,7 +310,6 @@ The homepage owns the Fawaz BH brand/person and practice overview. /ai-seo-exper
   "ai_faq_answers": 8,
   "retained_research_passages": 46,
   "entity_ids_address_sameas_preserved": true,
-  "personal_alias_and_org_social_profiles_pending_owner": true,
   "full_bytes": 149119,
   "chat_characters": 31077,
   "chat_bytes": 31109,

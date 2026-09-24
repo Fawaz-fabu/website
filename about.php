@@ -123,6 +123,10 @@ $schema = <<<'JSONLD'
       "email": [
         "fawazbhseo@gmail.com",
         "admin@fawazbhseo.in"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/fawazbhseo/",
+        "https://www.google.com/maps/place/FAWAZ+BH/@12.4545471,75.9570314,17z/data=!4m6!3m5!1s0x3ba509f61947deaf:0x8e001f641054a1df"
       ]
     },
     {
