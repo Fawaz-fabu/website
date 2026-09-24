@@ -19,7 +19,7 @@ if (!headers_sent()) {
 $destinations = [
     ['Home',                  '/',                              'The overview of the practice: services, process, credentials and how engagements run.'],
     ['SEO services',          '/seo-services',              'Every service with what it includes and the published starting rates.'],
-    ['Case studies',          '/case-studies',              'A working record of results, with unverified figures labelled as pending.'],
+    ['Case studies',          '/case-studies',              'Engagement notes and client-approved testimonials, without unsupported performance figures.'],
     ['Cities served',         '/cities-we-serve',           'Kodagu, Karnataka, South India and beyond, with what changes between them.'],
     ['About Fawaz BH',        '/about',                     'Who does the work, how I got into search, and the four named qualifications.'],
     ['Contact',               '/contact',                   'Phone, email, WhatsApp and a short form. I answer every message myself.'],

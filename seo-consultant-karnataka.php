@@ -73,7 +73,7 @@ $criteria = [
     ['Criterion 02', 'Who does the work after the pitch', 'Ask directly: will the person on this call implement the fixes, or will you be handed to an account manager and a junior team? Every audit, schema deployment, content brief and technical fix on my engagements is carried out by me, which is also why the client list is deliberately short. That is a capacity limit, and I will tell you when I am at it.'],
     ['Criterion 03', 'All three disciplines, or SEO with an AI upsell', 'Most Karnataka providers sell SEO and attach AEO or GEO as an add-on line item. Ask how they measure AI visibility and whether they can name the engines separately. I scope SEO, AEO and GEO as one connected strategy because entity clarity, structured data and answer-first content earn Google rankings and AI citations with the same work.'],
     ['Criterion 04', 'Genuine bilingual and local-market knowledge', 'Ask them to describe how a customer in Mysuru or Hubballi-Dharwad actually types a query. If they cannot discuss Kannada-script, transliterated and English variants of the same intent, they are running a national template on a Karnataka market. Keyword research on my engagements is built in Kannada and English together.'],
-    ['Criterion 05', 'Published numbers only when they are verified', 'Ask where a claimed result came from. On this site, client figures are published only once confirmed against Google Search Console, GA4 or Google Business Profile insights, and unverified metrics are labelled pending rather than rounded up. Green Coorg Spices reaching page one for its Kodagu keywords in roughly four months is the confirmed figure. The rest are marked as pending.'],
+    ['Criterion 05', 'Separate evidence from claims', 'Ask what supports a claimed result. Client-approved testimonials describe a client experience; they do not independently verify ranking, traffic, order-growth or AI-citation metrics. The historical first-page ranking is stated separately; no time-to-rank, traffic increase or order-growth figure is published.'],
     ['Criterion 06', 'Honesty about what cannot be guaranteed', 'Anyone guaranteeing a Google position or a ChatGPT citation is either misinformed or misleading you, because nobody controls a ranking algorithm or what a language model chooses to quote. What can be committed to is process, cadence and scope: a free written audit you keep, a scope agreed in writing before invoicing, and plain-English reporting on rankings, traffic and AI citations.'],
 ];
 
@@ -144,9 +144,10 @@ $clients = [
         'quote' => '&#8220;Fawaz helped us reach the first page of Google, and our online orders from Bangalore and Mysore have grown. He genuinely understood the Kodagu market.&#8221;',
         'cite'  => 'Green Coorg Spices',
         'biz'   => 'Organic spice brand, Kushal Nagar, Kodagu, greencoorgspices.in',
-        'badge' => 'Page one in about 4 months, confirmed',
+        'badge' => 'Client-approved testimonial',
         'accent'=> true,
-        'href'  => 'https://greencoorgspices.in',
+        'href'  => null,
+        'status_note' => 'Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. The site is currently offline because hosting expired; a rebuilt version is in progress.',
     ],
     [
         'quote' => 'Website design and build, technical fixes and digital marketing support for a construction and interiors firm in Nelamangala, Bengaluru. Engagement in progress, no testimonial until the client gives one in their own words.',
@@ -157,20 +158,20 @@ $clients = [
         'href'  => 'https://neelachandra.com',
     ],
     [
-        'quote' => 'Hospitality and homestay client in Madikeri, Kodagu, local ranking campaign active. Case study and verified figures will be published on completion.',
-        'cite'  => 'Homestay and hospitality, Madikeri',
-        'biz'   => 'Tourism, Kodagu, Karnataka',
-        'badge' => 'Campaign active',
-        'accent'=> false,
-        'href'  => null,
-    ],
-    [
-        'quote' => 'Multi-speciality healthcare clinic in Karnataka, local ranking campaign in progress. Metrics will be published only once confirmed in Search Console and Business Profile insights.',
-        'cite'  => 'Multi-speciality clinic, Karnataka',
-        'biz'   => 'Healthcare, Karnataka',
+        'quote' => 'Current digital work for neelachandrainteriors.com. This is an active engagement, not a completed-results claim or a client testimonial.',
+        'cite'  => 'Neelachandra Interiors',
+        'biz'   => 'neelachandrainteriors.com',
         'badge' => 'In progress',
         'accent'=> false,
-        'href'  => null,
+        'href'  => 'https://neelachandrainteriors.com',
+    ],
+    [
+        'quote' => 'I am co-founder of ILMERA Study Abroad and run its digital work. This is my own venture, not an arm&#8217;s-length client or a client testimonial.',
+        'cite'  => 'ILMERA Study Abroad',
+        'biz'   => 'ilmerastudyabroad.com',
+        'badge' => 'Own venture, disclosed',
+        'accent'=> false,
+        'href'  => 'https://ilmerastudyabroad.com',
     ],
 ];
 
@@ -203,7 +204,7 @@ $faqs = [
     ],
     [
         'q' => 'How long does SEO take to show results for a business in Karnataka?',
-        'a' => ['In tier-2 Karnataka markets such as Kodagu, Udupi or Shivamogga, meaningful ranking movement typically appears within a few months, while Bengaluru usually takes longer because the competitive set is deeper and better funded. Green Coorg Spices, a spice brand in Kushal Nagar, reached Google&#8217;s first page for its target Kodagu keywords in roughly four months. Answer-engine visibility can sometimes surface faster than classic rankings on recency-sensitive engines like Perplexity, but it still rests on a structured-data and authority foundation.'],
+        'a' => ['Timing depends on the starting site, the market, the scope and the implementation. No fixed result date is promised. Assess progress against an agreed baseline rather than treating a testimonial as a forecast.'],
     ],
     [
         'q' => 'Does an SEO consultant based in Kodagu actually understand Bengaluru and Mangaluru search?',
@@ -222,6 +223,9 @@ foreach ($faqs as $f) {
     ];
 }
 
+// After a real review, set its YYYY-MM-DD date here; otherwise leave null.
+$reviewed_on = null;
+
 $schema = json_encode([
     '@context' => 'https://schema.org',
     '@graph'   => [
@@ -229,10 +233,9 @@ $schema = json_encode([
             '@type' => 'WebPage',
             '@id'   => 'https://fawazbhseo.in/seo-consultant-karnataka#page',
             'url'   => 'https://fawazbhseo.in/seo-consultant-karnataka',
-            'name'  => 'SEO, AEO and GEO expert in Karnataka, Fawaz BH',
+            'name'  => 'SEO Consultant in Karnataka, Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'dateModified' => '2026-07-30',
-        ],
+        ] + fbh_review_date_schema($reviewed_on),
         [
             '@type'    => 'Person',
             '@id'      => 'https://fawazbhseo.in/#fawaz',
@@ -244,8 +247,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -261,13 +263,19 @@ $schema = json_encode([
         ],
         [
             '@type'      => 'ProfessionalService',
-            '@id'        => 'https://fawazbhseo.in/seo-consultant-karnataka#practice',
-            'name'       => 'FawazBHSEO, SEO consultant in Karnataka',
+            '@id'        => 'https://fawazbhseo.in/#practice',
+            'name'       => 'FawazBHSEO',
             'founder'    => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'url'        => 'https://fawazbhseo.in/seo-consultant-karnataka',
+            'url'        => 'https://fawazbhseo.in/',
             'telephone'  => '+91-94810-84038',
             'priceRange' => 'From INR 14999 per month',
-            'geo'        => ['@type' => 'GeoCoordinates', 'latitude' => 12.4574, 'longitude' => 75.9608],
+            'address' => [
+                '@type' => 'PostalAddress',
+                'addressLocality' => 'Kushalnagar, Kodagu',
+                'addressRegion' => 'Karnataka',
+                'postalCode' => '571234',
+                'addressCountry' => 'IN',
+            ],
             'areaServed' => [
                 'Bengaluru', 'Mysuru', 'Mangaluru', 'Hubballi-Dharwad', 'Udupi',
                 'Belagavi', 'Shivamogga', 'Davangere', 'Kodagu', 'Karnataka',
@@ -282,8 +290,8 @@ $schema = json_encode([
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 render_head([
-    'title'       => 'SEO, AEO and GEO expert in Karnataka | Fawaz BH',
-    'description' => 'Fawaz BH is an SEO, AEO and GEO expert in Karnataka, based in Kushal Nagar, Kodagu. Serving Bengaluru, Mysuru, Mangaluru, Hubballi-Dharwad and the whole state, with bilingual Kannada and English keyword research.',
+    'title'       => 'SEO Consultant in Karnataka | Fawaz BH, Kodagu',
+    'description' => 'SEO consultant in Karnataka, based in Kushalnagar, Kodagu. Local search, technical SEO and Kannada-English keyword research for businesses across the state.',
     'canonical'   => 'https://fawazbhseo.in/seo-consultant-karnataka',
     'schema'      => $schema,
 ]);
@@ -299,12 +307,13 @@ render_header('cities');
 
       <div class="hero__lead reveal">
         <nav class="eyebrow" aria-label="Breadcrumb">
-          <a href="/">Fawaz BH</a> / <span aria-current="page">SEO, AEO and GEO expert in Karnataka</span>
+          <a href="/">Fawaz BH</a> / <span aria-current="page">SEO consultant in Karnataka</span>
         </nav>
-        <h1 id="hero-h">SEO, AEO and GEO expert in Karnataka.</h1>
-        <p class="hero__sub">Help the right customers find your business in search and AI answers.</p>
+        <h1 id="hero-h">SEO consultant in Karnataka, based in Kodagu.</h1>
+        <p class="hero__sub">Local search, technical SEO and content work informed by Karnataka markets and Kannada-English keyword research.</p>
         <p style="margin-top:14px;color:var(--text-2)">Want to check the basics first? Use the <a href="/blogs/local-seo-checklist-karnataka">local SEO checklist for Karnataka businesses</a>, covering business profiles, useful location pages, languages, reviews and enquiries.</p>
-        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an SEO, AEO and GEO expert based in Kushal Nagar, Kodagu, Karnataka</strong>, working with businesses across Bengaluru, Mysuru, Mangaluru, Hubballi-Dharwad, Udupi, Belagavi, Shivamogga, Davangere and Kodagu. He holds four verifiable qualifications, which are Ahrefs Academy, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing, and runs keyword research in both Kannada and English. If you are trying to judge who the <strong>best SEO expert in Karnataka</strong> is, the section below sets out six criteria you can verify yourself before you hire anyone, including me.</p>
+        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an SEO consultant based in Kushalnagar, Kodagu, Karnataka</strong>, working with businesses across Bengaluru, Mysuru, Mangaluru, Hubballi-Dharwad, Udupi, Belagavi, Shivamogga, Davangere and Kodagu. He holds four verifiable qualifications, which are Ahrefs Academy, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing, and runs keyword research in both Kannada and English. If you are trying to judge who the <strong>best SEO expert in Karnataka</strong> is, the section below sets out six criteria you can verify yourself before you hire anyone, including me.</p>
+        <p id="ai-seo-route" style="margin-top:16px">For the connected AEO and GEO capability, tool-use disclosure and measurement questions, explore <a href="/ai-seo-expert-india">how I approach AI SEO</a>. This page focuses on Karnataka SEO and regional delivery.</p>
 
         <div class="btn-row">
           <a class="btn btn--accent" href="https://wa.me/919481084038?text=Hi%20Fawaz%2C%20I%20would%20like%20a%20free%20SEO%20audit%20for%20my%20Karnataka%20business" target="_blank" rel="noopener">
@@ -560,7 +569,7 @@ render_header('cities');
           </div>
           <?php endforeach; ?>
         </div>
-        <p class="field-note" style="margin-top:18px">Client performance figures appear on the <a href="/case-studies">case studies page</a> only once verified against Google Search Console, GA4 or Google Business Profile insights. No estimated or illustrative numbers are published here.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
       </div>
 
     </div>
@@ -584,6 +593,9 @@ render_header('cities');
             <cite><?php echo $c['cite']; ?></cite>
             <span class="biz"><?php echo $c['biz']; ?></span>
           </figcaption>
+          <?php if (!empty($c['status_note'])): ?>
+          <p class="field-note"><?php echo htmlspecialchars($c['status_note'], ENT_QUOTES, 'UTF-8'); ?></p>
+          <?php endif; ?>
           <?php if (!empty($c['href'])): ?>
           <p style="margin-top:18px"><a class="link-arrow" href="<?php echo $c['href']; ?>" target="_blank" rel="noopener">Visit website</a></p>
           <?php endif; ?>
@@ -657,9 +669,7 @@ render_header('cities');
       'id'      => 'contact',
   ]); ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="2026-07-30">30 July 2026</time>.
-  </p>
+  <?php fbh_render_review_date($reviewed_on); ?>
 
 </main>
 

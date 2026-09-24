@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-switzerland',
     'city'    => 'Switzerland',
     'region'  => 'Europe',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Zurich', 'Geneva', 'Basel', 'Bern', 'Lausanne', 'Zug', 'Lucerne'],
 
-    'geo_region'    => 'CH',
-    'geo_placename' => 'Switzerland',
-    'geo_position'  => '46.8182;8.2275',
-    'latitude'      => 46.8182,
-    'longitude'     => 8.2275,
 
     'market' => [
         ['Four national languages turn one small country into several search markets', 'German, French, Italian and Romansh split Switzerland into language regions that behave as separate search markets, each with modest volume. A German-language campaign in Zurich does nothing for a French-speaking prospect in Geneva. This has to be decided deliberately at the start: which language region actually holds your customers, and whether you genuinely need more than one. Many Swiss businesses over-extend into all of them and end up shallow everywhere, which is worse than being strong in one.'],

@@ -36,11 +36,11 @@
  *   places        array   Neighbourhoods or nearby towns, rendered as tags
  *   distance      string  Honest note on travel and on-site availability
  *   trust         string  Trust strip line, city-specific
- *   geo_region    string  ISO code, e.g. "IN-KA", "CH"
- *   geo_placename string
- *   geo_position  string  "lat;lon"
- *   latitude      float   For ProfessionalService geo
- *   longitude     float
+ *   reviewed_on   string|null  Real editorial review date in YYYY-MM-DD form.
+ *                 Leave null until reviewed. Add a real date in the existing
+ *                 location page data after reviewing it; never use filemtime,
+ *                 the upload date or today's date as an automatic fallback.
+ *                 Missing/invalid values emit no review line or dateModified.
  *   local_seo     bool    False for remote-only markets, changes the copy
  *   nav_active    string  Which nav item to highlight, defaults to 'cities'
  */
@@ -95,32 +95,33 @@ function fbh_location_schema(array $loc) {
     }
     $areaServed[] = $loc['region'];
 
-    $service = [
+    // One practice at the owner-confirmed location, not one branch per market.
+    // PostalAddress has no district field: locality includes Kushalnagar and Kodagu.
+    $practice = [
         '@type'      => 'ProfessionalService',
-        '@id'        => $url . '#practice',
-        'name'       => 'FawazBHSEO, SEO, AEO and GEO consulting for ' . $loc['city'],
+        '@id'        => $base . '#practice',
+        'name'       => 'FawazBHSEO',
         'founder'    => ['@id' => $base . '#fawaz'],
-        'url'        => $url,
+        'url'        => $base,
         'telephone'  => '+91-94810-84038',
         'email'      => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
         'priceRange' => 'From INR 14999 per month',
-        'areaServed' => array_values(array_unique($areaServed)),
         'address'    => [
             '@type'           => 'PostalAddress',
-            'streetAddress'   => 'Kushal Nagar',
-            'addressLocality' => 'Kodagu',
+            'addressLocality' => 'Kushalnagar, Kodagu',
             'addressRegion'   => 'Karnataka',
             'postalCode'      => '571234',
             'addressCountry'  => 'IN',
         ],
     ];
-    if (isset($loc['latitude'], $loc['longitude'])) {
-        $service['geo'] = [
-            '@type'     => 'GeoCoordinates',
-            'latitude'  => $loc['latitude'],
-            'longitude' => $loc['longitude'],
-        ];
-    }
+    $service = [
+        '@type'      => 'Service',
+        '@id'        => $url . '#service',
+        'name'       => 'SEO, AEO and GEO consulting for ' . html_entity_decode($loc['city'], ENT_QUOTES, 'UTF-8'),
+        'url'        => $url,
+        'provider'   => ['@id' => $base . '#practice'],
+        'areaServed' => array_values(array_unique($areaServed)),
+    ];
 
     return json_encode([
         '@context' => 'https://schema.org',
@@ -132,8 +133,7 @@ function fbh_location_schema(array $loc) {
                 'name'         => html_entity_decode($loc['h1'], ENT_QUOTES, 'UTF-8'),
                 'about'        => ['@id' => $base . '#fawaz'],
                 'inLanguage'   => 'en-IN',
-                'dateModified' => date('Y-m-d'),
-            ],
+            ] + fbh_review_date_schema($loc['reviewed_on'] ?? null),
             [
                 '@type'           => 'BreadcrumbList',
                 '@id'             => $url . '#breadcrumb',
@@ -156,6 +156,7 @@ function fbh_location_schema(array $loc) {
                     ['@type' => 'EducationalOccupationalCredential', 'name' => 'Advanced Diploma in Digital Marketing, Adrex Media School', 'credentialCategory' => 'diploma'],
                 ],
             ],
+            $practice,
             $service,
             [
                 '@type'      => 'FAQPage',
@@ -182,9 +183,6 @@ function render_location_page(array $loc) {
         'description'   => $loc['description'],
         'canonical'     => 'https://fawazbhseo.in/' . $loc['slug'],
         'schema'        => fbh_location_schema($loc),
-        'geo_region'    => $loc['geo_region']    ?? 'IN-KA',
-        'geo_placename' => $loc['geo_placename'] ?? ($loc['city'] . ', ' . $loc['region']),
-        'geo_position'  => $loc['geo_position']  ?? '12.4574;75.9608',
     ]);
 
     render_header($loc['nav_active'] ?? 'cities');
@@ -235,7 +233,8 @@ function render_location_page(array $loc) {
           <img src="/assets/images/fawazbh.webp"
                alt="Fawaz BH, SEO, AEO and GEO consultant serving <?php echo htmlspecialchars(html_entity_decode($loc['city'], ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?>"
                width="440" height="440" fetchpriority="high" decoding="async">
-          <figcaption>Fawaz BH, working with <?php echo $loc['city']; ?> businesses from Kushal Nagar, Kodagu</figcaption>
+          <figcaption>Fawaz BH, working with <?php echo $loc['city']; ?> businesses from Kushalnagar, Kodagu</figcaption>
+          <p class="field-note" style="padding:12px">The only business location is Kushalnagar, Kodagu, Karnataka, India, 571234. Other listed markets are service areas, not branch offices.</p>
         </figure>
 
         <?php if (!empty($loc['readout'])): ?>
@@ -510,9 +509,7 @@ function render_location_page(array $loc) {
       'id'      => 'contact',
   ]); ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="<?php echo date('Y-m-d'); ?>"><?php echo date('j F Y'); ?></time>.
-  </p>
+  <?php fbh_render_review_date($loc['reviewed_on'] ?? null); ?>
 
 </main>
 

@@ -56,29 +56,29 @@ $terms = [
 
 /* ── What actually changed about search ───────────────────────────────── */
 $shifts = [
-    ['The query no longer always produces a list', 'For a growing share of informational queries the engine composes an answer instead of presenting ten links. If your visibility strategy is entirely built on ranking positions, part of your addressable demand has moved somewhere you are not measuring. The position may be unchanged while the click never happens.'],
-    ['Impressions can rise while clicks fall, and that is not a bug', 'This is the pattern that worries people most, and it is worth understanding before panicking about it. Being cited in an answer can register as an impression while the user gets what they needed without visiting. That is a real loss of traffic and a real gain in influence at the same time. It needs different reporting rather than a different rank tracker.'],
-    ['Queries have got longer and more conversational', 'People type full questions and follow-up questions now, because the interface invites it. Short head terms still exist but a larger share of demand arrives as specific, qualified, sometimes multi-part questions. Content built only around head terms captures progressively less of it.'],
-    ['Off-site mentions matter more than they used to', 'When a model is deciding who to name, what independent sources say about you carries weight your own marketing copy cannot. Directory profiles, genuine press, association listings, review presence and credible third-party references all feed the picture. This is slower and less controllable than on-site work, and it is increasingly the part that separates two otherwise similar businesses.'],
-    ['Nobody controls what a model says, including consultants selling it', 'You cannot buy a citation, guarantee one, or file a ticket when a model gets you wrong. You can make yourself the easiest correct answer to assemble. Anyone promising a guaranteed AI mention is selling something they cannot deliver, and that is worth knowing before you pay for it.'],
-    ['The foundations did not get replaced, they got more load-bearing', 'The uncomfortable answer for anyone hoping AI search rewards a clever new tactic is that crawlability, clear structure, factual accuracy and genuine subject depth got more important rather than less. Most of what fails an AI visibility audit is ordinary technical and content debt, not a missing AI-specific trick.'],
+    ['Why might a search query produce an answer instead of a list?', 'For a growing share of informational queries the engine composes an answer instead of presenting ten links. If your visibility strategy is entirely built on ranking positions, part of your addressable demand has moved somewhere you are not measuring. The position may be unchanged while the click never happens.'],
+    ['Why can impressions rise while clicks fall?', 'This is the pattern that worries people most, and it is worth understanding before panicking about it. Being cited in an answer can register as an impression while the user gets what they needed without visiting. That is a real loss of traffic and a real gain in influence at the same time. It needs different reporting rather than a different rank tracker.'],
+    ['How do conversational questions affect content planning?', 'People type full questions and follow-up questions now, because the interface invites it. Short head terms still exist but a larger share of demand arrives as specific, qualified, sometimes multi-part questions. Content built only around head terms captures progressively less of it.'],
+    ['Why consider what other sources say about a business?', 'When a model is deciding who to name, what independent sources say about you carries weight your own marketing copy cannot. Directory profiles, genuine press, association listings, review presence and credible third-party references all feed the picture. This is slower and less controllable than on-site work, and it is increasingly the part that separates two otherwise similar businesses.'],
+    ['Can a consultant control what an AI model says?', 'You cannot buy a citation, guarantee one, or file a ticket when a model gets you wrong. You can make yourself the easiest correct answer to assemble. Anyone promising a guaranteed AI mention is selling something they cannot deliver, and that is worth knowing before you pay for it.'],
+    ['Does AI SEO replace technical and content foundations?', 'The uncomfortable answer for anyone hoping AI search rewards a clever new tactic is that crawlability, clear structure, factual accuracy and genuine subject depth got more important rather than less. Most of what fails an AI visibility audit is ordinary technical and content debt, not a missing AI-specific trick.'],
 ];
 
 /* ── How AI is used in delivery, honestly ─────────────────────────────── */
 $tooling = [
-    ['Used for', 'Clustering large query sets, spotting patterns across hundreds of URLs in a crawl, first-pass competitive comparison, and summarising research I then verify myself. Genuinely faster with no cost to quality, because the output gets checked before it is used.'],
-    ['Content preparation', 'This website includes AI-assisted writing and editing, identified on the new guides. Tool use does not establish first-hand experience or verify a factual claim. Client content methods, specialist review and approval responsibilities should be agreed in the scope rather than inferred from this site.'],
-    ['Never used for', 'Deciding strategy or interpreting client data. A model has no context on your market, your margins or what you can actually deliver operationally. Handing it that judgement produces plausible recommendations that quietly do not fit your business.'],
+    ['Which SEO tasks use AI assistance?', 'Clustering large query sets, spotting patterns across hundreds of URLs in a crawl, first-pass competitive comparison, and summarising research I then verify myself. Genuinely faster with no cost to quality, because the output gets checked before it is used. Client content methods and approvals are agreed in scope.'],
+    ['How is content prepared and checked?', 'This website includes AI-assisted writing and editing, identified on the new guides. Tool use does not establish first-hand experience or verify a factual claim. Client content methods, specialist review and approval responsibilities should be agreed in the scope rather than inferred from this site.'],
+    ['Who makes strategy and interpretation decisions?', 'Deciding strategy or interpreting client data. A model has no context on your market, your margins or what you can actually deliver operationally. Handing it that judgement produces plausible recommendations that quietly do not fit your business. Fawaz handles the strategy and implementation decisions directly.'],
 ];
 
 /* ── Six things to check before hiring anyone for AI SEO ──────────────── */
 $checks = [
-    ['Ask them to define AEO and GEO separately, without notes', 'The fastest filter available to you. If the two terms collapse into one vague answer about AI, or into a repackaged description of ordinary SEO, the offer is a renamed retainer. They should also be able to say which engine each one primarily affects and why the measurement differs.'],
-    ['Ask which engines they measure and how', 'ChatGPT, Perplexity, Gemini, Claude and Copilot do not share a source pool and do not respond to the same signals. Anyone treating AI visibility as one number has not looked closely. Ask specifically how they distinguish being retrieved from being cited, because those are different outcomes with different fixes.'],
-    ['Ask what they will not promise', 'This is more revealing than what they do promise. Citations cannot be guaranteed, timelines vary by engine, and freshness-sensitive engines behave differently from training-weighted ones. A practitioner who guarantees an AI mention either misunderstands the mechanism or is willing to mislead you, and neither is a good start.'],
-    ['Ask them to attribute a statistic they quote', 'AI search is full of confidently repeated numbers with no traceable source. Ask where a figure came from, who ran the study, on what sample. If nothing can be attributed, treat the whole assessment as decoration.'],
-    ['Ask how content is prepared and checked', 'Ask who supplies first-hand information, whether AI assists drafting, who checks sources and who approves publication. Judge the usefulness and accuracy of the result, not a blanket claim about the tool. Generated copy must not be presented as personal experience or a verified client result.'],
-    ['Ask whether your foundations are ready before buying anything AI-flavoured', 'If your site is slow, badly structured, thin on real detail or unclear about who you are, AEO and GEO work will underperform and the budget is better spent on the foundations first. Anyone who sells you the AI tier without checking this is prioritising their invoice over your outcome. My audit says which of the three you actually need, and sometimes the answer is that the newest one should wait.'],
+    ['Can the consultant explain AEO and GEO clearly?', 'The fastest filter available to you. If the two terms collapse into one vague answer about AI, or into a repackaged description of ordinary SEO, the offer is a renamed retainer. They should also be able to say which engine each one primarily affects and why the measurement differs.'],
+    ['Which engines are measured, and how?', 'ChatGPT, Perplexity, Gemini, Claude and Copilot do not share a source pool and do not respond to the same signals. Anyone treating AI visibility as one number has not looked closely. Ask specifically how they distinguish being retrieved from being cited, because those are different outcomes with different fixes.'],
+    ['What will the consultant not promise?', 'This is more revealing than what they do promise. Citations cannot be guaranteed, timelines vary by engine, and freshness-sensitive engines behave differently from training-weighted ones. A practitioner who guarantees an AI mention either misunderstands the mechanism or is willing to mislead you, and neither is a good start.'],
+    ['Can the consultant trace a statistic to its source?', 'AI search is full of confidently repeated numbers with no traceable source. Ask where a figure came from, who ran the study, on what sample. If nothing can be attributed, treat the whole assessment as decoration. Sources, examples and limitations should be clear before publication.'],
+    ['Who supplies evidence and approves content?', 'Ask who supplies first-hand information, whether AI assists drafting, who checks sources and who approves publication. Judge the usefulness and accuracy of the result, not a blanket claim about the tool. Generated copy must not be presented as personal experience or a verified client result.'],
+    ['Are the SEO foundations ready for additional AI visibility work?', 'If your site is slow, badly structured, thin on real detail or unclear about who you are, AEO and GEO work will underperform and the budget is better spent on the foundations first. Anyone who sells you the AI tier without checking this is prioritising their invoice over your outcome. My audit says which of the three you actually need, and sometimes the answer is that the newest one should wait.'],
 ];
 
 /* ── FAQ ──────────────────────────────────────────────────────────────── */
@@ -153,6 +153,9 @@ foreach ($faqs as $f) {
     ];
 }
 
+// After a real review, set its YYYY-MM-DD date here; otherwise leave null.
+$reviewed_on = null;
+
 $schema = json_encode([
     '@context' => 'https://schema.org',
     '@graph'   => [
@@ -162,8 +165,7 @@ $schema = json_encode([
             'url'   => 'https://fawazbhseo.in/ai-seo-expert-india',
             'name'  => 'AI SEO expert in India, Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'dateModified' => '2026-08-21',
-        ],
+        ] + fbh_review_date_schema($reviewed_on),
         [
             '@type' => 'BreadcrumbList',
             'itemListElement' => [
@@ -182,8 +184,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -223,12 +224,9 @@ $schema = json_encode([
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 render_head([
-    'title'       => 'AI SEO expert in India | Fawaz BH, SEO, AEO and GEO consultant',
-    'description' => 'Fawaz BH is an independent AI SEO expert in India, based in Kodagu, Karnataka. Staying visible as search shifts to AI answers, across SEO, AEO and GEO. Content written by a person, not generated.',
+    'title'       => 'AI SEO Expert & Consultant in India | Fawaz BH',
+    'description' => 'Work directly with Fawaz BH, an AI SEO consultant in India. Explore search visibility work, AI-assisted workflows, scope and per-engine measurement.',
     'canonical'   => 'https://fawazbhseo.in/ai-seo-expert-india',
-    'geo_region'  => 'IN-KA',
-    'geo_placename' => 'Kushal Nagar, Kodagu, Karnataka',
-    'geo_position'  => '12.4574;75.9608',
     'schema'      => $schema,
 ]);
 
@@ -245,8 +243,8 @@ render_header('aiseo');
         <nav class="eyebrow" aria-label="Breadcrumb">
           <a href="/">Fawaz BH</a> / <span aria-current="page">AI SEO expert in India</span>
         </nav>
-        <h1 id="hero-h">AI SEO expert in India.</h1>
-        <p class="hero__sub">Search started answering questions instead of listing pages. That changes the work, not the fundamentals.</p>
+        <h1 id="hero-h">AI SEO expert and consultant in India.</h1>
+        <p class="hero__sub">AI SEO consulting for businesses assessing both their visibility in AI answers and how AI tools are used in search work.</p>
 
         <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an independent AI SEO consultant based in Kushal Nagar, Kodagu, Karnataka, working with businesses across India remotely.</strong> Four qualifications sit behind the practice, two of them covering AI search specifically, which are Semrush AI Visibility Essentials and Semrush Technical SEO and AI Search Essentials, alongside an Ahrefs Academy certification and an Advanced Diploma in Digital Marketing.</p>
 
@@ -278,17 +276,17 @@ render_header('aiseo');
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Definitions</p>
-        <h2 id="terms-h">SEO, AEO and GEO are three different jobs</h2>
-        <p class="lede">Most confusion about AI SEO comes from these three being used interchangeably by people selling all of them as one thing. They answer different questions, they are measured differently, and they are not equally urgent for every business. Here they are separated properly.</p>
+        <h2 id="terms-h">What does AI SEO mean for a business in India?</h2>
+        <p class="lede">AI SEO covers search visibility as engines generate answers, as well as the use of AI tools within SEO delivery. Fawaz BH works across technical SEO, answer-focused content, entity information and per-engine observation. The sections below separate those activities so you can discuss the work you need rather than buy an undefined AI label.</p>
       </div>
 
       <div class="grid grid--3">
         <?php foreach ($terms as $t): ?>
         <article class="card reveal">
           <span class="card-index"><?php echo $t['term']; ?></span>
-          <h3><?php echo $t['name']; ?></h3>
-          <p class="field-note" style="margin-bottom:12px"><strong><?php echo $t['q']; ?></strong></p>
+          <h3><?php echo $t['q']; ?></h3>
           <p><?php echo $t['body']; ?></p>
+          <p class="field-note"><strong><?php echo $t['name']; ?></strong></p>
           <?php if (!empty($t['link'])): ?>
           <p style="margin-top:16px">
             <a class="link-arrow" href="<?php echo $t['link'][0]; ?>"><?php echo $t['link'][1]; ?>
@@ -301,6 +299,7 @@ render_header('aiseo');
       </div>
 
       <p class="lede reveal" style="margin-top:28px">The order matters. GEO depends on AEO foundations, and AEO depends on SEO foundations. Buying the newest one first is the most common and most expensive mistake in this market, which is why the free audit says which of the three your money should go to rather than assuming it is all three.</p>
+      <p id="service-choice" class="reveal" style="margin-top:18px">Choose the scope you want to explore: <a href="/aeo-consultant">AEO for direct answers</a>, <a href="/geo-consultant">GEO for AI-generated visibility</a>, or <a href="/seo-services#technical-seo">SEO foundations and deliverables</a>.</p>
     </div>
   </section>
 
@@ -310,8 +309,8 @@ render_header('aiseo');
 
       <div class="sticky-col reveal">
         <p class="eyebrow">What actually changed</p>
-        <h2 id="changed-h">Six real shifts, and one thing that did not change</h2>
-        <p class="lede">Stripped of the urgency that usually gets sold alongside it. These are the changes that show up in real client data, and the last one is the part most AI SEO pitches leave out because it is not exciting enough to charge a premium for.</p>
+        <h2 id="changed-h">What changes when a search engine answers the question?</h2>
+        <p class="lede">Rankings, visits and appearances in generated answers describe different outcomes. AI SEO work considers answer visibility alongside the existing technical and content foundations, rather than treating a mention as a website visit. The points below explain the distinctions already covered by this practice and the limits on what a consultant can promise.</p>
       </div>
 
       <div>
@@ -331,13 +330,37 @@ render_header('aiseo');
     </div>
   </section>
 
+  <section class="section" id="ai-seo-scope" aria-labelledby="ai-seo-scope-h">
+    <div class="wrap">
+      <h2 id="ai-seo-scope-h">What can an AI SEO engagement include?</h2>
+      <p class="lede">The existing service scope includes technical review, question and prompt mapping, answer-focused content, business-identity and structured-data work, and separate observations of AI visibility. The audit determines priorities; the written agreement defines what is included. An AI SEO label does not add a new package, page quantity, revision allowance or guaranteed result.</p>
+      <p>Explore the <a href="/aeo-consultant#services">AEO workstreams</a>, <a href="/geo-consultant#geo-services">GEO workstreams</a> and <a href="/seo-services#pricing">published services and starting prices</a>. Technical foundations are described in the <a href="/seo-services#technical-seo">technical SEO service section</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="ai-seo-inputs" aria-labelledby="ai-seo-inputs-h">
+    <div class="wrap">
+      <h2 id="ai-seo-inputs-h">What information and decisions are needed before work starts?</h2>
+      <p class="lede">Bring your public website and profile URLs, services, markets, buyer questions and the facts you can approve for publication. Identify who checks information and who approves or publishes changes. Available reports, access, reporting cadence and handover format are discussion points for the scope, not assumptions made from the AI SEO label.</p>
+      <p>The existing <a href="/aeo-consultant#inputs">inputs and responsibilities checklist</a> and <a href="/geo-consultant#handovers">handover discussion</a> explain these boundaries. Do not send passwords or confidential customer data with an initial enquiry.</p>
+    </div>
+  </section>
+
+  <section class="section" id="ai-seo-measurement" aria-labelledby="ai-seo-measurement-h">
+    <div class="wrap">
+      <h2 id="ai-seo-measurement-h">How are AI SEO observations measured?</h2>
+      <p class="lede">Record mentions, linked citations and recommendations as separate observations, and keep each engine separate rather than combining them into one score. Read those observations alongside available rankings, traffic and enquiries. A business name in an answer is not automatically a website visit, a recommendation or a measured client outcome.</p>
+      <p>The <a href="/blogs/measure-ai-search-visibility">AI search visibility guide</a> includes a blank observation log. The specialist pages explain <a href="/aeo-consultant#measurement">measurement categories</a> and <a href="/geo-consultant#scoping">how reporting is scoped</a>.</p>
+    </div>
+  </section>
+
   <!-- 4. HOW AI IS USED IN THE WORK -->
   <section class="section" id="tooling" aria-labelledby="tooling-h">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Straight answer</p>
-        <h2 id="tooling-h">Where AI is used in this work, and where it is not</h2>
-        <p class="lede">If you are hiring someone for AI SEO it is fair to ask how much AI is doing the job you are paying a person for. Most consultancies will not answer this directly. Here it is in three lines.</p>
+        <h2 id="tooling-h">How is AI used in the SEO work?</h2>
+        <p class="lede">AI assists query clustering, crawl-pattern analysis, comparisons and research summaries that Fawaz checks. This website also discloses AI-assisted writing and editing. That does not verify a claim or establish first-hand experience. For client content, the drafting method, evidence, specialist review and publication approval belong in the agreed scope.</p>
       </div>
 
       <div class="grid grid--3">
@@ -350,7 +373,7 @@ render_header('aiseo');
         <?php endforeach; ?>
       </div>
 
-      <p class="lede reveal" style="margin-top:28px">You can check this claim rather than take it on trust. Read a few pages on this site and look for the tells: generated copy hedges constantly, avoids specific numbers, repeats itself in slightly different words and never says anything that could be wrong. The pages here name distances, admit limitations, decline work that does not fit and tell you when a competitor would serve you better. That is not a writing style a model produces on its own.</p>
+      <p class="lede reveal" style="margin-top:28px">Writing style does not establish authorship or verify a claim. This website includes AI-assisted writing and editing. Judge published information by its sources, disclosures and accuracy; agree the drafting, review and approval responsibilities for client work in the scope.</p>
     </div>
   </section>
 
@@ -360,8 +383,8 @@ render_header('aiseo');
 
       <div class="sticky-col reveal">
         <p class="eyebrow">Before you hire anyone</p>
-        <h2 id="checks-h">Six questions that separate AI SEO from a renamed retainer</h2>
-        <p class="lede">AI SEO is the easiest thing in this industry to sell badly, because the terminology is new enough that almost nobody can check the claims. These six questions are ones you can ask without any technical background, and the answers are revealing. Ask me them too.</p>
+        <h2 id="checks-h">How should you choose an AI SEO consultant in India?</h2>
+        <p class="lede">Choose an AI SEO specialist by checking the proposed work, evidence and responsibilities, not the label alone. Ask which engines are observed, how results are recorded, who checks content and what is outside the scope. The questions below can be put to Fawaz directly before you decide whether the engagement fits.</p>
       </div>
 
       <div>
@@ -386,37 +409,37 @@ render_header('aiseo');
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Credentials</p>
-        <h2 id="cred-h">Four qualifications, two of them specific to AI search</h2>
-        <p class="lede">Named, issued by known bodies, and checkable. Certifications are a floor rather than a ceiling, but in a discipline this new they are one of the few verifiable signals available to you.</p>
+        <h2 id="cred-h">What qualifications does Fawaz BH hold for AI SEO work?</h2>
+        <p class="lede">Fawaz lists Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, Ahrefs Academy Certification and an Advanced Diploma in Digital Marketing from Adrex Media School. These describe his training, not a promise of rankings or citations. His background and existing client-work notes are available separately on the About and case-study pages.</p>
       </div>
 
       <div class="grid grid--2">
         <article class="card card--featured reveal">
           <span class="badge badge--accent">Issued by Semrush</span>
-          <h3>Semrush AI Visibility Essentials</h3>
+          <h3>What does the Semrush AI Visibility Essentials qualification cover?</h3>
           <p>Prompt-level tracking, share of voice inside generated answers, and the distinction between being retrieved and being cited. This is the certification that underpins the AEO and GEO work directly, and that last distinction is the one most AI SEO offers never make.</p>
         </article>
 
         <article class="card card--featured reveal">
           <span class="badge badge--accent">Issued by Semrush</span>
-          <h3>Semrush Technical SEO and AI Search Essentials</h3>
-          <p>Crawlability, indexation, site health and structured data, and how those foundations feed AI search surfaces. This is the certification that explains why AI visibility work keeps coming back to ordinary technical quality.</p>
+          <h3>What does the Semrush Technical SEO and AI Search Essentials qualification cover?</h3>
+          <p>Crawlability, indexation, site health and structured data, and how those foundations feed AI search surfaces. This is the certification that explains why AI visibility work keeps coming back to ordinary technical quality. The qualification is listed with the other training on the About page.</p>
         </article>
 
         <article class="card reveal">
           <span class="badge">Issued by Ahrefs</span>
-          <h3>Ahrefs Academy Certification</h3>
-          <p>Keyword research, backlink analysis, competitive research and technical auditing. Still the base layer, because classic ranking remains one of the strongest predictors of whether an engine cites you at all.</p>
+          <h3>What does the Ahrefs Academy certification cover?</h3>
+          <p>Keyword research, backlink analysis, competitive research and technical auditing. Still the base layer, because classic ranking remains one of the strongest predictors of whether an engine cites you at all. The About page also describes the on-page and technical SEO training behind this credential.</p>
         </article>
 
         <article class="card reveal">
           <span class="badge">Issued by Adrex Media School</span>
-          <h3>Advanced Diploma in Digital Marketing</h3>
-          <p>Broad grounding across digital channels, which is what makes it possible to tell you when your visibility problem is not actually a search problem and the budget belongs somewhere else entirely.</p>
+          <h3>What does the Advanced Diploma in Digital Marketing add?</h3>
+          <p>Broad grounding across digital channels, which is what makes it possible to tell you when your visibility problem is not actually a search problem and the budget belongs somewhere else entirely. It was awarded by Adrex Media School and sits alongside the named search certifications.</p>
         </article>
       </div>
 
-      <p class="lede reveal" style="margin-top:28px">Deep dives on the two newer disciplines live on the <a href="/aeo-consultant">AEO consultant page</a> and the <a href="/geo-consultant">GEO consultant page</a>. National SEO engagements are on the <a href="/seo-consultant-india">SEO consultant in India page</a>. Documented client work is on the <a href="/case-studies">case studies page</a>, where unverified figures are labelled as pending rather than published as results.</p>
+      <p class="lede reveal" style="margin-top:28px">Deep dives on the two newer disciplines live on the <a href="/aeo-consultant">AEO consultant page</a> and the <a href="/geo-consultant">GEO consultant page</a>. National SEO engagements are on the <a href="/seo-consultant-india">SEO consultant in India page</a>. Documented client work is on the <a href="/case-studies">case studies page</a>, where client-approved testimonials are kept separate from measured performance claims.</p>
     </div>
   </section>
 
@@ -426,8 +449,8 @@ render_header('aiseo');
 
       <div class="sticky-col reveal">
         <p class="eyebrow">Questions</p>
-        <h2 id="faq-h">AI SEO, answered plainly</h2>
-        <p class="lede">The questions people actually ask about this, including the two most consultants avoid, which are whether AI writes the content and whether traffic is going to fall.</p>
+        <h2 id="faq-h">What else should you know before commissioning AI SEO?</h2>
+        <p class="lede">Start with the distinction between AI search visibility and AI-assisted delivery, then discuss scope, evidence and cost. The answers below cover the existing service description, content disclosure, qualifications and published starting rates. They should be read alongside the written scope for your business, not as a guarantee that an engine will recommend it.</p>
       </div>
 
       <div>
@@ -448,15 +471,13 @@ render_header('aiseo');
 
   <?php
   render_contact_form([
-      'heading' => 'Find out where you actually stand in AI search',
-      'lede'    => 'The audit covers all three layers and tells you which one your budget should go to first. Sometimes the answer is that the newest one should wait, and you will be told that rather than sold the top tier.',
+      'heading' => 'How can you discuss an AI SEO project with Fawaz BH?',
+      'lede'    => 'Contact Fawaz directly with your website, business location and the search problem you want to discuss. The existing free audit is the starting point for deciding priorities across SEO, AEO and GEO. Agree the work and price in writing before implementation; no AI citation is guaranteed.',
       'id'      => 'contact',
   ]);
   ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="2026-08-21">21 August 2026</time>.
-  </p>
+  <?php fbh_render_review_date($reviewed_on); ?>
 
 </main>
 

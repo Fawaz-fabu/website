@@ -1,0 +1,185 @@
+# Fawaz BH: services, prices, coverage and website facts
+
+## The consultant, background and contact
+
+Fawaz BH is an independent SEO, AEO and GEO consultant based in Kushal Nagar, also spelled Kushalnagar, in Kodagu (Coorg), Karnataka, India, postal code 571234. The practice is called FawazBHSEO. He works directly with clients: audits, strategy, structured data, implementation and content direction are handled by him, without account managers or junior handoffs. He keeps a small client list and says when he is at capacity or when another provider would be a better fit.
+
+Fawaz grew up in Kushal Nagar and began working in SEO in early 2025. His foundation was technical SEO, on-page architecture and local search; he subsequently expanded into Answer Engine Optimisation and Generative Engine Optimisation. He treats SEO, AEO and GEO as a connected strategy. His background page explains the importance he places on local knowledge, direct delivery, reporting and ongoing learning.
+
+The qualifications listed on the website are Ahrefs Academy Certification, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing from Adrex Media School. The Ahrefs training covers keyword research, on-page and technical SEO, and link analysis. The Semrush qualifications cover AI visibility and technical SEO/AI-search foundations. The diploma provides a broader digital-marketing foundation.
+
+Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. Fawaz is co-founder of ILMERA Study Abroad and runs its digital work. ILMERA is his own venture, not an arm’s-length client or an independent client reference.
+
+The phone and WhatsApp number is +91 94810 84038. WhatsApp enquiries can be sent to https://wa.me/919481084038. The email addresses are fawazbhseo@gmail.com and admin@fawazbhseo.in. LinkedIn is https://www.linkedin.com/in/fawazbh. Contact-page working hours are Monday to Saturday, India Standard Time. Fawaz normally replies within a working day, but does not promise an immediate response; urgent enquiries can be made by phone.
+
+The first message only needs a website, city and a short explanation of what needs improvement. A prospect does not need technical vocabulary or analytics access ready before making contact. The free discovery audit produces a written summary of problems and recommended priorities. The prospect keeps it whether or not they hire Fawaz. If work proceeds, scope and price are agreed in writing before paid work or invoicing. The contact form prepares a WhatsApp message for the visitor to review, edit and send. It does not send or save that message on the website; WhatsApp is a separate service.
+
+FawazBHSEO is also styled Fawaz BH SEO. The homepage and About page link the practice and its founder, Fawaz BH, using the same entity IDs and address. Existing personal profile references: https://www.linkedin.com/in/fawazbh, https://x.com/fawazbhseo.
+
+Organization profile references:
+https://www.linkedin.com/company/fawazbhseo/
+https://www.google.com/maps/place/FAWAZ+BH/@12.4545471,75.9570314,17z/data=!4m6!3m5!1s0x3ba509f61947deaf:0x8e001f641054a1df
+
+## Personal testing and case-study status
+
+Fawaz BH states: "In my own testing as of September 2026, ChatGPT, Gemini and Google AI Overviews named me among SEO specialists for Kodagu and Karnataka. I re-test regularly. AI answers vary by prompt and change over time." These are his own observations, not an independent endorsement or a guarantee. Source: https://fawazbhseo.in/#ai-testing. The as-of date is generated from the single editable $ai_testing_as_of value in index.php; regenerate this static grounding file after that value changes.
+
+Green Coorg Spices had no prior website or digital presence. Fawaz BH built its website, which reached first-page Google rankings. The site is currently offline because hosting expired; a rebuilt version is in progress. This is a historical result, not a claim of current visibility. No time-to-rank or order-growth figure is asserted. External links to the offline site are disabled.
+
+The existing published testimonials were approved by the clients over WhatsApp. Their wording is client feedback, not a quantified traffic/sales result or a promise for another business.
+
+## What the services involve
+
+SEO addresses discovery and performance in traditional search. Technical SEO work includes Core Web Vitals optimisation for LCP, INP and CLS; JavaScript rendering and crawl-budget fixes; relevant structured data matching visible content and eligibility rules; canonical, hreflang and indexation cleanup; and XML sitemap, robots.txt and log-file analysis.
+
+Local SEO includes Google Business Profile setup, optimisation and posts; Kannada and English bilingual keyword research; local citations and a name/address/phone consistency audit; Karnataka directory submissions and local backlinks; and city or neighbourhood landing pages. Local knowledge is strongest in Kodagu and Karnataka. Being geographically close is not presented as a substitute for technical work.
+
+SEO content strategy includes topical-authority pillar and cluster mapping; long-form SEO articles of 1,500 to 3,500 words; service, location and comparison-page copy; strategic internal links and anchor planning; content refreshes; and keyword-cannibalisation fixes. This website includes AI-assisted writing and editing. Client drafting methods, review and approval responsibilities should be agreed in the scope rather than inferred from writing style.
+
+LinkedIn and personal-brand SEO includes headline, About, skills and keyword optimisation; a personal-brand content calendar and thought leadership; Instagram, X and YouTube social SEO; personal-website SEO with Person schema and a sameAs entity graph; and digital PR and authority backlink outreach.
+
+Answer Engine Optimisation, or AEO, makes information easier for an answer engine to retrieve and use as a direct answer. The specialist page distinguishes extracting a passage from synthesising a new answer. AEO work covers business identity and profile consistency, structured data checked against visible content and current eligibility, featured-snippet and People Also Ask opportunities, author biographies and credentials, supporting citations, and monthly AI-citation tracking. The service page names ChatGPT, Perplexity, Gemini, Claude and Copilot as tracked engines. These are service/measurement surfaces, not a claim that those engines endorse Fawaz.
+
+The AEO page covers Google AI Overviews, AI Mode, featured snippets, People Also Ask, voice/direct-answer surfaces and other answer engines. It describes entity and structured-data foundations, answer-first content, per-engine measurement, and local AEO using language and Business Profile information. It offers AEO-only engagements scoped after a free audit as well as combined SEO/AEO packages. Third-party inclusion, a featured answer or a citation is not guaranteed.
+
+Generative Engine Optimisation, or GEO, addresses how a business and its information appear in synthesised AI answers. The service page describes accessible content with clear headings, direct answers and useful detail; customer questions grouped by intent rather than duplicated into keyword pages; Google AI Overviews and AI Mode visibility review alongside other relevant engines; factual accuracy and source-quality review; and separate per-engine tracking of mentions, linked citations and explicit recommendations.
+
+The GEO specialist page describes an AI-visibility audit and prompt-set baseline, entity resolution and structured data, answer-first architecture and cluster coverage, and brand-mention building with measurement. It distinguishes being mentioned from being cited and does not promise control over an AI engine's source selection. A prompt test is an observation under particular conditions, not a guarantee of the result every user will receive. GEO scope and pricing are discussed after the audit.
+
+Digital marketing is described across the service and Kodagu pages as a combination of search, Google/Meta advertising, social media, web development and measurement. The published service catalogue includes social media marketing, performance marketing and website design alongside the search services. Their actual scope depends on the agreed package or quote.
+
+Social media marketing covers content calendars, platform content, short-form video at the relevant tier, community management, paid-social support and reporting. Higher tiers include multi-platform management, influencer outreach coordination and full paid-social management. Advertising spend is separate from the service fee.
+
+Performance marketing covers Google Ads, Meta Ads or both, depending on the tier. Published deliverables include campaign setup, targeting, optimisation, reporting, cross-platform strategy and A/B testing, conversion tracking, landing-page testing and a reporting dashboard at the relevant tier. Management fees and advertising budgets are separate.
+
+Website design covers mobile-responsive business sites and custom sites. Depending on the package, work includes basic on-page SEO, a contact form, custom design, schema, a blog/CMS, speed optimisation, a custom design system, advanced interactions, multi-page architecture and third-party integrations. Website-design prices are one-time build prices, not monthly retainers.
+
+## Specialist service depth and scoping
+
+AEO: This service brings together question mapping, answer-first content, business-identity and structured-data work, and separate checks of answer-engine visibility. The published workstreams below describe the scope; the free audit is the starting point for deciding which work is needed. Source: https://fawazbhseo.in/aeo-consultant#service-overview
+
+GEO: This service brings together a prompt-set baseline, website and business-identity work, content organisation, third-party corroboration and per-engine reporting. Start with the business information and questions you need to assess, then agree the work against the audit findings. Source: https://fawazbhseo.in/geo-consultant#service-overview
+
+Who this work suits, and when it does not A founder-led engagement Consider this scope if you want one consultant to connect your existing search foundations, business information and answer-engine visibility, with the work delivered directly rather than through an account-management layer. Know the limits before starting This is not a fit if you require guaranteed citations or a large team covering many markets in parallel. If you are still choosing between disciplines, compare the AI SEO scope explanation and the published service catalogue before agreeing an engagement. Source: https://fawazbhseo.in/aeo-consultant#fit (shared scoping guidance also on /geo-consultant).
+
+What the published scope supports handing over This is a practical reading of the work already described on this page, not a new package or an additional output allowance. Existing scope and details to settle before work starts Work already described Concrete output supported by the page Confirm in the engagement scope Discovery audit A written audit or baseline that you keep whether or not you hire Fawaz. Document format and the boundary between the free consultation and paid implementation. Prompt mapping A buyer-language set of 20 to 40 prompts, with related questions grouped for the work. Selected questions, products/modes, markets and access to the underlying prompt records. Content and identity work The page describes content restructuring, entity/profile consistency work and structured-data implementation. Which pages and profiles, who approves and publishes changes, and any revision or access limits. Reporting Repeated observations reported separately by engine, using the outcome categories already described below. Report format, review cadence, included evidence and the data available for your property. File formats, revision counts, page quantities, turnaround times and additional reporting fields are not specified here. Agree them before work begins; they should not be inferred from an example or a research statistic. Source: https://fawazbhseo.in/aeo-consultant#handovers (shared scoping guidance also on /geo-consultant).
+
+Inputs and responsibilities to discuss Use this as a pre-scope discussion checklist, not as a request to send passwords or confidential customer data. Business information and priorities Public website and relevant business-profile URLs. The services, locations and buyer questions you want to assess. Accurate business facts and evidence you are willing to publish. A person who can verify facts and approve changes. Access and implementation Discuss which analytics and search reports are available, which changes can be made within the agreed scope, and who can approve or publish them. The existing service description assigns audit, implementation and reporting to Fawaz; access permissions, approval timing and any client-side dependencies still need to be agreed. Source: https://fawazbhseo.in/aeo-consultant#inputs (shared scoping guidance also on /geo-consultant).
+
+How the work is measured The published method uses a repeatable prompt set, with results reported separately by engine. The existing categories are cited, mentioned without citation and absent. Use the measurement guide and blank observation log to see how the site distinguishes mentions, citations and recommendations. Illustration only: reading an observation If an answer names a business but provides no link to its website, record a mention without a citation. If it links to a page, record that citation. A recommendation is a separate observation about what the answer actually says. This is an explanation of the categories, not a client result, a measured improvement or a promise that an answer will appear. Source: https://fawazbhseo.in/aeo-consultant#measurement (shared scoping guidance also on /geo-consultant).
+
+Scoping and the next decision Start with the free audit and agree the work and price in writing before implementation or invoicing. Published packages remain on the services and pricing page ; this page does not add a new price or a separate package. Use the scope discussion to confirm priorities, pages and profiles, selected engines and modes, approval responsibilities, reporting cadence and any access constraints. The format and extent of handovers are to be agreed, rather than assumed from the workstream names. Source: https://fawazbhseo.in/aeo-consultant#scoping (shared scoping guidance also on /geo-consultant).
+
+Source records are linked from https://fawazbhseo.in/aeo-consultant#research-sources and https://fawazbhseo.in/geo-consultant#research-sources. No new price, turnaround, revision count or measured client example is supplied. The observation example is explicitly an illustration.
+
+## AI SEO scope, inputs and measurement
+
+What can an AI SEO engagement include? The existing service scope includes technical review, question and prompt mapping, answer-focused content, business-identity and structured-data work, and separate observations of AI visibility. The audit determines priorities; the written agreement defines what is included. An AI SEO label does not add a new package, page quantity, revision allowance or guaranteed result. Source: https://fawazbhseo.in/ai-seo-expert-india#ai-seo-scope
+
+What information and decisions are needed before work starts? Bring your public website and profile URLs, services, markets, buyer questions and the facts you can approve for publication. Identify who checks information and who approves or publishes changes. Available reports, access, reporting cadence and handover format are discussion points for the scope, not assumptions made from the AI SEO label. Source: https://fawazbhseo.in/ai-seo-expert-india#ai-seo-inputs
+
+How are AI SEO observations measured? Record mentions, linked citations and recommendations as separate observations, and keep each engine separate rather than combining them into one score. Read those observations alongside available rankings, traffic and enquiries. A business name in an answer is not automatically a website visit, a recommendation or a measured client outcome. Source: https://fawazbhseo.in/ai-seo-expert-india#ai-seo-measurement
+
+## Published starting prices and inclusions
+
+All prices below are the website's published starting rates in Indian rupees. Final scope and pricing are agreed after the free audit. Monthly plans include direct founder-led delivery and monthly reporting. Advertising spend is paid directly to Google, Meta or the relevant platform and is not included in the management fee. Premium plugins, stock media, hosting and other needed third-party costs are quoted separately before work begins. Taxes are additional where applicable.
+
+SEO Starter, Local SEO, starts at ₹14,999 per month. It includes Google Business Profile optimisation; local keyword research for 5 keywords; on-page SEO for 5 pages; and a monthly ranking and traffic report. The listed audience is Kodagu and Karnataka SMEs.
+
+SEO Growth, Full-Stack SEO plus AEO, starts at ₹29,999 per month. It includes everything in Local SEO, a technical SEO audit and fixes, AEO/AI-engine citation building, 4 long-form SEO articles per month and 5 quality contextual backlinks per month. The listed audience is Karnataka and South India growth businesses.
+
+SEO Enterprise, SEO plus AEO plus GEO, is a custom tailored quote. It includes everything in Growth, GEO, national keyword and entity strategy, 8+ long-form articles per month, and digital PR and authority-link campaigns. The listed audience is national Indian brands and SaaS. There is no fixed Enterprise rupee amount published.
+
+Social Media Marketing Starter, Presence, starts at ₹11,999 per month. It covers 1 to 2 platforms, 12 to 16 posts per month, a monthly content calendar and basic monthly reporting. The listed audience is local businesses starting out.
+
+Social Media Marketing Growth, Engage, starts at ₹22,999 per month. It covers 2 to 3 platforms, Reels and short-form video content, community management and paid-ad setup support. Ad spend is billed separately to Meta or the relevant platform. The listed audience is brands ready to scale reach.
+
+Social Media Marketing Enterprise, Scale, is a custom tailored quote. It includes multi-platform management, influencer outreach coordination, full paid-social ad management, and advanced analytics and reporting. The listed audience is established multi-brand teams.
+
+Performance Marketing Starter, Single Platform, starts at ₹11,999 management fee per month. It covers Google Ads or Meta Ads on one platform for ad spend under ₹30,000 per month, with campaign setup, targeting, optimisation and a monthly performance report. The advertising budget is paid directly to the platform in addition to the fee.
+
+Performance Marketing Growth, Google plus Meta, starts at ₹24,999 management fee per month. It covers Google Ads and Meta Ads combined, for ad spend of ₹30,000 to ₹1,00,000 per month, with cross-platform strategy, A/B testing, conversion tracking and monthly reporting. The advertising budget is billed separately by the platforms.
+
+Performance Marketing Enterprise, Full-Funnel, is custom-priced or 10 to 15% of spend. It includes multi-platform work for higher ad spend, advanced conversion optimisation, landing-page testing and iteration, and a dedicated reporting dashboard. Ad spend remains separate from the management fee.
+
+Website Design Starter, Business Site, starts at ₹29,999 one-time. It includes a 5 to 8 page mobile-responsive website, basic on-page SEO setup, a contact form, and a clean, fast, modern design. The listed audience is new local businesses.
+
+Website Design Growth, Custom plus CMS, starts at ₹64,999 one-time. It includes 10 to 15 pages with custom design, schema markup for SEO and AEO, blog/CMS setup, and speed/Core Web Vitals optimisation.
+
+Website Design Enterprise, Full Custom, is a custom tailored quote. It includes a fully custom design system, advanced interactions and animation, multi-page architecture and third-party integrations. The listed audience is brands and product companies.
+
+## Geographic coverage and delivery
+
+The base is Kushal Nagar in Kodagu. In-person meetings are available in Kodagu and reachable parts of Karnataka by arrangement. Elsewhere work runs through scheduled calls, shared documents and written reporting. Technical SEO, strategy, structured data, AEO and GEO can be delivered remotely; local listings and fieldwork may need someone with local knowledge. International calls are arranged in overlapping time windows rather than on an always-on basis.
+
+Kodagu coverage includes Kushal Nagar, Madikeri, Virajpet and Somwarpet. The district page also discusses places such as Suntikoppa, Napoklu, Kudige, Gonikoppal, Ponnampet, Ammathi, Shanivarsanthe and Kodlipet. Karnataka coverage includes Bengaluru, Mysuru, Mangaluru, Hubballi-Dharwad and other state markets described on the Karnataka page, including Udupi, Belagavi, Shivamogga and Davangere.
+
+South India service pages cover Chennai, Hyderabad, Kochi and Coimbatore. The coverage page also names Tamil Nadu, Kerala, Andhra Pradesh and Telangana. National work is delivered remotely across India, with dedicated city pages for Mumbai, Pune and Delhi NCR. These pages explain service coverage, not equal physical presence in every market.
+
+The international coverage page welcomes enquiries from Singapore, Dubai and the UAE, Malaysia and Sri Lanka for suitable remote work, and from Switzerland, Germany, the United Kingdom and the Netherlands. Enquiry coverage is not evidence of an established client base in each country. The Switzerland page describes remote SEO/AEO/GEO work, an upcoming rather than established Swiss client base, and a division between English-language strategy/technical work and final wording produced by a native speaker. It does not offer Swiss on-site local-listing work as though the consultant were based there.
+
+## What each of the 32 pages is for
+
+The homepage, /, introduces Fawaz BH and FawazBHSEO, his background, services and documented work. It links to the dedicated AI SEO page for AI search scope, tool use and measurement.
+
+The services page, /seo-services, is the main service catalogue and published rate card. It explains technical SEO, local SEO, AEO, GEO, SEO content strategy and LinkedIn/personal-brand SEO, and publishes the SEO, social media, performance-marketing and website-design packages described above.
+
+The AEO page, /aeo-consultant, explains answer extraction, the search and answer surfaces involved, AEO workstreams, cited research, how visibility is measured, qualifications, scope/pricing guidance, limitations and answers to prospective-client questions.
+
+The GEO page, /geo-consultant, explains visibility inside synthesised AI answers. It covers engine differences, GEO workstreams, research and sources, measurement, buying criteria, qualifications, scope/pricing guidance, limitations and prospective-client questions.
+
+The AI SEO page, /ai-seo-expert-india, is the dedicated AI SEO expert and consultant page for India. Question-shaped sections explain AI search visibility and AI-assisted delivery, existing scope, inputs, measurement, qualifications and provider selection. Published FAQs and starting rates remain on the page.
+
+The case-studies page, /case-studies, describes the Green Coorg Spices website build, its historical first-page Google rankings and the current expired-hosting/offline status while a rebuilt version is in progress. It also lists current work for neelachandra.com and neelachandrainteriors.com, and ILMERA as the co-founder’s own venture rather than an arm’s-length client. These examples do not promise the same outcome for another business.
+
+The geographic overview, /cities-we-serve, explains local versus remote delivery and groups coverage from Kodagu through Karnataka, South India, India and selected international enquiry markets. It explains meetings, time-zone arrangements and how an unlisted city can be discussed.
+
+The about page, /about, gives Fawaz's background, early-2025 start in SEO, move into AEO/GEO, named qualifications, direct working model, process, principles and reasons for being based in Kodagu.
+
+The contact page, /contact, provides phone, WhatsApp, both email addresses, LinkedIn, the business base, working days and the enquiry process. It explains the free written audit, agreement before paid work, usual response time, and that the form opens a WhatsApp draft rather than submitting a message to the site.
+
+The blog archive, /blog, introduces the site's practical search guides and points readers to the three educational articles. It is an editorial archive, not a separate service or a measured-results page.
+
+The guide at /blogs/seo-aeo-geo-differences compares SEO, AEO and GEO, explains their overlap and uses an explicitly illustrative business example. It is educational, not evidence of a client engagement.
+
+The guide at /blogs/measure-ai-search-visibility explains a manual way to distinguish mentions, direct-site citations, third-party citations, recommendations and enquiries. It links to a blank CSV worksheet and explains sample limitations; the worksheet is not a collection of actual results.
+
+The guide at /blogs/local-seo-checklist-karnataka covers business-profile accuracy, genuine service areas, useful local pages, language research, genuine reviews and enquiry measurement. It is a practical checklist rather than a results claim. Long-form article text is not reproduced in this grounding file.
+
+The district page, /seo-consultant-kodagu, explains work for Coorg businesses from the Kushalnagar base. It covers SEO, advertising, search experience, AEO/GEO, web development and social media, with district-specific context for Madikeri, Kushalnagar, Virajpet and Somwarpet.
+
+The state page, /seo-consultant-karnataka, focuses on SEO consulting in Karnataka, local search, technical SEO, content and Kannada-English keyword research. Existing AEO/GEO capabilities remain; the introduction links to the dedicated AI SEO page. ILMERA remains the consultant’s own venture, not an arm’s-length client.
+
+The national page, /seo-consultant-india, focuses on independent SEO consulting across India, national search strategy, technical SEO, content and remote delivery from Kodagu. Existing AEO/GEO capabilities remain; the introduction links to the dedicated AI SEO page.
+
+The Madikeri page, /seo-services-madikeri, explains SEO/AEO/GEO work for the district headquarters. It addresses hospitality and tourism as business sectors, direct-booking versus aggregator visibility, local search, technical work, content and seasonal planning. Sector examples are not a statement that a particular homestay is a client.
+
+The Kushal Nagar page, /seo-services-kushalnagar, explains services at the consultant's home base. It discusses pre-arrival travel queries, Nisargadhama and Bylakuppe, spice and coffee sellers, local services, language research and the distinction between local listings and selling products to buyers outside the town.
+
+The Virajpet page, /seo-services-virajpet, covers south Kodagu businesses. It distinguishes coffee/export visibility aimed at buyers outside the district from wildlife-tourism and local-service search around the Nagarhole area, and discusses suitable technical, content and answer-engine work.
+
+The Somwarpet page, /seo-services-somwarpet, covers north Kodagu estate-country businesses. It discusses estate accommodation and direct-booking pages, coffee/agri businesses, Mallalli and Pushpagiri-related travel queries, local search, content and answer-engine visibility.
+
+The Bengaluru page, /seo-services-bengaluru, covers neighbourhood-level local intent, technical SEO, content architecture, B2B/SaaS buying journeys and AI visibility. It also references current web and search work for a construction and interiors firm in Nelamangala.
+
+The Mysuru page, /seo-services-mysuru, covers local and wider-market SEO, English/Kannada/transliterated query research, heritage tourism, education, wellness and retail. It explains technical SEO, business profiles, content and answer-engine work in that context.
+
+The Mangaluru page, /seo-services-mangaluru, covers coastal Karnataka, including Udupi and Manipal. It discusses education and medical travel, Gulf/NRI audiences, port/logistics B2B, language research and the difference between local visibility and attracting customers from elsewhere.
+
+The Hubballi-Dharwad page, /seo-services-hubballi-dharwad, explains remote work for the north Karnataka twin cities. It discusses wholesale/distribution, manufacturing, education, the different local economies, Kannada-language context and technical, local and answer-engine optimisation.
+
+The Chennai page, /seo-services-chennai, explains remote SEO/AEO/GEO work with Tamil and English research. It covers manufacturing and auto-ancillary specification searches, medical travel and the OMR technology corridor, with content and technical priorities adjusted to the business.
+
+The Hyderabad page, /seo-services-hyderabad, explains remote services for pharma/life sciences, SaaS and locality-level real-estate search. It discusses Telugu, Hindi and English query contexts, technical foundations, content and answer-engine visibility.
+
+The Kochi page, /seo-services-kochi, explains remote services for spice/seafood exporters, Ayurveda-related travel, Gulf/NRI audiences, backwater-trip planning and technology firms. It discusses Malayalam, transliterated Malayalam and English research alongside technical and content work.
+
+The Coimbatore page, /seo-services-coimbatore, explains remote work for manufacturing and other local businesses. It discusses pumps, motors and castings searched by specification, Tiruppur knitwear, dealer/distributor discovery, Tamil/English content, technical SEO and AI visibility.
+
+The Mumbai page, /seo-services-mumbai, explains remote work involving micro-locality intent, ecommerce architecture and faceted navigation, financial-services content and media/publisher search. It covers technical SEO, content, entity clarity and answer-engine work rather than promising local visits.
+
+The Pune page, /seo-services-pune, explains remote work for manufacturing around Chakan and Pimpri, technology around Hinjewadi and education attracting applicants from elsewhere. It discusses turning product information into accessible web content, technical SEO and answer-engine visibility.
+
+The Delhi NCR page, /seo-services-delhi-ncr, covers Delhi, Gurugram, Noida and Faridabad. It discusses Hindi and English commercial queries, technical and link-history review, export businesses and remote SEO/AEO/GEO delivery.
+
+The Switzerland page, /seo-services-switzerland, explains remote SEO and GEO consulting rather than a Swiss office. It discusses multilingual market differences, technical structure, entity clarity, AI answers and native-language final copy. Strategy, structure, briefs and structured data are separated from the native speaker's responsibility for final wording.

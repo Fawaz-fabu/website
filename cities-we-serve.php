@@ -39,7 +39,7 @@ $schema = <<<'JSONLD'
       "url": "https://fawazbhseo.in/",
       "telephone": "+91-94810-84038",
       "priceRange": "Scoped per engagement",
-      "geo": {"@type": "GeoCoordinates", "latitude": 12.4574, "longitude": 75.9608},
+      "address": {"@type": "PostalAddress", "addressLocality": "Kushalnagar, Kodagu", "addressRegion": "Karnataka", "postalCode": "571234", "addressCountry": "IN"},
       "areaServed": [
         {"@type": "AdministrativeArea", "name": "Kodagu, Karnataka"},
         {"@type": "AdministrativeArea", "name": "Karnataka"},

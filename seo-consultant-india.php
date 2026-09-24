@@ -200,8 +200,8 @@ $creds = [
 
 /* ── Proof ────────────────────────────────────────────────────────────── */
 $patterns = [
-    ['Pattern', 'A tier-2 brand ranking in a metro market', 'A Kushal Nagar spice producer competing for buyers 250 km away in Bengaluru and Mysuru. Reached Google&#8217;s first page for target Kodagu spice keywords in roughly four months, the only figure on this site shown as confirmed. Documented on the <a href="/case-studies">case studies page</a>, where remaining metrics are marked pending until verified.'],
-    ['Pattern', 'Live engagements, marked live', 'Two construction and interiors domains in outer Bengaluru, a homestay client in Madikeri, and a multi-speciality clinic in Karnataka are currently in progress. No testimonials or performance figures are published for any of them yet, and none will be until the client provides them or the data is verified.'],
+    ['Engagement', 'Green Coorg Spices, Kodagu', 'Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. It is currently offline because hosting expired; a rebuilt version is in progress. Read the engagement notes and approved testimonial on the <a href="/case-studies">case studies page</a>.'],
+    ['Pattern', 'Live engagements, marked live', 'Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. I am co-founder of ILMERA Study Abroad and run its digital work; it is my own venture, not an arm&#8217;s-length client. These are current engagements, not completed-results claims.'],
     ['Background', 'The longer version', 'How I got into search in early 2025 and why I moved into answer-engine work as it was forming is on the <a href="/about">about page</a>. The full service and pricing breakdown, including published starting rates, is on the <a href="/seo-services">SEO services page</a>.'],
 ];
 
@@ -277,6 +277,9 @@ foreach ($faqs as $f) {
     ];
 }
 
+// After a real review, set its YYYY-MM-DD date here; otherwise leave null.
+$reviewed_on = null;
+
 $schema = json_encode([
     '@context' => 'https://schema.org',
     '@graph'   => [
@@ -284,11 +287,10 @@ $schema = json_encode([
             '@type' => 'WebPage',
             '@id'   => 'https://fawazbhseo.in/seo-consultant-india#page',
             'url'   => 'https://fawazbhseo.in/seo-consultant-india',
-            'name'  => 'SEO, AEO and GEO expert in India, Fawaz BH',
+            'name'  => 'SEO Consultant in India, Fawaz BH',
             'about' => ['@id' => 'https://fawazbhseo.in/#fawaz'],
             'inLanguage'   => 'en-IN',
-            'dateModified' => '2026-07-30',
-        ],
+        ] + fbh_review_date_schema($reviewed_on),
         [
             '@type' => 'BreadcrumbList',
             '@id'   => 'https://fawazbhseo.in/seo-consultant-india#breadcrumb',
@@ -308,8 +310,7 @@ $schema = json_encode([
             'email'    => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'address'  => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
@@ -325,22 +326,20 @@ $schema = json_encode([
         ],
         [
             '@type'      => 'ProfessionalService',
-            '@id'        => 'https://fawazbhseo.in/seo-consultant-india#practice',
-            'name'       => 'FawazBHSEO, SEO consultant in India',
+            '@id'        => 'https://fawazbhseo.in/#practice',
+            'name'       => 'FawazBHSEO',
             'founder'    => ['@id' => 'https://fawazbhseo.in/#fawaz'],
-            'url'        => 'https://fawazbhseo.in/seo-consultant-india',
+            'url'        => 'https://fawazbhseo.in/',
             'telephone'  => '+91-94810-84038',
             'email'      => ['fawazbhseo@gmail.com', 'admin@fawazbhseo.in'],
             'priceRange' => 'From INR 14999 per month',
             'address'    => [
                 '@type' => 'PostalAddress',
-                'streetAddress'   => 'Kushal Nagar',
-                'addressLocality' => 'Kodagu',
+                'addressLocality' => 'Kushalnagar, Kodagu',
                 'addressRegion'   => 'Karnataka',
                 'postalCode'      => '571234',
                 'addressCountry'  => 'IN',
             ],
-            'geo'        => ['@type' => 'GeoCoordinates', 'latitude' => 12.4574, 'longitude' => 75.9608],
             'areaServed' => [
                 ['@type' => 'Country', 'name' => 'India'],
                 'Mumbai', 'Delhi NCR', 'Bengaluru', 'Hyderabad', 'Chennai',
@@ -367,8 +366,8 @@ $schema = json_encode([
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 render_head([
-    'title'       => 'SEO, AEO and GEO expert in India | Fawaz BH, independent consultant',
-    'description' => 'Looking for the best SEO expert in India? Fawaz BH is an independent SEO, AEO and GEO expert serving clients across India remotely from Kodagu, Karnataka. Ahrefs and Semrush certified. Six checkable criteria inside.',
+    'title'       => 'SEO Consultant in India | Fawaz BH, Independent Specialist',
+    'description' => 'Independent SEO consulting across India from Kodagu, Karnataka. Work directly with Fawaz BH on technical SEO, content and national search strategy.',
     'canonical'   => 'https://fawazbhseo.in/seo-consultant-india',
     'schema'      => $schema,
 ]);
@@ -386,10 +385,11 @@ render_header('cities');
         <nav class="eyebrow" aria-label="Breadcrumb">
           <a href="/">Fawaz BH</a> / <span aria-current="page">SEO consultant in India</span>
         </nav>
-        <h1 id="hero-h">SEO, AEO and GEO expert in India.</h1>
-        <p class="hero__sub">Searching for the best SEO expert in India? Start by defining best, then check me against it.</p>
+        <h1 id="hero-h">Independent SEO consultant in India.</h1>
+        <p class="hero__sub">National search strategy, technical SEO and content work, delivered remotely and personally from Kodagu, Karnataka.</p>
 
-        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an independent SEO, AEO and GEO expert serving clients across India, based in Kushal Nagar, Kodagu, Karnataka.</strong> He holds four qualifications, which are an Ahrefs Academy certification, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing from Adrex Media School, and runs search engine optimisation, answer engine optimisation and generative engine optimisation as one connected strategy rather than three separate retainers.</p>
+        <p style="margin-top:18px;color:var(--text-2)"><strong>Fawaz BH is an independent SEO consultant serving businesses across India remotely from Kushalnagar, Kodagu, Karnataka.</strong> He holds four qualifications, which are an Ahrefs Academy certification, Semrush AI Visibility Essentials, Semrush Technical SEO and AI Search Essentials, and an Advanced Diploma in Digital Marketing from Adrex Media School, and runs search engine optimisation, answer engine optimisation and generative engine optimisation as one connected strategy rather than three separate retainers.</p>
+        <p id="ai-seo-route" style="margin-top:16px">This page covers national SEO consulting and delivery. For work focused on AI answers and the use of AI in SEO, see <a href="/ai-seo-expert-india">AI SEO services for businesses in India</a>.</p>
         <p style="margin-top:14px;color:var(--text-2)">Engagements across India are delivered fully remotely and personally: the person who runs your audit is the person who implements the fixes. There are no account managers, no junior handoffs and no subcontracting. Deep dives live on the <a href="/aeo-consultant">AEO consultant</a> and <a href="/geo-consultant">GEO consultant</a> pages; state-level work is on the <a href="/seo-consultant-karnataka">Karnataka SEO consultant</a> page. If what you are actually asking is how search behaves now that AI answers sit above the results, the <a href="/ai-seo-expert-india">AI SEO expert in India</a> page answers that directly, including which tools I use and which I refuse to.</p>
 
         <div class="btn-row">
@@ -545,7 +545,7 @@ render_header('cities');
           </div>
           <?php endforeach; ?>
         </div>
-        <p class="field-note" style="margin-top:18px">Client performance figures appear on the <a href="/case-studies">case studies page</a> only once verified against Google Search Console, GA4 or Business Profile data. No estimated or illustrative numbers are published anywhere on this site.</p>
+        <p class="field-note" style="margin-top:18px">The <a href="/case-studies">case studies page</a> contains engagement notes and client-approved testimonials. The historical first-page Google ranking for Green Coorg Spices is stated with its current offline/rebuild status. No time-to-rank, traffic increase or order-growth figure is published.</p>
       </div>
 
     </div>
@@ -645,13 +645,13 @@ render_header('cities');
 
       <div class="grid grid--2">
         <figure class="card card--featured quote reveal">
-          <span class="badge badge--accent">Completed engagement</span>
+          <span class="badge badge--accent">Site offline; rebuild in progress</span>
           <blockquote>&#8220;Fawaz helped us reach the first page of Google, and our online orders from Bangalore and Mysore have grown. He genuinely understood the Kodagu market.&#8221;</blockquote>
           <figcaption>
             <cite>Green Coorg Spices</cite>
             <span class="biz">Organic spice brand, Kushal Nagar, Kodagu, greencoorgspices.in</span>
           </figcaption>
-          <p style="margin-top:18px"><a class="link-arrow" href="https://greencoorgspices.in" target="_blank" rel="noopener">Visit website</a></p>
+          <p class="field-note" style="margin-top:18px">The site is currently offline because hosting expired. A rebuilt version is in progress; the historical ranking is not a claim of current visibility.</p>
         </figure>
 
         <figure class="card quote reveal">
@@ -710,10 +710,8 @@ render_header('cities');
       'id'      => 'contact',
   ]); ?>
 
-  <p class="wrap field-note" style="padding-bottom:40px">
-    Also available: <a href="/seo-consultant-karnataka">SEO consultant in Karnataka</a>, <a href="/seo-consultant-kodagu">SEO consultant in Kodagu</a>, <a href="/aeo-consultant">AEO consultant</a>, <a href="/geo-consultant">GEO consultant</a>.
-    Written and maintained by Fawaz BH. Last reviewed <time datetime="2026-07-30">30 July 2026</time>.
-  </p>
+  <p class="wrap field-note" style="padding-bottom:40px">Also available: <a href="/seo-consultant-karnataka">SEO consultant in Karnataka</a>, <a href="/seo-consultant-kodagu">SEO consultant in Kodagu</a>, <a href="/aeo-consultant">AEO consultant</a>, <a href="/geo-consultant">GEO consultant</a>.</p>
+  <?php fbh_render_review_date($reviewed_on); ?>
 
 </main>
 

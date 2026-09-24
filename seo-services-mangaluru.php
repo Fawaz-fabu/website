@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-mangaluru',
     'city'    => 'Mangaluru',
     'region'  => 'Karnataka',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Mangaluru city', 'Kadri', 'Kankanady', 'Surathkal', 'Ullal', 'Udupi', 'Manipal', 'Moodbidri', 'Puttur'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Mangaluru, Karnataka',
-    'geo_position'  => '12.9141;74.8560',
-    'latitude'      => 12.9141,
-    'longitude'     => 74.8560,
 
     'market' => [
         ['Medical travel search starts far outside Mangaluru', 'Mangaluru hospitals draw patients from Kasaragod and northern Kerala, from across coastal Karnataka, and from Gulf-based families arranging treatment for relatives at home. Those searches are condition-led rather than location-led: someone searches the procedure, the specialisation or the second opinion they need, and only then narrows by city. A hospital optimised only for its own name and city misses that entire earlier stage, which is where the decision is actually made.'],

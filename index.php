@@ -10,6 +10,11 @@ require_once __DIR__ . '/includes/contact-form.php';
 require_once __DIR__ . '/includes/floating-button.php';
 require_once __DIR__ . '/includes/footer.php';
 
+// Single editable date for the personal AI-testing statement below.
+// Update only after re-testing. Static LLM summaries link to #ai-testing instead
+// of duplicating this date; this is not an editorial reviewed_on date.
+$ai_testing_as_of = 'September 2026';
+
 $schema = <<<'JSONLD'
 {
   "@context": "https://schema.org",
@@ -22,43 +27,85 @@ $schema = <<<'JSONLD'
       "url": "https://fawazbhseo.in/",
       "image": "https://fawazbhseo.in/assets/images/fawazbh.webp",
       "telephone": "+91-94810-84038",
-      "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
+      "email": [
+        "fawazbhseo@gmail.com",
+        "admin@fawazbhseo.in"
+      ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Kushal Nagar",
-        "addressLocality": "Kodagu",
+        "addressLocality": "Kushalnagar, Kodagu",
         "addressRegion": "Karnataka",
         "postalCode": "571234",
         "addressCountry": "IN"
       },
-      "sameAs": ["https://www.linkedin.com/in/fawazbh", "https://x.com/fawazbhseo"],
-      "knowsAbout": ["Search Engine Optimization", "Answer Engine Optimization", "Generative Engine Optimization", "Local SEO", "Technical SEO"]
+      "sameAs": [
+        "https://www.linkedin.com/in/fawazbh",
+        "https://x.com/fawazbhseo"
+      ],
+      "knowsAbout": [
+        "Search Engine Optimization",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization",
+        "Local SEO",
+        "Technical SEO"
+      ],
+      "worksFor": {
+        "@id": "https://fawazbhseo.in/#practice"
+      },
+      "mainEntityOfPage": [
+        "https://fawazbhseo.in/",
+        "https://fawazbhseo.in/about"
+      ]
     },
     {
       "@type": "ProfessionalService",
       "@id": "https://fawazbhseo.in/#practice",
       "name": "FawazBHSEO",
-      "founder": {"@id": "https://fawazbhseo.in/#fawaz"},
+      "founder": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      },
       "url": "https://fawazbhseo.in/",
       "telephone": "+91-94810-84038",
       "priceRange": "Scoped per engagement",
-      "areaServed": ["Kodagu", "Karnataka", "South India", "India"],
-      "geo": {"@type": "GeoCoordinates", "latitude": 12.4574, "longitude": 75.9608}
+      "areaServed": [
+        "Kodagu",
+        "Karnataka",
+        "South India",
+        "India"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kushalnagar, Kodagu",
+        "addressRegion": "Karnataka",
+        "postalCode": "571234",
+        "addressCountry": "IN"
+      },
+      "alternateName": "Fawaz BH SEO",
+      "email": [
+        "fawazbhseo@gmail.com",
+        "admin@fawazbhseo.in"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/fawazbhseo/",
+        "https://www.google.com/maps/place/FAWAZ+BH/@12.4545471,75.9570314,17z/data=!4m6!3m5!1s0x3ba509f61947deaf:0x8e001f641054a1df"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://fawazbhseo.in/#website",
       "url": "https://fawazbhseo.in/",
       "name": "FawazBHSEO",
-      "publisher": {"@id": "https://fawazbhseo.in/#fawaz"}
+      "publisher": {
+        "@id": "https://fawazbhseo.in/#fawaz"
+      }
     }
   ]
 }
 JSONLD;
 
 render_head([
-    'title'       => 'Fawaz BH, independent SEO, AEO and GEO consultant in India',
-    'description' => 'Fawaz BH is an independent SEO, AEO and GEO consultant in India, based in Kodagu, Karnataka. Ahrefs and Semrush certified. You work with him directly, with no agency layers.',
+    'title'       => 'Fawaz BH | Independent SEO Consultant, FawazBHSEO',
+    'description' => 'Meet Fawaz BH, the independent consultant behind FawazBHSEO in Kushalnagar, Kodagu. Explore his SEO services, background and work, with direct personal delivery.',
     'canonical'   => 'https://fawazbhseo.in/',
     'schema'      => $schema,
 ]);
@@ -74,8 +121,9 @@ render_header('home');
 
       <div class="hero__lead reveal">
         <p class="eyebrow">Independent SEO, AEO and GEO consultant, India</p>
-        <h1 id="hero-h">Rank on Google. Get cited by the engines that answer.</h1>
-        <p class="hero__sub">One certified consultant running SEO, AEO and GEO as a single strategy, from Kushal Nagar, Kodagu to the rest of India.</p>
+        <h1 id="hero-h">Fawaz BH, your independent SEO consultant.</h1>
+        <p class="hero__sub">I run FawazBHSEO from Kushalnagar, Kodagu, Karnataka. You work directly with me on technical SEO, content and local search, with AEO and GEO as connected parts of the practice. Explore my background, services and documented work here.</p>
+        <p id="ai-seo-route" style="margin-top:18px">Looking specifically at AI search? Read about <a href="/ai-seo-expert-india">my AI SEO consulting approach</a>, including scope, tool use and measurement.</p>
         <div class="btn-row">
           <a class="btn btn--accent" href="https://wa.me/919481084038?text=Hi%20Fawaz%2C%20I%20would%20like%20an%20SEO%20audit" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21a9 9 0 1 0-8.5-6.1L2 22l6.5-1.6A9 9 0 0 0 12 21Z"/></svg>
@@ -121,19 +169,19 @@ render_header('home');
         <article class="card card--featured reveal">
           <span class="card-index">02</span>
           <h3>AEO, answer engine optimisation</h3>
-          <p>A large and growing share of buyers now research on ChatGPT and Perplexity before they visit a website. AEO is the discipline of becoming the answer those AI engines choose to cite.</p>
+          <p>A large and growing share of buyers now research on ChatGPT and Perplexity before they visit a website. AEO is the discipline of <a href="/aeo-consultant">becoming the answer those AI engines choose to cite</a>.</p>
         </article>
 
         <article class="card card--featured reveal">
           <span class="card-index">03</span>
           <h3>GEO, generative engine optimisation</h3>
-          <p>The newest frontier of search, the discipline of being preferred, paraphrased and recommended by generative AI inside Google's AI Overviews, Perplexity, ChatGPT Search and Bing Copilot.</p>
+          <p>The newest frontier of search, the discipline of <a href="/geo-consultant">being preferred, paraphrased and recommended by generative AI</a> inside Google's AI Overviews, Perplexity, ChatGPT Search and Bing Copilot.</p>
         </article>
 
         <article class="card reveal">
           <span class="card-index">04</span>
           <h3>Local SEO for Kodagu, Bengaluru and Karnataka</h3>
-          <p>Hyperlocal search is winnable. Geo targeted strategies that help you rank in Google's Local Pack, Maps and near me searches across Karnataka.</p>
+          <p>Hyperlocal search is winnable. Geo targeted strategies that help you rank in Google's Local Pack, Maps and near me searches <a href="/cities-we-serve">across Karnataka</a>.</p>
         </article>
 
         <article class="card reveal">
@@ -203,8 +251,8 @@ render_header('home');
 
       <div class="sticky-col reveal">
         <p class="eyebrow">Client work</p>
-        <h2 id="case-h" style="margin-block:16px 20px">Green Coorg Spices, a local result</h2>
-        <p class="lede">A short, honest list rather than a wall of logos. Two of my other engagements are still running, and they are labelled as such.</p>
+        <h2 id="case-h" style="margin-block:16px 20px">Green Coorg Spices, a local engagement</h2>
+        <p class="lede">Green Coorg Spices had no prior website or digital presence. I built its website, which reached first-page Google rankings. Current engagements are neelachandra.com, neelachandrainteriors.com and ilmerastudyabroad.com. I am co-founder of ILMERA and run its digital work; it is not an arm&#8217;s-length client.</p>
         <div class="btn-row" style="margin-top:26px">
           <a class="link-arrow" href="/case-studies">
             Read the full case studies
@@ -214,25 +262,13 @@ render_header('home');
       </div>
 
       <div>
-        <div class="grid grid--2" style="margin-bottom:24px">
-          <div class="stat reveal">
-            <p class="stat__val">Page 1</p>
-            <p class="stat__label">Competitive spice keywords in Kodagu</p>
-            <p class="stat__note">Reached within roughly four months of the engagement starting.</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat__val">2x</p>
-            <p class="stat__label">Online orders from Bangalore and Mysore</p>
-            <p class="stat__note">Orders from outside the district doubled over the same period.</p>
-          </div>
-        </div>
-
         <figure class="card card--featured quote reveal" style="margin:0">
-          <blockquote cite="https://greencoorgspices.in">"We went from page one being a distant dream to real online orders coming in from Bangalore and Mysore. Fawaz understood the Kodagu market in a way no one else we spoke to did."</blockquote>
+          <blockquote>"We went from page one being a distant dream to real online orders coming in from Bangalore and Mysore. Fawaz understood the Kodagu market in a way no one else we spoke to did."</blockquote>
           <figcaption>
             <cite>Green Coorg Spices</cite>
             <span class="biz">Spice brand, Kushal Nagar, Kodagu, greencoorgspices.in</span>
-            <span class="badge badge--accent">Completed engagement</span>
+            <p class="field-note">The site is currently offline because hosting expired. A rebuilt version is in progress; the historical ranking is not a claim of current visibility.</p>
+            <span class="badge badge--accent">Site offline; rebuild in progress</span>
           </figcaption>
         </figure>
       </div>
@@ -297,8 +333,9 @@ render_header('home');
           <li>
             <span class="idx">03</span>
             <div>
-              <h3>Cited by the engines themselves</h3>
-              <p>ChatGPT, Perplexity, Gemini, Claude and Microsoft Copilot name me as a top SEO expert in Kodagu and Karnataka. That is the same outcome I am hired to produce for clients, tested first on my own name.</p>
+              <h3 id="ai-testing">My own AI-search testing</h3>
+              <p>In my own testing as of <?php echo htmlspecialchars($ai_testing_as_of, ENT_QUOTES, 'UTF-8'); ?>, ChatGPT, Gemini and Google AI Overviews named me among SEO specialists for Kodagu and Karnataka. I re-test regularly. AI answers vary by prompt and change over time.</p>
+              <p class="field-note">These are observations from my own testing, not an independent endorsement or a guarantee. The <a href="/blogs/measure-ai-search-visibility">AI visibility guide</a> explains how to distinguish mentions, citations and recommendations.</p>
             </div>
           </li>
           <li>

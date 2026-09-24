@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-pune',
     'city'    => 'Pune',
     'region'  => 'Maharashtra',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Pune city', 'Hinjewadi', 'Kharadi', 'Pimpri-Chinchwad', 'Chakan', 'Talegaon', 'Baner', 'Kothrud'],
 
-    'geo_region'    => 'IN-MH',
-    'geo_placename' => 'Pune, Maharashtra',
-    'geo_position'  => '18.5204;73.8567',
-    'latitude'      => 18.5204,
-    'longitude'     => 73.8567,
 
     'market' => [
         ['The automotive and engineering belt sells on specification to buyers elsewhere', 'Chakan, Pimpri-Chinchwad and Talegaon hold one of India&#8217;s densest concentrations of automotive component makers, engineering firms, tooling shops and industrial suppliers. Their customers are OEM sourcing teams and tier-one buyers who search by part type, material, process, tolerance and capacity, usually from other states or other countries. Local pack work is irrelevant to them. Most supplier sites here publish a company profile and a photograph gallery rather than the technical detail a sourcing engineer actually needs, which leaves an unusually clear opening.'],

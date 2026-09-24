@@ -8,6 +8,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-madikeri',
     'city'    => 'Madikeri',
     'region'  => 'Kodagu, Karnataka',
@@ -35,11 +38,6 @@ render_location_page([
 
     'places' => ['Madikeri town', 'Suntikoppa', 'Napoklu', 'Raja&#8217;s Seat area', 'Abbey Falls road', 'Mahadevpet'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Madikeri, Kodagu, Karnataka',
-    'geo_position'  => '12.4244;75.7382',
-    'latitude'      => 12.4244,
-    'longitude'     => 75.7382,
 
     'market' => [
         ['The map pack here is genuinely crowded', 'Madikeri has a high density of accommodation listings packed into a small geographic radius, most of them clustered around the fort, Raja&#8217;s Seat and the Abbey Falls road. When the search radius is that tight, proximity stops being a differentiator and the ranking is decided by primary category accuracy, review velocity, photo freshness and how completely the profile is filled in. That is unglamorous work, and it is also the work most Madikeri listings have never had done properly.'],

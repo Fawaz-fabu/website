@@ -1,0 +1,56 @@
+# Private audit workspace and original analytics exports (any directory)
+.audit-work/
+_audit/
+
+# Secrets and local diagnostic endpoints
+ai-config.php
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+diag*.php
+
+# Generated archives and release/review/rollback bundles
+*.[zZ][iI][pP]
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+release/
+releases/
+release-bundles/
+review-bundles/
+rollback/
+*[Bb]undle*
+*[Rr]ollback*
+*-replacements/
+*-website-files/
+*-complete-changed-files.txt
+complete_changed_files.txt
+
+# Generated and research manifests; keep local copies out of Git
+*[Mm]anifest*
+
+# GSC and PageSpeed exports outside the private audit directories
+Queries.csv
+Pages.csv
+Countries.csv
+Devices.csv
+Filters.csv
+Chart.csv
+Search-appearance.csv
+*[Gg][Ss][Cc]*.csv
+*[Gg][Ss][Cc]*.xlsx
+*[Ss]earch-[Cc]onsole*.csv
+*[Ss]earch-[Cc]onsole*.xlsx
+*[Pp]age[Ss]peed*
+
+# Local logs, editor state and temporary backups
+*.log
+*.bak
+*.backup
+*.swp
+.DS_Store
+Thumbs.db

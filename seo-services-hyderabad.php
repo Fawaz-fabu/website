@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-hyderabad',
     'city'    => 'Hyderabad',
     'region'  => 'Telangana',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Hyderabad city', 'HITEC City', 'Gachibowli', 'Madhapur', 'Banjara Hills', 'Kukatpally', 'Genome Valley', 'Secunderabad'],
 
-    'geo_region'    => 'IN-TG',
-    'geo_placename' => 'Hyderabad, Telangana',
-    'geo_position'  => '17.3850;78.4867',
-    'latitude'      => 17.3850,
-    'longitude'     => 78.4867,
 
     'market' => [
         ['Pharma and life sciences reward verifiable detail more than any other sector', 'Hyderabad is one of the world&#8217;s significant pharmaceutical centres, and its search demand is unusually technical: buyers, partners and regulators look for capability, compliance status, approvals, facility detail and therapeutic focus. Vague claims about quality are worthless here because every competitor makes them. Stating your approvals, your certifications, your capacity and your actual therapeutic areas plainly is what generates enquiries. It is also precisely the kind of checkable, structured material that AI assistants can safely cite, which makes this sector unusually well suited to answer-engine work.'],

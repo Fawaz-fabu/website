@@ -11,6 +11,7 @@ if (!function_exists('render_footer')) {
 
 function render_footer() {
     $items = fbh_nav_items();
+    $items['cities'] = ['label' => 'Service areas', 'href' => fbh_link('/cities-we-serve'), 'mt_attr' => ''];
     $year  = date('Y');
     ?>
     <footer class="site-footer">
@@ -26,7 +27,7 @@ function render_footer() {
             <p class="footer-h">Explore</p>
             <ul>
               <?php foreach ($items as $item): ?>
-              <li><a href="<?php echo htmlspecialchars($item['href'], ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+              <li><a href="<?php echo htmlspecialchars($item['href'], ENT_QUOTES, 'UTF-8'); ?>"<?php echo $item['mt_attr']; ?>><?php echo htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8'); ?></a></li>
               <?php endforeach; ?>
             </ul>
           </nav>
@@ -86,7 +87,7 @@ function render_footer() {
 
         <div class="site-footer__bottom">
           <p>&copy; <?php echo $year; ?> <span class="notranslate" translate="no">Fawaz BH, FawazBHSEO</span>. All rights reserved.</p>
-          <p>Kushal Nagar, Kodagu, Karnataka, India</p>
+          <p>Kushalnagar, Kodagu, Karnataka, India, 571234. Other markets are service areas, not branch offices.</p>
         </div>
 
       </div>

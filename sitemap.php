@@ -1,53 +1,71 @@
 <?php
 /**
- * Dynamic XML sitemap.
+ * English-only XML sitemap, served by the existing Apache rewrite at
+ * https://fawazbhseo.in/sitemap.xml. Do not create a static sitemap.xml.
  *
- * Why this exists alongside sitemap.xml: the static file has to be edited by
- * hand every time a page is added, and it had already fallen out of date once
- * (nine location pages existed but were missing from it, so nothing linked or
- * listed them). This version derives the URL list from one PHP array and takes
- * each <lastmod> from the actual file modification time on disk, so it cannot
- * silently drift from reality.
+ * Editorial dates only: reviewed_on in each page takes precedence, then a
+ * manually maintained updated_on or published_on in $editorial_dates below.
+ * Missing/invalid dates omit lastmod. File, upload and request times are never
+ * used. A review date must represent an actual substantive editorial review,
+ * not just checking the page or uploading unchanged files.
  *
- * Output is XML, so there must be no whitespace or markup before the opening
- * PHP tag above and nothing echoed before the header() call below.
+ * Page metadata must remain a literal 'YYYY-MM-DD' (single/double quotes) or
+ * null: either $reviewed_on = ...; or 'reviewed_on' => ..., in location data.
+ * Expressions and ambiguous multiple declarations are deliberately ignored.
+ * Page source is tokenised, never included/executed to discover its date.
  *
- * To add a page: add one line to $pages. Nothing else needs touching.
- *
- * THIS IS NOW THE ONLY SITEMAP. The static sitemap.xml has been deleted and
- * .htaccess section 2e serves this file at the familiar address:
- *
- *   RewriteRule ^sitemap\.xml$ /sitemap.php [L]
- *
- * So https://fawazbhseo.in/sitemap.xml is what crawlers and Search Console
- * request, and this file is what answers. Do not recreate a static
- * sitemap.xml: a real file on disk would take precedence over the rewrite and
- * silently start serving stale data again.
- *
- * MULTILINGUAL. Each URL carries xhtml:link alternates for every INDEXABLE
- * locale, which is a narrower set than "every locale that exists". A locale
- * qualifies only when it is published, past the machine translation stage, and
- * at least 90 percent complete. See fbh_available_locales().
- *
- * Machine drafts are deliberately absent. They are noindex, and listing a
- * noindex URL in a sitemap is a contradictory signal that wastes crawl budget.
- * More importantly, submitting a few hundred unreviewed machine translated URLs
- * is the textbook shape of scaled content abuse, and this site has only just
- * finished getting its location pages out of "discovered, currently not
- * indexed". The sitemap stays small and every URL in it is a page worth
- * ranking.
- *
- * So the count here grows only as translations are genuinely reviewed. English
- * being the only indexable locale today means this output is byte-for-byte what
- * it was, which is exactly what is wanted while reindexing is still settling.
- * Nothing needs editing here to add a language: review one, mark it published,
- * and its URLs appear.
+ * The 32 explicit English entries are independent of translation publication.
+ * This file does not change routing, canonical tags or locale configuration.
  */
 
-require_once __DIR__ . '/includes/i18n.php';
+// Defines the shared calendar-date validator without rendering a page.
+require_once __DIR__ . '/includes/head.php';
 
-/* Each entry: slug (extensionless URL path), source file, changefreq, priority.
-   The source file is only used to read its modification time. */
+/** Read only the existing literal metadata contract; never evaluate PHP. */
+function fbh_sitemap_reviewed_on($source) {
+    $tokens = array_values(array_filter(token_get_all($source), function ($token) {
+        return !is_array($token) || !in_array($token[0], [T_WHITESPACE, T_COMMENT, T_DOC_COMMENT], true);
+    }));
+    $values = [];
+    foreach ($tokens as $i => $token) {
+        if (!is_array($token)) continue;
+        $assignment = $token[0] === T_VARIABLE && $token[1] === '$reviewed_on'
+            && ($tokens[$i + 1] ?? null) === '=';
+        $key = $token[0] === T_CONSTANT_ENCAPSED_STRING
+            && in_array($token[1], ["'reviewed_on'", '"reviewed_on"'], true)
+            && is_array($tokens[$i + 1] ?? null)
+            && $tokens[$i + 1][0] === T_DOUBLE_ARROW;
+        if (!$assignment && !$key) continue;
+        $value = $tokens[$i + 2] ?? null;
+        $end = $tokens[$i + 3] ?? null;
+        $validEnd = $assignment ? $end === ';' : in_array($end, [',', ']', ')'], true);
+        $date = null;
+        if ($validEnd && is_array($value) && $value[0] === T_CONSTANT_ENCAPSED_STRING
+            && preg_match('/^[\'"]([0-9]{4}-[0-9]{2}-[0-9]{2})[\'"]$/', $value[1], $match)) {
+            $date = fbh_reviewed_on($match[1]);
+        }
+        $values[] = $date;
+    }
+    return count($values) === 1 ? $values[0] : null;
+}
+
+function fbh_sitemap_lastmod($source, array $manual = []) {
+    return fbh_sitemap_reviewed_on($source)
+        ?? fbh_reviewed_on($manual['updated_on'] ?? null)
+        ?? fbh_reviewed_on($manual['published_on'] ?? null);
+}
+
+/* Optional dates keyed by the exact source filename below (including blogs/).
+ * Add only dates you can substantiate, as literal YYYY-MM-DD strings.
+ * For example, add an entry of this shape and replace null only with real dates:
+ * 'index.php' => ['updated_on' => null, 'published_on' => null],
+ * updated_on is the last substantive content update, not the last upload.
+ * published_on is the genuine initial publication date, not a draft date.
+ * No dates have been supplied; do not infer them from guide preparation dates.
+ */
+$editorial_dates = [];
+
+// Each entry: extensionless slug, source file, change frequency, priority.
 $pages = [
     // Core
     ['',                    'index.php',                      'monthly', '1.0'],
@@ -99,61 +117,25 @@ $pages = [
 ];
 
 $base = 'https://fawazbhseo.in/';
-
-/* Only locales that pass the indexing gate. See the header note. */
-$published = fbh_indexable_locales();
-$multi     = count($published) > 1;
-
 header('Content-Type: application/xml; charset=UTF-8');
-header('X-Robots-Tag: noindex');   // the sitemap itself should not be indexed
+header('X-Robots-Tag: noindex');
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
-echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
-if ($multi) { echo ' xmlns:xhtml="http://www.w3.org/1999/xhtml"'; }
-echo '>' . "\n";
-
+echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 foreach ($pages as $p) {
     list($slug, $file, $freq, $priority) = $p;
-
-    /* Skip anything that is not actually on disk, so a deleted page can never
-       be advertised to a crawler as a live URL. */
     $path = __DIR__ . '/' . $file;
-    if (!is_file($path)) {
-        continue;
-    }
-
-    $lastmod = gmdate('Y-m-d', filemtime($path));
-
-    /* One <url> per published locale, each listing every locale as an
-       alternate. Reciprocal alternates are required: if /kn/x lists /x but /x
-       does not list /kn/x, Google ignores the pair. */
-    foreach ($published as $code => $meta) {
-        $prefix = ($code === 'en') ? '' : $code . '/';
-        $loc    = $base . $prefix . $slug;
-
-        echo "  <url>\n";
-        echo '    <loc>' . htmlspecialchars($loc, ENT_QUOTES, 'UTF-8') . "</loc>\n";
-
-        if ($multi) {
-            foreach ($published as $altCode => $altMeta) {
-                $altPrefix = ($altCode === 'en') ? '' : $altCode . '/';
-                printf(
-                    "    <xhtml:link rel=\"alternate\" hreflang=\"%s\" href=\"%s\"/>\n",
-                    htmlspecialchars($altMeta['hreflang'], ENT_QUOTES, 'UTF-8'),
-                    htmlspecialchars($base . $altPrefix . $slug, ENT_QUOTES, 'UTF-8')
-                );
-            }
-            printf(
-                "    <xhtml:link rel=\"alternate\" hreflang=\"x-default\" href=\"%s\"/>\n",
-                htmlspecialchars($base . $slug, ENT_QUOTES, 'UTF-8')
-            );
-        }
-
+    // Do not advertise a page that has been deleted.
+    if (!is_file($path)) continue;
+    $source = is_readable($path) ? file_get_contents($path) : false;
+    $lastmod = fbh_sitemap_lastmod($source === false ? '' : $source, $editorial_dates[$file] ?? []);
+    echo "  <url>\n";
+    echo '    <loc>' . htmlspecialchars($base . $slug, ENT_QUOTES, 'UTF-8') . "</loc>\n";
+    if ($lastmod !== null) {
         echo '    <lastmod>' . $lastmod . "</lastmod>\n";
-        echo '    <changefreq>' . $freq . "</changefreq>\n";
-        echo '    <priority>' . $priority . "</priority>\n";
-        echo "  </url>\n";
     }
+    echo '    <changefreq>' . $freq . "</changefreq>\n";
+    echo '    <priority>' . $priority . "</priority>\n";
+    echo "  </url>\n";
 }
-
 echo '</urlset>' . "\n";

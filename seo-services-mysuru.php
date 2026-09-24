@@ -9,6 +9,9 @@
 require_once __DIR__ . '/includes/location-page.php';
 
 render_location_page([
+    // After a real review, replace null with its YYYY-MM-DD date.
+    // Never use an automatic date or a file/upload timestamp.
+    'reviewed_on' => null,
     'slug'    => 'seo-services-mysuru',
     'city'    => 'Mysuru',
     'region'  => 'Karnataka',
@@ -36,11 +39,6 @@ render_location_page([
 
     'places' => ['Mysuru city', 'Vijayanagar', 'Kuvempunagar', 'Saraswathipuram', 'Hebbal industrial area', 'Nanjangud', 'Srirangapatna', 'T Narasipura'],
 
-    'geo_region'    => 'IN-KA',
-    'geo_placename' => 'Mysuru, Karnataka',
-    'geo_position'  => '12.2958;76.6394',
-    'latitude'      => 12.2958,
-    'longitude'     => 76.6394,
 
     'market' => [
         ['Three query languages, three sets of intent', 'Mysuru search splits between English, Kannada script and transliterated Kannada, and the split is not cosmetic. English queries skew towards visitors, students and higher-value purchases. Kannada and transliterated queries skew towards resident, everyday and price-sensitive intent. A business that only ranks in one of the three is invisible to a large part of its own market, and this is the single most common gap I find in the city.'],

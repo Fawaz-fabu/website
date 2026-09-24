@@ -30,7 +30,7 @@ function render_contact_form(array $opts = []) {
             <li><span class="k">Email</span><a class="notranslate" translate="no" href="mailto:fawazbhseo@gmail.com">fawazbhseo@gmail.com</a></li>
             <li><span class="k">Admin email</span><a class="notranslate" translate="no" href="mailto:admin@fawazbhseo.in">admin@fawazbhseo.in</a></li>
             <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/fawazbh" target="_blank" rel="noopener">linkedin.com/in/fawazbh</a></li>
-            <li><span class="k">Based in</span><address style="font-style:normal;display:inline">Kushal Nagar, Kodagu, Karnataka 571234, India</address></li>
+            <li><span class="k">Based in</span><address style="font-style:normal;display:inline">Kushalnagar, Kodagu, Karnataka, India, 571234</address></li>
           </ul>
         </div>
 

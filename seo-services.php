@@ -37,7 +37,7 @@ $services = [
         'title'    => 'AEO, answer engine optimisation',
         'featured' => true,
         'tags'     => ['Entity SEO', 'Structured data', 'E-E-A-T', 'Snippets'],
-        'blurb'    => 'AEO makes your information easier to find and use when someone asks a question. The work focuses on direct, useful answers, accurate business details and supporting evidence. It overlaps with SEO and GEO; a featured answer or citation is not guaranteed.',
+        'blurb'    => 'AEO makes your information easier to find and use when someone asks a question. The work focuses on <a href="/aeo-consultant">direct, useful answers</a>, accurate business details and supporting evidence. It overlaps with SEO and GEO; a featured answer or citation is not guaranteed.',
         'deliv'    => [
             'Consistent business identity and relevant profile checks; third-party inclusion is not guaranteed',
             'Structured data review against visible content and current search-feature eligibility',
@@ -53,7 +53,7 @@ $services = [
         'title'    => 'GEO, generative engine optimisation',
         'featured' => true,
         'tags'     => ['GEO', 'AI Overviews', 'AI search', 'Citation tracking'],
-        'blurb'    => 'GEO works on how a business and its information appear in AI-generated answers. Clear pages, accurate identity and credible supporting sources are paired with separate measurement of mentions, linked citations and recommendations.',
+        'blurb'    => 'GEO works on <a href="/geo-consultant">how a business and its information appear in AI-generated answers</a>. Clear pages, accurate identity and credible supporting sources are paired with separate measurement of mentions, linked citations and recommendations.',
         'deliv'    => [
             'Accessible content with clear headings, direct answers and useful supporting detail',
             'Related customer questions grouped by intent, without duplicate keyword pages',
@@ -304,8 +304,8 @@ $schema = <<<'JSONLD'
     {
       "@type": "ProfessionalService",
       "@id": "https://fawazbhseo.in/#practice",
-      "name": "FawazBHSEO, SEO, AEO, GEO and digital marketing services",
-      "url": "https://fawazbhseo.in/seo-services",
+      "name": "FawazBHSEO",
+      "url": "https://fawazbhseo.in/",
       "telephone": "+91-94810-84038",
       "email": ["fawazbhseo@gmail.com", "admin@fawazbhseo.in"],
       "priceRange": "INR 11999 to custom",
@@ -314,7 +314,7 @@ $schema = <<<'JSONLD'
       "provider": {"@id": "https://fawazbhseo.in/#fawaz"},
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Kushal Nagar",
+        "addressLocality": "Kushalnagar, Kodagu",
         "addressRegion": "Karnataka",
         "postalCode": "571234",
         "addressCountry": "IN"

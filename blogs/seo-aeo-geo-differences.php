@@ -52,8 +52,8 @@ render_header('blog');
           <thead><tr><th scope="col">Approach</th><th scope="col">Question it addresses</th><th scope="col">Typical work</th><th scope="col">What to observe</th></tr></thead>
           <tbody>
             <tr><th scope="row">SEO</th><td>Can relevant customers find and use this page?</td><td>Crawl and indexing checks, page quality, internal links and usability.</td><td>Relevant queries, search clicks, useful visits and qualified enquiries.</td></tr>
-            <tr><th scope="row">AEO</th><td>Does this page answer a specific question well?</td><td>Direct answers, understandable headings, supporting detail and accurate business facts.</td><td>Answer appearances and attributed sources for a defined question set.</td></tr>
-            <tr><th scope="row">GEO</th><td>Is the business or its information included in generated answers?</td><td>Helpful source material, consistent identity, credible corroboration and per-engine testing.</td><td>Brand mentions, linked citations, recommendations and the accuracy of each.</td></tr>
+            <tr><th scope="row">AEO</th><td>Does this page answer a specific question well?</td><td><a href="/aeo-consultant">Direct answers, understandable headings</a>, supporting detail and accurate business facts.</td><td>Answer appearances and attributed sources for a defined question set.</td></tr>
+            <tr><th scope="row">GEO</th><td>Is the business or its information included in generated answers?</td><td>Helpful source material, consistent identity, <a href="/geo-consultant">credible corroboration and per-engine testing</a>.</td><td>Brand mentions, linked citations, recommendations and the accuracy of each.</td></tr>
           </tbody>
         </table>
       </div>
